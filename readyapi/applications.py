@@ -125,7 +125,7 @@ class ReadyApi(Starlette):
                 '"openapi_prefix" has been deprecated in favor of "root_path", which '
                 "follows more closely the ASGI standard, is simpler, and more "
                 "automatic. Check the docs at "
-                "https://readyapi.tiangolo.com/advanced/sub-applications/"
+                "https://readyapi.khulnasoft.com/advanced/sub-applications/"
             )
         self.webhooks = webhooks or routing.APIRouter()
         self.root_path = root_path or openapi_prefix

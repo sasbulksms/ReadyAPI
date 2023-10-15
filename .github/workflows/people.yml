@@ -12,7 +12,7 @@ on:
 
 jobs:
   readyapi-people:
-    if: github.repository_owner == 'tiangolo'
+    if: github.repository_owner == 'khulnasoft'
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
@@ -31,4 +31,4 @@ jobs:
           limit-access-to-actor: true
       - uses: ./.github/actions/people
         with:
-          token: ${{ secrets.FASTAPI_PEOPLE }}
+          token: ${{ secrets.READYAPI_PEOPLE }}

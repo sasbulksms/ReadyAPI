@@ -10,7 +10,7 @@ tags_metadata = [
         "description": "Manage items. So _fancy_ they have their own docs.",
         "externalDocs": {
             "description": "Items external docs",
-            "url": "https://readyapi.tiangolo.com/",
+            "url": "https://readyapi.khulnasoft.com/",
         },
     },
 ]

@@ -12,7 +12,12 @@ client = TestClient(app)
     [
         ("/items", None, 200, {"User-Agent": "testclient"}),
         ("/items", {"X-Header": "notvalid"}, 200, {"User-Agent": "testclient"}),
-        ("/items", {"User-Agent": "ReadyApi test"}, 200, {"User-Agent": "ReadyApi test"}),
+        (
+            "/items",
+            {"User-Agent": "ReadyApi test"},
+            200,
+            {"User-Agent": "ReadyApi test"},
+        ),
     ],
 )
 def test(path, headers, expected_status, expected_response):

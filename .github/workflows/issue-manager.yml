@@ -16,16 +16,16 @@ on:
 
 jobs:
   issue-manager:
-    if: github.repository_owner == 'tiangolo'
+    if: github.repository_owner == 'khulnasoft'
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
-      - uses: tiangolo/issue-manager@0.4.0
+      - uses: khulnasoft/issue-manager@0.4.0
         with:
-          token: ${{ secrets.FASTAPI_ISSUE_MANAGER }}
+          token: ${{ secrets.READYAPI_ISSUE_MANAGER }}
           config: >
             {
               "answered": {

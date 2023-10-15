@@ -8,7 +8,7 @@ client = TestClient(app)
 def test_redirect_response_class():
     response = client.get("/readyapi", follow_redirects=False)
     assert response.status_code == 307
-    assert response.headers["location"] == "https://readyapi.tiangolo.com"
+    assert response.headers["location"] == "https://readyapi.khulnasoft.com"
 
 
 def test_openapi_schema():
@@ -20,7 +20,7 @@ def test_openapi_schema():
         "paths": {
             "/readyapi": {
                 "get": {
-                    "summary": "Redirect Fastapi",
+                    "summary": "Redirect Readyapi",
                     "operationId": "redirect_readyapi_readyapi_get",
                     "responses": {"307": {"description": "Successful Response"}},
                 }

@@ -6,7 +6,7 @@ app = ReadyApi(
     servers=[
         {"url": "/", "description": "Default, relative server"},
         {
-            "url": "http://staging.localhost.tiangolo.com:8000",
+            "url": "http://staging.localhost.khulnasoft.com:8000",
             "description": "Staging but actually localhost still",
         },
         {"url": "https://prod.example.com"},
@@ -37,9 +37,9 @@ def test_openapi_schema():
             {"url": "/", "description": "Default, relative server"},
             {
                 "url": IsOneOf(
-                    "http://staging.localhost.tiangolo.com:8000/",
+                    "http://staging.localhost.khulnasoft.com:8000/",
                     # TODO: remove when deprecating Pydantic v1
-                    "http://staging.localhost.tiangolo.com:8000",
+                    "http://staging.localhost.khulnasoft.com:8000",
                 ),
                 "description": "Staging but actually localhost still",
             },

@@ -4,8 +4,8 @@ from readyapi.middleware.cors import CORSMiddleware
 app = ReadyApi()
 
 origins = [
-    "http://localhost.tiangolo.com",
-    "https://localhost.tiangolo.com",
+    "http://localhost.khulnasoft.com",
+    "https://localhost.khulnasoft.com",
     "http://localhost",
     "http://localhost:8080",
 ]
