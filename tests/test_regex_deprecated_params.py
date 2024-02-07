@@ -1,6 +1,6 @@
 import pytest
 from dirty_equals import IsDict
-from readyapi import ReadyAPI, Query
+from readyapi import Query, ReadyAPI
 from readyapi.testclient import TestClient
 from readyapi.utils import match_pydantic_error_url
 from typing_extensions import Annotated
@@ -14,7 +14,7 @@ def get_client():
 
         @app.get("/items/")
         async def read_items(
-            q: Annotated[str | None, Query(regex="^fixedquery$")] = None
+            q: Annotated[str | None, Query(regex="^fixedquery$")] = None,
         ):
             if q:
                 return f"Hello {q}"
