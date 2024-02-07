@@ -1,6 +1,6 @@
 # 🛃 📨 - 🕸, 🎏, 📁, 🎏
 
-🔢, **ReadyApi** 🔜 📨 📨 ⚙️ `JSONResponse`.
+🔢, **ReadyAPI** 🔜 📨 📨 ⚙️ `JSONResponse`.
 
 👆 💪 🔐 ⚫️ 🛬 `Response` 🔗 👀 [📨 📨 🔗](response-directly.md){.internal-link target=_blank}.
 
@@ -13,7 +13,7 @@
 &amp; 🚥 👈 `Response` ✔️ 🎻 📻 🆎 (`application/json`), 💖 💼 ⏮️ `JSONResponse` &amp; `UJSONResponse`, 💽 👆 📨 🔜 🔁 🗜 (&amp; ⛽) ⏮️ 🙆 Pydantic `response_model` 👈 👆 📣 *➡ 🛠️ 👨‍🎨*.
 
 !!! note
-    🚥 👆 ⚙️ 📨 🎓 ⏮️ 🙅‍♂ 📻 🆎, ReadyApi 🔜 ⌛ 👆 📨 ✔️ 🙅‍♂ 🎚, ⚫️ 🔜 🚫 📄 📨 📁 🚮 🏗 🗄 🩺.
+    🚥 👆 ⚙️ 📨 🎓 ⏮️ 🙅‍♂ 📻 🆎, ReadyAPI 🔜 ⌛ 👆 📨 ✔️ 🙅‍♂ 🎚, ⚫️ 🔜 🚫 📄 📨 📁 🚮 🏗 🗄 🩺.
 
 ## ⚙️ `ORJSONResponse`
 
@@ -23,9 +23,9 @@
 
 ⭕ 📨, 📨 `Response` 🔗 🌅 ⏩ 🌘 🛬 📖.
 
-👉 ↩️ 🔢, ReadyApi 🔜 ✔ 🔠 🏬 🔘 &amp; ⚒ 💭 ⚫️ 🎻 ⏮️ 🎻, ⚙️ 🎏 [🎻 🔗 🔢](../tutorial/encoder.md){.internal-link target=_blank} 🔬 🔰. 👉 ⚫️❔ ✔ 👆 📨 **❌ 🎚**, 🖼 💽 🏷.
+👉 ↩️ 🔢, ReadyAPI 🔜 ✔ 🔠 🏬 🔘 &amp; ⚒ 💭 ⚫️ 🎻 ⏮️ 🎻, ⚙️ 🎏 [🎻 🔗 🔢](../tutorial/encoder.md){.internal-link target=_blank} 🔬 🔰. 👉 ⚫️❔ ✔ 👆 📨 **❌ 🎚**, 🖼 💽 🏷.
 
-✋️ 🚥 👆 🎯 👈 🎚 👈 👆 🛬 **🎻 ⏮️ 🎻**, 👆 💪 🚶‍♀️ ⚫️ 🔗 📨 🎓 &amp; ❎ ➕ 🌥 👈 ReadyApi 🔜 ✔️ 🚶‍♀️ 👆 📨 🎚 🔘 `jsonable_encoder` ⏭ 🚶‍♀️ ⚫️ 📨 🎓.
+✋️ 🚥 👆 🎯 👈 🎚 👈 👆 🛬 **🎻 ⏮️ 🎻**, 👆 💪 🚶‍♀️ ⚫️ 🔗 📨 🎓 &amp; ❎ ➕ 🌥 👈 ReadyAPI 🔜 ✔️ 🚶‍♀️ 👆 📨 🎚 🔘 `jsonable_encoder` ⏭ 🚶‍♀️ ⚫️ 📨 🎓.
 
 ```Python hl_lines="2  7"
 {!../../../docs_src/custom_response/tutorial001b.py!}
@@ -39,11 +39,11 @@
      &amp; ⚫️ 🔜 📄 ✅ 🗄.
 
 !!! tip
-     `ORJSONResponse` ⏳ 🕴 💪 ReadyApi, 🚫 💃.
+     `ORJSONResponse` ⏳ 🕴 💪 ReadyAPI, 🚫 💃.
 
 ## 🕸 📨
 
-📨 📨 ⏮️ 🕸 🔗 ⚪️➡️ **ReadyApi**, ⚙️ `HTMLResponse`.
+📨 📨 ⏮️ 🕸 🔗 ⚪️➡️ **ReadyAPI**, ⚙️ `HTMLResponse`.
 
 * 🗄 `HTMLResponse`.
 * 🚶‍♀️ `HTMLResponse` 🔢 `response_class` 👆 *➡ 🛠️ 👨‍🎨*.
@@ -91,9 +91,9 @@
 
 👉 🖼, 🔢 `generate_html_response()` ⏪ 🏗 &amp; 📨 `Response` ↩️ 🛬 🕸 `str`.
 
-🛬 🏁 🤙 `generate_html_response()`, 👆 ⏪ 🛬 `Response` 👈 🔜 🔐 🔢 **ReadyApi** 🎭.
+🛬 🏁 🤙 `generate_html_response()`, 👆 ⏪ 🛬 `Response` 👈 🔜 🔐 🔢 **ReadyAPI** 🎭.
 
-✋️ 👆 🚶‍♀️ `HTMLResponse` `response_class` 💁‍♂️, **ReadyApi** 🔜 💭 ❔ 📄 ⚫️ 🗄 &amp; 🎓 🩺 🕸 ⏮️ `text/html`:
+✋️ 👆 🚶‍♀️ `HTMLResponse` `response_class` 💁‍♂️, **ReadyAPI** 🔜 💭 ❔ 📄 ⚫️ 🗄 &amp; 🎓 🩺 🕸 ⏮️ `text/html`:
 
 <img src="/img/tutorial/custom-response/image01.png">
 
@@ -106,7 +106,7 @@
 !!! note "📡 ℹ"
     👆 💪 ⚙️ `from starlette.responses import HTMLResponse`.
 
-    **ReadyApi** 🚚 🎏 `starlette.responses` `readyapi.responses` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 📨 👟 🔗 ⚪️➡️ 💃.
+    **ReadyAPI** 🚚 🎏 `starlette.responses` `readyapi.responses` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 📨 👟 🔗 ⚪️➡️ 💃.
 
 ### `Response`
 
@@ -121,7 +121,7 @@
 * `headers` - `dict` 🎻.
 * `media_type` - `str` 🤝 📻 🆎. 🤶 Ⓜ. `"text/html"`.
 
-ReadyApi (🤙 💃) 🔜 🔁 🔌 🎚-📐 🎚. ⚫️ 🔜 🔌 🎚-🆎 🎚, ⚓️ 🔛 = &amp; 🔁 = ✍ 🆎.
+ReadyAPI (🤙 💃) 🔜 🔁 🔌 🎚-📐 🎚. ⚫️ 🔜 🔌 🎚-🆎 🎚, ⚓️ 🔛 = &amp; 🔁 = ✍ 🆎.
 
 ```Python hl_lines="1  18"
 {!../../../docs_src/response_directly/tutorial002.py!}
@@ -143,7 +143,7 @@ ReadyApi (🤙 💃) 🔜 🔁 🔌 🎚-📐 🎚. ⚫️ 🔜 🔌 🎚-🆎 �
 
 ✊ 💽 &amp; 📨 `application/json` 🗜 📨.
 
-👉 🔢 📨 ⚙️ **ReadyApi**, 👆 ✍ 🔛.
+👉 🔢 📨 ⚙️ **ReadyAPI**, 👆 ✍ 🔛.
 
 ### `ORJSONResponse`
 
@@ -282,11 +282,11 @@ ReadyApi (🤙 💃) 🔜 🔁 🔌 🎚-📐 🎚. ⚫️ 🔜 🔌 🎚-🆎 �
 
 ## 🔢 📨 🎓
 
-🕐❔ 🏗 **ReadyApi** 🎓 👐 ⚖️ `APIRouter` 👆 💪 ✔ ❔ 📨 🎓 ⚙️ 🔢.
+🕐❔ 🏗 **ReadyAPI** 🎓 👐 ⚖️ `APIRouter` 👆 💪 ✔ ❔ 📨 🎓 ⚙️ 🔢.
 
 🔢 👈 🔬 👉 `default_response_class`.
 
-🖼 🔛, **ReadyApi** 🔜 ⚙️ `ORJSONResponse` 🔢, 🌐 *➡ 🛠️*, ↩️ `JSONResponse`.
+🖼 🔛, **ReadyAPI** 🔜 ⚙️ `ORJSONResponse` 🔢, 🌐 *➡ 🛠️*, ↩️ `JSONResponse`.
 
 ```Python hl_lines="2  4"
 {!../../../docs_src/custom_response/tutorial010.py!}

@@ -25,7 +25,7 @@ But if you don't remember what each number code is for, you can use the shortcut
     {!> ../../../docs_src/path_operation_configuration/tutorial001_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="3  17"
     {!> ../../../docs_src/path_operation_configuration/tutorial001.py!}
@@ -36,7 +36,7 @@ That status code will be used in the response and will be added to the OpenAPI s
 !!! note "Technical Details"
     You could also use `from starlette import status`.
 
-    **ReadyApi** provides the same `starlette.status` as `readyapi.status` just as a convenience for you, the developer. But it comes directly from Starlette.
+    **ReadyAPI** provides the same `starlette.status` as `readyapi.status` just as a convenience for you, the developer. But it comes directly from Starlette.
 
 ## Tags
 
@@ -54,7 +54,7 @@ You can add tags to your *path operation*, pass the parameter `tags` with a `lis
     {!> ../../../docs_src/path_operation_configuration/tutorial002_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="17  22  27"
     {!> ../../../docs_src/path_operation_configuration/tutorial002.py!}
@@ -70,7 +70,7 @@ If you have a big application, you might end up accumulating **several tags**, a
 
 In these cases, it could make sense to store the tags in an `Enum`.
 
-**ReadyApi** supports that the same way as with plain strings:
+**ReadyAPI** supports that the same way as with plain strings:
 
 ```Python hl_lines="1  8-10  13  18"
 {!../../../docs_src/path_operation_configuration/tutorial002b.py!}
@@ -92,7 +92,7 @@ You can add a `summary` and `description`:
     {!> ../../../docs_src/path_operation_configuration/tutorial003_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="20-21"
     {!> ../../../docs_src/path_operation_configuration/tutorial003.py!}
@@ -100,7 +100,7 @@ You can add a `summary` and `description`:
 
 ## Description from docstring
 
-As descriptions tend to be long and cover multiple lines, you can declare the *path operation* description in the function <abbr title="a multi-line string as the first expression inside a function (not assigned to any variable) used for documentation">docstring</abbr> and **ReadyApi** will read it from there.
+As descriptions tend to be long and cover multiple lines, you can declare the *path operation* description in the function <abbr title="a multi-line string as the first expression inside a function (not assigned to any variable) used for documentation">docstring</abbr> and **ReadyAPI** will read it from there.
 
 You can write <a href="https://en.wikipedia.org/wiki/Markdown" class="external-link" target="_blank">Markdown</a> in the docstring, it will be interpreted and displayed correctly (taking into account docstring indentation).
 
@@ -116,7 +116,7 @@ You can write <a href="https://en.wikipedia.org/wiki/Markdown" class="external-l
     {!> ../../../docs_src/path_operation_configuration/tutorial004_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="19-27"
     {!> ../../../docs_src/path_operation_configuration/tutorial004.py!}
@@ -142,7 +142,7 @@ You can specify the response description with the parameter `response_descriptio
     {!> ../../../docs_src/path_operation_configuration/tutorial005_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="21"
     {!> ../../../docs_src/path_operation_configuration/tutorial005.py!}
@@ -154,7 +154,7 @@ You can specify the response description with the parameter `response_descriptio
 !!! check
     OpenAPI specifies that each *path operation* requires a response description.
 
-    So, if you don't provide one, **ReadyApi** will automatically generate one of "Successful response".
+    So, if you don't provide one, **ReadyAPI** will automatically generate one of "Successful response".
 
 <img src="/img/tutorial/path-operation-configuration/image03.png">
 

@@ -14,7 +14,7 @@ You can serve static files automatically from a directory using `StaticFiles`.
 !!! note "Technical Details"
     You could also use `from starlette.staticfiles import StaticFiles`.
 
-    **ReadyApi** provides the same `starlette.staticfiles` as `readyapi.staticfiles` just as a convenience for you, the developer. But it actually comes directly from Starlette.
+    **ReadyAPI** provides the same `starlette.staticfiles` as `readyapi.staticfiles` just as a convenience for you, the developer. But it actually comes directly from Starlette.
 
 ### What is "Mounting"
 
@@ -22,7 +22,7 @@ You can serve static files automatically from a directory using `StaticFiles`.
 
 This is different from using an `APIRouter` as a mounted application is completely independent. The OpenAPI and docs from your main application won't include anything from the mounted application, etc.
 
-You can read more about this in the **Advanced User Guide**.
+You can read more about this in the [Advanced User Guide](../advanced/index.md){.internal-link target=_blank}.
 
 ## Details
 
@@ -30,7 +30,7 @@ The first `"/static"` refers to the sub-path this "sub-application" will be "mou
 
 The `directory="static"` refers to the name of the directory that contains your static files.
 
-The `name="static"` gives it a name that can be used internally by **ReadyApi**.
+The `name="static"` gives it a name that can be used internally by **ReadyAPI**.
 
 All these parameters can be different than "`static`", adjust them with the needs and specific details of your own application.
 

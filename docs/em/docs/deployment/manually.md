@@ -1,6 +1,6 @@
 # 🏃 💽 ❎ - Uvicorn
 
-👑 👜 👆 💪 🏃 **ReadyApi** 🈸 🛰 💽 🎰 🔫 💽 📋 💖 **Uvicorn**.
+👑 👜 👆 💪 🏃 **ReadyAPI** 🈸 🛰 💽 🎰 🔫 💽 📋 💖 **Uvicorn**.
 
 📤 3️⃣ 👑 🎛:
 
@@ -94,7 +94,7 @@
 
 ## Hypercorn ⏮️ 🎻
 
-💃 &amp; **ReadyApi** ⚓️ 🔛 <a href="https://anyio.readthedocs.io/en/stable/" class="external-link" target="_blank">AnyIO</a>, ❔ ⚒ 👫 🔗 ⏮️ 👯‍♂️ 🐍 🐩 🗃 <a href="https://docs.python.org/3/library/asyncio-task.html" class="external-link" target="_blank">✳</a> &amp; <a href="https://trio.readthedocs.io/en/stable/" class="external-link" target="_blank">🎻</a>.
+💃 &amp; **ReadyAPI** ⚓️ 🔛 <a href="https://anyio.readthedocs.io/en/stable/" class="external-link" target="_blank">AnyIO</a>, ❔ ⚒ 👫 🔗 ⏮️ 👯‍♂️ 🐍 🐩 🗃 <a href="https://docs.python.org/3/library/asyncio-task.html" class="external-link" target="_blank">✳</a> &amp; <a href="https://trio.readthedocs.io/en/stable/" class="external-link" target="_blank">🎻</a>.
 
 👐, Uvicorn ⏳ 🕴 🔗 ⏮️ ✳, &amp; ⚫️ 🛎 ⚙️ <a href="https://github.com/MagicStack/uvloop" class="external-link" target="_blank">`uvloop`</a>, ↕-🎭 💧-♻ `asyncio`.
 

@@ -141,9 +141,9 @@ function shuffle(array) {
 }
 
 async function showRandomAnnouncement(groupId, timeInterval) {
-    const announceReadyApi = document.getElementById(groupId);
-    if (announceReadyApi) {
-        let children = [].slice.call(announceReadyApi.children);
+    const announceReadyAPI = document.getElementById(groupId);
+    if (announceReadyAPI) {
+        let children = [].slice.call(announceReadyAPI.children);
         children = shuffle(children)
         let index = 0
         const announceRandom = () => {

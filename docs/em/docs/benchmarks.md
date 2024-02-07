@@ -1,6 +1,6 @@
 # 📇
 
-🔬 🇸🇲 📇 🎦 **ReadyApi** 🈸 🏃‍♂ 🔽 Uvicorn <a href="https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7" class="external-link" target="_blank">1️⃣ ⏩ 🐍 🛠️ 💪</a>, 🕴 🔛 💃 &amp; Uvicorn 👫 (⚙️ 🔘 ReadyApi). (*)
+🔬 🇸🇲 📇 🎦 **ReadyAPI** 🈸 🏃‍♂ 🔽 Uvicorn <a href="https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7" class="external-link" target="_blank">1️⃣ ⏩ 🐍 🛠️ 💪</a>, 🕴 🔛 💃 &amp; Uvicorn 👫 (⚙️ 🔘 ReadyAPI). (*)
 
 ✋️ 🕐❔ ✅ 📇 &amp; 🔺 👆 🔜 ✔️ 📄 🤯.
 
@@ -8,7 +8,7 @@
 
 🕐❔ 👆 ✅ 📇, ⚫️ ⚠ 👀 📚 🧰 🎏 🆎 🔬 🌓.
 
-🎯, 👀 Uvicorn, 💃 &amp; ReadyApi 🔬 👯‍♂️ (👪 📚 🎏 🧰).
+🎯, 👀 Uvicorn, 💃 &amp; ReadyAPI 🔬 👯‍♂️ (👪 📚 🎏 🧰).
 
 🙅 ⚠ ❎ 🧰, 👍 🎭 ⚫️ 🔜 🤚. &amp; 🏆 📇 🚫 💯 🌖 ⚒ 🚚 🧰.
 
@@ -16,19 +16,19 @@
 
 * **Uvicorn**: 🔫 💽
     * **💃**: (⚙️ Uvicorn) 🕸 🕸
-        * **ReadyApi**: (⚙️ 💃) 🛠️ 🕸 ⏮️ 📚 🌖 ⚒ 🏗 🔗, ⏮️ 💽 🔬, ♒️.
+        * **ReadyAPI**: (⚙️ 💃) 🛠️ 🕸 ⏮️ 📚 🌖 ⚒ 🏗 🔗, ⏮️ 💽 🔬, ♒️.
 
 * **Uvicorn**:
     * 🔜 ✔️ 🏆 🎭, ⚫️ 🚫 ✔️ 🌅 ➕ 📟 ↖️ ⚪️➡️ 💽 ⚫️.
-    * 👆 🚫🔜 ✍ 🈸 Uvicorn 🔗. 👈 🔜 ⛓ 👈 👆 📟 🔜 ✔️ 🔌 🌖 ⚖️ 🌘, 🌘, 🌐 📟 🚚 💃 (⚖️ **ReadyApi**). &amp; 🚥 👆 👈, 👆 🏁 🈸 🔜 ✔️ 🎏 🌥 ✔️ ⚙️ 🛠️ &amp; 📉 👆 📱 📟 &amp; 🐛.
+    * 👆 🚫🔜 ✍ 🈸 Uvicorn 🔗. 👈 🔜 ⛓ 👈 👆 📟 🔜 ✔️ 🔌 🌖 ⚖️ 🌘, 🌘, 🌐 📟 🚚 💃 (⚖️ **ReadyAPI**). &amp; 🚥 👆 👈, 👆 🏁 🈸 🔜 ✔️ 🎏 🌥 ✔️ ⚙️ 🛠️ &amp; 📉 👆 📱 📟 &amp; 🐛.
     * 🚥 👆 ⚖ Uvicorn, 🔬 ⚫️ 🛡 👸, Hypercorn, ✳, ♒️. 🈸 💽.
 * **💃**:
     * 🔜 ✔️ ⏭ 🏆 🎭, ⏮️ Uvicorn. 👐, 💃 ⚙️ Uvicorn 🏃. , ⚫️ 🎲 💪 🕴 🤚 "🐌" 🌘 Uvicorn ✔️ 🛠️ 🌅 📟.
     * ✋️ ⚫️ 🚚 👆 🧰 🏗 🙅 🕸 🈸, ⏮️ 🕹 ⚓️ 🔛 ➡, ♒️.
     * 🚥 👆 ⚖ 💃, 🔬 ⚫️ 🛡 🤣, 🏺, ✳, ♒️. 🕸 🛠️ (⚖️ 🕸).
-* **ReadyApi**:
-    * 🎏 🌌 👈 💃 ⚙️ Uvicorn &amp; 🚫🔜 ⏩ 🌘 ⚫️, **ReadyApi** ⚙️ 💃, ⚫️ 🚫🔜 ⏩ 🌘 ⚫️.
-    * ReadyApi 🚚 🌅 ⚒ 🔛 🔝 💃. ⚒ 👈 👆 🌖 🕧 💪 🕐❔ 🏗 🔗, 💖 💽 🔬 &amp; 🛠️. &amp; ⚙️ ⚫️, 👆 🤚 🏧 🧾 🆓 (🏧 🧾 🚫 🚮 🌥 🏃‍♂ 🈸, ⚫️ 🏗 🔛 🕴).
-    * 🚥 👆 🚫 ⚙️ ReadyApi &amp; ⚙️ 💃 🔗 (⚖️ ➕1️⃣ 🧰, 💖 🤣, 🏺, 🆘, ♒️) 👆 🔜 ✔️ 🛠️ 🌐 💽 🔬 &amp; 🛠️ 👆. , 👆 🏁 🈸 🔜 ✔️ 🎏 🌥 🚥 ⚫️ 🏗 ⚙️ ReadyApi. &amp; 📚 💼, 👉 💽 🔬 &amp; 🛠️ 🦏 💸 📟 ✍ 🈸.
-    * , ⚙️ ReadyApi 👆 ♻ 🛠️ 🕰, 🐛, ⏸ 📟, &amp; 👆 🔜 🎲 🤚 🎏 🎭 (⚖️ 👍) 👆 🔜 🚥 👆 🚫 ⚙️ ⚫️ (👆 🔜 ✔️ 🛠️ ⚫️ 🌐 👆 📟).
-    * 🚥 👆 ⚖ ReadyApi, 🔬 ⚫️ 🛡 🕸 🈸 🛠️ (⚖️ ⚒ 🧰) 👈 🚚 💽 🔬, 🛠️ &amp; 🧾, 💖 🏺-apispec, NestJS, ♨, ♒️. 🛠️ ⏮️ 🛠️ 🏧 💽 🔬, 🛠️ &amp; 🧾.
+* **ReadyAPI**:
+    * 🎏 🌌 👈 💃 ⚙️ Uvicorn &amp; 🚫🔜 ⏩ 🌘 ⚫️, **ReadyAPI** ⚙️ 💃, ⚫️ 🚫🔜 ⏩ 🌘 ⚫️.
+    * ReadyAPI 🚚 🌅 ⚒ 🔛 🔝 💃. ⚒ 👈 👆 🌖 🕧 💪 🕐❔ 🏗 🔗, 💖 💽 🔬 &amp; 🛠️. &amp; ⚙️ ⚫️, 👆 🤚 🏧 🧾 🆓 (🏧 🧾 🚫 🚮 🌥 🏃‍♂ 🈸, ⚫️ 🏗 🔛 🕴).
+    * 🚥 👆 🚫 ⚙️ ReadyAPI &amp; ⚙️ 💃 🔗 (⚖️ ➕1️⃣ 🧰, 💖 🤣, 🏺, 🆘, ♒️) 👆 🔜 ✔️ 🛠️ 🌐 💽 🔬 &amp; 🛠️ 👆. , 👆 🏁 🈸 🔜 ✔️ 🎏 🌥 🚥 ⚫️ 🏗 ⚙️ ReadyAPI. &amp; 📚 💼, 👉 💽 🔬 &amp; 🛠️ 🦏 💸 📟 ✍ 🈸.
+    * , ⚙️ ReadyAPI 👆 ♻ 🛠️ 🕰, 🐛, ⏸ 📟, &amp; 👆 🔜 🎲 🤚 🎏 🎭 (⚖️ 👍) 👆 🔜 🚥 👆 🚫 ⚙️ ⚫️ (👆 🔜 ✔️ 🛠️ ⚫️ 🌐 👆 📟).
+    * 🚥 👆 ⚖ ReadyAPI, 🔬 ⚫️ 🛡 🕸 🈸 🛠️ (⚖️ ⚒ 🧰) 👈 🚚 💽 🔬, 🛠️ &amp; 🧾, 💖 🏺-apispec, NestJS, ♨, ♒️. 🛠️ ⏮️ 🛠️ 🏧 💽 🔬, 🛠️ &amp; 🧾.

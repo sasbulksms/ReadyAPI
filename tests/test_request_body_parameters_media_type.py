@@ -1,10 +1,10 @@
 import typing
 
-from readyapi import Body, ReadyApi
-from readyapi.testclient import TestClient
 from pydantic import BaseModel
+from readyapi import Body, ReadyAPI
+from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 media_type = "application/vnd.api+json"
 
@@ -41,7 +41,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/products": {
                 "post": {

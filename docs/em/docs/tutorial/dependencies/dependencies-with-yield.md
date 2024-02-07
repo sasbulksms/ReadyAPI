@@ -1,6 +1,6 @@
 # 🔗 ⏮️ 🌾
 
-ReadyApi 🐕‍🦺 🔗 👈 <abbr title='sometimes also called "exit", "cleanup", "teardown", "close", "context managers", ...'>➕ 🔁 ⏮️ 🏁</abbr>.
+ReadyAPI 🐕‍🦺 🔗 👈 <abbr title='sometimes also called "exit", "cleanup", "teardown", "close", "context managers", ...'>➕ 🔁 ⏮️ 🏁</abbr>.
 
 👉, ⚙️ `yield` ↩️ `return`, &amp; ✍ ➕ 🔁 ⏮️.
 
@@ -13,9 +13,9 @@ ReadyApi 🐕‍🦺 🔗 👈 <abbr title='sometimes also called "exit", "clean
     * <a href="https://docs.python.org/3/library/contextlib.html#contextlib.contextmanager" class="external-link" target="_blank">`@contextlib.contextmanager`</a> ⚖️
     * <a href="https://docs.python.org/3/library/contextlib.html#contextlib.asynccontextmanager" class="external-link" target="_blank">`@contextlib.asynccontextmanager`</a>
 
-    🔜 ☑ ⚙️ **ReadyApi** 🔗.
+    🔜 ☑ ⚙️ **ReadyAPI** 🔗.
 
-    👐, ReadyApi ⚙️ 📚 2️⃣ 👨‍🎨 🔘.
+    👐, ReadyAPI ⚙️ 📚 2️⃣ 👨‍🎨 🔘.
 
 ## 💽 🔗 ⏮️ `yield`
 
@@ -42,7 +42,7 @@ ReadyApi 🐕‍🦺 🔗 👈 <abbr title='sometimes also called "exit", "clean
 !!! tip
     👆 💪 ⚙️ `async` ⚖️ 😐 🔢.
 
-    **ReadyApi** 🔜 ▶️️ 👜 ⏮️ 🔠, 🎏 ⏮️ 😐 🔗.
+    **ReadyAPI** 🔜 ▶️️ 👜 ⏮️ 🔠, 🎏 ⏮️ 😐 🔗.
 
 ## 🔗 ⏮️ `yield` &amp; `try`
 
@@ -62,7 +62,7 @@ ReadyApi 🐕‍🦺 🔗 👈 <abbr title='sometimes also called "exit", "clean
 
 👆 💪 ✔️ 🎧-🔗 &amp; "🌲" 🎧-🔗 🙆 📐 &amp; 💠, &amp; 🙆 ⚖️ 🌐 👫 💪 ⚙️ `yield`.
 
-**ReadyApi** 🔜 ⚒ 💭 👈 "🚪 📟" 🔠 🔗 ⏮️ `yield` 🏃 ☑ ✔.
+**ReadyAPI** 🔜 ⚒ 💭 👈 "🚪 📟" 🔠 🔗 ⏮️ `yield` 🏃 ☑ ✔.
 
 🖼, `dependency_c` 💪 ✔️ 🔗 🔛 `dependency_b`, &amp; `dependency_b` 🔛 `dependency_a`:
 
@@ -86,12 +86,12 @@ ReadyApi 🐕‍🦺 🔗 👈 <abbr title='sometimes also called "exit", "clean
 
 👆 💪 ✔️ 🙆 🌀 🔗 👈 👆 💚.
 
-**ReadyApi** 🔜 ⚒ 💭 🌐 🏃 ☑ ✔.
+**ReadyAPI** 🔜 ⚒ 💭 🌐 🏃 ☑ ✔.
 
 !!! note "📡 ℹ"
     👉 👷 👏 🐍 <a href="https://docs.python.org/3/library/contextlib.html" class="external-link" target="_blank">🔑 👨‍💼</a>.
 
-    **ReadyApi** ⚙️ 👫 🔘 🏆 👉.
+    **ReadyAPI** ⚙️ 👫 🔘 🏆 👉.
 
 ## 🔗 ⏮️ `yield` &amp; `HTTPException`
 
@@ -186,18 +186,18 @@ with open("./somefile.txt") as f:
 
 🕐❔ `with` 🍫 🏁, ⚫️ ⚒ 💭 🔐 📁, 🚥 📤 ⚠.
 
-🕐❔ 👆 ✍ 🔗 ⏮️ `yield`, **ReadyApi** 🔜 🔘 🗜 ⚫️ 🔑 👨‍💼, &amp; 🌀 ⚫️ ⏮️ 🎏 🔗 🧰.
+🕐❔ 👆 ✍ 🔗 ⏮️ `yield`, **ReadyAPI** 🔜 🔘 🗜 ⚫️ 🔑 👨‍💼, &amp; 🌀 ⚫️ ⏮️ 🎏 🔗 🧰.
 
 ### ⚙️ 🔑 👨‍💼 🔗 ⏮️ `yield`
 
 !!! warning
     👉, 🌅 ⚖️ 🌘, "🏧" 💭.
 
-    🚥 👆 ▶️ ⏮️ **ReadyApi** 👆 💪 💚 🚶 ⚫️ 🔜.
+    🚥 👆 ▶️ ⏮️ **ReadyAPI** 👆 💪 💚 🚶 ⚫️ 🔜.
 
 🐍, 👆 💪 ✍ 🔑 👨‍💼 <a href="https://docs.python.org/3/reference/datamodel.html#context-managers" class="external-link" target="_blank">🏗 🎓 ⏮️ 2️⃣ 👩‍🔬: `__enter__()` &amp; `__exit__()`</a>.
 
-👆 💪 ⚙️ 👫 🔘 **ReadyApi** 🔗 ⏮️ `yield` ⚙️
+👆 💪 ⚙️ 👫 🔘 **ReadyAPI** 🔗 ⏮️ `yield` ⚙️
 `with` ⚖️ `async with` 📄 🔘 🔗 🔢:
 
 ```Python hl_lines="1-9  13"
@@ -212,8 +212,8 @@ with open("./somefile.txt") as f:
 
     ⚙️ 👫 🎀 🔢 ⏮️ 👁 `yield`.
 
-    👈 ⚫️❔ **ReadyApi** ⚙️ 🔘 🔗 ⏮️ `yield`.
+    👈 ⚫️❔ **ReadyAPI** ⚙️ 🔘 🔗 ⏮️ `yield`.
 
-    ✋️ 👆 🚫 ✔️ ⚙️ 👨‍🎨 ReadyApi 🔗 (&amp; 👆 🚫🔜 🚫).
+    ✋️ 👆 🚫 ✔️ ⚙️ 👨‍🎨 ReadyAPI 🔗 (&amp; 👆 🚫🔜 🚫).
 
-    ReadyApi 🔜 ⚫️ 👆 🔘.
+    ReadyAPI 🔜 ⚫️ 👆 🔘.

@@ -69,7 +69,7 @@ Da mesma forma, você pode declarar parâmetros de consulta opcionais, definindo
     {!> ../../../docs_src/query_params/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/query_params/tutorial002.py!}
@@ -78,7 +78,7 @@ Da mesma forma, você pode declarar parâmetros de consulta opcionais, definindo
 Nesse caso, o parâmetro da função `q` será opcional, e `None` será o padrão.
 
 !!! check "Verificar"
-    Você também pode notar que o **ReadyApi** é esperto o suficiente para perceber que o parâmetro da rota `item_id` é um parâmetro da rota, e `q` não é, portanto, `q` é o parâmetro de consulta.
+    Você também pode notar que o **ReadyAPI** é esperto o suficiente para perceber que o parâmetro da rota `item_id` é um parâmetro da rota, e `q` não é, portanto, `q` é o parâmetro de consulta.
 
 
 ## Conversão dos tipos de parâmetros de consulta
@@ -91,7 +91,7 @@ Você também pode declarar tipos `bool`, e eles serão convertidos:
     {!> ../../../docs_src/query_params/tutorial003_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/query_params/tutorial003.py!}
@@ -131,7 +131,7 @@ ou qualquer outra variação (tudo em maiúscula, primeira letra em maiúscula, 
 
 ## Múltiplos parâmetros de rota e consulta
 
-Você pode declarar múltiplos parâmetros de rota e parâmetros de consulta ao mesmo tempo, o **ReadyApi** vai saber o quê é o quê.
+Você pode declarar múltiplos parâmetros de rota e parâmetros de consulta ao mesmo tempo, o **ReadyAPI** vai saber o quê é o quê.
 
 E você não precisa declarar eles em nenhuma ordem específica.
 
@@ -143,7 +143,7 @@ Eles serão detectados pelo nome:
     {!> ../../../docs_src/query_params/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="8  10"
     {!> ../../../docs_src/query_params/tutorial004.py!}
@@ -209,7 +209,7 @@ E claro, você pode definir alguns parâmetros como obrigatórios, alguns possui
     {!> ../../../docs_src/query_params/tutorial006_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="10"
     {!> ../../../docs_src/query_params/tutorial006.py!}

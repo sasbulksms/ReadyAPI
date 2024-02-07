@@ -6,11 +6,11 @@
 
 通过声明变量的类型，编辑器和一些工具能给你提供更好的支持。
 
-这只是一个关于 Python 类型提示的**快速入门 / 复习**。它仅涵盖与 **ReadyApi** 一起使用所需的最少部分...实际上只有很少一点。
+这只是一个关于 Python 类型提示的**快速入门 / 复习**。它仅涵盖与 **ReadyAPI** 一起使用所需的最少部分...实际上只有很少一点。
 
-整个 **ReadyApi** 都基于这些类型提示构建，它们带来了许多优点和好处。
+整个 **ReadyAPI** 都基于这些类型提示构建，它们带来了许多优点和好处。
 
-但即使你不会用到 **ReadyApi**，了解一下类型提示也会让你从中受益。
+但即使你不会用到 **ReadyAPI**，了解一下类型提示也会让你从中受益。
 
 !!! note
     如果你已经精通 Python，并且了解关于类型提示的一切知识，直接跳到下一章节吧。
@@ -127,7 +127,7 @@ John Doe
 
 你刚刚看到的就是声明类型提示的主要场景。用于函数的参数。
 
-这也是你将在 **ReadyApi** 中使用它们的主要场景。
+这也是你将在 **ReadyAPI** 中使用它们的主要场景。
 
 ### 简单类型
 
@@ -256,20 +256,20 @@ John Doe
 !!! info
     想进一步了解 <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic，请阅读其文档</a>.
 
-整个 **ReadyApi** 建立在 Pydantic 的基础之上。
+整个 **ReadyAPI** 建立在 Pydantic 的基础之上。
 
 实际上你将在 [教程 - 用户指南](tutorial/index.md){.internal-link target=_blank} 看到很多这种情况。
 
-## **ReadyApi** 中的类型提示
+## **ReadyAPI** 中的类型提示
 
-**ReadyApi** 利用这些类型提示来做下面几件事。
+**ReadyAPI** 利用这些类型提示来做下面几件事。
 
-使用 **ReadyApi** 时用类型提示声明参数可以获得：
+使用 **ReadyAPI** 时用类型提示声明参数可以获得：
 
 * **编辑器支持**。
 * **类型检查**。
 
-...并且 **ReadyApi** 还会用这些类型声明来：
+...并且 **ReadyAPI** 还会用这些类型声明来：
 
 * **定义参数要求**：声明对请求路径参数、查询参数、请求头、请求体、依赖等的要求。
 * **转换数据**：将来自请求的数据转换为需要的类型。
@@ -280,7 +280,7 @@ John Doe
 
 听上去有点抽象。不过不用担心。你将在 [教程 - 用户指南](tutorial/index.md){.internal-link target=_blank} 中看到所有的实战。
 
-最重要的是，通过使用标准的 Python 类型，只需要在一个地方声明（而不是添加更多的类、装饰器等），**ReadyApi** 会为你完成很多的工作。
+最重要的是，通过使用标准的 Python 类型，只需要在一个地方声明（而不是添加更多的类、装饰器等），**ReadyAPI** 会为你完成很多的工作。
 
 !!! info
     如果你已经阅读了所有教程，回过头来想了解有关类型的更多信息，<a href="https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html" class="external-link" target="_blank">来自 `mypy` 的"速查表"</a>是不错的资源。

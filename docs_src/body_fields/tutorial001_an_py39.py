@@ -1,9 +1,9 @@
 from typing import Annotated, Union
 
-from readyapi import Body, ReadyApi
 from pydantic import BaseModel, Field
+from readyapi import Body, ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

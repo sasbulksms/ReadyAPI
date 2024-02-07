@@ -1,10 +1,10 @@
 # 🔬
 
-👏 <a href="https://www.starlette.io/testclient/" class="external-link" target="_blank">💃</a>, 🔬 **ReadyApi** 🈸 ⏩ &amp; 😌.
+👏 <a href="https://www.starlette.io/testclient/" class="external-link" target="_blank">💃</a>, 🔬 **ReadyAPI** 🈸 ⏩ &amp; 😌.
 
 ⚫️ ⚓️ 🔛 <a href="https://www.python-httpx.org" class="external-link" target="_blank">🇸🇲</a>, ❔ 🔄 🏗 ⚓️ 🔛 📨, ⚫️ 📶 😰 &amp; 🏋️.
 
-⏮️ ⚫️, 👆 💪 ⚙️ <a href="https://docs.pytest.org/" class="external-link" target="_blank">✳</a> 🔗 ⏮️ **ReadyApi**.
+⏮️ ⚫️, 👆 💪 ⚙️ <a href="https://docs.pytest.org/" class="external-link" target="_blank">✳</a> 🔗 ⏮️ **ReadyAPI**.
 
 ## ⚙️ `TestClient`
 
@@ -15,7 +15,7 @@
 
 🗄 `TestClient`.
 
-✍ `TestClient` 🚶‍♀️ 👆 **ReadyApi** 🈸 ⚫️.
+✍ `TestClient` 🚶‍♀️ 👆 **ReadyAPI** 🈸 ⚫️.
 
 ✍ 🔢 ⏮️ 📛 👈 ▶️ ⏮️ `test_` (👉 🐩 `pytest` 🏛).
 
@@ -37,18 +37,18 @@
 !!! note "📡 ℹ"
     👆 💪 ⚙️ `from starlette.testclient import TestClient`.
 
-    **ReadyApi** 🚚 🎏 `starlette.testclient` `readyapi.testclient` 🏪 👆, 👩‍💻. ✋️ ⚫️ 👟 🔗 ⚪️➡️ 💃.
+    **ReadyAPI** 🚚 🎏 `starlette.testclient` `readyapi.testclient` 🏪 👆, 👩‍💻. ✋️ ⚫️ 👟 🔗 ⚪️➡️ 💃.
 
 !!! tip
-    🚥 👆 💚 🤙 `async` 🔢 👆 💯 ↖️ ⚪️➡️ 📨 📨 👆 ReadyApi 🈸 (✅ 🔁 💽 🔢), ✔️ 👀 [🔁 💯](../advanced/async-tests.md){.internal-link target=_blank} 🏧 🔰.
+    🚥 👆 💚 🤙 `async` 🔢 👆 💯 ↖️ ⚪️➡️ 📨 📨 👆 ReadyAPI 🈸 (✅ 🔁 💽 🔢), ✔️ 👀 [🔁 💯](../advanced/async-tests.md){.internal-link target=_blank} 🏧 🔰.
 
 ## 🎏 💯
 
 🎰 🈸, 👆 🎲 🔜 ✔️ 👆 💯 🎏 📁.
 
-&amp; 👆 **ReadyApi** 🈸 5️⃣📆 ✍ 📚 📁/🕹, ♒️.
+&amp; 👆 **ReadyAPI** 🈸 5️⃣📆 ✍ 📚 📁/🕹, ♒️.
 
-### **ReadyApi** 📱 📁
+### **ReadyAPI** 📱 📁
 
 ➡️ 💬 👆 ✔️ 📁 📊 🔬 [🦏 🈸](./bigger-applications.md){.internal-link target=_blank}:
 
@@ -59,7 +59,7 @@
 │   └── main.py
 ```
 
-📁 `main.py` 👆 ✔️ 👆 **ReadyApi** 📱:
+📁 `main.py` 👆 ✔️ 👆 **ReadyAPI** 📱:
 
 
 ```Python
@@ -90,7 +90,7 @@
 
 🔜 ➡️ ↔ 👉 🖼 &amp; 🚮 🌖 ℹ 👀 ❔ 💯 🎏 🍕.
 
-### ↔ **ReadyApi** 📱 📁
+### ↔ **ReadyAPI** 📱 📁
 
 ➡️ 😣 ⏮️ 🎏 📁 📊 ⏭:
 
@@ -102,7 +102,7 @@
 │   └── test_main.py
 ```
 
-➡️ 💬 👈 🔜 📁 `main.py` ⏮️ 👆 **ReadyApi** 📱 ✔️ 🎏 **➡ 🛠️**.
+➡️ 💬 👈 🔜 📁 `main.py` ⏮️ 👆 **ReadyAPI** 📱 ✔️ 🎏 **➡ 🛠️**.
 
 ⚫️ ✔️ `GET` 🛠️ 👈 💪 📨 ❌.
 

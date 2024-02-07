@@ -16,7 +16,7 @@ This could be useful if for example you live in a country that restricts some UR
 
 The first step is to disable the automatic docs, as by default, those use the default CDN.
 
-To disable them, set their URLs to `None` when creating your `ReadyApi` app:
+To disable them, set their URLs to `None` when creating your `ReadyAPI` app:
 
 ```Python hl_lines="8"
 {!../../../docs_src/custom_docs_ui/tutorial001.py!}
@@ -26,7 +26,7 @@ To disable them, set their URLs to `None` when creating your `ReadyApi` app:
 
 Now you can create the *path operations* for the custom docs.
 
-You can re-use ReadyApi's internal functions to create the HTML pages for the docs, and pass them the needed arguments:
+You can re-use ReadyAPI's internal functions to create the HTML pages for the docs, and pass them the needed arguments:
 
 * `openapi_url`: the URL where the HTML page for the docs can get the OpenAPI schema for your API. You can use here the attribute `app.openapi_url`.
 * `title`: the title of your API.
@@ -63,7 +63,7 @@ Now, you should be able to go to your docs at <a href="http://127.0.0.1:8000/doc
 
 Self-hosting the JavaScript and CSS could be useful if, for example, you need your app to keep working even while offline, without open Internet access, or in a local network.
 
-Here you'll see how to serve those files yourself, in the same ReadyApi app, and configure the docs to use them.
+Here you'll see how to serve those files yourself, in the same ReadyAPI app, and configure the docs to use them.
 
 ### Project file structure
 
@@ -96,8 +96,8 @@ You can probably right-click each link and select an option similar to `Save lin
 
 **Swagger UI** uses the files:
 
-* <a href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js" class="external-link" target="_blank">`swagger-ui-bundle.js`</a>
-* <a href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css" class="external-link" target="_blank">`swagger-ui.css`</a>
+* <a href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.9.0/swagger-ui-bundle.js" class="external-link" target="_blank">`swagger-ui-bundle.js`</a>
+* <a href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.9.0/swagger-ui.css" class="external-link" target="_blank">`swagger-ui.css`</a>
 
 And **ReDoc** uses the file:
 
@@ -153,7 +153,7 @@ Now we can configure the app to use those static files for the docs.
 
 The same as when using a custom CDN, the first step is to disable the automatic docs, as those use the CDN by default.
 
-To disable them, set their URLs to `None` when creating your `ReadyApi` app:
+To disable them, set their URLs to `None` when creating your `ReadyAPI` app:
 
 ```Python hl_lines="9"
 {!../../../docs_src/custom_docs_ui/tutorial002.py!}
@@ -163,7 +163,7 @@ To disable them, set their URLs to `None` when creating your `ReadyApi` app:
 
 And the same way as with a custom CDN, now you can create the *path operations* for the custom docs.
 
-Again, you can re-use ReadyApi's internal functions to create the HTML pages for the docs, and pass them the needed arguments:
+Again, you can re-use ReadyAPI's internal functions to create the HTML pages for the docs, and pass them the needed arguments:
 
 * `openapi_url`: the URL where the HTML page for the docs can get the OpenAPI schema for your API. You can use here the attribute `app.openapi_url`.
 * `title`: the title of your API.

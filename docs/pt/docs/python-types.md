@@ -6,11 +6,11 @@ Esses **"type hints"** são uma nova sintaxe (desde Python 3.6+) que permite dec
 
 Ao declarar tipos para suas variáveis, editores e ferramentas podem oferecer um melhor suporte.
 
-Este é apenas um **tutorial rápido / atualização** sobre type hints Python. Ele cobre apenas o mínimo necessário para usá-los com o **ReadyApi** ... que é realmente muito pouco.
+Este é apenas um **tutorial rápido / atualização** sobre type hints Python. Ele cobre apenas o mínimo necessário para usá-los com o **ReadyAPI** ... que é realmente muito pouco.
 
-O **ReadyApi** é baseado nesses type hints, eles oferecem muitas vantagens e benefícios.
+O **ReadyAPI** é baseado nesses type hints, eles oferecem muitas vantagens e benefícios.
 
-Mas mesmo que você nunca use o **ReadyApi**, você se beneficiaria de aprender um pouco sobre eles.
+Mas mesmo que você nunca use o **ReadyAPI**, você se beneficiaria de aprender um pouco sobre eles.
 
 !!! note "Nota"
      Se você é um especialista em Python e já sabe tudo sobre type hints, pule para o próximo capítulo.
@@ -128,7 +128,7 @@ Agora você sabe que precisa corrigí-lo, converta `age` em uma string com `str 
 
 Você acabou de ver o local principal para declarar type hints. Como parâmetros de função.
 
-Este também é o principal local em que você os usaria com o **ReadyApi**.
+Este também é o principal local em que você os usaria com o **ReadyAPI**.
 
 ### Tipos simples
 
@@ -285,20 +285,20 @@ Retirado dos documentos oficiais dos Pydantic:
 !!! info "Informação"
     Para saber mais sobre o <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank"> Pydantic, verifique seus documentos </a>.
 
-**ReadyApi** é todo baseado em Pydantic.
+**ReadyAPI** é todo baseado em Pydantic.
 
 Você verá muito mais disso na prática no [Tutorial - Guia do usuário](tutorial/index.md){.internal-link target=_blank}.
 
-## Type hints em **ReadyApi**
+## Type hints em **ReadyAPI**
 
-O **ReadyApi** aproveita esses type hints para fazer várias coisas.
+O **ReadyAPI** aproveita esses type hints para fazer várias coisas.
 
-Com o **ReadyApi**, você declara parâmetros com type hints e obtém:
+Com o **ReadyAPI**, você declara parâmetros com type hints e obtém:
 
 * **Suporte ao editor**.
 * **Verificações de tipo**.
 
-... e **ReadyApi** usa as mesmas declarações para:
+... e **ReadyAPI** usa as mesmas declarações para:
 
 * **Definir requisitos**: dos parâmetros do caminho da solicitação, parâmetros da consulta, cabeçalhos, corpos, dependências, etc.
 * **Converter dados**: da solicitação para o tipo necessário.
@@ -309,7 +309,7 @@ Com o **ReadyApi**, você declara parâmetros com type hints e obtém:
 
 Tudo isso pode parecer abstrato. Não se preocupe. Você verá tudo isso em ação no [Tutorial - Guia do usuário](tutorial/index.md){.internal-link target=_blank}.
 
-O importante é que, usando tipos padrão de Python, em um único local (em vez de adicionar mais classes, decoradores, etc.), o **ReadyApi** fará muito trabalho para você.
+O importante é que, usando tipos padrão de Python, em um único local (em vez de adicionar mais classes, decoradores, etc.), o **ReadyAPI** fará muito trabalho para você.
 
 !!! info "Informação"
     Se você já passou por todo o tutorial e voltou para ver mais sobre os tipos, um bom recurso é <a href = "https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html" class = "external-link "target =" _ blank "> a "cheat sheet" do `mypy` </a>.

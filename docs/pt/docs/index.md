@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="https://readyapi.khulnasoft.com"><img src="https://readyapi.khulnasoft.com/img/logo-margin/logo-teal.png" alt="ReadyApi"></a>
+  <a href="https://readyapi.khulnasoft.com"><img src="https://readyapi.khulnasoft.com/img/logo-margin/logo-teal.png" alt="ReadyAPI"></a>
 </p>
 <p align="center">
-    <em>Framework ReadyApi, alta performance, fácil de aprender, fácil de codar, pronto para produção</em>
+    <em>Framework ReadyAPI, alta performance, fácil de aprender, fácil de codar, pronto para produção</em>
 </p>
 <p align="center">
 <a href="https://github.com/khulnasoft/readyapi/actions?query=workflow%3ATest" target="_blank">
@@ -24,7 +24,7 @@
 
 ---
 
-ReadyApi é um moderno e rápido (alta performance) _framework web_ para construção de APIs com Python 3.6 ou superior, baseado nos _type hints_ padrões do Python.
+ReadyAPI é um moderno e rápido (alta performance) _framework web_ para construção de APIs com Python 3.8 ou superior, baseado nos _type hints_ padrões do Python.
 
 Os recursos chave são:
 
@@ -58,13 +58,13 @@ Os recursos chave são:
 
 ## Opiniões
 
-"*[...] Estou usando **ReadyApi** muito esses dias. [...] Estou na verdade planejando utilizar ele em todos os times de **serviços _Machine Learning_ na Microsoft**. Alguns deles estão sendo integrados no _core_ do produto **Windows** e alguns produtos **Office**.*"
+"*[...] Estou usando **ReadyAPI** muito esses dias. [...] Estou na verdade planejando utilizar ele em todos os times de **serviços _Machine Learning_ na Microsoft**. Alguns deles estão sendo integrados no _core_ do produto **Windows** e alguns produtos **Office**.*"
 
 <div style="text-align: right; margin-right: 10%;">Kabir Khan - <strong>Microsoft</strong> <a href="https://github.com/khulnasoft/readyapi/pull/26" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"*Estou extremamente entusiasmado com o **ReadyApi**. É tão divertido!*"
+"*Estou extremamente entusiasmado com o **ReadyAPI**. É tão divertido!*"
 
 <div style="text-align: right; margin-right: 10%;">Brian Okken - <strong><a href="https://pythonbytes.fm/episodes/show/123/time-to-right-the-py-wrongs?time_in_sec=855" target="_blank">Python Bytes</a> podcaster</strong> <a href="https://twitter.com/brianokken/status/1112220079972728832" target="_blank"><small>(ref)</small></a></div>
 
@@ -76,33 +76,33 @@ Os recursos chave são:
 
 ---
 
-"*Se você está procurando aprender um **_framework_ moderno** para construir aplicações _REST_, dê uma olhada no **ReadyApi** [...] É rápido, fácil de usar e fácil de aprender [...]*"
+"*Se você está procurando aprender um **_framework_ moderno** para construir aplicações _REST_, dê uma olhada no **ReadyAPI** [...] É rápido, fácil de usar e fácil de aprender [...]*"
 
-"*Nós trocamos nossas **APIs** por **ReadyApi** [...] Acredito que vocês gostarão dele [...]*"
+"*Nós trocamos nossas **APIs** por **ReadyAPI** [...] Acredito que vocês gostarão dele [...]*"
 
 <div style="text-align: right; margin-right: 10%;">Ines Montani - Matthew Honnibal - <strong>fundadores da <a href="https://explosion.ai" target="_blank">Explosion AI</a> - criadores da <a href="https://spacy.io" target="_blank">spaCy</a></strong> <a href="https://twitter.com/_inesmontani/status/1144173225322143744" target="_blank"><small>(ref)</small></a> - <a href="https://twitter.com/honnibal/status/1144031421859655680" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"*Nós adotamos a biblioteca **ReadyApi** para criar um servidor **REST** que possa ser chamado para obter **predições**. [para o Ludwig]*"
+"*Nós adotamos a biblioteca **ReadyAPI** para criar um servidor **REST** que possa ser chamado para obter **predições**. [para o Ludwig]*"
 
 <div style="text-align: right; margin-right: 10%;">Piero Molino, Yaroslav Dudin e Sai Sumanth Miryala - <strong>Uber</strong> <a href="https://eng.uber.com/ludwig-v0-2/" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-## **Typer**, o ReadyApi das interfaces de linhas de comando
+## **Typer**, o ReadyAPI das interfaces de linhas de comando
 
 <a href="https://typer.khulnasoft.com" target="_blank"><img src="https://typer.khulnasoft.com/img/logo-margin/logo-margin-vector.svg" style="width: 20%;"></a>
 
 Se você estiver construindo uma aplicação <abbr title="Command Line Interface">_CLI_</abbr> para ser utilizada em um terminal ao invés de uma aplicação web, dê uma olhada no <a href="https://typer.khulnasoft.com/" class="external-link" target="_blank">**Typer**</a>.
 
-**Typer** é o irmão menor do ReadyApi. E seu propósito é ser o **ReadyApi das _CLIs_**. ⌨️ 🚀
+**Typer** é o irmão menor do ReadyAPI. E seu propósito é ser o **ReadyAPI das _CLIs_**. ⌨️ 🚀
 
 ## Requisitos
 
-Python 3.7+
+Python 3.8+
 
-ReadyApi está nos ombros de gigantes:
+ReadyAPI está nos ombros de gigantes:
 
 * <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a> para as partes web.
 * <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic</a> para a parte de dados.
@@ -140,9 +140,9 @@ $ pip install "uvicorn[standard]"
 ```Python
 from typing import Union
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/")
@@ -163,9 +163,9 @@ Se seu código utiliza `async` / `await`, use `async def`:
 ```Python hl_lines="9  14"
 from typing import Union
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/")
@@ -208,7 +208,7 @@ INFO:     Application startup complete.
 O comando `uvicorn main:app` se refere a:
 
 * `main`: o arquivo `main.py` (o "módulo" Python).
-* `app`: o objeto criado dentro de `main.py` com a linha `app = ReadyApi()`.
+* `app`: o objeto criado dentro de `main.py` com a linha `app = ReadyAPI()`.
 * `--reload`: faz o servidor recarregar após mudanças de código. Somente faça isso para desenvolvimento.
 
 </details>
@@ -255,10 +255,10 @@ Declare o corpo utilizando tipos padrão Python, graças ao Pydantic.
 ```Python hl_lines="4  9-12  25-27"
 from typing import Union
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Item(BaseModel):
@@ -316,7 +316,7 @@ Você faz com tipos padrão do Python moderno.
 
 Você não terá que aprender uma nova sintaxe, métodos ou classes de uma biblioteca específica etc.
 
-Apenas **Python 3.6+** padrão.
+Apenas **Python 3.8+** padrão.
 
 Por exemplo, para um `int`:
 
@@ -358,7 +358,7 @@ item: Item
 
 ---
 
-Voltando ao código do exemplo anterior, **ReadyApi** irá:
+Voltando ao código do exemplo anterior, **ReadyAPI** irá:
 
 * Validar que existe um `item_id` na rota para requisições `GET` e `PUT`.
 * Validar que `item_id` é do tipo `int` para requisições `GET` e `PUT`.
@@ -422,7 +422,7 @@ Para um exemplo mais completo incluindo mais recursos, veja <a href="https://rea
 
 ## Performance
 
-Testes de performance da _Independent TechEmpower_ mostram aplicações **ReadyApi** rodando sob Uvicorn como <a href="https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7" class="external-link" target="_blank">um dos _frameworks_ Python mais rápidos disponíveis</a>, somente atrás de Starlette e Uvicorn (utilizados internamente pelo ReadyApi). (*)
+Testes de performance da _Independent TechEmpower_ mostram aplicações **ReadyAPI** rodando sob Uvicorn como <a href="https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7" class="external-link" target="_blank">um dos _frameworks_ Python mais rápidos disponíveis</a>, somente atrás de Starlette e Uvicorn (utilizados internamente pelo ReadyAPI). (*)
 
 Para entender mais sobre performance, veja a seção <a href="https://readyapi.khulnasoft.com/benchmarks/" class="internal-link" target="_blank">Benchmarks</a>.
 
@@ -438,11 +438,11 @@ Usados por Starlette:
 * <a href="https://jinja.palletsprojects.com" target="_blank"><code>jinja2</code></a> - Necessário se você quiser utilizar a configuração padrão de templates.
 * <a href="https://andrew-d.github.io/python-multipart/" target="_blank"><code>python-multipart</code></a> - Necessário se você quiser suporte com <abbr title="converte uma string que chega de uma requisição HTTP para dados Python">"parsing"</abbr> de formulário, com `request.form()`.
 * <a href="https://pythonhosted.org/itsdangerous/" target="_blank"><code>itsdangerous</code></a> - Necessário para suporte a `SessionMiddleware`.
-* <a href="https://pyyaml.org/wiki/PyYAMLDocumentation" target="_blank"><code>pyyaml</code></a> - Necessário para suporte a `SchemaGenerator` da Starlette (você provavelmente não precisará disso com o ReadyApi).
+* <a href="https://pyyaml.org/wiki/PyYAMLDocumentation" target="_blank"><code>pyyaml</code></a> - Necessário para suporte a `SchemaGenerator` da Starlette (você provavelmente não precisará disso com o ReadyAPI).
 * <a href="https://graphene-python.org/" target="_blank"><code>graphene</code></a> - Necessário para suporte a `GraphQLApp`.
 * <a href="https://github.com/esnme/ultrajson" target="_blank"><code>ujson</code></a> - Necessário se você quer utilizar `UJSONResponse`.
 
-Usados por ReadyApi / Starlette:
+Usados por ReadyAPI / Starlette:
 
 * <a href="https://www.uvicorn.org" target="_blank"><code>uvicorn</code></a> - para o servidor que carrega e serve sua aplicação.
 * <a href="https://github.com/ijl/orjson" target="_blank"><code>orjson</code></a> - Necessário se você quer utilizar `ORJSONResponse`.

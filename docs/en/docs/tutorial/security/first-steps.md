@@ -6,11 +6,11 @@ And you have a **frontend** in another domain or in a different path of the same
 
 And you want to have a way for the frontend to authenticate with the backend, using a **username** and **password**.
 
-We can use **OAuth2** to build that with **ReadyApi**.
+We can use **OAuth2** to build that with **ReadyAPI**.
 
 But let's save you the time of reading the full long specification just to find those little pieces of information you need.
 
-Let's use the tools provided by **ReadyApi** to handle security.
+Let's use the tools provided by **ReadyAPI** to handle security.
 
 ## How it looks
 
@@ -26,13 +26,13 @@ Copy the example in a file `main.py`:
     {!> ../../../docs_src/security/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     {!> ../../../docs_src/security/tutorial001_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -99,7 +99,7 @@ The `password` "flow" is one of the ways ("flows") defined in OAuth2, to handle 
 
 OAuth2 was designed so that the backend or API could be independent of the server that authenticates the user.
 
-But in this case, the same **ReadyApi** application will handle the API and the authentication.
+But in this case, the same **ReadyAPI** application will handle the API and the authentication.
 
 So, let's review it from that simplified point of view:
 
@@ -117,9 +117,9 @@ So, let's review it from that simplified point of view:
     * So, to authenticate with our API, it sends a header `Authorization` with a value of `Bearer ` plus the token.
     * If the token contains `foobar`, the content of the `Authorization` header would be: `Bearer foobar`.
 
-## **ReadyApi**'s `OAuth2PasswordBearer`
+## **ReadyAPI**'s `OAuth2PasswordBearer`
 
-**ReadyApi** provides several tools, at different levels of abstraction, to implement these security features.
+**ReadyAPI** provides several tools, at different levels of abstraction, to implement these security features.
 
 In this example we are going to use **OAuth2**, with the **Password** flow, using a **Bearer** token. We do that using the `OAuth2PasswordBearer` class.
 
@@ -130,7 +130,7 @@ In this example we are going to use **OAuth2**, with the **Password** flow, usin
 
     And it might be the best for most use cases, unless you are an OAuth2 expert and know exactly why there's another option that suits better your needs.
 
-    In that case, **ReadyApi** also provides you with the tools to build it.
+    In that case, **ReadyAPI** also provides you with the tools to build it.
 
 When we create an instance of the `OAuth2PasswordBearer` class we pass in the `tokenUrl` parameter. This parameter contains the URL that the client (the frontend running in the user's browser) will use to send the `username` and `password` in order to get a token.
 
@@ -140,13 +140,13 @@ When we create an instance of the `OAuth2PasswordBearer` class we pass in the `t
     {!> ../../../docs_src/security/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python  hl_lines="7"
     {!> ../../../docs_src/security/tutorial001_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -191,13 +191,13 @@ Now you can pass that `oauth2_scheme` in a dependency with `Depends`.
     {!> ../../../docs_src/security/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python  hl_lines="11"
     {!> ../../../docs_src/security/tutorial001_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -208,12 +208,12 @@ Now you can pass that `oauth2_scheme` in a dependency with `Depends`.
 
 This dependency will provide a `str` that is assigned to the parameter `token` of the *path operation function*.
 
-**ReadyApi** will know that it can use this dependency to define a "security scheme" in the OpenAPI schema (and the automatic API docs).
+**ReadyAPI** will know that it can use this dependency to define a "security scheme" in the OpenAPI schema (and the automatic API docs).
 
 !!! info "Technical Details"
-    **ReadyApi** will know that it can use the class `OAuth2PasswordBearer` (declared in a dependency) to define the security scheme in OpenAPI because it inherits from `readyapi.security.oauth2.OAuth2`, which in turn inherits from `readyapi.security.base.SecurityBase`.
+    **ReadyAPI** will know that it can use the class `OAuth2PasswordBearer` (declared in a dependency) to define the security scheme in OpenAPI because it inherits from `readyapi.security.oauth2.OAuth2`, which in turn inherits from `readyapi.security.base.SecurityBase`.
 
-    All the security utilities that integrate with OpenAPI (and the automatic API docs) inherit from `SecurityBase`, that's how **ReadyApi** can know how to integrate them in OpenAPI.
+    All the security utilities that integrate with OpenAPI (and the automatic API docs) inherit from `SecurityBase`, that's how **ReadyAPI** can know how to integrate them in OpenAPI.
 
 ## What it does
 

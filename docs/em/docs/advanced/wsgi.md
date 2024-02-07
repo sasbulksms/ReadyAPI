@@ -20,7 +20,7 @@
 
 🔜, 🔠 📨 🔽 ➡ `/v1/` 🔜 🍵 🏺 🈸.
 
-&amp; 🎂 🔜 🍵 **ReadyApi**.
+&amp; 🎂 🔜 🍵 **ReadyAPI**.
 
 🚥 👆 🏃 ⚫️ ⏮️ Uvicorn &amp; 🚶 <a href="http://localhost:8000/v1/" class="external-link" target="_blank">http://localhost:8000/v1/</a> 👆 🔜 👀 📨 ⚪️➡️ 🏺:
 
@@ -28,7 +28,7 @@
 Hello, World from Flask!
 ```
 
-&amp; 🚥 👆 🚶 <a href="http://localhost:8000/v2" class="external-link" target="_blank">http://localhost:8000/v2</a> 👆 🔜 👀 📨 ⚪️➡️ ReadyApi:
+&amp; 🚥 👆 🚶 <a href="http://localhost:8000/v2" class="external-link" target="_blank">http://localhost:8000/v2</a> 👆 🔜 👀 📨 ⚪️➡️ ReadyAPI:
 
 ```JSON
 {

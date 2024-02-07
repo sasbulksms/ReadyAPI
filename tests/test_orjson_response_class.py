@@ -1,9 +1,9 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.responses import ORJSONResponse
 from readyapi.testclient import TestClient
 from sqlalchemy.sql.elements import quoted_name
 
-app = ReadyApi(default_response_class=ORJSONResponse)
+app = ReadyAPI(default_response_class=ORJSONResponse)
 
 
 @app.get("/orjson_non_str_keys")

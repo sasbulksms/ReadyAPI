@@ -1,9 +1,9 @@
 from typing import Union
 
-from readyapi import Cookie, ReadyApi
+from readyapi import Cookie, ReadyAPI
 from typing_extensions import Annotated
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/")

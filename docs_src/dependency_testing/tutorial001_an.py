@@ -1,10 +1,10 @@
 from typing import Union
 
-from readyapi import Depends, ReadyApi
+from readyapi import Depends, ReadyAPI
 from readyapi.testclient import TestClient
 from typing_extensions import Annotated
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 async def common_parameters(

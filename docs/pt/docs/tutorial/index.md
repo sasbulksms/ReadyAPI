@@ -1,6 +1,6 @@
 # Tutorial - Guia de Usuário
 
-Esse tutorial mostra como usar o **ReadyApi** com a maior parte de seus recursos, passo a passo.
+Esse tutorial mostra como usar o **ReadyAPI** com a maior parte de seus recursos, passo a passo.
 
 Cada seção constrói, gradualmente, sobre as anteriores, mas sua estrutura são tópicos separados, para que você possa ir a qualquer um específico e resolver suas necessidades específicas de API.
 
@@ -30,13 +30,13 @@ $ uvicorn main:app --reload
 
 É **ALTAMENTE recomendado** que você escreva ou copie o código, edite-o e rode-o localmente.
 
-Usá-lo em seu editor é o que realmente te mostra os benefícios do ReadyApi, ver quão pouco código você tem que escrever, todas as conferências de tipo, auto completações etc.
+Usá-lo em seu editor é o que realmente te mostra os benefícios do ReadyAPI, ver quão pouco código você tem que escrever, todas as conferências de tipo, auto completações etc.
 
 ---
 
-## Instale o ReadyApi
+## Instale o ReadyAPI
 
-O primeiro passo é instalar o ReadyApi.
+O primeiro passo é instalar o ReadyAPI.
 
 Para o tutorial, você deve querer instalá-lo com todas as dependências e recursos opicionais.
 

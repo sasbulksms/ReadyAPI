@@ -1,9 +1,9 @@
 from typing import Union
 
-from readyapi import Body, ReadyApi, status
+from readyapi import Body, ReadyAPI, status
 from readyapi.responses import JSONResponse
 
-app = ReadyApi()
+app = ReadyAPI()
 
 items = {"foo": {"name": "Fighters", "size": 6}, "bar": {"name": "Tenders", "size": 3}}
 

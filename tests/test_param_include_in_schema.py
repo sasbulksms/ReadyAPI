@@ -1,22 +1,22 @@
 from typing import Optional
 
 import pytest
-from readyapi import Cookie, ReadyApi, Header, Path, Query
+from readyapi import Cookie, Header, Path, Query, ReadyAPI
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/hidden_cookie")
 async def hidden_cookie(
-    hidden_cookie: Optional[str] = Cookie(default=None, include_in_schema=False)
+    hidden_cookie: Optional[str] = Cookie(default=None, include_in_schema=False),
 ):
     return {"hidden_cookie": hidden_cookie}
 
 
 @app.get("/hidden_header")
 async def hidden_header(
-    hidden_header: Optional[str] = Header(default=None, include_in_schema=False)
+    hidden_header: Optional[str] = Header(default=None, include_in_schema=False),
 ):
     return {"hidden_header": hidden_header}
 
@@ -28,14 +28,14 @@ async def hidden_path(hidden_path: str = Path(include_in_schema=False)):
 
 @app.get("/hidden_query")
 async def hidden_query(
-    hidden_query: Optional[str] = Query(default=None, include_in_schema=False)
+    hidden_query: Optional[str] = Query(default=None, include_in_schema=False),
 ):
     return {"hidden_query": hidden_query}
 
 
 openapi_schema = {
     "openapi": "3.1.0",
-    "info": {"title": "ReadyApi", "version": "0.1.0"},
+    "info": {"title": "ReadyAPI", "version": "0.1.0"},
     "paths": {
         "/hidden_cookie": {
             "get": {

@@ -1,5 +1,5 @@
 import pytest
-from readyapi import ReadyApi, File, Form, UploadFile
+from readyapi import File, Form, ReadyAPI, UploadFile
 from readyapi.dependencies.utils import (
     multipart_incorrect_install_error,
     multipart_not_installed_error,
@@ -9,7 +9,7 @@ from readyapi.dependencies.utils import (
 def test_incorrect_multipart_installed_form(monkeypatch):
     monkeypatch.delattr("multipart.multipart.parse_options_header", raising=False)
     with pytest.raises(RuntimeError, match=multipart_incorrect_install_error):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         @app.post("/")
         async def root(username: str = Form()):
@@ -19,7 +19,7 @@ def test_incorrect_multipart_installed_form(monkeypatch):
 def test_incorrect_multipart_installed_file_upload(monkeypatch):
     monkeypatch.delattr("multipart.multipart.parse_options_header", raising=False)
     with pytest.raises(RuntimeError, match=multipart_incorrect_install_error):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         @app.post("/")
         async def root(f: UploadFile = File()):
@@ -29,7 +29,7 @@ def test_incorrect_multipart_installed_file_upload(monkeypatch):
 def test_incorrect_multipart_installed_file_bytes(monkeypatch):
     monkeypatch.delattr("multipart.multipart.parse_options_header", raising=False)
     with pytest.raises(RuntimeError, match=multipart_incorrect_install_error):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         @app.post("/")
         async def root(f: bytes = File()):
@@ -39,7 +39,7 @@ def test_incorrect_multipart_installed_file_bytes(monkeypatch):
 def test_incorrect_multipart_installed_multi_form(monkeypatch):
     monkeypatch.delattr("multipart.multipart.parse_options_header", raising=False)
     with pytest.raises(RuntimeError, match=multipart_incorrect_install_error):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         @app.post("/")
         async def root(username: str = Form(), password: str = Form()):
@@ -49,7 +49,7 @@ def test_incorrect_multipart_installed_multi_form(monkeypatch):
 def test_incorrect_multipart_installed_form_file(monkeypatch):
     monkeypatch.delattr("multipart.multipart.parse_options_header", raising=False)
     with pytest.raises(RuntimeError, match=multipart_incorrect_install_error):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         @app.post("/")
         async def root(username: str = Form(), f: UploadFile = File()):
@@ -59,7 +59,7 @@ def test_incorrect_multipart_installed_form_file(monkeypatch):
 def test_no_multipart_installed(monkeypatch):
     monkeypatch.delattr("multipart.__version__", raising=False)
     with pytest.raises(RuntimeError, match=multipart_not_installed_error):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         @app.post("/")
         async def root(username: str = Form()):
@@ -69,7 +69,7 @@ def test_no_multipart_installed(monkeypatch):
 def test_no_multipart_installed_file(monkeypatch):
     monkeypatch.delattr("multipart.__version__", raising=False)
     with pytest.raises(RuntimeError, match=multipart_not_installed_error):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         @app.post("/")
         async def root(f: UploadFile = File()):
@@ -79,7 +79,7 @@ def test_no_multipart_installed_file(monkeypatch):
 def test_no_multipart_installed_file_bytes(monkeypatch):
     monkeypatch.delattr("multipart.__version__", raising=False)
     with pytest.raises(RuntimeError, match=multipart_not_installed_error):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         @app.post("/")
         async def root(f: bytes = File()):
@@ -89,7 +89,7 @@ def test_no_multipart_installed_file_bytes(monkeypatch):
 def test_no_multipart_installed_multi_form(monkeypatch):
     monkeypatch.delattr("multipart.__version__", raising=False)
     with pytest.raises(RuntimeError, match=multipart_not_installed_error):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         @app.post("/")
         async def root(username: str = Form(), password: str = Form()):
@@ -99,7 +99,7 @@ def test_no_multipart_installed_multi_form(monkeypatch):
 def test_no_multipart_installed_form_file(monkeypatch):
     monkeypatch.delattr("multipart.__version__", raising=False)
     with pytest.raises(RuntimeError, match=multipart_not_installed_error):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         @app.post("/")
         async def root(username: str = Form(), f: UploadFile = File()):

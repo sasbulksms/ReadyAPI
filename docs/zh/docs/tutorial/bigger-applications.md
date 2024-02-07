@@ -2,7 +2,7 @@
 
 如果你正在开发一个应用程序或 Web API，很少会将所有的内容都放在一个文件中。
 
-**ReadyApi** 提供了一个方便的工具，可以在保持所有灵活性的同时构建你的应用程序。
+**ReadyAPI** 提供了一个方便的工具，可以在保持所有灵活性的同时构建你的应用程序。
 
 !!! info
     如果你来自 Flask，那这将相当于 Flask 的 Blueprints。
@@ -71,15 +71,15 @@
 
 你希望将与用户相关的*路径操作*与其他代码分开，以使其井井有条。
 
-但它仍然是同一 **ReadyApi** 应用程序/web API 的一部分（它是同一「Python 包」的一部分）。
+但它仍然是同一 **ReadyAPI** 应用程序/web API 的一部分（它是同一「Python 包」的一部分）。
 
 你可以使用 `APIRouter` 为该模块创建*路径操作*。
 
 ### 导入 `APIRouter`
 
-你可以导入它并通过与 `ReadyApi` 类相同的方式创建一个「实例」：
+你可以导入它并通过与 `ReadyAPI` 类相同的方式创建一个「实例」：
 
-```Python hl_lines="1  3"
+```Python hl_lines="1  3" title="app/routers/users.py"
 {!../../../docs_src/bigger_applications/app/routers/users.py!}
 ```
 
@@ -87,13 +87,13 @@
 
 然后你可以使用它来声明*路径操作*。
 
-使用方式与 `ReadyApi` 类相同：
+使用方式与 `ReadyAPI` 类相同：
 
-```Python hl_lines="6  11  16"
+```Python hl_lines="6  11  16" title="app/routers/users.py"
 {!../../../docs_src/bigger_applications/app/routers/users.py!}
 ```
 
-你可以将 `APIRouter` 视为一个「迷你 `ReadyApi`」类。
+你可以将 `APIRouter` 视为一个「迷你 `ReadyAPI`」类。
 
 所有相同的选项都得到支持。
 
@@ -102,7 +102,7 @@
 !!! tip
     在此示例中，该变量被命名为 `router`，但你可以根据你的想法自由命名。
 
-我们将在主 `ReadyApi` 应用中包含该 `APIRouter`，但首先，让我们来看看依赖项和另一个 `APIRouter`。
+我们将在主 `ReadyAPI` 应用中包含该 `APIRouter`，但首先，让我们来看看依赖项和另一个 `APIRouter`。
 
 ## 依赖项
 
@@ -112,7 +112,7 @@
 
 现在我们将使用一个简单的依赖项来读取一个自定义的 `X-Token` 请求首部：
 
-```Python hl_lines="1  4-6"
+```Python hl_lines="1  4-6" title="app/dependencies.py"
 {!../../../docs_src/bigger_applications/app/dependencies.py!}
 ```
 
@@ -143,7 +143,7 @@
 
 因此，我们可以将其添加到 `APIRouter` 中，而不是将其添加到每个路径操作中。
 
-```Python hl_lines="5-10  16  21"
+```Python hl_lines="5-10  16  21" title="app/routers/items.py"
 {!../../../docs_src/bigger_applications/app/routers/items.py!}
 ```
 
@@ -185,7 +185,7 @@ async def read_item(item_id: str):
     在 `APIRouter`中具有 `dependencies` 可以用来，例如，对一整组的*路径操作*要求身份认证。即使这些依赖项并没有分别添加到每个路径操作中。
 
 !!! check
-    `prefix`、`tags`、`responses` 以及 `dependencies` 参数只是（和其他很多情况一样）**ReadyApi** 的一个用于帮助你避免代码重复的功能。
+    `prefix`、`tags`、`responses` 以及 `dependencies` 参数只是（和其他很多情况一样）**ReadyAPI** 的一个用于帮助你避免代码重复的功能。
 
 ### 导入依赖项
 
@@ -195,7 +195,7 @@ async def read_item(item_id: str):
 
 因此，我们通过 `..` 对依赖项使用了相对导入：
 
-```Python hl_lines="3"
+```Python hl_lines="3" title="app/routers/items.py"
 {!../../../docs_src/bigger_applications/app/routers/items.py!}
 ```
 
@@ -265,7 +265,7 @@ from ...dependencies import get_token_header
 
 但是我们仍然可以添加*更多*将会应用于特定的*路径操作*的 `tags`，以及一些特定于该*路径操作*的额外 `responses`：
 
-```Python hl_lines="30-31"
+```Python hl_lines="30-31" title="app/routers/items.py"
 {!../../../docs_src/bigger_applications/app/routers/items.py!}
 ```
 
@@ -274,23 +274,23 @@ from ...dependencies import get_token_header
 
     并且在文档中也会有两个响应，一个用于 `404`，一个用于 `403`。
 
-## `ReadyApi` 主体
+## `ReadyAPI` 主体
 
 现在，让我们来看看位于 `app/main.py` 的模块。
 
-在这里你导入并使用 `ReadyApi` 类。
+在这里你导入并使用 `ReadyAPI` 类。
 
 这将是你的应用程序中将所有内容联结在一起的主文件。
 
 并且由于你的大部分逻辑现在都存在于其自己的特定模块中，因此主文件的内容将非常简单。
 
-### 导入 `ReadyApi`
+### 导入 `ReadyAPI`
 
-你可以像平常一样导入并创建一个 `ReadyApi` 类。
+你可以像平常一样导入并创建一个 `ReadyAPI` 类。
 
 我们甚至可以声明[全局依赖项](dependencies/global-dependencies.md){.internal-link target=_blank}，它会和每个 `APIRouter` 的依赖项组合在一起：
 
-```Python hl_lines="1  3  7"
+```Python hl_lines="1  3  7" title="app/main.py"
 {!../../../docs_src/bigger_applications/app/main.py!}
 ```
 
@@ -298,7 +298,7 @@ from ...dependencies import get_token_header
 
 现在，我们导入具有 `APIRouter` 的其他子模块：
 
-```Python hl_lines="5"
+```Python hl_lines="5" title="app/main.py"
 {!../../../docs_src/bigger_applications/app/main.py!}
 ```
 
@@ -360,7 +360,7 @@ from .routers.users import router
 
 因此，为了能够在同一个文件中使用它们，我们直接导入子模块：
 
-```Python hl_lines="4"
+```Python hl_lines="5" title="app/main.py"
 {!../../../docs_src/bigger_applications/app/main.py!}
 ```
 
@@ -368,7 +368,7 @@ from .routers.users import router
 
 现在，让我们来包含来自 `users` 和 `items` 子模块的 `router`。
 
-```Python hl_lines="10-11"
+```Python hl_lines="10-11" title="app/main.py"
 {!../../../docs_src/bigger_applications/app/main.py!}
 ```
 
@@ -377,7 +377,7 @@ from .routers.users import router
 
     `items.router` 包含了 `app/routers/items.py` 文件中的 `APIRouter`。
 
-使用 `app.include_router()`，我们可以将每个 `APIRouter` 添加到主 `ReadyApi` 应用程序中。
+使用 `app.include_router()`，我们可以将每个 `APIRouter` 添加到主 `ReadyAPI` 应用程序中。
 
 它将包含来自该路由器的所有路由作为其一部分。
 
@@ -401,7 +401,7 @@ from .routers.users import router
 
 对于此示例，它将非常简单。但是假设由于它是与组织中的其他项目所共享的，因此我们无法对其进行修改，以及直接在 `APIRouter` 中添加 `prefix`、`dependencies`、`tags` 等：
 
-```Python hl_lines="3"
+```Python hl_lines="3" title="app/internal/admin.py"
 {!../../../docs_src/bigger_applications/app/internal/admin.py!}
 ```
 
@@ -409,7 +409,7 @@ from .routers.users import router
 
 我们可以通过将这些参数传递给 `app.include_router()` 来完成所有的声明，而不必修改原始的 `APIRouter`：
 
-```Python hl_lines="14-17"
+```Python hl_lines="14-17" title="app/main.py"
 {!../../../docs_src/bigger_applications/app/main.py!}
 ```
 
@@ -428,11 +428,11 @@ from .routers.users import router
 
 ### 包含一个*路径操作*
 
-我们还可以直接将*路径操作*添加到 `ReadyApi` 应用中。
+我们还可以直接将*路径操作*添加到 `ReadyAPI` 应用中。
 
 这里我们这样做了...只是为了表明我们可以做到🤷：
 
-```Python hl_lines="21-23"
+```Python hl_lines="21-23" title="app/main.py"
 {!../../../docs_src/bigger_applications/app/main.py!}
 ```
 
@@ -479,10 +479,10 @@ $ uvicorn app.main:app --reload
 
 ## 在另一个 `APIRouter` 中包含一个 `APIRouter`
 
-与在 `ReadyApi` 应用程序中包含 `APIRouter` 的方式相同，你也可以在另一个 `APIRouter` 中包含 `APIRouter`，通过：
+与在 `ReadyAPI` 应用程序中包含 `APIRouter` 的方式相同，你也可以在另一个 `APIRouter` 中包含 `APIRouter`，通过：
 
 ```Python
 router.include_router(other_router)
 ```
 
-请确保在你将 `router` 包含到 `ReadyApi` 应用程序之前进行此操作，以便 `other_router` 中的`路径操作`也能被包含进来。
+请确保在你将 `router` 包含到 `ReadyAPI` 应用程序之前进行此操作，以便 `other_router` 中的`路径操作`也能被包含进来。

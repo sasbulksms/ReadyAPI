@@ -1,7 +1,7 @@
 import gzip
 from typing import Callable, List
 
-from readyapi import Body, ReadyApi, Request, Response
+from readyapi import Body, ReadyAPI, Request, Response
 from readyapi.routing import APIRoute
 
 
@@ -26,7 +26,7 @@ class GzipRoute(APIRoute):
         return custom_route_handler
 
 
-app = ReadyApi()
+app = ReadyAPI()
 app.router.route_class = GzipRoute
 
 

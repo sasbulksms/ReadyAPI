@@ -1,6 +1,6 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
-app = ReadyApi(docs_url="/documentation", redoc_url=None)
+app = ReadyAPI(docs_url="/documentation", redoc_url=None)
 
 
 @app.get("/items/")

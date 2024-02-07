@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from readyapi import ReadyApi
-from readyapi.encoders import jsonable_encoder
 from pydantic import BaseModel
+from readyapi import ReadyAPI
+from readyapi.encoders import jsonable_encoder
 
 fake_db = {}
 
@@ -13,7 +13,7 @@ class Item(BaseModel):
     description: str | None = None
 
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.put("/items/{id}")

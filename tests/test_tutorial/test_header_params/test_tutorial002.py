@@ -14,9 +14,9 @@ client = TestClient(app)
         ("/items", {"X-Header": "notvalid"}, 200, {"strange_header": None}),
         (
             "/items",
-            {"strange_header": "ReadyApi test"},
+            {"strange_header": "ReadyAPI test"},
             200,
-            {"strange_header": "ReadyApi test"},
+            {"strange_header": "ReadyAPI test"},
         ),
         (
             "/items",
@@ -37,7 +37,7 @@ def test_openapi_schema():
     assert response.status_code == 200
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/items/": {
                 "get": {

@@ -9,15 +9,15 @@ Taking data from:
 * Cookies.
 * etc.
 
-And by doing so, **ReadyApi** is validating that data, converting it and generating documentation for your API automatically.
+And by doing so, **ReadyAPI** is validating that data, converting it and generating documentation for your API automatically.
 
 But there are situations where you might need to access the `Request` object directly.
 
 ## Details about the `Request` object
 
-As **ReadyApi** is actually **Starlette** underneath, with a layer of several tools on top, you can use Starlette's <a href="https://www.starlette.io/requests/" class="external-link" target="_blank">`Request`</a> object directly when you need to.
+As **ReadyAPI** is actually **Starlette** underneath, with a layer of several tools on top, you can use Starlette's <a href="https://www.starlette.io/requests/" class="external-link" target="_blank">`Request`</a> object directly when you need to.
 
-It would also mean that if you get data from the `Request` object directly (for example, read the body) it won't be validated, converted or documented (with OpenAPI, for the automatic API user interface) by ReadyApi.
+It would also mean that if you get data from the `Request` object directly (for example, read the body) it won't be validated, converted or documented (with OpenAPI, for the automatic API user interface) by ReadyAPI.
 
 Although any other parameter declared normally (for example, the body with a Pydantic model) would still be validated, converted, annotated, etc.
 
@@ -33,7 +33,7 @@ For that you need to access the request directly.
 {!../../../docs_src/using_request_directly/tutorial001.py!}
 ```
 
-By declaring a *path operation function* parameter with the type being the `Request` **ReadyApi** will know to pass the `Request` in that parameter.
+By declaring a *path operation function* parameter with the type being the `Request` **ReadyAPI** will know to pass the `Request` in that parameter.
 
 !!! tip
     Note that in this case, we are declaring a path parameter beside the request parameter.
@@ -49,4 +49,4 @@ You can read more details about the <a href="https://www.starlette.io/requests/"
 !!! note "Technical Details"
     You could also use `from starlette.requests import Request`.
 
-    **ReadyApi** provides it directly just as a convenience for you, the developer. But it comes directly from Starlette.
+    **ReadyAPI** provides it directly just as a convenience for you, the developer. But it comes directly from Starlette.

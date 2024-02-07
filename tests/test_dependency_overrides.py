@@ -2,11 +2,11 @@ from typing import Optional
 
 import pytest
 from dirty_equals import IsDict
-from readyapi import APIRouter, Depends, ReadyApi
+from readyapi import APIRouter, Depends, ReadyAPI
 from readyapi.testclient import TestClient
 from readyapi.utils import match_pydantic_error_url
 
-app = ReadyApi()
+app = ReadyAPI()
 
 router = APIRouter()
 

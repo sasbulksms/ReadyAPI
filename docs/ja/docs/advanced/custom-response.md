@@ -1,6 +1,6 @@
 # カスタムレスポンス - HTML、ストリーム、ファイル、その他のレスポンス
 
-デフォルトでは、**ReadyApi** は `JSONResponse` を使ってレスポンスを返します。
+デフォルトでは、**ReadyAPI** は `JSONResponse` を使ってレスポンスを返します。
 
 [レスポンスを直接返す](response-directly.md){.internal-link target=_blank}で見たように、 `Response` を直接返すことでこの挙動をオーバーライドできます。
 
@@ -13,7 +13,7 @@
 そしてもし、`Response` が、`JSONResponse` や `UJSONResponse` の場合のようにJSONメディアタイプ (`application/json`) ならば、データは *path operationデコレータ* に宣言したPydantic `response_model` により自動的に変換 (もしくはフィルタ) されます。
 
 !!! note "備考"
-    メディアタイプを指定せずにレスポンスクラスを利用すると、ReadyApiは何もコンテンツがないことを期待します。そのため、生成されるOpenAPIドキュメントにレスポンスフォーマットが記載されません。
+    メディアタイプを指定せずにレスポンスクラスを利用すると、ReadyAPIは何もコンテンツがないことを期待します。そのため、生成されるOpenAPIドキュメントにレスポンスフォーマットが記載されません。
 
 ## `ORJSONResponse` を使う
 
@@ -33,11 +33,11 @@
     そして、OpenAPIにはそのようにドキュメントされます。
 
 !!! tip "豆知識"
-    `ORJSONResponse` は、現在はReadyApiのみで利用可能で、Starletteでは利用できません。
+    `ORJSONResponse` は、現在はReadyAPIのみで利用可能で、Starletteでは利用できません。
 
 ## HTMLレスポンス
 
-**ReadyApi** からHTMLを直接返す場合は、`HTMLResponse` を使います。
+**ReadyAPI** からHTMLを直接返す場合は、`HTMLResponse` を使います。
 
 * `HTMLResponse` をインポートする。
 * *path operation* のパラメータ `content_type` に `HTMLResponse` を渡す。
@@ -85,9 +85,9 @@
 
 この例では、関数 `generate_html_response()` は、`str` のHTMLを返すのではなく `Response` を生成して返しています。
 
-`generate_html_response()` を呼び出した結果を返すことにより、**ReadyApi** の振る舞いを上書きする `Response` が既に返されています。
+`generate_html_response()` を呼び出した結果を返すことにより、**ReadyAPI** の振る舞いを上書きする `Response` が既に返されています。
 
-しかし、一方では `response_class` に `HTMLResponse` を渡しているため、 **ReadyApi** はOpenAPIや対話的ドキュメントでHTMLとして `text/html` でドキュメント化する方法を知っています。
+しかし、一方では `response_class` に `HTMLResponse` を渡しているため、 **ReadyAPI** はOpenAPIや対話的ドキュメントでHTMLとして `text/html` でドキュメント化する方法を知っています。
 
 <img src="/img/tutorial/custom-response/image01.png">
 
@@ -100,7 +100,7 @@
 !!! note "技術詳細"
     `from starlette.responses import HTMLResponse` も利用できます。
 
-    **ReadyApi** は開発者の利便性のために `readyapi.responses` として `starlette.responses` と同じものを提供しています。しかし、利用可能なレスポンスのほとんどはStarletteから直接提供されます。
+    **ReadyAPI** は開発者の利便性のために `readyapi.responses` として `starlette.responses` と同じものを提供しています。しかし、利用可能なレスポンスのほとんどはStarletteから直接提供されます。
 
 ### `Response`
 
@@ -115,7 +115,7 @@
 * `headers` - 文字列の `dict` 。
 * `media_type` - メディアタイプを示す `str` 。例えば `"text/html"` 。
 
-ReadyApi (実際にはStarlette) は自動的にContent-Lengthヘッダーを含みます。また、media_typeに基づいたContent-Typeヘッダーを含み、テキストタイプのためにcharsetを追加します。
+ReadyAPI (実際にはStarlette) は自動的にContent-Lengthヘッダーを含みます。また、media_typeに基づいたContent-Typeヘッダーを含み、テキストタイプのためにcharsetを追加します。
 
 ```Python hl_lines="1  18"
 {!../../../docs_src/response_directly/tutorial002.py!}
@@ -137,7 +137,7 @@ ReadyApi (実際にはStarlette) は自動的にContent-Lengthヘッダーを含
 
 データを受け取り、 `application/json` としてエンコードされたレスポンスを返します。
 
-上で読んだように、**ReadyApi** のデフォルトのレスポンスとして利用されます。
+上で読んだように、**ReadyAPI** のデフォルトのレスポンスとして利用されます。
 
 ### `ORJSONResponse`
 
@@ -205,11 +205,11 @@ HTTPリダイレクトを返します。デフォルトでは307ステータス�
 
 ## デフォルトレスポンスクラス
 
-**ReadyApi** クラスのインスタンスか `APIRouter` を生成するときに、デフォルトのレスポンスクラスを指定できます。
+**ReadyAPI** クラスのインスタンスか `APIRouter` を生成するときに、デフォルトのレスポンスクラスを指定できます。
 
 定義するためのパラメータは、 `default_response_class` です。
 
-以下の例では、 **ReadyApi** は、全ての *path operation* で `JSONResponse` の代わりに `ORJSONResponse` をデフォルトとして利用します。
+以下の例では、 **ReadyAPI** は、全ての *path operation* で `JSONResponse` の代わりに `ORJSONResponse` をデフォルトとして利用します。
 
 ```Python hl_lines="2  4"
 {!../../../docs_src/custom_response/tutorial010.py!}

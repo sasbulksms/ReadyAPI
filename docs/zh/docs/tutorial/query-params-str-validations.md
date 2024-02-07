@@ -1,6 +1,6 @@
 # 查询参数和字符串校验
 
-**ReadyApi** 允许你为参数声明额外的信息和校验。
+**ReadyAPI** 允许你为参数声明额外的信息和校验。
 
 让我们以下面的应用程序为例：
 
@@ -10,7 +10,7 @@
     {!> ../../../docs_src/query_params_str_validations/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/query_params_str_validations/tutorial001.py!}
@@ -86,7 +86,7 @@ q: Union[str, None] = Query(default=None, max_length=50)
 
 如果你对所有的这些**「正则表达式」**概念感到迷茫，请不要担心。对于许多人来说这都是一个困难的主题。你仍然可以在无需正则表达式的情况下做很多事情。
 
-但是，一旦你需要用到并去学习它们时，请了解你已经可以在 **ReadyApi** 中直接使用它们。
+但是，一旦你需要用到并去学习它们时，请了解你已经可以在 **ReadyAPI** 中直接使用它们。
 
 ## 默认值
 
@@ -137,9 +137,9 @@ q: Union[str, None] = Query(default=None, min_length=3)
 
 !!! info
     如果你之前没见过 `...` 这种用法：它是一个特殊的单独值，它是 <a href="https://docs.python.org/3/library/constants.html#Ellipsis" class="external-link" target="_blank">Python 的一部分并且被称为「省略号」</a>。
-    Pydantic 和 ReadyApi 使用它来显式的声明需要一个值。
+    Pydantic 和 ReadyAPI 使用它来显式的声明需要一个值。
 
-这将使 **ReadyApi** 知道此查询参数是必需的。
+这将使 **ReadyAPI** 知道此查询参数是必需的。
 
 ### 使用`None`声明必需参数
 
@@ -152,7 +152,7 @@ q: Union[str, None] = Query(default=None, min_length=3)
 ```
 
 !!! tip
-    Pydantic 是 ReadyApi 中所有数据验证和序列化的核心，当你在没有设默认值的情况下使用 `Optional` 或 `Union[Something, None]` 时，它具有特殊行为，你可以在 Pydantic 文档中阅读有关<a href="https://pydantic-docs.helpmanual.io/usage/models/#required-optional-fields" class="external-link" target="_blank">必需可选字段</a>的更多信息。
+    Pydantic 是 ReadyAPI 中所有数据验证和序列化的核心，当你在没有设默认值的情况下使用 `Optional` 或 `Union[Something, None]` 时，它具有特殊行为，你可以在 Pydantic 文档中阅读有关<a href="https://pydantic-docs.helpmanual.io/usage/models/#required-optional-fields" class="external-link" target="_blank">必需可选字段</a>的更多信息。
 
 ### 使用Pydantic中的`Required`代替省略号(`...`)
 
@@ -236,7 +236,7 @@ http://localhost:8000/items/
 ```
 
 !!! note
-    请记住，在这种情况下 ReadyApi 将不会检查列表的内容。
+    请记住，在这种情况下 ReadyAPI 将不会检查列表的内容。
 
     例如，`List[int]` 将检查（并记录到文档）列表的内容必须是整数。但是单独的 `list` 不会。
 

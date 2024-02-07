@@ -2,14 +2,14 @@ from typing import Union
 
 import pytest
 from dirty_equals import IsDict
-from readyapi import Body, Cookie, ReadyApi, Header, Path, Query
+from pydantic import BaseModel, ConfigDict
+from readyapi import Body, Cookie, Header, Path, Query, ReadyAPI
 from readyapi._compat import PYDANTIC_V2
 from readyapi.testclient import TestClient
-from pydantic import BaseModel, ConfigDict
 
 
 def create_app():
-    app = ReadyApi()
+    app = ReadyAPI()
 
     class Item(BaseModel):
         data: str
@@ -40,7 +40,7 @@ def create_app():
                 {"data": "Data in Body examples, example1"},
                 {"data": "Data in Body examples, example2"},
             ],
-        )
+        ),
     ):
         return item
 
@@ -54,7 +54,7 @@ def create_app():
                     {"data": "examples example_examples 1"},
                     {"data": "examples example_examples 2"},
                 ],
-            )
+            ),
         ):
             return item
 
@@ -271,7 +271,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/schema_extra/": {
                 "post": {

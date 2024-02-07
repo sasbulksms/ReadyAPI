@@ -23,7 +23,7 @@
     {!> ../../../docs_src/body/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="4"
     {!> ../../../docs_src/body/tutorial001.py!}
@@ -41,7 +41,7 @@
     {!> ../../../docs_src/body/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="7-11"
     {!> ../../../docs_src/body/tutorial001.py!}
@@ -79,7 +79,7 @@
     {!> ../../../docs_src/body/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="18"
     {!> ../../../docs_src/body/tutorial001.py!}
@@ -89,7 +89,7 @@
 
 ## 结果
 
-仅仅使用了 Python 类型声明，**ReadyApi** 将会：
+仅仅使用了 Python 类型声明，**ReadyAPI** 将会：
 
 * 将请求体作为 JSON 读取。
 * 转换为相应的类型（在需要时）。
@@ -142,7 +142,7 @@ Pydantic 本身甚至也进行了一些更改以支持此功能。
     {!> ../../../docs_src/body/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="21"
     {!> ../../../docs_src/body/tutorial002.py!}
@@ -152,7 +152,7 @@ Pydantic 本身甚至也进行了一些更改以支持此功能。
 
 你可以同时声明路径参数和请求体。
 
-**ReadyApi** 将识别出与路径参数匹配的函数参数应**从路径中获取**，而声明为 Pydantic 模型的函数参数应**从请求体中获取**。
+**ReadyAPI** 将识别出与路径参数匹配的函数参数应**从路径中获取**，而声明为 Pydantic 模型的函数参数应**从请求体中获取**。
 
 === "Python 3.10+"
 
@@ -160,7 +160,7 @@ Pydantic 本身甚至也进行了一些更改以支持此功能。
     {!> ../../../docs_src/body/tutorial003_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="17-18"
     {!> ../../../docs_src/body/tutorial003.py!}
@@ -170,7 +170,7 @@ Pydantic 本身甚至也进行了一些更改以支持此功能。
 
 你还可以同时声明**请求体**、**路径参数**和**查询参数**。
 
-**ReadyApi** 会识别它们中的每一个，并从正确的位置获取数据。
+**ReadyAPI** 会识别它们中的每一个，并从正确的位置获取数据。
 
 === "Python 3.10+"
 
@@ -178,7 +178,7 @@ Pydantic 本身甚至也进行了一些更改以支持此功能。
     {!> ../../../docs_src/body/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="18"
     {!> ../../../docs_src/body/tutorial004.py!}

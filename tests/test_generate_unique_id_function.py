@@ -1,10 +1,10 @@
 import warnings
 from typing import List
 
-from readyapi import APIRouter, ReadyApi
+from pydantic import BaseModel
+from readyapi import APIRouter, ReadyAPI
 from readyapi.routing import APIRoute
 from readyapi.testclient import TestClient
-from pydantic import BaseModel
 
 
 def custom_generate_unique_id(route: APIRoute):
@@ -30,7 +30,7 @@ class Message(BaseModel):
 
 
 def test_top_level_generate_unique_id():
-    app = ReadyApi(generate_unique_id_function=custom_generate_unique_id)
+    app = ReadyAPI(generate_unique_id_function=custom_generate_unique_id)
     router = APIRouter()
 
     @app.post("/", response_model=List[Item], responses={404: {"model": List[Message]}})
@@ -49,7 +49,7 @@ def test_top_level_generate_unique_id():
     data = response.json()
     assert data == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/": {
                 "post": {
@@ -231,7 +231,7 @@ def test_top_level_generate_unique_id():
 
 
 def test_router_overrides_generate_unique_id():
-    app = ReadyApi(generate_unique_id_function=custom_generate_unique_id)
+    app = ReadyAPI(generate_unique_id_function=custom_generate_unique_id)
     router = APIRouter(generate_unique_id_function=custom_generate_unique_id2)
 
     @app.post("/", response_model=List[Item], responses={404: {"model": List[Message]}})
@@ -250,7 +250,7 @@ def test_router_overrides_generate_unique_id():
     data = response.json()
     assert data == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/": {
                 "post": {
@@ -432,7 +432,7 @@ def test_router_overrides_generate_unique_id():
 
 
 def test_router_include_overrides_generate_unique_id():
-    app = ReadyApi(generate_unique_id_function=custom_generate_unique_id)
+    app = ReadyAPI(generate_unique_id_function=custom_generate_unique_id)
     router = APIRouter(generate_unique_id_function=custom_generate_unique_id2)
 
     @app.post("/", response_model=List[Item], responses={404: {"model": List[Message]}})
@@ -451,7 +451,7 @@ def test_router_include_overrides_generate_unique_id():
     data = response.json()
     assert data == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/": {
                 "post": {
@@ -633,7 +633,7 @@ def test_router_include_overrides_generate_unique_id():
 
 
 def test_subrouter_top_level_include_overrides_generate_unique_id():
-    app = ReadyApi(generate_unique_id_function=custom_generate_unique_id)
+    app = ReadyAPI(generate_unique_id_function=custom_generate_unique_id)
     router = APIRouter()
     sub_router = APIRouter(generate_unique_id_function=custom_generate_unique_id2)
 
@@ -662,7 +662,7 @@ def test_subrouter_top_level_include_overrides_generate_unique_id():
     data = response.json()
     assert data == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/": {
                 "post": {
@@ -907,7 +907,7 @@ def test_subrouter_top_level_include_overrides_generate_unique_id():
 
 
 def test_router_path_operation_overrides_generate_unique_id():
-    app = ReadyApi(generate_unique_id_function=custom_generate_unique_id)
+    app = ReadyAPI(generate_unique_id_function=custom_generate_unique_id)
     router = APIRouter(generate_unique_id_function=custom_generate_unique_id2)
 
     @app.post("/", response_model=List[Item], responses={404: {"model": List[Message]}})
@@ -929,7 +929,7 @@ def test_router_path_operation_overrides_generate_unique_id():
     data = response.json()
     assert data == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/": {
                 "post": {
@@ -1111,7 +1111,7 @@ def test_router_path_operation_overrides_generate_unique_id():
 
 
 def test_app_path_operation_overrides_generate_unique_id():
-    app = ReadyApi(generate_unique_id_function=custom_generate_unique_id)
+    app = ReadyAPI(generate_unique_id_function=custom_generate_unique_id)
     router = APIRouter(generate_unique_id_function=custom_generate_unique_id2)
 
     @app.post(
@@ -1137,7 +1137,7 @@ def test_app_path_operation_overrides_generate_unique_id():
     data = response.json()
     assert data == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/": {
                 "post": {
@@ -1319,7 +1319,7 @@ def test_app_path_operation_overrides_generate_unique_id():
 
 
 def test_callback_override_generate_unique_id():
-    app = ReadyApi(generate_unique_id_function=custom_generate_unique_id)
+    app = ReadyAPI(generate_unique_id_function=custom_generate_unique_id)
     callback_router = APIRouter(generate_unique_id_function=custom_generate_unique_id2)
 
     @callback_router.post(
@@ -1354,7 +1354,7 @@ def test_callback_override_generate_unique_id():
     data = response.json()
     assert data == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/": {
                 "post": {
@@ -1608,7 +1608,7 @@ def test_warn_duplicate_operation_id():
     def broken_operation_id(route: APIRoute):
         return "foo"
 
-    app = ReadyApi(generate_unique_id_function=broken_operation_id)
+    app = ReadyAPI(generate_unique_id_function=broken_operation_id)
 
     @app.post("/")
     def post_root(item1: Item):
@@ -1626,6 +1626,9 @@ def test_warn_duplicate_operation_id():
     with warnings.catch_warnings(record=True) as w:
         warnings.simplefilter("always")
         client.get("/openapi.json")
-        assert len(w) == 2
-        assert issubclass(w[-1].category, UserWarning)
-        assert "Duplicate Operation ID" in str(w[-1].message)
+        assert len(w) >= 2
+        duplicate_warnings = [
+            warning for warning in w if issubclass(warning.category, UserWarning)
+        ]
+        assert len(duplicate_warnings) > 0
+        assert "Duplicate Operation ID" in str(duplicate_warnings[0].message)

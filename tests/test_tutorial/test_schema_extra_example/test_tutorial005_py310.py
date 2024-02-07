@@ -33,7 +33,7 @@ def test_openapi_schema(client: TestClient) -> None:
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/items/{item_id}": {
                 "put": {
@@ -73,7 +73,7 @@ def test_openapi_schema(client: TestClient) -> None:
                                     },
                                     "converted": {
                                         "summary": "An example with converted data",
-                                        "description": "ReadyApi can convert price `strings` to actual `numbers` automatically",
+                                        "description": "ReadyAPI can convert price `strings` to actual `numbers` automatically",
                                         "value": {"name": "Bar", "price": "35.4"},
                                     },
                                     "invalid": {

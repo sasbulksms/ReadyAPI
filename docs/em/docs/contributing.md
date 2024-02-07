@@ -1,6 +1,6 @@
 # 🛠️ - 📉
 
-🥇, 👆 💪 💚 👀 🔰 🌌 [ℹ ReadyApi &amp; 🤚 ℹ](help-readyapi.md){.internal-link target=_blank}.
+🥇, 👆 💪 💚 👀 🔰 🌌 [ℹ ReadyAPI &amp; 🤚 ℹ](help-readyapi.md){.internal-link target=_blank}.
 
 ## 🛠️
 
@@ -115,13 +115,13 @@ $ pip install -r requirements.txt
 
 </div>
 
-⚫️ 🔜 ❎ 🌐 🔗 &amp; 👆 🇧🇿 ReadyApi 👆 🇧🇿 🌐.
+⚫️ 🔜 ❎ 🌐 🔗 &amp; 👆 🇧🇿 ReadyAPI 👆 🇧🇿 🌐.
 
-#### ⚙️ 👆 🇧🇿 ReadyApi
+#### ⚙️ 👆 🇧🇿 ReadyAPI
 
-🚥 👆 ✍ 🐍 📁 👈 🗄 &amp; ⚙️ ReadyApi, &amp; 🏃 ⚫️ ⏮️ 🐍 ⚪️➡️ 👆 🇧🇿 🌐, ⚫️ 🔜 ⚙️ 👆 🇧🇿 ReadyApi ℹ 📟.
+🚥 👆 ✍ 🐍 📁 👈 🗄 &amp; ⚙️ ReadyAPI, &amp; 🏃 ⚫️ ⏮️ 🐍 ⚪️➡️ 👆 🇧🇿 🌐, ⚫️ 🔜 ⚙️ 👆 🇧🇿 ReadyAPI ℹ 📟.
 
-&amp; 🚥 👆 ℹ 👈 🇧🇿 ReadyApi ℹ 📟, ⚫️ ❎ ⏮️ `-e`, 🕐❔ 👆 🏃 👈 🐍 📁 🔄, ⚫️ 🔜 ⚙️ 🍋 ⏬ ReadyApi 👆 ✍.
+&amp; 🚥 👆 ℹ 👈 🇧🇿 ReadyAPI ℹ 📟, ⚫️ ❎ ⏮️ `-e`, 🕐❔ 👆 🏃 👈 🐍 📁 🔄, ⚫️ 🔜 ⚙️ 🍋 ⏬ ReadyAPI 👆 ✍.
 
 👈 🌌, 👆 🚫 ✔️ "❎" 👆 🇧🇿 ⏬ 💪 💯 🔠 🔀.
 
@@ -139,7 +139,7 @@ $ bash scripts/format.sh
 
 ⚫️ 🔜 🚘-😇 🌐 👆 🗄.
 
-⚫️ 😇 👫 ☑, 👆 💪 ✔️ ReadyApi ❎ 🌐 👆 🌐, ⏮️ 📋 📄 🔛 ⚙️ `-e`.
+⚫️ 😇 👫 ☑, 👆 💪 ✔️ ReadyAPI ❎ 🌐 👆 🌐, ⏮️ 📋 📄 🔛 ⚙️ `-e`.
 
 ## 🩺
 
@@ -280,7 +280,7 @@ $ python ./scripts/docs.py live es
 
 🔜 👆 💪 🚶 <a href="http://127.0.0.1:8008" class="external-link" target="_blank">http://127.0.0.1:8008</a> &amp; 👀 👆 🔀 🖖.
 
-🚥 👆 👀 ReadyApi 🩺 🕸, 👆 🔜 👀 👈 🔠 🇪🇸 ✔️ 🌐 📃. ✋️ 📃 🚫 💬 &amp; ✔️ 📨 🔃 ❌ ✍.
+🚥 👆 👀 ReadyAPI 🩺 🕸, 👆 🔜 👀 👈 🔠 🇪🇸 ✔️ 🌐 📃. ✋️ 📃 🚫 💬 &amp; ✔️ 📨 🔃 ❌ ✍.
 
 ✋️ 🕐❔ 👆 🏃 ⚫️ 🌐 💖 👉, 👆 🔜 🕴 👀 📃 👈 ⏪ 💬.
 
@@ -310,10 +310,10 @@ docs/en/mkdocs.yml
 * 🔎 🥉 🌐❔ 👈 `docs/features.md` 🔎 📁 📁. 👱 💖:
 
 ```YAML hl_lines="8"
-site_name: ReadyApi
+site_name: ReadyAPI
 # More stuff
 nav:
-- ReadyApi: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -329,10 +329,10 @@ docs/es/mkdocs.yml
 * 🚮 ⚫️ 📤 ☑ 🎏 🗺 ⚫️ 🇪🇸, ✅:
 
 ```YAML hl_lines="8"
-site_name: ReadyApi
+site_name: ReadyAPI
 # More stuff
 nav:
-- ReadyApi: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -395,7 +395,7 @@ jinja2.exceptions.TemplateNotFound: partials/language/xx.html
 🚥 👆 💪 👈, ✍ `mkdocs.yml` 👆 🆕 🇪🇸, ⚫️ 🔜 ✔️ 🕳 💖:
 
 ```YAML hl_lines="5"
-site_name: ReadyApi
+site_name: ReadyAPI
 # More stuff
 theme:
   # More stuff

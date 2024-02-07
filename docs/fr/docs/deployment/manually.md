@@ -1,6 +1,6 @@
 # Exécuter un serveur manuellement - Uvicorn
 
-La principale chose dont vous avez besoin pour exécuter une application **ReadyApi** sur une machine serveur distante est un programme serveur ASGI tel que **Uvicorn**.
+La principale chose dont vous avez besoin pour exécuter une application **ReadyAPI** sur une machine serveur distante est un programme serveur ASGI tel que **Uvicorn**.
 
 Il existe 3 principales alternatives :
 
@@ -97,7 +97,7 @@ Vous pouvez ensuite exécuter votre application de la même manière que vous l'
 
 ## Hypercorn avec Trio
 
-Starlette et **ReadyApi** sont basés sur
+Starlette et **ReadyAPI** sont basés sur
 <a href="https://anyio.readthedocs.io/en/stable/" class="external-link" target="_blank">AnyIO</a>, qui les rend
 compatibles avec <a href="https://docs.python.org/3/library/asyncio-task.html" class="external-link" target="_blank">asyncio</a>, de la bibliothèque standard Python et
 <a href="https://trio.readthedocs.io/en/stable/" class="external-link" target="_blank">Trio</a>.

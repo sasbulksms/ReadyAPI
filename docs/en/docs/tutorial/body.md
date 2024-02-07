@@ -11,7 +11,7 @@ To declare a **request** body, you use <a href="https://pydantic-docs.helpmanual
 !!! info
     To send data, you should use one of: `POST` (the more common), `PUT`, `DELETE` or `PATCH`.
 
-    Sending a body with a `GET` request has an undefined behavior in the specifications, nevertheless, it is supported by ReadyApi, only for very complex/extreme use cases.
+    Sending a body with a `GET` request has an undefined behavior in the specifications, nevertheless, it is supported by ReadyAPI, only for very complex/extreme use cases.
 
     As it is discouraged, the interactive docs with Swagger UI won't show the documentation for the body when using `GET`, and proxies in the middle might not support it.
 
@@ -25,7 +25,7 @@ First, you need to import `BaseModel` from `pydantic`:
     {!> ../../../docs_src/body/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="4"
     {!> ../../../docs_src/body/tutorial001.py!}
@@ -43,7 +43,7 @@ Use standard Python types for all the attributes:
     {!> ../../../docs_src/body/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="7-11"
     {!> ../../../docs_src/body/tutorial001.py!}
@@ -81,7 +81,7 @@ To add it to your *path operation*, declare it the same way you declared path an
     {!> ../../../docs_src/body/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="18"
     {!> ../../../docs_src/body/tutorial001.py!}
@@ -91,7 +91,7 @@ To add it to your *path operation*, declare it the same way you declared path an
 
 ## Results
 
-With just that Python type declaration, **ReadyApi** will:
+With just that Python type declaration, **ReadyAPI** will:
 
 * Read the body of the request as JSON.
 * Convert the corresponding types (if needed).
@@ -155,7 +155,7 @@ Inside of the function, you can access all the attributes of the model object di
     {!> ../../../docs_src/body/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="21"
     {!> ../../../docs_src/body/tutorial002.py!}
@@ -165,7 +165,7 @@ Inside of the function, you can access all the attributes of the model object di
 
 You can declare path parameters and request body at the same time.
 
-**ReadyApi** will recognize that the function parameters that match path parameters should be **taken from the path**, and that function parameters that are declared to be Pydantic models should be **taken from the request body**.
+**ReadyAPI** will recognize that the function parameters that match path parameters should be **taken from the path**, and that function parameters that are declared to be Pydantic models should be **taken from the request body**.
 
 === "Python 3.10+"
 
@@ -173,7 +173,7 @@ You can declare path parameters and request body at the same time.
     {!> ../../../docs_src/body/tutorial003_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="17-18"
     {!> ../../../docs_src/body/tutorial003.py!}
@@ -183,7 +183,7 @@ You can declare path parameters and request body at the same time.
 
 You can also declare **body**, **path** and **query** parameters, all at the same time.
 
-**ReadyApi** will recognize each of them and take the data from the correct place.
+**ReadyAPI** will recognize each of them and take the data from the correct place.
 
 === "Python 3.10+"
 
@@ -191,7 +191,7 @@ You can also declare **body**, **path** and **query** parameters, all at the sam
     {!> ../../../docs_src/body/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="18"
     {!> ../../../docs_src/body/tutorial004.py!}
@@ -204,9 +204,9 @@ The function parameters will be recognized as follows:
 * If the parameter is declared to be of the type of a **Pydantic model**, it will be interpreted as a request **body**.
 
 !!! note
-    ReadyApi will know that the value of `q` is not required because of the default value `= None`.
+    ReadyAPI will know that the value of `q` is not required because of the default value `= None`.
 
-    The `Union` in `Union[str, None]` is not used by ReadyApi, but will allow your editor to give you better support and detect errors.
+    The `Union` in `Union[str, None]` is not used by ReadyAPI, but will allow your editor to give you better support and detect errors.
 
 ## Without Pydantic
 

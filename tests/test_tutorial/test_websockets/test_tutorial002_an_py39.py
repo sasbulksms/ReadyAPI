@@ -1,5 +1,5 @@
 import pytest
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 from readyapi.websockets import WebSocketDisconnect
 
@@ -14,7 +14,7 @@ def get_app():
 
 
 @needs_py39
-def test_main(app: ReadyApi):
+def test_main(app: ReadyAPI):
     client = TestClient(app)
     response = client.get("/")
     assert response.status_code == 200, response.text
@@ -22,7 +22,7 @@ def test_main(app: ReadyApi):
 
 
 @needs_py39
-def test_websocket_with_cookie(app: ReadyApi):
+def test_websocket_with_cookie(app: ReadyAPI):
     client = TestClient(app, cookies={"session": "fakesession"})
     with pytest.raises(WebSocketDisconnect):
         with client.websocket_connect("/items/foo/ws") as websocket:
@@ -41,7 +41,7 @@ def test_websocket_with_cookie(app: ReadyApi):
 
 
 @needs_py39
-def test_websocket_with_header(app: ReadyApi):
+def test_websocket_with_header(app: ReadyAPI):
     client = TestClient(app)
     with pytest.raises(WebSocketDisconnect):
         with client.websocket_connect("/items/bar/ws?token=some-token") as websocket:
@@ -60,7 +60,7 @@ def test_websocket_with_header(app: ReadyApi):
 
 
 @needs_py39
-def test_websocket_with_header_and_query(app: ReadyApi):
+def test_websocket_with_header_and_query(app: ReadyAPI):
     client = TestClient(app)
     with pytest.raises(WebSocketDisconnect):
         with client.websocket_connect("/items/2/ws?q=3&token=some-token") as websocket:
@@ -83,7 +83,7 @@ def test_websocket_with_header_and_query(app: ReadyApi):
 
 
 @needs_py39
-def test_websocket_no_credentials(app: ReadyApi):
+def test_websocket_no_credentials(app: ReadyAPI):
     client = TestClient(app)
     with pytest.raises(WebSocketDisconnect):
         with client.websocket_connect("/items/foo/ws"):
@@ -93,7 +93,7 @@ def test_websocket_no_credentials(app: ReadyApi):
 
 
 @needs_py39
-def test_websocket_invalid_data(app: ReadyApi):
+def test_websocket_invalid_data(app: ReadyAPI):
     client = TestClient(app)
     with pytest.raises(WebSocketDisconnect):
         with client.websocket_connect("/items/foo/ws?q=bar&token=some-token"):

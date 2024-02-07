@@ -12,7 +12,7 @@
     {!> ../../../docs_src/dependencies/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/dependencies/tutorial001.py!}
@@ -69,11 +69,11 @@ fluffy = Cat(name="Mr Fluffy")
 
 所以，Python 类也是 **可调用对象**。
 
-因此，在 **ReadyApi** 中，你可以使用一个 Python 类作为一个依赖项。
+因此，在 **ReadyAPI** 中，你可以使用一个 Python 类作为一个依赖项。
 
-实际上 ReadyApi 检查的是它是一个 "可调用对象"（函数，类或其他任何类型）以及定义的参数。
+实际上 ReadyAPI 检查的是它是一个 "可调用对象"（函数，类或其他任何类型）以及定义的参数。
 
-如果您在 **ReadyApi** 中传递一个 "可调用对象" 作为依赖项，它将分析该 "可调用对象" 的参数，并以处理路径操作函数的参数的方式来处理它们。包括子依赖项。
+如果您在 **ReadyAPI** 中传递一个 "可调用对象" 作为依赖项，它将分析该 "可调用对象" 的参数，并以处理路径操作函数的参数的方式来处理它们。包括子依赖项。
 
 这也适用于完全没有参数的可调用对象。这与不带参数的路径操作函数一样。
 
@@ -85,7 +85,7 @@ fluffy = Cat(name="Mr Fluffy")
     {!> ../../../docs_src/dependencies/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="11-15"
     {!> ../../../docs_src/dependencies/tutorial002.py!}
@@ -119,7 +119,7 @@ fluffy = Cat(name="Mr Fluffy")
     {!> ../../../docs_src/dependencies/tutorial001.py!}
     ```
 
-这些参数就是 **ReadyApi** 用来 "处理" 依赖项的。
+这些参数就是 **ReadyAPI** 用来 "处理" 依赖项的。
 
 在两个例子下，都有：
 
@@ -145,7 +145,7 @@ fluffy = Cat(name="Mr Fluffy")
     {!> ../../../docs_src/dependencies/tutorial002.py!}
     ```
 
-**ReadyApi** 调用 `CommonQueryParams` 类。这将创建该类的一个 "实例"，该实例将作为参数 `commons` 被传递给你的函数。
+**ReadyAPI** 调用 `CommonQueryParams` 类。这将创建该类的一个 "实例"，该实例将作为参数 `commons` 被传递给你的函数。
 
 ## 类型注解 vs `Depends`
 
@@ -163,7 +163,7 @@ commons: CommonQueryParams = Depends(CommonQueryParams)
 
 ...实际上是 **Readyapi** 用来知道依赖项是什么的。
 
-ReadyApi 将从依赖项中提取声明的参数，这才是 ReadyApi 实际调用的。
+ReadyAPI 将从依赖项中提取声明的参数，这才是 ReadyAPI 实际调用的。
 
 ---
 
@@ -173,7 +173,7 @@ ReadyApi 将从依赖项中提取声明的参数，这才是 ReadyApi 实际调�
 commons: CommonQueryParams ...
 ```
 
-...对于 **ReadyApi** 没有任何特殊的意义。ReadyApi 不会使用它进行数据转换、验证等 (因为对于这，它使用 `= Depends(CommonQueryParams)`)。
+...对于 **ReadyAPI** 没有任何特殊的意义。ReadyAPI 不会使用它进行数据转换、验证等 (因为对于这，它使用 `= Depends(CommonQueryParams)`)。
 
 你实际上可以只这样编写:
 
@@ -207,7 +207,7 @@ commons = Depends(CommonQueryParams)
 commons: CommonQueryParams = Depends(CommonQueryParams)
 ```
 
-**ReadyApi** 为这些情况提供了一个快捷方式，在这些情况下，依赖项 *明确地* 是一个类，**ReadyApi** 将 "调用" 它来创建类本身的一个实例。
+**ReadyAPI** 为这些情况提供了一个快捷方式，在这些情况下，依赖项 *明确地* 是一个类，**ReadyAPI** 将 "调用" 它来创建类本身的一个实例。
 
 对于这些特定的情况，您可以跟随以下操作：
 
@@ -239,9 +239,9 @@ commons: CommonQueryParams = Depends()
     {!> ../../../docs_src/dependencies/tutorial004.py!}
     ```
 
-... **ReadyApi** 会知道怎么处理。
+... **ReadyAPI** 会知道怎么处理。
 
 !!! tip
     如果这看起来更加混乱而不是更加有帮助，那么请忽略它，你不*需要*它。
 
-    这只是一个快捷方式。因为 **ReadyApi** 关心的是帮助您减少代码重复。
+    这只是一个快捷方式。因为 **ReadyAPI** 关心的是帮助您减少代码重复。

@@ -18,7 +18,7 @@ In the previous example, we were returning a `dict` from our dependency ("depend
     {!> ../../../docs_src/dependencies/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="12"
     {!> ../../../docs_src/dependencies/tutorial001_an.py!}
@@ -33,7 +33,7 @@ In the previous example, we were returning a `dict` from our dependency ("depend
     {!> ../../../docs_src/dependencies/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -93,11 +93,11 @@ And to create `fluffy`, you are "calling" `Cat`.
 
 So, a Python class is also a **callable**.
 
-Then, in **ReadyApi**, you could use a Python class as a dependency.
+Then, in **ReadyAPI**, you could use a Python class as a dependency.
 
-What ReadyApi actually checks is that it is a "callable" (function, class or anything else) and the parameters defined.
+What ReadyAPI actually checks is that it is a "callable" (function, class or anything else) and the parameters defined.
 
-If you pass a "callable" as a dependency in **ReadyApi**, it will analyze the parameters for that "callable", and process them in the same way as the parameters for a *path operation function*. Including sub-dependencies.
+If you pass a "callable" as a dependency in **ReadyAPI**, it will analyze the parameters for that "callable", and process them in the same way as the parameters for a *path operation function*. Including sub-dependencies.
 
 That also applies to callables with no parameters at all. The same as it would be for *path operation functions* with no parameters.
 
@@ -115,7 +115,7 @@ Then, we can change the dependency "dependable" `common_parameters` from above t
     {!> ../../../docs_src/dependencies/tutorial002_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="12-16"
     {!> ../../../docs_src/dependencies/tutorial002_an.py!}
@@ -130,7 +130,7 @@ Then, we can change the dependency "dependable" `common_parameters` from above t
     {!> ../../../docs_src/dependencies/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -153,7 +153,7 @@ Pay attention to the `__init__` method used to create the instance of the class:
     {!> ../../../docs_src/dependencies/tutorial002_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="13"
     {!> ../../../docs_src/dependencies/tutorial002_an.py!}
@@ -168,7 +168,7 @@ Pay attention to the `__init__` method used to create the instance of the class:
     {!> ../../../docs_src/dependencies/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -191,7 +191,7 @@ Pay attention to the `__init__` method used to create the instance of the class:
     {!> ../../../docs_src/dependencies/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="10"
     {!> ../../../docs_src/dependencies/tutorial001_an.py!}
@@ -206,7 +206,7 @@ Pay attention to the `__init__` method used to create the instance of the class:
     {!> ../../../docs_src/dependencies/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -215,7 +215,7 @@ Pay attention to the `__init__` method used to create the instance of the class:
     {!> ../../../docs_src/dependencies/tutorial001.py!}
     ```
 
-Those parameters are what **ReadyApi** will use to "solve" the dependency.
+Those parameters are what **ReadyAPI** will use to "solve" the dependency.
 
 In both cases, it will have:
 
@@ -241,7 +241,7 @@ Now you can declare your dependency using this class.
     {!> ../../../docs_src/dependencies/tutorial002_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="20"
     {!> ../../../docs_src/dependencies/tutorial002_an.py!}
@@ -256,7 +256,7 @@ Now you can declare your dependency using this class.
     {!> ../../../docs_src/dependencies/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -265,13 +265,13 @@ Now you can declare your dependency using this class.
     {!> ../../../docs_src/dependencies/tutorial002.py!}
     ```
 
-**ReadyApi** calls the `CommonQueryParams` class. This creates an "instance" of that class and the instance will be passed as the parameter `commons` to your function.
+**ReadyAPI** calls the `CommonQueryParams` class. This creates an "instance" of that class and the instance will be passed as the parameter `commons` to your function.
 
 ## Type annotation vs `Depends`
 
 Notice how we write `CommonQueryParams` twice in the above code:
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -280,7 +280,7 @@ Notice how we write `CommonQueryParams` twice in the above code:
     commons: CommonQueryParams = Depends(CommonQueryParams)
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     commons: Annotated[CommonQueryParams, Depends(CommonQueryParams)]
@@ -292,21 +292,21 @@ The last `CommonQueryParams`, in:
 ... Depends(CommonQueryParams)
 ```
 
-...is what **ReadyApi** will actually use to know what is the dependency.
+...is what **ReadyAPI** will actually use to know what is the dependency.
 
-From it is that ReadyApi will extract the declared parameters and that is what ReadyApi will actually call.
+From it is that ReadyAPI will extract the declared parameters and that is what ReadyAPI will actually call.
 
 ---
 
 In this case, the first `CommonQueryParams`, in:
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     commons: Annotated[CommonQueryParams, ...
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -315,17 +315,17 @@ In this case, the first `CommonQueryParams`, in:
     commons: CommonQueryParams ...
     ```
 
-...doesn't have any special meaning for **ReadyApi**. ReadyApi won't use it for data conversion, validation, etc. (as it is using the `Depends(CommonQueryParams)` for that).
+...doesn't have any special meaning for **ReadyAPI**. ReadyAPI won't use it for data conversion, validation, etc. (as it is using the `Depends(CommonQueryParams)` for that).
 
 You could actually write just:
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     commons: Annotated[Any, Depends(CommonQueryParams)]
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -348,7 +348,7 @@ You could actually write just:
     {!> ../../../docs_src/dependencies/tutorial003_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="20"
     {!> ../../../docs_src/dependencies/tutorial003_an.py!}
@@ -363,7 +363,7 @@ You could actually write just:
     {!> ../../../docs_src/dependencies/tutorial003_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -380,7 +380,7 @@ But declaring the type is encouraged as that way your editor will know what will
 
 But you see that we are having some code repetition here, writing `CommonQueryParams` twice:
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -389,25 +389,25 @@ But you see that we are having some code repetition here, writing `CommonQueryPa
     commons: CommonQueryParams = Depends(CommonQueryParams)
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     commons: Annotated[CommonQueryParams, Depends(CommonQueryParams)]
     ```
 
-**ReadyApi** provides a shortcut for these cases, in where the dependency is *specifically* a class that **ReadyApi** will "call" to create an instance of the class itself.
+**ReadyAPI** provides a shortcut for these cases, in where the dependency is *specifically* a class that **ReadyAPI** will "call" to create an instance of the class itself.
 
 For those specific cases, you can do the following:
 
 Instead of writing:
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     commons: Annotated[CommonQueryParams, Depends(CommonQueryParams)]
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -418,13 +418,13 @@ Instead of writing:
 
 ...you write:
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     commons: Annotated[CommonQueryParams, Depends()]
     ```
 
-=== "Python 3.6 non-Annotated"
+=== "Python 3.8 non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -449,7 +449,7 @@ The same example would then look like:
     {!> ../../../docs_src/dependencies/tutorial004_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="20"
     {!> ../../../docs_src/dependencies/tutorial004_an.py!}
@@ -464,7 +464,7 @@ The same example would then look like:
     {!> ../../../docs_src/dependencies/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -473,9 +473,9 @@ The same example would then look like:
     {!> ../../../docs_src/dependencies/tutorial004.py!}
     ```
 
-...and **ReadyApi** will know what to do.
+...and **ReadyAPI** will know what to do.
 
 !!! tip
     If that seems more confusing than helpful, disregard it, you don't *need* it.
 
-    It is just a shortcut. Because **ReadyApi** cares about helping you minimize code repetition.
+    It is just a shortcut. Because **ReadyAPI** cares about helping you minimize code repetition.

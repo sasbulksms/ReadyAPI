@@ -1,7 +1,7 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.routing import APIRoute
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/")
@@ -9,7 +9,7 @@ async def read_items():
     return [{"item_id": "Foo"}]
 
 
-def use_route_names_as_operation_ids(app: ReadyApi) -> None:
+def use_route_names_as_operation_ids(app: ReadyAPI) -> None:
     """
     Simplify operation IDs so that generated API clients have simpler function
     names.

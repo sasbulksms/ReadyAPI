@@ -1,7 +1,7 @@
-from readyapi import ReadyApi, Path, Query, status
+from readyapi import Path, Query, ReadyAPI, status
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/{repeated_alias}")
@@ -57,7 +57,7 @@ def test_openapi_schema():
                 },
             }
         },
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "openapi": "3.1.0",
         "paths": {
             "/{repeated_alias}": {

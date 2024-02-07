@@ -4,17 +4,17 @@ You can use a project generator to get started, as it includes a lot of the init
 
 A project generator will always have a very opinionated setup that you should update and adapt for your own needs, but it might be a good starting point for your project.
 
-## Full Stack ReadyApi PostgreSQL
+## Full Stack ReadyAPI PostgreSQL
 
 GitHub: <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-postgresql</a>
 
-### Full Stack ReadyApi PostgreSQL - Features
+### Full Stack ReadyAPI PostgreSQL - Features
 
 * Full **Docker** integration (Docker based).
 * Docker Swarm Mode deployment.
 * **Docker Compose** integration and optimization for local development.
 * **Production ready** Python web server using Uvicorn and Gunicorn.
-* Python <a href="https://github.com/khulnasoft/readyapi" class="external-link" target="_blank">**ReadyApi**</a> backend:
+* Python <a href="https://github.com/khulnasoft/readyapi" class="external-link" target="_blank">**ReadyAPI**</a> backend:
     * **Fast**: Very high performance, on par with **NodeJS** and **Go** (thanks to Starlette and Pydantic).
     * **Intuitive**: Great editor support. <abbr title="also known as auto-complete, autocompletion, IntelliSense">Completion</abbr> everywhere. Less time debugging.
     * **Easy**: Designed to be easy to use and learn. Less time reading docs.
@@ -52,7 +52,7 @@ GitHub: <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" c
 * Traefik integration, including Let's Encrypt **HTTPS** certificates automatic generation.
 * GitLab **CI** (continuous integration), including frontend and backend testing.
 
-## Full Stack ReadyApi Couchbase
+## Full Stack ReadyAPI Couchbase
 
 GitHub: <a href="https://github.com/khulnasoft/full-stack-readyapi-couchbase" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-couchbase</a>
 
@@ -60,21 +60,21 @@ GitHub: <a href="https://github.com/khulnasoft/full-stack-readyapi-couchbase" cl
 
 If you are starting a new project from scratch, check the alternatives here.
 
-For example, the project generator <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" class="external-link" target="_blank">Full Stack ReadyApi PostgreSQL</a> might be a better alternative, as it is actively maintained and used. And it includes all the new features and improvements.
+For example, the project generator <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" class="external-link" target="_blank">Full Stack ReadyAPI PostgreSQL</a> might be a better alternative, as it is actively maintained and used. And it includes all the new features and improvements.
 
 You are still free to use the Couchbase-based generator if you want to, it should probably still work fine, and if you already have a project generated with it that's fine as well (and you probably already updated it to suit your needs).
 
 You can read more about it in the docs for the repo.
 
-## Full Stack ReadyApi MongoDB
+## Full Stack ReadyAPI MongoDB
 
 ...might come later, depending on my time availability and other factors. 😅 🎉
 
-## Machine Learning models with spaCy and ReadyApi
+## Machine Learning models with spaCy and ReadyAPI
 
 GitHub: <a href="https://github.com/microsoft/cookiecutter-spacy-readyapi" class="external-link" target="_blank">https://github.com/microsoft/cookiecutter-spacy-readyapi</a>
 
-### Machine Learning models with spaCy and ReadyApi - Features
+### Machine Learning models with spaCy and ReadyAPI - Features
 
 * **spaCy** NER model integration.
 * **Azure Cognitive Search** request format built in.

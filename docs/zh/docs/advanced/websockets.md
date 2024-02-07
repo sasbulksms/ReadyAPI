@@ -1,6 +1,6 @@
 # WebSockets
 
-您可以在 **ReadyApi** 中使用 [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)。
+您可以在 **ReadyAPI** 中使用 [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)。
 
 ## 安装 `WebSockets`
 
@@ -40,7 +40,7 @@ $ pip install websockets
 
 ## 创建 `websocket`
 
-在您的 **ReadyApi** 应用程序中，创建一个 `websocket`：
+在您的 **ReadyAPI** 应用程序中，创建一个 `websocket`：
 
 ```Python hl_lines="1  46-47"
 {!../../../docs_src/websockets/tutorial001.py!}
@@ -49,7 +49,7 @@ $ pip install websockets
 !!! note "技术细节"
     您也可以使用 `from starlette.websockets import WebSocket`。
 
-    **ReadyApi** 直接提供了相同的 `WebSocket`，只是为了方便开发人员。但它直接来自 Starlette。
+    **ReadyAPI** 直接提供了相同的 `WebSocket`，只是为了方便开发人员。但它直接来自 Starlette。
 
 ## 等待消息并发送消息
 
@@ -81,7 +81,7 @@ $ uvicorn main:app --reload
 
 <img src="/img/tutorial/websockets/image02.png">
 
-您的 **ReadyApi** 应用程序将回复：
+您的 **ReadyAPI** 应用程序将回复：
 
 <img src="/img/tutorial/websockets/image03.png">
 
@@ -104,7 +104,7 @@ $ uvicorn main:app --reload
 * `Path`
 * `Query`
 
-它们的工作方式与其他 ReadyApi 端点/ *路径操作* 相同：
+它们的工作方式与其他 ReadyAPI 端点/ *路径操作* 相同：
 
 === "Python 3.10+"
 
@@ -118,7 +118,7 @@ $ uvicorn main:app --reload
     {!> ../../../docs_src/websockets/tutorial002_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="69-70  83"
     {!> ../../../docs_src/websockets/tutorial002_an.py!}
@@ -133,7 +133,7 @@ $ uvicorn main:app --reload
     {!> ../../../docs_src/websockets/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+ 非带注解版本"
+=== "Python 3.8+ 非带注解版本"
 
     !!! tip
         如果可能，请尽量使用 `Annotated` 版本。
@@ -181,7 +181,7 @@ $ uvicorn main:app --reload
     {!> ../../../docs_src/websockets/tutorial003_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="81-83"
     {!> ../../../docs_src/websockets/tutorial003.py!}
@@ -204,7 +204,7 @@ Client #1596980209979 left the chat
 
     但请记住，由于所有内容都在内存中以单个列表的形式处理，因此它只能在进程运行时工作，并且只能使用单个进程。
 
-    如果您需要与 ReadyApi 集成更简单但更强大的功能，支持 Redis、PostgreSQL 或其他功能，请查看 [encode/broadcaster](https://github.com/encode/broadcaster)。
+    如果您需要与 ReadyAPI 集成更简单但更强大的功能，支持 Redis、PostgreSQL 或其他功能，请查看 [encode/broadcaster](https://github.com/encode/broadcaster)。
 
 ## 更多信息
 

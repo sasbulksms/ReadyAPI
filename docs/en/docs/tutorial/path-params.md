@@ -38,7 +38,7 @@ If you run this example and open your browser at <a href="http://127.0.0.1:8000/
 !!! check
     Notice that the value your function received (and returned) is `3`, as a Python `int`, not a string `"3"`.
 
-    So, with that type declaration, **ReadyApi** gives you automatic request <abbr title="converting the string that comes from an HTTP request into Python data">"parsing"</abbr>.
+    So, with that type declaration, **ReadyAPI** gives you automatic request <abbr title="converting the string that comes from an HTTP request into Python data">"parsing"</abbr>.
 
 ## Data validation
 
@@ -46,16 +46,18 @@ But if you go to the browser at <a href="http://127.0.0.1:8000/items/foo" class=
 
 ```JSON
 {
-    "detail": [
-        {
-            "loc": [
-                "path",
-                "item_id"
-            ],
-            "msg": "value is not a valid integer",
-            "type": "type_error.integer"
-        }
-    ]
+  "detail": [
+    {
+      "type": "int_parsing",
+      "loc": [
+        "path",
+        "item_id"
+      ],
+      "msg": "Input should be a valid integer, unable to parse string as an integer",
+      "input": "foo",
+      "url": "https://errors.pydantic.dev/2.1/v/int_parsing"
+    }
+  ]
 }
 ```
 
@@ -64,7 +66,7 @@ because the path parameter `item_id` had a value of `"foo"`, which is not an `in
 The same error would appear if you provided a `float` instead of an `int`, as in: <a href="http://127.0.0.1:8000/items/4.2" class="external-link" target="_blank">http://127.0.0.1:8000/items/4.2</a>
 
 !!! check
-    So, with the same Python type declaration, **ReadyApi** gives you data validation.
+    So, with the same Python type declaration, **ReadyAPI** gives you data validation.
 
     Notice that the error also clearly states exactly the point where the validation didn't pass.
 
@@ -77,7 +79,7 @@ And when you open your browser at <a href="http://127.0.0.1:8000/docs" class="ex
 <img src="/img/tutorial/path-params/image01.png">
 
 !!! check
-    Again, just with that same Python type declaration, **ReadyApi** gives you automatic, interactive documentation (integrating Swagger UI).
+    Again, just with that same Python type declaration, **ReadyAPI** gives you automatic, interactive documentation (integrating Swagger UI).
 
     Notice that the path parameter is declared to be an integer.
 
@@ -85,7 +87,7 @@ And when you open your browser at <a href="http://127.0.0.1:8000/docs" class="ex
 
 And because the generated schema is from the <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.1.0.md" class="external-link" target="_blank">OpenAPI</a> standard, there are many compatible tools.
 
-Because of this, **ReadyApi** itself provides an alternative API documentation (using ReDoc), which you can access at <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a>:
+Because of this, **ReadyAPI** itself provides an alternative API documentation (using ReDoc), which you can access at <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a>:
 
 <img src="/img/tutorial/path-params/image02.png">
 
@@ -213,7 +215,7 @@ So, the URL for that file would be something like: `/files/home/johndoe/myfile.t
 
 OpenAPI doesn't support a way to declare a *path parameter* to contain a *path* inside, as that could lead to scenarios that are difficult to test and define.
 
-Nevertheless, you can still do it in **ReadyApi**, using one of the internal tools from Starlette.
+Nevertheless, you can still do it in **ReadyAPI**, using one of the internal tools from Starlette.
 
 And the docs would still work, although not adding any documentation telling that the parameter should contain a path.
 
@@ -240,7 +242,7 @@ So, you can use it with:
 
 ## Recap
 
-With **ReadyApi**, by using short, intuitive and standard Python type declarations, you get:
+With **ReadyAPI**, by using short, intuitive and standard Python type declarations, you get:
 
 * Editor support: error checks, autocompletion, etc.
 * Data "<abbr title="converting the string that comes from an HTTP request into Python data">parsing</abbr>"
@@ -249,4 +251,4 @@ With **ReadyApi**, by using short, intuitive and standard Python type declaratio
 
 And you only have to declare them once.
 
-That's probably the main visible advantage of **ReadyApi** compared to alternative frameworks (apart from the raw performance).
+That's probably the main visible advantage of **ReadyAPI** compared to alternative frameworks (apart from the raw performance).

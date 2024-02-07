@@ -1,8 +1,8 @@
 from typing import Annotated
 
-from readyapi import ReadyApi, Form
+from readyapi import Form, ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.post("/login/")

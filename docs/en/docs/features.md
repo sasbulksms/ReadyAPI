@@ -1,8 +1,13 @@
+---
+hide:
+  - navigation
+---
+
 # Features
 
-## ReadyApi features
+## ReadyAPI features
 
-**ReadyApi** gives you the following:
+**ReadyAPI** gives you the following:
 
 ### Based on open standards
 
@@ -27,7 +32,7 @@ Interactive API documentation and exploration web user interfaces. As the framew
 
 It's all based on standard **Python 3.6 type** declarations (thanks to Pydantic). No new syntax to learn. Just standard modern Python.
 
-If you need a 2 minute refresher of how to use Python types (even if you don't use ReadyApi), check the short tutorial: [Python Types](python-types.md){.internal-link target=_blank}.
+If you need a 2 minute refresher of how to use Python types (even if you don't use ReadyAPI), check the short tutorial: [Python Types](python-types.md){.internal-link target=_blank}.
 
 You write standard Python with types:
 
@@ -74,7 +79,7 @@ All the framework was designed to be easy and intuitive to use, all the decision
 
 In the last Python developer survey it was clear <a href="https://www.jetbrains.com/research/python-developers-survey-2017/#tools-and-features" class="external-link" target="_blank">that the most used feature is "autocompletion"</a>.
 
-The whole **ReadyApi** framework is based to satisfy that. Autocompletion works everywhere.
+The whole **ReadyAPI** framework is based to satisfy that. Autocompletion works everywhere.
 
 You will rarely need to come back to the docs.
 
@@ -133,7 +138,7 @@ All built as reusable tools and components that are easy to integrate with your 
 
 ### Dependency Injection
 
-ReadyApi includes an extremely easy to use, but extremely powerful <abbr title='also known as "components", "resources", "services", "providers"'><strong>Dependency Injection</strong></abbr> system.
+ReadyAPI includes an extremely easy to use, but extremely powerful <abbr title='also known as "components", "resources", "services", "providers"'><strong>Dependency Injection</strong></abbr> system.
 
 * Even dependencies can have dependencies, creating a hierarchy or **"graph" of dependencies**.
 * All **automatically handled** by the framework.
@@ -156,11 +161,11 @@ Any integration is designed to be so simple to use (with dependencies) that you 
 
 ## Starlette features
 
-**ReadyApi** is fully compatible with (and based on) <a href="https://www.starlette.io/" class="external-link" target="_blank"><strong>Starlette</strong></a>. So, any additional Starlette code you have, will also work.
+**ReadyAPI** is fully compatible with (and based on) <a href="https://www.starlette.io/" class="external-link" target="_blank"><strong>Starlette</strong></a>. So, any additional Starlette code you have, will also work.
 
-`ReadyApi` is actually a sub-class of `Starlette`. So, if you already know or use Starlette, most of the functionality will work the same way.
+`ReadyAPI` is actually a sub-class of `Starlette`. So, if you already know or use Starlette, most of the functionality will work the same way.
 
-With **ReadyApi** you get all of **Starlette**'s features (as ReadyApi is just Starlette on steroids):
+With **ReadyAPI** you get all of **Starlette**'s features (as ReadyAPI is just Starlette on steroids):
 
 * Seriously impressive performance. It is <a href="https://github.com/encode/starlette#performance" class="external-link" target="_blank">one of the fastest Python frameworks available, on par with **NodeJS** and **Go**</a>.
 * **WebSocket** support.
@@ -174,7 +179,7 @@ With **ReadyApi** you get all of **Starlette**'s features (as ReadyApi is just S
 
 ## Pydantic features
 
-**ReadyApi** is fully compatible with (and based on) <a href="https://pydantic-docs.helpmanual.io" class="external-link" target="_blank"><strong>Pydantic</strong></a>. So, any additional Pydantic code you have, will also work.
+**ReadyAPI** is fully compatible with (and based on) <a href="https://pydantic-docs.helpmanual.io" class="external-link" target="_blank"><strong>Pydantic</strong></a>. So, any additional Pydantic code you have, will also work.
 
 Including external libraries also based on Pydantic, as <abbr title="Object-Relational Mapper">ORM</abbr>s, <abbr title="Object-Document Mapper">ODM</abbr>s for databases.
 
@@ -182,7 +187,7 @@ This also means that in many cases you can pass the same object you get from a r
 
 The same applies the other way around, in many cases you can just pass the object you get from the database **directly to the client**.
 
-With **ReadyApi** you get all of **Pydantic**'s features (as ReadyApi is based on Pydantic for all the data handling):
+With **ReadyAPI** you get all of **Pydantic**'s features (as ReadyAPI is based on Pydantic for all the data handling):
 
 * **No brainfuck**:
     * No new schema definition micro-language to learn.

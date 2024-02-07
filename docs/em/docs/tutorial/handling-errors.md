@@ -68,7 +68,7 @@
 
     👆 💪 🚶‍♀️ `dict`, `list`, ♒️.
 
-    👫 🍵 🔁 **ReadyApi** &amp; 🗜 🎻.
+    👫 🍵 🔁 **ReadyAPI** &amp; 🗜 🎻.
 
 ## 🚮 🛃 🎚
 
@@ -88,7 +88,7 @@
 
 ➡️ 💬 👆 ✔️ 🛃 ⚠ `UnicornException` 👈 👆 (⚖️ 🗃 👆 ⚙️) 💪 `raise`.
 
-&amp; 👆 💚 🍵 👉 ⚠ 🌐 ⏮️ ReadyApi.
+&amp; 👆 💚 🍵 👉 ⚠ 🌐 ⏮️ ReadyAPI.
 
 👆 💪 🚮 🛃 ⚠ 🐕‍🦺 ⏮️ `@app.exception_handler()`:
 
@@ -109,11 +109,11 @@
 !!! note "📡 ℹ"
     👆 💪 ⚙️ `from starlette.requests import Request` &amp; `from starlette.responses import JSONResponse`.
 
-    **ReadyApi** 🚚 🎏 `starlette.responses` `readyapi.responses` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 📨 👟 🔗 ⚪️➡️ 💃. 🎏 ⏮️ `Request`.
+    **ReadyAPI** 🚚 🎏 `starlette.responses` `readyapi.responses` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 📨 👟 🔗 ⚪️➡️ 💃. 🎏 ⏮️ `Request`.
 
 ## 🔐 🔢 ⚠ 🐕‍🦺
 
-**ReadyApi** ✔️ 🔢 ⚠ 🐕‍🦺.
+**ReadyAPI** ✔️ 🔢 ⚠ 🐕‍🦺.
 
 👫 🐕‍🦺 🈚 🛬 🔢 🎻 📨 🕐❔ 👆 `raise` `HTTPException` &amp; 🕐❔ 📨 ✔️ ❌ 💽.
 
@@ -121,7 +121,7 @@
 
 ### 🔐 📨 🔬 ⚠
 
-🕐❔ 📨 🔌 ❌ 📊, **ReadyApi** 🔘 🤚 `RequestValidationError`.
+🕐❔ 📨 🔌 ❌ 📊, **ReadyAPI** 🔘 🤚 `RequestValidationError`.
 
 &amp; ⚫️ 🔌 🔢 ⚠ 🐕‍🦺 ⚫️.
 
@@ -165,7 +165,7 @@ path -> item_id
 
 `RequestValidationError` 🎧-🎓 Pydantic <a href="https://pydantic-docs.helpmanual.io/usage/models/#error-handling" class="external-link" target="_blank">`ValidationError`</a>.
 
-**ReadyApi** ⚙️ ⚫️ 👈, 🚥 👆 ⚙️ Pydantic 🏷 `response_model`, &amp; 👆 💽 ✔️ ❌, 👆 🔜 👀 ❌ 👆 🕹.
+**ReadyAPI** ⚙️ ⚫️ 👈, 🚥 👆 ⚙️ Pydantic 🏷 `response_model`, &amp; 👆 💽 ✔️ ❌, 👆 🔜 👀 ❌ 👆 🕹.
 
 ✋️ 👩‍💻/👩‍💻 🔜 🚫 👀 ⚫️. ↩️, 👩‍💻 🔜 📨 "🔗 💽 ❌" ⏮️ 🇺🇸🔍 👔 📟 `500`.
 
@@ -186,7 +186,7 @@ path -> item_id
 !!! note "📡 ℹ"
     👆 💪 ⚙️ `from starlette.responses import PlainTextResponse`.
 
-    **ReadyApi** 🚚 🎏 `starlette.responses` `readyapi.responses` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 📨 👟 🔗 ⚪️➡️ 💃.
+    **ReadyAPI** 🚚 🎏 `starlette.responses` `readyapi.responses` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 📨 👟 🔗 ⚪️➡️ 💃.
 
 ### ⚙️ `RequestValidationError` 💪
 
@@ -228,17 +228,17 @@ path -> item_id
 }
 ```
 
-#### ReadyApi `HTTPException` 🆚 💃 `HTTPException`
+#### ReadyAPI `HTTPException` 🆚 💃 `HTTPException`
 
-**ReadyApi** ✔️ 🚮 👍 `HTTPException`.
+**ReadyAPI** ✔️ 🚮 👍 `HTTPException`.
 
-&amp; **ReadyApi**'Ⓜ `HTTPException` ❌ 🎓 😖 ⚪️➡️ 💃 `HTTPException` ❌ 🎓.
+&amp; **ReadyAPI**'Ⓜ `HTTPException` ❌ 🎓 😖 ⚪️➡️ 💃 `HTTPException` ❌ 🎓.
 
-🕴 🔺, 👈 **ReadyApi**'Ⓜ `HTTPException` ✔ 👆 🚮 🎚 🔌 📨.
+🕴 🔺, 👈 **ReadyAPI**'Ⓜ `HTTPException` ✔ 👆 🚮 🎚 🔌 📨.
 
 👉 💪/⚙️ 🔘 ✳ 2️⃣.0️⃣ &amp; 💂‍♂ 🚙.
 
-, 👆 💪 🚧 🙋‍♀ **ReadyApi**'Ⓜ `HTTPException` 🛎 👆 📟.
+, 👆 💪 🚧 🙋‍♀ **ReadyAPI**'Ⓜ `HTTPException` 🛎 👆 📟.
 
 ✋️ 🕐❔ 👆 ® ⚠ 🐕‍🦺, 👆 🔜 ® ⚫️ 💃 `HTTPException`.
 
@@ -250,9 +250,9 @@ path -> item_id
 from starlette.exceptions import HTTPException as StarletteHTTPException
 ```
 
-### 🏤-⚙️ **ReadyApi**'Ⓜ ⚠ 🐕‍🦺
+### 🏤-⚙️ **ReadyAPI**'Ⓜ ⚠ 🐕‍🦺
 
-🚥 👆 💚 ⚙️ ⚠ ⤴️ ⏮️ 🎏 🔢 ⚠ 🐕‍🦺 ⚪️➡️ **ReadyApi**, 👆 💪 🗄 &amp; 🏤-⚙️ 🔢 ⚠ 🐕‍🦺 ⚪️➡️ `readyapi.exception_handlers`:
+🚥 👆 💚 ⚙️ ⚠ ⤴️ ⏮️ 🎏 🔢 ⚠ 🐕‍🦺 ⚪️➡️ **ReadyAPI**, 👆 💪 🗄 &amp; 🏤-⚙️ 🔢 ⚠ 🐕‍🦺 ⚪️➡️ `readyapi.exception_handlers`:
 
 ```Python hl_lines="2-5  15  21"
 {!../../../docs_src/handling_errors/tutorial006.py!}

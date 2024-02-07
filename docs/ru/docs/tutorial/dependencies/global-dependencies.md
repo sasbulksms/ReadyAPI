@@ -2,7 +2,7 @@
 
 Для некоторых типов приложений может потребоваться добавить зависимости ко всему приложению.
 
-Подобно тому, как вы можете [добавлять зависимости через параметр `dependencies` в *декораторах операций пути*](dependencies-in-path-operation-decorators.md){.internal-link target=_blank}, вы можете добавлять зависимости сразу ко всему `ReadyApi` приложению.
+Подобно тому, как вы можете [добавлять зависимости через параметр `dependencies` в *декораторах операций пути*](dependencies-in-path-operation-decorators.md){.internal-link target=_blank}, вы можете добавлять зависимости сразу ко всему `ReadyAPI` приложению.
 
 В этом случае они будут применяться ко всем *операциям пути* в приложении:
 
@@ -12,13 +12,13 @@
     {!> ../../../docs_src/dependencies/tutorial012_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="16"
     {!> ../../../docs_src/dependencies/tutorial012_an.py!}
     ```
 
-=== "Python 3.6 non-Annotated"
+=== "Python 3.8 non-Annotated"
 
     !!! tip "Подсказка"
         Рекомендуется использовать 'Annotated' версию, если это возможно.

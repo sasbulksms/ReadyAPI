@@ -1,7 +1,7 @@
 from typing import List, Union
 
-from readyapi import ReadyApi
 from pydantic import BaseModel
+from readyapi import ReadyAPI
 
 
 class Item(BaseModel):
@@ -9,7 +9,7 @@ class Item(BaseModel):
     description: Union[str, None] = None
 
 
-app = ReadyApi(separate_input_output_schemas=False)
+app = ReadyAPI(separate_input_output_schemas=False)
 
 
 @app.post("/items/")

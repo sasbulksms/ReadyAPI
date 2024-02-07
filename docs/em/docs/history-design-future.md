@@ -1,6 +1,6 @@
 # 📖, 🔧 &amp; 🔮
 
-🕰 🏁, <a href="https://github.com/khulnasoft/readyapi/issues/3#issuecomment-454956920" class="external-link" target="_blank"> **ReadyApi** 👩‍💻 💭</a>:
+🕰 🏁, <a href="https://github.com/khulnasoft/readyapi/issues/3#issuecomment-454956920" class="external-link" target="_blank"> **ReadyAPI** 👩‍💻 💭</a>:
 
 &gt; ⚫️❔ 📖 👉 🏗 ❓ ⚫️ 😑 ✔️ 👟 ⚪️➡️ 🕳 👌 👩‍❤‍👨 🗓️ [...]
 
@@ -12,17 +12,17 @@
 
 🍕 👈, 👤 💪 🔬, 💯 &amp; ⚙️ 📚 🎛.
 
-📖 **ReadyApi** 👑 🍕 📖 🚮 ⏪.
+📖 **ReadyAPI** 👑 🍕 📖 🚮 ⏪.
 
 🙆‍♀ 📄 [🎛](alternatives.md){.internal-link target=_blank}:
 
 <blockquote markdown="1">
 
-**ReadyApi** 🚫🔜 🔀 🚥 🚫 ⏮️ 👷 🎏.
+**ReadyAPI** 🚫🔜 🔀 🚥 🚫 ⏮️ 👷 🎏.
 
 📤 ✔️ 📚 🧰 ✍ ⏭ 👈 ✔️ ℹ 😮 🚮 🏗.
 
-👤 ✔️ ❎ 🏗 🆕 🛠️ 📚 1️⃣2️⃣🗓️. 🥇 👤 🔄 ❎ 🌐 ⚒ 📔 **ReadyApi** ⚙️ 📚 🎏 🛠️, 🔌-🔌, &amp; 🧰.
+👤 ✔️ ❎ 🏗 🆕 🛠️ 📚 1️⃣2️⃣🗓️. 🥇 👤 🔄 ❎ 🌐 ⚒ 📔 **ReadyAPI** ⚙️ 📚 🎏 🛠️, 🔌-🔌, &amp; 🧰.
 
 ✋️ ☝, 📤 🙅‍♂ 🎏 🎛 🌘 🏗 🕳 👈 🚚 🌐 👫 ⚒, ✊ 🏆 💭 ⚪️➡️ ⏮️ 🧰, &amp; 🌀 👫 🏆 🌌 💪, ⚙️ 🇪🇸 ⚒ 👈 ➖🚫 💪 ⏭ (🐍 3️⃣.6️⃣ ➕ 🆎 🔑).
 
@@ -36,17 +36,17 @@
 
 , 🏆 🎯 ⚙️ ⏪ ♻ 🐩.
 
-, ⏭ ▶️ 📟 **ReadyApi**, 👤 💸 📚 🗓️ 🎓 🔌 🗄, 🎻 🔗, Oauth2️⃣, ♒️. 🎯 👫 💛, 🔀, &amp; 🔺.
+, ⏭ ▶️ 📟 **ReadyAPI**, 👤 💸 📚 🗓️ 🎓 🔌 🗄, 🎻 🔗, Oauth2️⃣, ♒️. 🎯 👫 💛, 🔀, &amp; 🔺.
 
 ## 🔧
 
-⤴️ 👤 💸 🕰 🔧 👩‍💻 "🛠️" 👤 💚 ✔️ 👩‍💻 (👩‍💻 ⚙️ ReadyApi).
+⤴️ 👤 💸 🕰 🔧 👩‍💻 "🛠️" 👤 💚 ✔️ 👩‍💻 (👩‍💻 ⚙️ ReadyAPI).
 
 👤 💯 📚 💭 🏆 🌟 🐍 👨‍🎨: 🗒, 🆚 📟, 🎠 🧢 👨‍🎨.
 
 🏁 <a href="https://www.jetbrains.com/research/python-developers-survey-2018/#development-tools" class="external-link" target="_blank">🐍 👩‍💻 🔬</a>, 👈 📔 🔃 8️⃣0️⃣ 💯 👩‍💻.
 
-⚫️ ⛓ 👈 **ReadyApi** 🎯 💯 ⏮️ 👨‍🎨 ⚙️ 8️⃣0️⃣ 💯 🐍 👩‍💻. &amp; 🏆 🎏 👨‍🎨 😑 👷 ➡, 🌐 🚮 💰 🔜 👷 🌖 🌐 👨‍🎨.
+⚫️ ⛓ 👈 **ReadyAPI** 🎯 💯 ⏮️ 👨‍🎨 ⚙️ 8️⃣0️⃣ 💯 🐍 👩‍💻. &amp; 🏆 🎏 👨‍🎨 😑 👷 ➡, 🌐 🚮 💰 🔜 👷 🌖 🌐 👨‍🎨.
 
 👈 🌌 👤 💪 🔎 🏆 🌌 📉 📟 ❎ 🌅 💪, ✔️ 🛠️ 🌐, 🆎 &amp; ❌ ✅, ♒️.
 
@@ -62,18 +62,18 @@
 
 ## 🛠️
 
-🕰 👤 ▶️ 🏗 **ReadyApi** ⚫️, 🏆 🍖 ⏪ 🥉, 🔧 🔬, 📄 &amp; 🧰 🔜, &amp; 💡 🔃 🐩 &amp; 🔧 🆑 &amp; 🍋.
+🕰 👤 ▶️ 🏗 **ReadyAPI** ⚫️, 🏆 🍖 ⏪ 🥉, 🔧 🔬, 📄 &amp; 🧰 🔜, &amp; 💡 🔃 🐩 &amp; 🔧 🆑 &amp; 🍋.
 
 ## 🔮
 
-👉 ☝, ⚫️ ⏪ 🆑 👈 **ReadyApi** ⏮️ 🚮 💭 ➖ ⚠ 📚 👫👫.
+👉 ☝, ⚫️ ⏪ 🆑 👈 **ReadyAPI** ⏮️ 🚮 💭 ➖ ⚠ 📚 👫👫.
 
 ⚫️ 💆‍♂ 👐 🤭 ⏮️ 🎛 ♣ 📚 ⚙️ 💼 👍.
 
-📚 👩‍💻 &amp; 🏉 ⏪ 🪀 🔛 **ReadyApi** 👫 🏗 (🔌 👤 &amp; 👇 🏉).
+📚 👩‍💻 &amp; 🏉 ⏪ 🪀 🔛 **ReadyAPI** 👫 🏗 (🔌 👤 &amp; 👇 🏉).
 
 ✋️, 📤 📚 📈 &amp; ⚒ 👟.
 
-**ReadyApi** ✔️ 👑 🔮 ⤴️.
+**ReadyAPI** ✔️ 👑 🔮 ⤴️.
 
 &amp; [👆 ℹ](help-readyapi.md){.internal-link target=_blank} 📉 👍.

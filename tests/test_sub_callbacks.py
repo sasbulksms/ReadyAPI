@@ -1,11 +1,11 @@
 from typing import Optional
 
 from dirty_equals import IsDict
-from readyapi import APIRouter, ReadyApi
-from readyapi.testclient import TestClient
 from pydantic import BaseModel, HttpUrl
+from readyapi import APIRouter, ReadyAPI
+from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Invoice(BaseModel):
@@ -89,7 +89,7 @@ def test_openapi_schema():
         response = client.get("/openapi.json")
         assert response.json() == {
             "openapi": "3.1.0",
-            "info": {"title": "ReadyApi", "version": "0.1.0"},
+            "info": {"title": "ReadyAPI", "version": "0.1.0"},
             "paths": {
                 "/invoices/": {
                     "post": {

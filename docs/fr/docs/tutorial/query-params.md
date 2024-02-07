@@ -70,17 +70,17 @@ De la même façon, vous pouvez définir des paramètres de requête comme optio
 Ici, le paramètre `q` sera optionnel, et aura `None` comme valeur par défaut.
 
 !!! check "Remarque"
-    On peut voir que **ReadyApi** est capable de détecter que le paramètre de chemin `item_id` est un paramètre de chemin et que `q` n'en est pas un, c'est donc un paramètre de requête.
+    On peut voir que **ReadyAPI** est capable de détecter que le paramètre de chemin `item_id` est un paramètre de chemin et que `q` n'en est pas un, c'est donc un paramètre de requête.
 
 !!! note
-    **ReadyApi** saura que `q` est optionnel grâce au `=None`.
+    **ReadyAPI** saura que `q` est optionnel grâce au `=None`.
 
-    Le `Optional` dans `Optional[str]` n'est pas utilisé par **ReadyApi** (**ReadyApi** n'en utilisera que la partie `str`), mais il servira tout de même à votre éditeur de texte pour détecter des erreurs dans votre code.
+    Le `Optional` dans `Optional[str]` n'est pas utilisé par **ReadyAPI** (**ReadyAPI** n'en utilisera que la partie `str`), mais il servira tout de même à votre éditeur de texte pour détecter des erreurs dans votre code.
 
 
 ## Conversion des types des paramètres de requête
 
-Vous pouvez aussi déclarer des paramètres de requête comme booléens (`bool`), **ReadyApi** les convertira :
+Vous pouvez aussi déclarer des paramètres de requête comme booléens (`bool`), **ReadyAPI** les convertira :
 
 ```Python hl_lines="9"
 {!../../../docs_src/query_params/tutorial003.py!}
@@ -120,7 +120,7 @@ ou n'importe quelle autre variation de casse (tout en majuscules, uniquement la 
 
 ## Multiples paramètres de chemin et de requête
 
-Vous pouvez déclarer plusieurs paramètres de chemin et paramètres de requête dans la même fonction, **ReadyApi** saura comment les gérer.
+Vous pouvez déclarer plusieurs paramètres de chemin et paramètres de requête dans la même fonction, **ReadyAPI** saura comment les gérer.
 
 Et vous n'avez pas besoin de les déclarer dans un ordre spécifique.
 

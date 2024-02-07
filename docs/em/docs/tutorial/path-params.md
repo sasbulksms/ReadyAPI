@@ -38,7 +38,7 @@
 !!! check
     👀 👈 💲 👆 🔢 📨 (&amp; 📨) `3`, 🐍 `int`, 🚫 🎻 `"3"`.
 
-    , ⏮️ 👈 🆎 📄, **ReadyApi** 🤝 👆 🏧 📨 <abbr title="converting the string that comes from an HTTP request into Python data">"✍"</abbr>.
+    , ⏮️ 👈 🆎 📄, **ReadyAPI** 🤝 👆 🏧 📨 <abbr title="converting the string that comes from an HTTP request into Python data">"✍"</abbr>.
 
 ## 💽 🔬
 
@@ -64,7 +64,7 @@
 🎏 ❌ 🔜 😑 🚥 👆 🚚 `float` ↩️ `int`,: <a href="http://127.0.0.1:8000/items/4.2" class="external-link" target="_blank">http://127.0.0.1:8000/items/4.2</a>
 
 !!! check
-    , ⏮️ 🎏 🐍 🆎 📄, **ReadyApi** 🤝 👆 💽 🔬.
+    , ⏮️ 🎏 🐍 🆎 📄, **ReadyAPI** 🤝 👆 💽 🔬.
 
     👀 👈 ❌ 🎯 🇵🇸 ⚫️❔ ☝ 🌐❔ 🔬 🚫 🚶‍♀️.
 
@@ -77,7 +77,7 @@
 <img src="/img/tutorial/path-params/image01.png">
 
 !!! check
-    🔄, ⏮️ 👈 🎏 🐍 🆎 📄, **ReadyApi** 🤝 👆 🏧, 🎓 🧾 (🛠️ 🦁 🎚).
+    🔄, ⏮️ 👈 🎏 🐍 🆎 📄, **ReadyAPI** 🤝 👆 🏧, 🎓 🧾 (🛠️ 🦁 🎚).
 
     👀 👈 ➡ 🔢 📣 🔢.
 
@@ -85,7 +85,7 @@
 
 &amp; ↩️ 🏗 🔗 ⚪️➡️ <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md" class="external-link" target="_blank">🗄</a> 🐩, 📤 📚 🔗 🧰.
 
-↩️ 👉, **ReadyApi** ⚫️ 🚚 🎛 🛠️ 🧾 (⚙️ 📄), ❔ 👆 💪 🔐 <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a>:
+↩️ 👉, **ReadyAPI** ⚫️ 🚚 🎛 🛠️ 🧾 (⚙️ 📄), ❔ 👆 💪 🔐 <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a>:
 
 <img src="/img/tutorial/path-params/image02.png">
 
@@ -213,7 +213,7 @@
 
 🗄 🚫 🐕‍🦺 🌌 📣 *➡ 🔢* 🔌 *➡* 🔘, 👈 💪 ↘️ 😐 👈 ⚠ 💯 &amp; 🔬.
 
-👐, 👆 💪 ⚫️ **ReadyApi**, ⚙️ 1️⃣ 🔗 🧰 ⚪️➡️ 💃.
+👐, 👆 💪 ⚫️ **ReadyAPI**, ⚙️ 1️⃣ 🔗 🧰 ⚪️➡️ 💃.
 
 &amp; 🩺 🔜 👷, 👐 🚫 ❎ 🙆 🧾 💬 👈 🔢 🔜 🔌 ➡.
 
@@ -240,7 +240,7 @@
 
 ## 🌃
 
-⏮️ **ReadyApi**, ⚙️ 📏, 🏋️ &amp; 🐩 🐍 🆎 📄, 👆 🤚:
+⏮️ **ReadyAPI**, ⚙️ 📏, 🏋️ &amp; 🐩 🐍 🆎 📄, 👆 🤚:
 
 * 👨‍🎨 🐕‍🦺: ❌ ✅, ✍, ♒️.
 * 💽 "<abbr title="converting the string that comes from an HTTP request into Python data">✍</abbr>"
@@ -249,4 +249,4 @@
 
 &amp; 👆 🕴 ✔️ 📣 👫 🕐.
 
-👈 🎲 👑 ⭐ 📈 **ReadyApi** 🔬 🎛 🛠️ (↖️ ⚪️➡️ 🍣 🎭).
+👈 🎲 👑 ⭐ 📈 **ReadyAPI** 🔬 🎛 🛠️ (↖️ ⚪️➡️ 🍣 🎭).

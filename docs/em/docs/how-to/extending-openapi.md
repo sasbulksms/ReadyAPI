@@ -15,7 +15,7 @@
 
 😐 (🔢) 🛠️, ⏩.
 
-`ReadyApi` 🈸 (👐) ✔️ `.openapi()` 👩‍🔬 👈 📈 📨 🗄 🔗.
+`ReadyAPI` 🈸 (👐) ✔️ `.openapi()` 👩‍🔬 👈 📈 📨 🗄 🔗.
 
 🍕 🈸 🎚 🏗, *➡ 🛠️* `/openapi.json` (⚖️ ⚫️❔ 👆 ⚒ 👆 `openapi_url`) ®.
 
@@ -39,9 +39,9 @@
 
 🖼, ➡️ 🚮 <a href="https://github.com/Rebilly/ReDoc/blob/master/docs/redoc-vendor-extensions.md#x-logo" class="external-link" target="_blank">📄 🗄 ↔ 🔌 🛃 🔱</a>.
 
-### 😐 **ReadyApi**
+### 😐 **ReadyAPI**
 
-🥇, ✍ 🌐 👆 **ReadyApi** 🈸 🛎:
+🥇, ✍ 🌐 👆 **ReadyAPI** 🈸 🛎:
 
 ```Python hl_lines="1  4  7-9"
 {!../../../docs_src/extending_openapi/tutorial001.py!}
@@ -85,6 +85,6 @@
 
 ### ✅ ⚫️
 
-🕐 👆 🚶 <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a> 👆 🔜 👀 👈 👆 ⚙️ 👆 🛃 🔱 (👉 🖼, **ReadyApi**'Ⓜ 🔱):
+🕐 👆 🚶 <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a> 👆 🔜 👀 👈 👆 ⚙️ 👆 🛃 🔱 (👉 🖼, **ReadyAPI**'Ⓜ 🔱):
 
 <img src="/img/tutorial/extending-openapi/image01.png">

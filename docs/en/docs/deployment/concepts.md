@@ -1,6 +1,6 @@
 # Deployments Concepts
 
-When deploying a **ReadyApi** application, or actually, any type of web API, there are several concepts that you probably care about, and using them you can find the **most appropriate** way to **deploy your application**.
+When deploying a **ReadyAPI** application, or actually, any type of web API, there are several concepts that you probably care about, and using them you can find the **most appropriate** way to **deploy your application**.
 
 Some of the important concepts are:
 
@@ -19,7 +19,7 @@ I'll tell you a bit more about these **concepts** here, and that would hopefully
 
 By considering these concepts, you will be able to **evaluate and design** the best way to deploy **your own APIs**.
 
-In the next chapters, I'll give you more **concrete recipes** to deploy ReadyApi applications.
+In the next chapters, I'll give you more **concrete recipes** to deploy ReadyAPI applications.
 
 But for now, let's check these important **conceptual ideas**. These concepts also apply to any other type of web API. 💡
 
@@ -104,7 +104,7 @@ And if the server is restarted (for example after updates, or migrations from th
 
 ### Run Automatically on Startup
 
-In general, you will probably want the server program (e.g. Uvicorn) to be started automatically on server startup, and without needing any **human intervention**, to have a process always running with your API (e.g. Uvicorn running your ReadyApi app).
+In general, you will probably want the server program (e.g. Uvicorn) to be started automatically on server startup, and without needing any **human intervention**, to have a process always running with your API (e.g. Uvicorn running your ReadyAPI app).
 
 ### Separate Program
 
@@ -137,7 +137,7 @@ And we as developers keep improving the code as we find those bugs and as we imp
 
 ### Small Errors Automatically Handled
 
-When building web APIs with ReadyApi, if there's an error in our code, ReadyApi will normally contain it to the single request that triggered the error. 🛡
+When building web APIs with ReadyAPI, if there's an error in our code, ReadyAPI will normally contain it to the single request that triggered the error. 🛡
 
 The client will get a **500 Internal Server Error** for that request, but the application will continue working for the next requests instead of just crashing completely.
 
@@ -175,7 +175,7 @@ For example, this could be handled by:
 
 ## Replication - Processes and Memory
 
-With a ReadyApi application, using a server program like Uvicorn, running it once in **one process** can serve multiple clients concurrently.
+With a ReadyAPI application, using a server program like Uvicorn, running it once in **one process** can serve multiple clients concurrently.
 
 But in many cases, you will want to run several worker processes at the same time.
 
@@ -241,7 +241,7 @@ Here are some possible combinations and strategies:
 !!! tip
     Don't worry if some of these items about **containers**, Docker, or Kubernetes don't make a lot of sense yet.
 
-    I'll tell you more about container images, Docker, Kubernetes, etc. in a future chapter: [ReadyApi in Containers - Docker](./docker.md){.internal-link target=_blank}.
+    I'll tell you more about container images, Docker, Kubernetes, etc. in a future chapter: [ReadyAPI in Containers - Docker](./docker.md){.internal-link target=_blank}.
 
 ## Previous Steps Before Starting
 
@@ -258,7 +258,7 @@ And you will have to make sure that it's a single process running those previous
 Of course, there are some cases where there's no problem in running the previous steps multiple times, in that case, it's a lot easier to handle.
 
 !!! tip
-    Also, have in mind that depending on your setup, in some cases you **might not even need any previous steps** before starting your application.
+    Also, keep in mind that depending on your setup, in some cases you **might not even need any previous steps** before starting your application.
 
     In that case, you wouldn't have to worry about any of this. 🤷
 
@@ -273,7 +273,7 @@ Here are some possible ideas:
     * You would still need a way to start/restart *that* bash script, detect errors, etc.
 
 !!! tip
-    I'll give you more concrete examples for doing this with containers in a future chapter: [ReadyApi in Containers - Docker](./docker.md){.internal-link target=_blank}.
+    I'll give you more concrete examples for doing this with containers in a future chapter: [ReadyAPI in Containers - Docker](./docker.md){.internal-link target=_blank}.
 
 ## Resource Utilization
 
@@ -297,7 +297,7 @@ You can use simple tools like `htop` to see the CPU and RAM used in your server 
 
 ## Recap
 
-You have been reading here some of the main concepts that you would probably need to have in mind when deciding how to deploy your application:
+You have been reading here some of the main concepts that you would probably need to keep in mind when deciding how to deploy your application:
 
 * Security - HTTPS
 * Running on startup

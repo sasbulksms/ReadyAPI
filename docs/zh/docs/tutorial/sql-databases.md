@@ -1,6 +1,6 @@
 # SQL (关系型) 数据库
 
-**ReadyApi**不需要你使用SQL(关系型)数据库。
+**ReadyAPI**不需要你使用SQL(关系型)数据库。
 
 但是您可以使用任何您想要的关系型数据库。
 
@@ -19,14 +19,14 @@
 稍后，对于您的产品级别的应用程序，您可能会要使用像**PostgreSQL**这样的数据库服务器。
 
 !!! tip
-    这儿有一个**ReadyApi**和**PostgreSQL**的官方项目生成器，全部基于**Docker**，包括前端和更多工具：<a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-postgresql</a>
+    这儿有一个**ReadyAPI**和**PostgreSQL**的官方项目生成器，全部基于**Docker**，包括前端和更多工具：<a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-postgresql</a>
 
 !!! note
-    请注意，大部分代码是`SQLAlchemy`的标准代码，您可以用于任何框架。ReadyApi特定的代码和往常一样少。
+    请注意，大部分代码是`SQLAlchemy`的标准代码，您可以用于任何框架。ReadyAPI特定的代码和往常一样少。
 
 ## ORMs（对象关系映射）
 
-**ReadyApi**可与任何数据库在任何样式的库中一起与 数据库进行通信。
+**ReadyAPI**可与任何数据库在任何样式的库中一起与 数据库进行通信。
 
 一种常见的模式是使用“ORM”：对象关系映射。
 
@@ -78,9 +78,23 @@ ORM 具有在代码和数据库表（“*关系型”）中的**对象**之间�
 
 现在让我们看看每个文件/模块的作用。
 
+## 安装 SQLAlchemy
+
+先下载`SQLAlchemy`所需要的依赖：
+
+<div class="termy">
+
+```console
+$ pip install sqlalchemy
+
+---> 100%
+```
+
+</div>
+
 ## 创建 SQLAlchemy 部件
 
-让我们涉及到文件`sql_app/database.py`。
+让我们转到文件`sql_app/database.py`。
 
 ### 导入 SQLAlchemy 部件
 
@@ -138,7 +152,7 @@ connect_args={"check_same_thread": False}
 
     这是为了防止意外地为不同的事物（不同的请求）共享相同的连接。
 
-    但是在 ReadyApi 中，普遍使用def函数，多个线程可以为同一个请求与数据库交互，所以我们需要使用`connect_args={"check_same_thread": False}`来让SQLite允许这样。
+    但是在 ReadyAPI 中，普遍使用def函数，多个线程可以为同一个请求与数据库交互，所以我们需要使用`connect_args={"check_same_thread": False}`来让SQLite允许这样。
 
     此外，我们将确保每个请求都在依赖项中获得自己的数据库连接会话，因此不需要该默认机制。
 
@@ -258,7 +272,7 @@ connect_args={"check_same_thread": False}
     {!> ../../../docs_src/sql_databases/sql_app_py39/schemas.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="3  6-8  11-12  23-24  27-28"
     {!> ../../../docs_src/sql_databases/sql_app/schemas.py!}
@@ -302,7 +316,7 @@ name: str
     {!> ../../../docs_src/sql_databases/sql_app_py39/schemas.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="15-17  31-34"
     {!> ../../../docs_src/sql_databases/sql_app/schemas.py!}
@@ -331,7 +345,7 @@ name: str
     {!> ../../../docs_src/sql_databases/sql_app_py39/schemas.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="15  19-20  31  36-37"
     {!> ../../../docs_src/sql_databases/sql_app/schemas.py!}
@@ -457,7 +471,7 @@ current_user.items
 
     `Item(**item.dict(), owner_id=user_id)`
 
-## 主**ReadyApi**应用程序
+## 主**ReadyAPI**应用程序
 
 现在在`sql_app/main.py`文件中 让我们集成和使用我们之前创建的所有其他部分。
 
@@ -471,7 +485,7 @@ current_user.items
     {!> ../../../docs_src/sql_databases/sql_app_py39/main.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/sql_databases/sql_app/main.py!}
@@ -485,7 +499,7 @@ current_user.items
 
 “迁移”是每当您更改 SQLAlchemy 模型的结构、添加新属性等以在数据库中复制这些更改、添加新列、新表等时所需的一组步骤。
 
-您可以在[Project Generation - Template](https://readyapi.khulnasoft.com/zh/project-generation/)的模板中找到一个 ReadyApi 项目中的 Alembic 示例。具体在[`alembic`代码目录中](https://github.com/khulnasoft/full-stack-readyapi-postgresql/tree/master/%7B%7Bcookiecutter.project_slug%7D%7D/backend/app/alembic/)。
+您可以在[Project Generation - Template](https://readyapi.khulnasoft.com/zh/project-generation/)的模板中找到一个 ReadyAPI 项目中的 Alembic 示例。具体在[`alembic`代码目录中](https://github.com/khulnasoft/full-stack-readyapi-postgresql/tree/master/src/backend/app/alembic/)。
 
 ### 创建依赖项
 
@@ -505,7 +519,7 @@ current_user.items
     {!> ../../../docs_src/sql_databases/sql_app_py39/main.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="15-20"
     {!> ../../../docs_src/sql_databases/sql_app/main.py!}
@@ -530,7 +544,7 @@ current_user.items
     {!> ../../../docs_src/sql_databases/sql_app_py39/main.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="24  32  38  47  53"
     {!> ../../../docs_src/sql_databases/sql_app/main.py!}
@@ -541,9 +555,9 @@ current_user.items
 
     但是通过将类型声明为Session，编辑器现在可以知道可用的方法（.add()、.query()、.commit()等）并且可以提供更好的支持（比如完成）。类型声明不影响实际对象。
 
-### 创建您的**ReadyApi** *路径操作*
+### 创建您的**ReadyAPI** *路径操作*
 
-现在，到了最后，编写标准的**ReadyApi** *路径操作*代码。
+现在，到了最后，编写标准的**ReadyAPI** *路径操作*代码。
 
 === "Python 3.9+"
 
@@ -551,7 +565,7 @@ current_user.items
     {!> ../../../docs_src/sql_databases/sql_app_py39/main.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="23-28  31-34  37-42  45-49  52-55"
     {!> ../../../docs_src/sql_databases/sql_app/main.py!}
@@ -608,11 +622,11 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
 
 ## 迁移
 
-因为我们直接使用 SQLAlchemy，并且我们不需要任何类型的插件来使用**ReadyApi**，所以我们可以直接将数据库迁移至[Alembic](https://alembic.sqlalchemy.org/)进行集成。
+因为我们直接使用 SQLAlchemy，并且我们不需要任何类型的插件来使用**ReadyAPI**，所以我们可以直接将数据库迁移至[Alembic](https://alembic.sqlalchemy.org/)进行集成。
 
-由于与 SQLAlchemy 和 SQLAlchemy 模型相关的代码位于单独的独立文件中，您甚至可以使用 Alembic 执行迁移，而无需安装 ReadyApi、Pydantic 或其他任何东西。
+由于与 SQLAlchemy 和 SQLAlchemy 模型相关的代码位于单独的独立文件中，您甚至可以使用 Alembic 执行迁移，而无需安装 ReadyAPI、Pydantic 或其他任何东西。
 
-同样，您将能够在与**ReadyApi**无关的代码的其他部分中使用相同的 SQLAlchemy 模型和实用程序。
+同样，您将能够在与**ReadyAPI**无关的代码的其他部分中使用相同的 SQLAlchemy 模型和实用程序。
 
 例如，在具有[Celery](https://docs.celeryq.dev/)、[RQ](https://python-rq.org/)或[ARQ](https://arq-docs.helpmanual.io/)的后台任务工作者中。
 
@@ -650,7 +664,7 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
     {!> ../../../docs_src/sql_databases/sql_app_py39/schemas.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     {!> ../../../docs_src/sql_databases/sql_app/schemas.py!}
@@ -670,7 +684,7 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
     {!> ../../../docs_src/sql_databases/sql_app_py39/main.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     {!> ../../../docs_src/sql_databases/sql_app/main.py!}
@@ -699,13 +713,13 @@ $ uvicorn sql_app.main:app --reload
 
 打开浏览器进入 <a href="http://127.0.0.1:8000/docs" class="external-link" target="_blank">http://127.0.0.1:8000/docs。</a>
 
-您将能够与您的**ReadyApi**应用程序交互，从真实数据库中读取数据：
+您将能够与您的**ReadyAPI**应用程序交互，从真实数据库中读取数据：
 
 <img src="/img/tutorial/sql-databases/image01.png">
 
 ## 直接与数据库交互
 
-如果您想独立于 ReadyApi 直接浏览 SQLite 数据库（文件）以调试其内容、添加表、列、记录、修改数据等，您可以使用[SQLite 的 DB Browser](https://sqlitebrowser.org/)
+如果您想独立于 ReadyAPI 直接浏览 SQLite 数据库（文件）以调试其内容、添加表、列、记录、修改数据等，您可以使用[SQLite 的 DB Browser](https://sqlitebrowser.org/)
 
 它看起来像这样：
 
@@ -729,7 +743,7 @@ $ uvicorn sql_app.main:app --reload
     {!> ../../../docs_src/sql_databases/sql_app_py39/alt_main.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="14-22"
     {!> ../../../docs_src/sql_databases/sql_app/alt_main.py!}
@@ -765,6 +779,6 @@ $ uvicorn sql_app.main:app --reload
     `tyield`当依赖项 足以满足用例时，使用`tyield`依赖项方法会更好。
 
 !!! info
-    `yield`的依赖项是最近刚加入**ReadyApi**中的。
+    `yield`的依赖项是最近刚加入**ReadyAPI**中的。
 
     所以本教程的先前版本只有带有中间件的示例，并且可能有多个应用程序使用中间件进行数据库会话管理。

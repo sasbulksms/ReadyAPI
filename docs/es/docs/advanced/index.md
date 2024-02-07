@@ -2,7 +2,7 @@
 
 ## Características Adicionales
 
-El [Tutorial - Guía de Usuario](../tutorial/){.internal-link target=_blank} principal debe ser suficiente para darte un paseo por todas las características principales de **ReadyApi**
+El [Tutorial - Guía de Usuario](../tutorial/){.internal-link target=_blank} principal debe ser suficiente para darte un paseo por todas las características principales de **ReadyAPI**
 
 En las secciones siguientes verás otras opciones, configuraciones, y características adicionales.
 
@@ -13,6 +13,6 @@ En las secciones siguientes verás otras opciones, configuraciones, y caracterí
 
 ## Lee primero el Tutorial
 
-Puedes continuar usando la mayoría de las características de **ReadyApi** con el conocimiento del [Tutorial - Guía de Usuario](../tutorial/){.internal-link target=_blank} principal.
+Puedes continuar usando la mayoría de las características de **ReadyAPI** con el conocimiento del [Tutorial - Guía de Usuario](../tutorial/){.internal-link target=_blank} principal.
 
 En las siguientes secciones se asume que lo has leído y conoces esas ideas principales.

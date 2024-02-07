@@ -86,9 +86,9 @@ $ pip install "passlib[bcrypt]"
 !!! tip
     ⏮️ `passlib`, 👆 💪 🔗 ⚫️ 💪 ✍ 🔐 ✍ **✳**, **🏺** 💂‍♂ 🔌-⚖️ 📚 🎏.
 
-    , 👆 🔜 💪, 🖼, 💰 🎏 📊 ⚪️➡️ ✳ 🈸 💽 ⏮️ ReadyApi 🈸. ⚖️ 📉 ↔ ✳ 🈸 ⚙️ 🎏 💽.
+    , 👆 🔜 💪, 🖼, 💰 🎏 📊 ⚪️➡️ ✳ 🈸 💽 ⏮️ ReadyAPI 🈸. ⚖️ 📉 ↔ ✳ 🈸 ⚙️ 🎏 💽.
 
-     &amp; 👆 👩‍💻 🔜 💪 💳 ⚪️➡️ 👆 ✳ 📱 ⚖️ ⚪️➡️ 👆 **ReadyApi** 📱, 🎏 🕰.
+     &amp; 👆 👩‍💻 🔜 💪 💳 ⚪️➡️ 👆 ✳ 📱 ⚖️ ⚪️➡️ 👆 **ReadyAPI** 📱, 🎏 🕰.
 
 ##  #️⃣ &amp; ✔ 🔐
 
@@ -192,13 +192,13 @@ $ openssl rand -hex 32
 
 === "🐍 3️⃣.6️⃣ &amp; 🔛"
 
-    ```Python hl_lines="115-128"
+    ```Python hl_lines="115-130"
     {!> ../../../docs_src/security/tutorial004.py!}
     ```
 
 === "🐍 3️⃣.1️⃣0️⃣ &amp; 🔛"
 
-    ```Python hl_lines="114-127"
+    ```Python hl_lines="114-129"
     {!> ../../../docs_src/security/tutorial004_py310.py!}
     ```
 
@@ -272,11 +272,11 @@ Oauth2️⃣ ✔️ 🔑 "↔".
 
 ⤴️ 👆 💪 🤝 👉 🤝 👩‍💻 🔗 ⚖️ 🥉 🥳, 🔗 ⏮️ 👆 🛠️ ⏮️ ⚒ 🚫.
 
-👆 💪 💡 ❔ ⚙️ 👫 &amp; ❔ 👫 🛠️ 🔘 **ReadyApi** ⏪ **🏧 👩‍💻 🦮**.
+👆 💪 💡 ❔ ⚙️ 👫 &amp; ❔ 👫 🛠️ 🔘 **ReadyAPI** ⏪ **🏧 👩‍💻 🦮**.
 
 ## 🌃
 
-⏮️ ⚫️❔ 👆 ✔️ 👀 🆙 🔜, 👆 💪 ⚒ 🆙 🔐 **ReadyApi** 🈸 ⚙️ 🐩 💖 Oauth2️⃣ &amp; 🥙.
+⏮️ ⚫️❔ 👆 ✔️ 👀 🆙 🔜, 👆 💪 ⚒ 🆙 🔐 **ReadyAPI** 🈸 ⚙️ 🐩 💖 Oauth2️⃣ &amp; 🥙.
 
 🌖 🙆 🛠️ 🚚 💂‍♂ ▶️️ 👍 🏗 📄 🔜.
 
@@ -284,11 +284,11 @@ Oauth2️⃣ ✔️ 🔑 "↔".
 
 ---
 
-**ReadyApi** 🚫 ⚒ 🙆 ⚠ ⏮️ 🙆 💽, 💽 🏷 ⚖️ 🧰.
+**ReadyAPI** 🚫 ⚒ 🙆 ⚠ ⏮️ 🙆 💽, 💽 🏷 ⚖️ 🧰.
 
 ⚫️ 🤝 👆 🌐 💪 ⚒ 🕐 👈 👖 👆 🏗 🏆.
 
-&amp; 👆 💪 ⚙️ 🔗 📚 👍 🚧 &amp; 🛎 ⚙️ 📦 💖 `passlib` &amp; `python-jose`, ↩️ **ReadyApi** 🚫 🚚 🙆 🏗 🛠️ 🛠️ 🔢 📦.
+&amp; 👆 💪 ⚙️ 🔗 📚 👍 🚧 &amp; 🛎 ⚙️ 📦 💖 `passlib` &amp; `python-jose`, ↩️ **ReadyAPI** 🚫 🚚 🙆 🏗 🛠️ 🛠️ 🔢 📦.
 
 ✋️ ⚫️ 🚚 👆 🧰 📉 🛠️ 🌅 💪 🍵 🎯 💪, ⚖, ⚖️ 💂‍♂.
 

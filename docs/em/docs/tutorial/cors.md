@@ -34,11 +34,11 @@
 
 ## ⚙️ `CORSMiddleware`
 
-👆 💪 🔗 ⚫️ 👆 **ReadyApi** 🈸 ⚙️ `CORSMiddleware`.
+👆 💪 🔗 ⚫️ 👆 **ReadyAPI** 🈸 ⚙️ `CORSMiddleware`.
 
 * 🗄 `CORSMiddleware`.
 * ✍ 📇 ✔ 🇨🇳 (🎻).
-* 🚮 ⚫️ "🛠️" 👆 **ReadyApi** 🈸.
+* 🚮 ⚫️ "🛠️" 👆 **ReadyAPI** 🈸.
 
 👆 💪 ✔ 🚥 👆 👩‍💻 ✔:
 
@@ -81,4 +81,4 @@
 !!! note "📡 ℹ"
     👆 💪 ⚙️ `from starlette.middleware.cors import CORSMiddleware`.
 
-    **ReadyApi** 🚚 📚 🛠️ `readyapi.middleware` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 🛠️ 👟 🔗 ⚪️➡️ 💃.
+    **ReadyAPI** 🚚 📚 🛠️ `readyapi.middleware` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 🛠️ 👟 🔗 ⚪️➡️ 💃.

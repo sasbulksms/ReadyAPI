@@ -1,6 +1,6 @@
 # 開発 - 貢献
 
-まず、[ReadyApiを応援 - ヘルプの入手](help-readyapi.md){.internal-link target=_blank}の基本的な方法を見て、ヘルプを得た方がいいかもしれません。
+まず、[ReadyAPIを応援 - ヘルプの入手](help-readyapi.md){.internal-link target=_blank}の基本的な方法を見て、ヘルプを得た方がいいかもしれません。
 
 ## 開発
 
@@ -104,13 +104,13 @@ $ pip install -r requirements.txt
 
 </div>
 
-これで、すべての依存関係とReadyApiを、ローカル環境にインストールします。
+これで、すべての依存関係とReadyAPIを、ローカル環境にインストールします。
 
-#### ローカル環境でReadyApiを使う
+#### ローカル環境でReadyAPIを使う
 
-ReadyApiをインポートして使用するPythonファイルを作成し、ローカル環境で実行すると、ローカルのReadyApiソースコードが使用されます。
+ReadyAPIをインポートして使用するPythonファイルを作成し、ローカル環境で実行すると、ローカルのReadyAPIソースコードが使用されます。
 
-そして、`-e` でインストールされているローカルのReadyApiソースコードを更新した場合、そのPythonファイルを再度実行すると、更新したばかりの新しいバージョンのReadyApiが使用されます。
+そして、`-e` でインストールされているローカルのReadyAPIソースコードを更新した場合、そのPythonファイルを再度実行すると、更新したばかりの新しいバージョンのReadyAPIが使用されます。
 
 これにより、ローカルバージョンを「インストール」しなくても、すべての変更をテストできます。
 
@@ -128,7 +128,7 @@ $ bash scripts/format.sh
 
 また、すべてのインポートを自動でソートします。
 
-正しく並べ替えるには、上記セクションのコマンドで `-e` を使い、ReadyApiをローカル環境にインストールしている必要があります。
+正しく並べ替えるには、上記セクションのコマンドで `-e` を使い、ReadyAPIをローカル環境にインストールしている必要があります。
 
 ### インポートの整形
 
@@ -283,7 +283,7 @@ $ python ./scripts/docs.py live es
 
 これで<a href="http://127.0.0.1:8008" class="external-link" target="_blank">http://127.0.0.1:8008</a> を開いて、変更を確認できます。
 
-ReadyApi docs Webサイトを見ると、すべての言語にすべてのページがあります。しかし、一部のページは翻訳されておらず、翻訳の欠落ページについて通知があります。
+ReadyAPI docs Webサイトを見ると、すべての言語にすべてのページがあります。しかし、一部のページは翻訳されておらず、翻訳の欠落ページについて通知があります。
 
 しかし、このようにローカルで実行すると、翻訳済みのページのみが表示されます。
 
@@ -313,10 +313,10 @@ docs/en/docs/mkdocs.yml
 * 設定ファイルの中で、`docs/features.md`が記述されている箇所を見つけます:
 
 ```YAML hl_lines="8"
-site_name: ReadyApi
+site_name: ReadyAPI
 # More stuff
 nav:
-- ReadyApi: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -332,10 +332,10 @@ docs/es/docs/mkdocs.yml
 * 英語とまったく同じ場所に追加します。例えば:
 
 ```YAML hl_lines="8"
-site_name: ReadyApi
+site_name: ReadyAPI
 # More stuff
 nav:
-- ReadyApi: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -398,7 +398,7 @@ jinja2.exceptions.TemplateNotFound: partials/language/xx.html
 その必要がある場合は、新しい言語の`mkdocs.yml`を次のように編集してください:
 
 ```YAML hl_lines="5"
-site_name: ReadyApi
+site_name: ReadyAPI
 # More stuff
 theme:
   # More stuff

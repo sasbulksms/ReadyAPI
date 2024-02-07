@@ -1,6 +1,6 @@
 # Corpo - Modelos aninhados
 
-Com o **ReadyApi**, você pode definir, validar, documentar e usar modelos profundamente aninhados de forma arbitrária (graças ao Pydantic).
+Com o **ReadyAPI**, você pode definir, validar, documentar e usar modelos profundamente aninhados de forma arbitrária (graças ao Pydantic).
 
 ## Campos do tipo Lista
 
@@ -94,7 +94,7 @@ E então podemos usa-lo como o tipo de um atributo:
 {!../../../docs_src/body_nested_models/tutorial004.py!}
 ```
 
-Isso significa que o **ReadyApi** vai esperar um corpo similar à:
+Isso significa que o **ReadyAPI** vai esperar um corpo similar à:
 
 ```JSON
 {
@@ -110,7 +110,7 @@ Isso significa que o **ReadyApi** vai esperar um corpo similar à:
 }
 ```
 
-Novamente, apenas fazendo essa declaração, com o **ReadyApi**, você ganha:
+Novamente, apenas fazendo essa declaração, com o **ReadyAPI**, você ganha:
 
 * Suporte do editor de texto (compleção, etc), inclusive para modelos aninhados
 * Conversão de dados
@@ -237,7 +237,7 @@ Neste caso, você aceitaria qualquer `dict`, desde que tenha chaves` int` com va
 
 ## Recapitulação
 
-Com **ReadyApi** você tem a flexibilidade máxima fornecida pelos modelos Pydantic, enquanto seu código é mantido simples, curto e elegante.
+Com **ReadyAPI** você tem a flexibilidade máxima fornecida pelos modelos Pydantic, enquanto seu código é mantido simples, curto e elegante.
 
 Mas com todos os benefícios:
 

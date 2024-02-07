@@ -19,7 +19,7 @@
 {!../../../docs_src/background_tasks/tutorial001.py!}
 ```
 
-**ReadyApi** 会创建一个 `BackgroundTasks` 类型的对象并作为该参数传入。
+**ReadyAPI** 会创建一个 `BackgroundTasks` 类型的对象并作为该参数传入。
 
 ## 创建一个任务函数
 
@@ -27,7 +27,7 @@
 
 它只是一个可以接收参数的标准函数。
 
-它可以是 `async def` 或普通的 `def` 函数，**ReadyApi** 知道如何正确处理。
+它可以是 `async def` 或普通的 `def` 函数，**ReadyAPI** 知道如何正确处理。
 
 在这种情况下，任务函数将写入一个文件（模拟发送电子邮件）。
 
@@ -55,7 +55,7 @@
 
 使用 `BackgroundTasks` 也适用于依赖注入系统，你可以在多个级别声明 `BackgroundTasks` 类型的参数：在 *路径操作函数* 里，在依赖中(可依赖)，在子依赖中，等等。
 
-**ReadyApi** 知道在每种情况下该做什么以及如何复用同一对象，因此所有后台任务被合并在一起并且随后在后台运行：
+**ReadyAPI** 知道在每种情况下该做什么以及如何复用同一对象，因此所有后台任务被合并在一起并且随后在后台运行：
 
 === "Python 3.10+"
 
@@ -69,7 +69,7 @@
     {!> ../../../docs_src/background_tasks/tutorial002_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="14  16  23  26"
     {!> ../../../docs_src/background_tasks/tutorial002_an.py!}
@@ -84,7 +84,7 @@
     {!> ../../../docs_src/background_tasks/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+ 没Annotated"
+=== "Python 3.8+ 没Annotated"
 
     !!! tip
          尽可能选择使用 `Annotated` 的版本。
@@ -103,11 +103,11 @@
 
 `BackgroundTasks` 类直接来自 <a href="https://www.starlette.io/background/" class="external-link" target="_blank">`starlette.background`</a>。
 
-它被直接导入/包含到ReadyApi以便你可以从 `readyapi` 导入，并避免意外从 `starlette.background` 导入备用的 `BackgroundTask` (后面没有 `s`)。
+它被直接导入/包含到ReadyAPI以便你可以从 `readyapi` 导入，并避免意外从 `starlette.background` 导入备用的 `BackgroundTask` (后面没有 `s`)。
 
-通过仅使用 `BackgroundTasks` (而不是 `BackgroundTask`)，使得能将它作为 *路径操作函数* 的参数 ，并让**ReadyApi**为您处理其余部分, 就像直接使用 `Request` 对象。
+通过仅使用 `BackgroundTasks` (而不是 `BackgroundTask`)，使得能将它作为 *路径操作函数* 的参数 ，并让**ReadyAPI**为您处理其余部分, 就像直接使用 `Request` 对象。
 
-在ReadyApi中仍然可以单独使用 `BackgroundTask`，但您必须在代码中创建对象，并返回包含它的Starlette `Response`。
+在ReadyAPI中仍然可以单独使用 `BackgroundTask`，但您必须在代码中创建对象，并返回包含它的Starlette `Response`。
 
 更多细节查看 <a href="https://www.starlette.io/background/" class="external-link" target="_blank">Starlette's official docs for Background Tasks</a>.
 
@@ -119,7 +119,7 @@
 
 要查看示例，查阅 [Project Generators](../project-generation.md){.internal-link target=_blank}，它们都包括已经配置的Celery。
 
-但是，如果您需要从同一个**ReadyApi**应用程序访问变量和对象，或者您需要执行小型后台任务（如发送电子邮件通知），您只需使用 `BackgroundTasks` 即可。
+但是，如果您需要从同一个**ReadyAPI**应用程序访问变量和对象，或者您需要执行小型后台任务（如发送电子邮件通知），您只需使用 `BackgroundTasks` 即可。
 
 ## 回顾
 

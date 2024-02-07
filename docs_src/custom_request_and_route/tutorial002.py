@@ -1,6 +1,6 @@
 from typing import Callable, List
 
-from readyapi import Body, ReadyApi, HTTPException, Request, Response
+from readyapi import Body, HTTPException, ReadyAPI, Request, Response
 from readyapi.exceptions import RequestValidationError
 from readyapi.routing import APIRoute
 
@@ -20,7 +20,7 @@ class ValidationErrorLoggingRoute(APIRoute):
         return custom_route_handler
 
 
-app = ReadyApi()
+app = ReadyAPI()
 app.router.route_class = ValidationErrorLoggingRoute
 
 

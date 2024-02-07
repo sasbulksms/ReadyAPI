@@ -1,10 +1,10 @@
 from typing import Optional
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.params import Param
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/")

@@ -30,7 +30,7 @@ It will:
 !!! note
     Some response codes (see the next section) indicate that the response does not have a body.
 
-    ReadyApi knows this, and will produce OpenAPI docs that state there is no response body.
+    ReadyAPI knows this, and will produce OpenAPI docs that state there is no response body.
 
 ## About HTTP status codes
 
@@ -82,7 +82,7 @@ They are just a convenience, they hold the same number, but that way you can use
 !!! note "Technical Details"
     You could also use `from starlette import status`.
 
-    **ReadyApi** provides the same `starlette.status` as `readyapi.status` just as a convenience for you, the developer. But it comes directly from Starlette.
+    **ReadyAPI** provides the same `starlette.status` as `readyapi.status` just as a convenience for you, the developer. But it comes directly from Starlette.
 
 ## Changing the default
 

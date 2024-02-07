@@ -1,9 +1,9 @@
 import uuid
 
 import pytest
-from readyapi import ReadyApi
-from readyapi.testclient import TestClient
 from pydantic import BaseModel
+from readyapi import ReadyAPI
+from readyapi.testclient import TestClient
 
 from .utils import needs_pydanticv1, needs_pydanticv2
 
@@ -30,7 +30,7 @@ class MyUuid:
 def test_pydanticv2():
     from pydantic import field_serializer
 
-    app = ReadyApi()
+    app = ReadyAPI()
 
     @app.get("/fast_uuid")
     def return_fast_uuid():
@@ -73,7 +73,7 @@ def test_pydanticv2():
 # TODO: remove when deprecating Pydantic v1
 @needs_pydanticv1
 def test_pydanticv1():
-    app = ReadyApi()
+    app = ReadyAPI()
 
     @app.get("/fast_uuid")
     def return_fast_uuid():

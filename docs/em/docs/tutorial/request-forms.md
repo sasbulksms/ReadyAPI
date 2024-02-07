@@ -39,7 +39,7 @@
 
 🌌 🕸 📨 (`<form></form>`) 📨 💽 💽 🛎 ⚙️ "🎁" 🔢 👈 📊, ⚫️ 🎏 ⚪️➡️ 🎻.
 
-**ReadyApi** 🔜 ⚒ 💭 ✍ 👈 📊 ⚪️➡️ ▶️️ 🥉 ↩️ 🎻.
+**ReadyAPI** 🔜 ⚒ 💭 ✍ 👈 📊 ⚪️➡️ ▶️️ 🥉 ↩️ 🎻.
 
 !!! note "📡 ℹ"
     📊 ⚪️➡️ 📨 🛎 🗜 ⚙️ "📻 🆎" `application/x-www-form-urlencoded`.
@@ -51,7 +51,7 @@
 !!! warning
     👆 💪 📣 💗 `Form` 🔢 *➡ 🛠️*, ✋️ 👆 💪 🚫 📣 `Body` 🏑 👈 👆 ⌛ 📨 🎻, 📨 🔜 ✔️ 💪 🗜 ⚙️ `application/x-www-form-urlencoded` ↩️ `application/json`.
 
-    👉 🚫 🚫 **ReadyApi**, ⚫️ 🍕 🇺🇸🔍 🛠️.
+    👉 🚫 🚫 **ReadyAPI**, ⚫️ 🍕 🇺🇸🔍 🛠️.
 
 ## 🌃
 

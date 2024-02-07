@@ -1,6 +1,6 @@
 import pytest
 from dirty_equals import IsDict
-from readyapi import ReadyApi, Form
+from readyapi import Form, ReadyAPI
 from readyapi.testclient import TestClient
 from readyapi.utils import match_pydantic_error_url
 from typing_extensions import Annotated
@@ -9,12 +9,12 @@ from .utils import needs_py310
 
 
 def get_client():
-    app = ReadyApi()
+    app = ReadyAPI()
     with pytest.warns(DeprecationWarning):
 
         @app.post("/items/")
         async def read_items(
-            q: Annotated[str | None, Form(regex="^fixedquery$")] = None
+            q: Annotated[str | None, Form(regex="^fixedquery$")] = None,
         ):
             if q:
                 return f"Hello {q}"
@@ -82,7 +82,7 @@ def test_openapi_schema():
     # insert_assert(response.json())
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/items/": {
                 "post": {

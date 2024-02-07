@@ -38,7 +38,7 @@ Se você rodar esse exemplo e abrir o seu navegador em <a href="http://127.0.0.1
 !!! Verifique
 	Observe que o valor recebido pela função (e também retornado por ela) é `3`, como um Python `int`, não como uma string `"3"`.
 
-	Então, com essa declaração de tipo, o **ReadyApi** dá pra você um <abbr title="convertendo a string que veio do request HTTP em um dado Python">"parsing"</abbr> automático no request .
+	Então, com essa declaração de tipo, o **ReadyAPI** dá pra você um <abbr title="convertendo a string que veio do request HTTP em um dado Python">"parsing"</abbr> automático no request .
 
 ## Validação de dados
 
@@ -64,7 +64,7 @@ devido ao parâmetro da rota `item_id` ter um valor `"foo"`, que não é um `int
 O mesmo erro apareceria se você tivesse fornecido um `float` ao invés de um `int`, como em: <a href="http://127.0.0.1:8000/items/4.2" class="external-link" target="_blank">http://127.0.0.1:8000/items/4.2</a>
 
 !!! Verifique
-	Então, com a mesma declaração de tipo do Python, o **ReadyApi** dá pra você validação de dados.
+	Então, com a mesma declaração de tipo do Python, o **ReadyAPI** dá pra você validação de dados.
 
 	Observe que o erro também mostra claramente o ponto exato onde a validação não passou.
 
@@ -77,7 +77,7 @@ Quando você abrir o seu navegador em <a href="http://127.0.0.1:8000/docs" class
 <img src="/img/tutorial/path-params/image01.png">
 
 !!! check
-	Novamente, apenas com a mesma declaração de tipo do Python, o **ReadyApi** te dá de forma automática e interativa a documentação (integrada com o Swagger UI).
+	Novamente, apenas com a mesma declaração de tipo do Python, o **ReadyAPI** te dá de forma automática e interativa a documentação (integrada com o Swagger UI).
 
 	Veja que o parâmetro de rota está declarado como sendo um inteiro (int).
 
@@ -85,7 +85,7 @@ Quando você abrir o seu navegador em <a href="http://127.0.0.1:8000/docs" class
 
 Devido ao schema gerado ser o padrão do <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md" class="external-link" target="_blank">OpenAPI</a>, existem muitas ferramentas compatíveis.
 
-Por esse motivo, o próprio **ReadyApi** fornece uma API alternativa para documentação (utilizando ReDoc), que você pode acessar em <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a>:
+Por esse motivo, o próprio **ReadyAPI** fornece uma API alternativa para documentação (utilizando ReDoc), que você pode acessar em <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a>:
 
 <img src="/img/tutorial/path-params/image02.png">
 
@@ -205,7 +205,7 @@ Então, a URL para este arquivo deveria ser algo como: `/files/home/johndoe/myfi
 
 O OpenAPI não suporta uma maneira de declarar um *parâmetro de rota* que contenha uma *rota* dentro, dado que isso poderia levar a cenários que são difíceis de testar e definir.
 
-No entanto, você pode fazer isso no **ReadyApi**, usando uma das ferramentas internas do Starlette.
+No entanto, você pode fazer isso no **ReadyAPI**, usando uma das ferramentas internas do Starlette.
 
 A documentação continuaria funcionando, ainda que não adicionaria nenhuma informação dizendo que o parâmetro deveria conter uma rota.
 
@@ -233,7 +233,7 @@ Então, você poderia usar ele com:
 
 ## Recapitulando
 
-Com o **ReadyApi**, usando as declarações de tipo do Python, você obtém:
+Com o **ReadyAPI**, usando as declarações de tipo do Python, você obtém:
 
 * Suporte no editor: verificação de erros, e opção de autocompletar, etc.
 * "<abbr title="convertendo uma string que vem de um request HTTP em dado Python">Parsing</abbr>" de dados
@@ -242,4 +242,4 @@ Com o **ReadyApi**, usando as declarações de tipo do Python, você obtém:
 
 Você apenas tem que declará-los uma vez.
 
-Essa é provavelmente a vantagem mais visível do **ReadyApi** se comparado com frameworks alternativos (além do desempenho puro).
+Essa é provavelmente a vantagem mais visível do **ReadyAPI** se comparado com frameworks alternativos (além do desempenho puro).

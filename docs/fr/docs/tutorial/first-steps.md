@@ -1,6 +1,6 @@
 # Démarrage
 
-Le fichier **ReadyApi** le plus simple possible pourrait ressembler à cela  :
+Le fichier **ReadyAPI** le plus simple possible pourrait ressembler à cela  :
 
 ```Python
 {!../../../docs_src/first_steps/tutorial001.py!}
@@ -28,7 +28,7 @@ $ uvicorn main:app --reload
     La commande `uvicorn main:app` fait référence à :
 
     * `main` : le fichier `main.py` (le module Python).
-    * `app` : l'objet créé dans `main.py` via la ligne `app = ReadyApi()`.
+    * `app` : l'objet créé dans `main.py` via la ligne `app = ReadyAPI()`.
     * `--reload` : l'option disant à uvicorn de redémarrer le serveur à chaque changement du code. À ne pas utiliser en production !
 
 Vous devriez voir dans la console, une ligne semblable à la suivante :
@@ -67,7 +67,7 @@ Vous y verrez la documentation alternative (via <a href="https://github.com/Rebi
 
 ### OpenAPI
 
-**ReadyApi** génère un "schéma" contenant toute votre API dans le standard de définition d'API **OpenAPI**.
+**ReadyAPI** génère un "schéma" contenant toute votre API dans le standard de définition d'API **OpenAPI**.
 
 #### "Schéma"
 
@@ -91,7 +91,7 @@ Dans ce cas, cela signifierait les attributs JSON, ainsi que les types de ces at
 
 #### Allez voir `openapi.json`
 
-Si vous êtes curieux d'à quoi ressemble le schéma brut **OpenAPI**, **ReadyApi** génère automatiquement un (schéma) JSON avec les descriptions de toute votre API.
+Si vous êtes curieux d'à quoi ressemble le schéma brut **OpenAPI**, **ReadyAPI** génère automatiquement un (schéma) JSON avec les descriptions de toute votre API.
 
 Vous pouvez le voir directement à cette adresse : <a href="http://127.0.0.1:8000/openapi.json" class="external-link" target="_blank">http://127.0.0.1:8000/openapi.json</a>.
 
@@ -102,7 +102,7 @@ Le schéma devrait ressembler à ceci :
 {
     "openapi": "3.0.2",
     "info": {
-        "title": "ReadyApi",
+        "title": "ReadyAPI",
         "version": "0.1.0"
     },
     "paths": {
@@ -123,32 +123,32 @@ Le schéma devrait ressembler à ceci :
 
 Le schéma **OpenAPI** est ce qui alimente les deux systèmes de documentation interactive.
 
-Et il existe des dizaines d'alternatives, toutes basées sur **OpenAPI**. Vous pourriez facilement ajouter n'importe laquelle de ces alternatives à votre application **ReadyApi**.
+Et il existe des dizaines d'alternatives, toutes basées sur **OpenAPI**. Vous pourriez facilement ajouter n'importe laquelle de ces alternatives à votre application **ReadyAPI**.
 
 Vous pourriez aussi l'utiliser pour générer du code automatiquement, pour les clients qui communiquent avec votre API. Comme par exemple, des applications frontend, mobiles ou IOT.
 
 ## Récapitulatif, étape par étape
 
-### Étape 1 : import `ReadyApi`
+### Étape 1 : import `ReadyAPI`
 
 ```Python hl_lines="1"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-`ReadyApi` est une classe Python qui fournit toutes les fonctionnalités nécessaires au lancement de votre API.
+`ReadyAPI` est une classe Python qui fournit toutes les fonctionnalités nécessaires au lancement de votre API.
 
 !!! note "Détails techniques"
-    `ReadyApi` est une classe héritant directement de `Starlette`.
+    `ReadyAPI` est une classe héritant directement de `Starlette`.
 
-    Vous pouvez donc aussi utiliser toutes les fonctionnalités de <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a> depuis `ReadyApi`.
+    Vous pouvez donc aussi utiliser toutes les fonctionnalités de <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a> depuis `ReadyAPI`.
 
-### Étape 2 : créer une "instance" `ReadyApi`
+### Étape 2 : créer une "instance" `ReadyAPI`
 
 ```Python hl_lines="3"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-Ici la variable `app` sera une "instance" de la classe `ReadyApi`.
+Ici la variable `app` sera une "instance" de la classe `ReadyAPI`.
 
 Ce sera le point principal d'interaction pour créer toute votre API.
 
@@ -246,7 +246,7 @@ Nous allons donc aussi appeler ces dernières des "**opérations**".
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-Le `@app.get("/")` dit à **ReadyApi** que la fonction en dessous est chargée de gérer les requêtes qui vont sur :
+Le `@app.get("/")` dit à **ReadyAPI** que la fonction en dessous est chargée de gérer les requêtes qui vont sur :
 
 * le chemin `/`
 * en utilisant une <abbr title="une méthode GET HTTP">opération <code>get</code></abbr>
@@ -258,7 +258,7 @@ Le `@app.get("/")` dit à **ReadyApi** que la fonction en dessous est chargée d
 
     Un "décorateur" prend la fonction en dessous et en fait quelque chose.
 
-    Dans notre cas, ce décorateur dit à **ReadyApi** que la fonction en dessous correspond au **chemin** `/` avec l'**opération** `get`.
+    Dans notre cas, ce décorateur dit à **ReadyAPI** que la fonction en dessous correspond au **chemin** `/` avec l'**opération** `get`.
 
     C'est le "**décorateur d'opération de chemin**".
 
@@ -278,7 +278,7 @@ Tout comme celles les plus exotiques :
 !!! tip "Astuce"
     Vous êtes libres d'utiliser chaque opération (méthode HTTP) comme vous le désirez.
 
-    **ReadyApi** n'impose pas de sens spécifique à chacune d'elle.
+    **ReadyAPI** n'impose pas de sens spécifique à chacune d'elle.
 
     Les informations qui sont présentées ici forment une directive générale, pas des obligations.
 
@@ -298,7 +298,7 @@ Voici notre "**fonction de chemin**" (ou fonction d'opération de chemin) :
 
 C'est une fonction Python.
 
-Elle sera appelée par **ReadyApi** quand une requête sur l'URL `/` sera reçue via une opération `GET`.
+Elle sera appelée par **ReadyAPI** quand une requête sur l'URL `/` sera reçue via une opération `GET`.
 
 Ici, c'est une fonction asynchrone (définie avec `async def`).
 
@@ -327,7 +327,7 @@ Il y a de nombreux autres objets et modèles qui seront automatiquement converti
 
 ## Récapitulatif
 
-* Importez `ReadyApi`.
+* Importez `ReadyAPI`.
 * Créez une instance d'`app`.
 * Ajoutez une **décorateur d'opération de chemin** (tel que `@app.get("/")`).
 * Ajoutez une **fonction de chemin** (telle que `def root(): ...` comme ci-dessus).

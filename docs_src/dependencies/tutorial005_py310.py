@@ -1,6 +1,6 @@
-from readyapi import Cookie, Depends, ReadyApi
+from readyapi import Cookie, Depends, ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 def query_extractor(q: str | None = None):

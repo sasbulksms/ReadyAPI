@@ -4,7 +4,7 @@ In some situations, you might need to use a **proxy** server like Traefik or Ngi
 
 In these cases you can use `root_path` to configure your application.
 
-The `root_path` is a mechanism provided by the ASGI specification (that ReadyApi is built on, through Starlette).
+The `root_path` is a mechanism provided by the ASGI specification (that ReadyAPI is built on, through Starlette).
 
 The `root_path` is used to handle these specific cases.
 
@@ -12,13 +12,17 @@ And it's also used internally when mounting sub-applications.
 
 ## Proxy with a stripped path prefix
 
-Having a proxy with a stripped path prefix, in this case, means that you could declare a path at `/app` in your code, but then, you add a layer on top (the proxy) that would put your **ReadyApi** application under a path like `/api/v1`.
+Having a proxy with a stripped path prefix, in this case, means that you could declare a path at `/app` in your code, but then, you add a layer on top (the proxy) that would put your **ReadyAPI** application under a path like `/api/v1`.
 
 In this case, the original path `/app` would actually be served at `/api/v1/app`.
 
 Even though all your code is written assuming there's just `/app`.
 
-And the proxy would be **"stripping"** the **path prefix** on the fly before transmitting the request to Uvicorn, keep your application convinced that it is serving at `/app`, so that you don't have to update all your code to include the prefix `/api/v1`.
+```Python hl_lines="6"
+{!../../../docs_src/behind_a_proxy/tutorial001.py!}
+```
+
+And the proxy would be **"stripping"** the **path prefix** on the fly before transmitting the request to Uvicorn, keeping your application convinced that it is being served at `/app`, so that you don't have to update all your code to include the prefix `/api/v1`.
 
 Up to here, everything would work as normally.
 
@@ -59,7 +63,7 @@ The docs UI would also need the OpenAPI schema to declare that this API `server`
 }
 ```
 
-In this example, the "Proxy" could be something like **Traefik**. And the server would be something like **Uvicorn**, running your ReadyApi application.
+In this example, the "Proxy" could be something like **Traefik**. And the server would be something like **Uvicorn**, running your ReadyAPI application.
 
 ### Providing the `root_path`
 
@@ -113,19 +117,19 @@ The response would be something like:
 }
 ```
 
-### Setting the `root_path` in the ReadyApi app
+### Setting the `root_path` in the ReadyAPI app
 
-Alternatively, if you don't have a way to provide a command line option like `--root-path` or equivalent, you can set the `root_path` parameter when creating your ReadyApi app:
+Alternatively, if you don't have a way to provide a command line option like `--root-path` or equivalent, you can set the `root_path` parameter when creating your ReadyAPI app:
 
 ```Python hl_lines="3"
 {!../../../docs_src/behind_a_proxy/tutorial002.py!}
 ```
 
-Passing the `root_path` to `ReadyApi` would be the equivalent of passing the `--root-path` command line option to Uvicorn or Hypercorn.
+Passing the `root_path` to `ReadyAPI` would be the equivalent of passing the `--root-path` command line option to Uvicorn or Hypercorn.
 
 ### About `root_path`
 
-Have in mind that the server (Uvicorn) won't use that `root_path` for anything else than passing it to the app.
+Keep in mind that the server (Uvicorn) won't use that `root_path` for anything else than passing it to the app.
 
 But if you go with your browser to <a href="http://127.0.0.1:8000" class="external-link" target="_blank">http://127.0.0.1:8000/app</a> you will see the normal response:
 
@@ -142,7 +146,7 @@ Uvicorn will expect the proxy to access Uvicorn at `http://127.0.0.1:8000/app`, 
 
 ## About proxies with a stripped path prefix
 
-Have in mind that a proxy with stripped path prefix is only one of the ways to configure it.
+Keep in mind that a proxy with stripped path prefix is only one of the ways to configure it.
 
 Probably in many cases the default will be that the proxy doesn't have a stripped path prefix.
 
@@ -275,18 +279,18 @@ You can check it at <a href="http://127.0.0.1:9999/api/v1/docs" class="external-
 
 Right as we wanted it. ✔️
 
-This is because ReadyApi uses this `root_path` to create the default `server` in OpenAPI with the URL provided by `root_path`.
+This is because ReadyAPI uses this `root_path` to create the default `server` in OpenAPI with the URL provided by `root_path`.
 
 ## Additional servers
 
 !!! warning
     This is a more advanced use case. Feel free to skip it.
 
-By default, **ReadyApi** will create a `server` in the OpenAPI schema with the URL for the `root_path`.
+By default, **ReadyAPI** will create a `server` in the OpenAPI schema with the URL for the `root_path`.
 
 But you can also provide other alternative `servers`, for example if you want *the same* docs UI to interact with a staging and production environments.
 
-If you pass a custom list of `servers` and there's a `root_path` (because your API lives behind a proxy), **ReadyApi** will insert a "server" with this `root_path` at the beginning of the list.
+If you pass a custom list of `servers` and there's a `root_path` (because your API lives behind a proxy), **ReadyAPI** will insert a "server" with this `root_path` at the beginning of the list.
 
 For example:
 
@@ -331,7 +335,7 @@ In the docs UI at <a href="http://127.0.0.1:9999/api/v1/docs" class="external-li
 
 ### Disable automatic server from `root_path`
 
-If you don't want **ReadyApi** to include an automatic server using the `root_path`, you can use the parameter `root_path_in_servers=False`:
+If you don't want **ReadyAPI** to include an automatic server using the `root_path`, you can use the parameter `root_path_in_servers=False`:
 
 ```Python hl_lines="9"
 {!../../../docs_src/behind_a_proxy/tutorial004.py!}
@@ -343,4 +347,4 @@ and then it won't include it in the OpenAPI schema.
 
 If you need to mount a sub-application (as described in [Sub Applications - Mounts](./sub-applications.md){.internal-link target=_blank}) while also using a proxy with `root_path`, you can do it normally, as you would expect.
 
-ReadyApi will internally use the `root_path` smartly, so it will just work. ✨
+ReadyAPI will internally use the `root_path` smartly, so it will just work. ✨

@@ -70,12 +70,12 @@ Del mismo modo puedes declarar parámetros de query opcionales definiendo el val
 En este caso el parámetro de la función `q` será opcional y será `None` por defecto.
 
 !!! check "Revisa"
-    También puedes notar que **ReadyApi** es lo suficientemente inteligente para darse cuenta de que el parámetro de path `item_id` es un parámetro de path y que `q` no lo es, y por lo tanto es un parámetro de query.
+    También puedes notar que **ReadyAPI** es lo suficientemente inteligente para darse cuenta de que el parámetro de path `item_id` es un parámetro de path y que `q` no lo es, y por lo tanto es un parámetro de query.
 
 !!! note "Nota"
-    ReadyApi sabrá que `q` es opcional por el `= None`.
+    ReadyAPI sabrá que `q` es opcional por el `= None`.
 
-    El `Union` en `Union[str, None]` no es usado por ReadyApi (ReadyApi solo usará la parte `str`), pero el `Union[str, None]` le permitirá a tu editor ayudarte a encontrar errores en tu código.
+    El `Union` en `Union[str, None]` no es usado por ReadyAPI (ReadyAPI solo usará la parte `str`), pero el `Union[str, None]` le permitirá a tu editor ayudarte a encontrar errores en tu código.
 
 ## Conversión de tipos de parámetros de query
 
@@ -119,7 +119,7 @@ o cualquier otra variación (mayúsculas, primera letra en mayúscula, etc.) tu 
 
 ## Múltiples parámetros de path y query
 
-Puedes declarar múltiples parámetros de path y parámetros de query al mismo tiempo. **ReadyApi** sabe cuál es cuál.
+Puedes declarar múltiples parámetros de path y parámetros de query al mismo tiempo. **ReadyAPI** sabe cuál es cuál.
 
 No los tienes que declarar en un orden específico.
 

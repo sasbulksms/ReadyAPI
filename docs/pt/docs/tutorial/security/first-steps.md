@@ -6,11 +6,11 @@ E você tem um **frontend** em outro domínio ou em um path diferente no mesmo d
 
 E você quer uma maneira de o frontend autenticar o backend, usando um **username** e **senha**.
 
-Nós podemos usar o **OAuth2** junto com o **ReadyApi**.
+Nós podemos usar o **OAuth2** junto com o **ReadyAPI**.
 
 Mas, vamos poupar-lhe o tempo de ler toda a especificação apenas para achar as pequenas informações que você precisa.
 
-Vamos usar as ferramentas fornecidas pela **ReadyApi** para lidar com segurança.
+Vamos usar as ferramentas fornecidas pela **ReadyAPI** para lidar com segurança.
 
 ## Como Parece
 
@@ -80,7 +80,7 @@ O "fluxo" da `senha` é um dos caminhos ("fluxos") definidos no OAuth2, para lid
 
 OAuth2 foi projetado para que o backend ou a API pudesse ser independente do servidor que autentica o usuário.
 
-Mas nesse caso, a mesma aplicação **ReadyApi** irá lidar com a API e a autenticação.
+Mas nesse caso, a mesma aplicação **ReadyAPI** irá lidar com a API e a autenticação.
 
 Então, vamos rever de um ponto de vista simplificado:
 
@@ -98,9 +98,9 @@ Então, vamos rever de um ponto de vista simplificado:
 		* Então, para autenticar com nossa API, ele manda um header de `Autorização` com o valor `Bearer` mais o token.
 		* Se o token contém `foobar`, o conteúdo do header de `Autorização` será: `Bearer foobar`.
 
-## **ReadyApi**'s `OAuth2PasswordBearer`
+## **ReadyAPI**'s `OAuth2PasswordBearer`
 
-**ReadyApi** fornece várias ferramentas, em diferentes níveis de abstração, para implementar esses recursos de segurança.
+**ReadyAPI** fornece várias ferramentas, em diferentes níveis de abstração, para implementar esses recursos de segurança.
 
 Neste exemplo, nós vamos usar o **OAuth2** com o fluxo de **Senha**, usando um token **Bearer**. Fazemos isso usando a classe `OAuth2PasswordBearer`.
 
@@ -111,7 +111,7 @@ Neste exemplo, nós vamos usar o **OAuth2** com o fluxo de **Senha**, usando um 
 
 	E talvez seja a melhor para a maioria dos casos, a não ser que você seja um especialista em OAuth2 e saiba exatamente o porquê de existir outras opções que se adequam melhor às suas necessidades.
 
-	Nesse caso, **ReadyApi** também fornece as ferramentas para construir.
+	Nesse caso, **ReadyAPI** também fornece as ferramentas para construir.
 
 Quando nós criamos uma instância da classe `OAuth2PasswordBearer`, nós passamos pelo parâmetro `tokenUrl` Esse parâmetro contém a URL que o client (o frontend rodando no browser do usuário) vai usar para mandar o `username` e `senha` para obter um token.
 
@@ -155,12 +155,12 @@ Agora você pode passar aquele `oauth2_scheme` em uma dependência com `Depends`
 
 Esse dependência vai fornecer uma `str` que é atribuído ao parâmetro `token da *função do path operation*
 
-A **ReadyApi** saberá que pode usar essa dependência para definir um "esquema de segurança" no esquema da OpenAPI (e na documentação da API automática).
+A **ReadyAPI** saberá que pode usar essa dependência para definir um "esquema de segurança" no esquema da OpenAPI (e na documentação da API automática).
 
 !!! informação "Detalhes técnicos"
-	**ReadyApi** saberá que pode usar a classe `OAuth2PasswordBearer` (declarada na dependência) para definir o esquema de segurança na OpenAPI porque herda de `readyapi.security.oauth2.OAuth2`, que por sua vez herda de `readyapi.security.base.Securitybase`.
+	**ReadyAPI** saberá que pode usar a classe `OAuth2PasswordBearer` (declarada na dependência) para definir o esquema de segurança na OpenAPI porque herda de `readyapi.security.oauth2.OAuth2`, que por sua vez herda de `readyapi.security.base.Securitybase`.
 
-	 Todos os utilitários de segurança que se integram com OpenAPI (e na documentação da API automática) herdam de `SecurityBase`, é assim que **ReadyApi** pode saber como integrá-los no OpenAPI.
+	 Todos os utilitários de segurança que se integram com OpenAPI (e na documentação da API automática) herdam de `SecurityBase`, é assim que **ReadyAPI** pode saber como integrá-los no OpenAPI.
 
 ## O que ele faz
 

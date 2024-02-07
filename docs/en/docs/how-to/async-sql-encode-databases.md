@@ -1,4 +1,4 @@
-# Async SQL (Relational) Databases with Encode/Databases
+# ~~Async SQL (Relational) Databases with Encode/Databases~~ (deprecated)
 
 !!! info
     These docs are about to be updated. 🎉
@@ -7,7 +7,10 @@
 
     The new docs will include Pydantic v2 and will use <a href="https://sqlmodel.khulnasoft.com/" class="external-link" target="_blank">SQLModel</a> once it is updated to use Pydantic v2 as well.
 
-You can also use <a href="https://github.com/encode/databases" class="external-link" target="_blank">`encode/databases`</a> with **ReadyApi** to connect to databases using `async` and `await`.
+!!! warning "Deprecated"
+    This tutorial is deprecated and will be removed in a future version.
+
+You can also use <a href="https://github.com/encode/databases" class="external-link" target="_blank">`encode/databases`</a> with **ReadyAPI** to connect to databases using `async` and `await`.
 
 It is compatible with:
 
@@ -20,7 +23,7 @@ In this example, we'll use **SQLite**, because it uses a single file and Python 
 Later, for your production application, you might want to use a database server like **PostgreSQL**.
 
 !!! tip
-    You could adopt ideas from the section about SQLAlchemy ORM ([SQL (Relational) Databases](../tutorial/sql-databases.md){.internal-link target=_blank}), like using utility functions to perform operations in the database, independent of your **ReadyApi** code.
+    You could adopt ideas from the section about SQLAlchemy ORM ([SQL (Relational) Databases](../tutorial/sql-databases.md){.internal-link target=_blank}), like using utility functions to perform operations in the database, independent of your **ReadyAPI** code.
 
     This section doesn't apply those ideas, to be equivalent to the counterpart in <a href="https://www.starlette.io/database/" class="external-link" target="_blank">Starlette</a>.
 
@@ -56,7 +59,7 @@ Later, for your production application, you might want to use a database server 
 
 In this case, we are creating the tables in the same Python file, but in production, you would probably want to create them with Alembic, integrated with migrations, etc.
 
-Here, this section would run directly, right before starting your **ReadyApi** application.
+Here, this section would run directly, right before starting your **ReadyAPI** application.
 
 * Create an `engine`.
 * Create all the tables from the `metadata` object.
@@ -82,7 +85,7 @@ So, you will be able to see it all in the interactive API docs.
 
 ## Connect and disconnect
 
-* Create your `ReadyApi` application.
+* Create your `ReadyAPI` application.
 * Create event handlers to connect and disconnect from the database.
 
 ```Python hl_lines="42  45-47  50-52"
@@ -113,6 +116,11 @@ Create the *path operation function* to create notes:
 ```Python hl_lines="61-65"
 {!../../../docs_src/async_sql_databases/tutorial001.py!}
 ```
+
+!!! info
+    In Pydantic v1 the method was called `.dict()`, it was deprecated (but still supported) in Pydantic v2, and renamed to `.model_dump()`.
+
+    The examples here use `.dict()` for compatibility with Pydantic v1, but you should use `.model_dump()` instead if you can use Pydantic v2.
 
 !!! Note
     Notice that as we communicate with the database using `await`, the *path operation function* is declared with `async`.

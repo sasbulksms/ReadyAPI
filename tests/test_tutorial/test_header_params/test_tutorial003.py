@@ -12,8 +12,12 @@ client = TestClient(app)
     [
         ("/items", None, 200, {"X-Token values": None}),
         ("/items", {"x-token": "foo"}, 200, {"X-Token values": ["foo"]}),
-        # TODO: fix this, is it a bug?
-        # ("/items", [("x-token", "foo"), ("x-token", "bar")], 200, {"X-Token values": ["foo", "bar"]}),
+        (
+            "/items",
+            [("x-token", "foo"), ("x-token", "bar")],
+            200,
+            {"X-Token values": ["foo", "bar"]},
+        ),
     ],
 )
 def test(path, headers, expected_status, expected_response):
@@ -27,7 +31,7 @@ def test_openapi_schema():
     assert response.status_code == 200
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/items/": {
                 "get": {

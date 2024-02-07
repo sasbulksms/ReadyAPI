@@ -1,8 +1,8 @@
 # Merkmale
 
-## ReadyApi Merkmale
+## ReadyAPI Merkmale
 
-**ReadyApi** ermöglicht Ihnen folgendes:
+**ReadyAPI** ermöglicht Ihnen folgendes:
 
 ### Basiert auf offenen Standards
 
@@ -13,7 +13,7 @@
 
 ### Automatische Dokumentation
 
-Mit einer interaktiven API-Dokumentation und explorativen webbasierten Benutzerschnittstellen. Da ReadyApi auf OpenAPI basiert, gibt es hierzu mehrere Optionen, wobei zwei standardmäßig vorhanden sind.
+Mit einer interaktiven API-Dokumentation und explorativen webbasierten Benutzerschnittstellen. Da ReadyAPI auf OpenAPI basiert, gibt es hierzu mehrere Optionen, wobei zwei standardmäßig vorhanden sind.
 
 * <a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank"><strong>Swagger UI</strong></a>, bietet interaktive Exploration: testen und rufen Sie ihre API direkt vom Webbrowser auf.
 
@@ -25,11 +25,11 @@ Mit einer interaktiven API-Dokumentation und explorativen webbasierten Benutzers
 
 ### Nur modernes Python
 
-Alles basiert auf **Python 3.6 Typ**-Deklarationen (dank Pydantic). Es muss keine neue Syntax gelernt werden, nur standardisiertes modernes Python.
+Alles basiert auf **Python 3.8 Typ**-Deklarationen (dank Pydantic). Es muss keine neue Syntax gelernt werden, nur standardisiertes modernes Python.
 
 
 
-Wenn Sie eine kurze, zweiminütige, Auffrischung in der Benutzung von Python Typ-Deklarationen benötigen (auch wenn Sie ReadyApi nicht nutzen), schauen Sie sich diese kurze Einführung an (Englisch): Python Types{.internal-link target=_blank}.
+Wenn Sie eine kurze, zweiminütige, Auffrischung in der Benutzung von Python Typ-Deklarationen benötigen (auch wenn Sie ReadyAPI nicht nutzen), schauen Sie sich diese kurze Einführung an (Englisch): Python Types{.internal-link target=_blank}.
 
 Sie schreiben Standard-Python mit Typ-Deklarationen:
 
@@ -73,11 +73,11 @@ my_second_user: User = User(**second_user_data)
 
 ### Editor Unterstützung
 
-ReadyApi wurde so entworfen, dass es einfach und intuitiv zu benutzen ist; alle Entscheidungen wurden auf mehreren Editoren getestet (sogar vor der eigentlichen Implementierung), um so eine best mögliche Entwicklererfahrung zu gewährleisten.
+ReadyAPI wurde so entworfen, dass es einfach und intuitiv zu benutzen ist; alle Entscheidungen wurden auf mehreren Editoren getestet (sogar vor der eigentlichen Implementierung), um so eine best mögliche Entwicklererfahrung zu gewährleisten.
 
 In der letzen Python Entwickler Umfrage stellte sich heraus, dass <a href="https://www.jetbrains.com/research/python-developers-survey-2017/#tools-and-features" class="external-link" target="_blank">die meist genutzte Funktion die "Autovervollständigung" ist</a>.
 
-Die gesamte Struktur von **ReadyApi** soll dem gerecht werden. Autovervollständigung funktioniert überall.
+Die gesamte Struktur von **ReadyAPI** soll dem gerecht werden. Autovervollständigung funktioniert überall.
 
 Sie müssen selten in die Dokumentation schauen.
 
@@ -97,7 +97,7 @@ Hierdurch werden Sie nie wieder einen falschen Schlüsselnamen benutzen und spar
 
 ### Kompakt
 
-ReadyApi nutzt für alles sensible **Standard-Einstellungen**, welche optional überall konfiguriert werden können. Alle Parameter können ganz genau an Ihre Bedürfnisse angepasst werden, sodass sie genau die API definieren können, die sie brauchen.
+ReadyAPI nutzt für alles sensible **Standard-Einstellungen**, welche optional überall konfiguriert werden können. Alle Parameter können ganz genau an Ihre Bedürfnisse angepasst werden, sodass sie genau die API definieren können, die sie brauchen.
 
 Aber standardmäßig, **"funktioniert einfach"** alles.
 
@@ -136,10 +136,10 @@ Alles wurde als wiederverwendbare Werkzeuge und Komponenten geschaffen, die einf
 
 ### Einbringen von Abhängigkeiten (meist: Dependency Injection)
 
-ReadyApi enthält ein extrem einfaches, aber extrem mächtiges <abbr title='oft verwendet im Zusammenhang von: Komponenten, Resourcen, Diensten, Dienstanbieter'><strong>Dependency Injection</strong></abbr> System.
+ReadyAPI enthält ein extrem einfaches, aber extrem mächtiges <abbr title='oft verwendet im Zusammenhang von: Komponenten, Resourcen, Diensten, Dienstanbieter'><strong>Dependency Injection</strong></abbr> System.
 
 * Selbst Abhängigkeiten können Abhängigkeiten haben, woraus eine Hierachie oder ein **"Graph" von Abhängigkeiten** entsteht.
-* **Automatische Umsetzung** durch ReadyApi.
+* **Automatische Umsetzung** durch ReadyAPI.
 * Alle abhängigen Komponenten könnten Daten von Anfragen, **Erweiterungen der Pfadoperations-**Einschränkungen und der automatisierten Dokumentation benötigen.
 * **Automatische Validierung** selbst für *Pfadoperationen*-Parameter, die in den Abhängigkeiten definiert wurden.
 * Unterstützt komplexe Benutzerauthentifizierungssysteme, **Datenbankverbindungen**, usw.
@@ -159,11 +159,11 @@ Jede Integration wurde so entworfen, dass sie einfach zu nutzen ist (mit Abhäng
 
 ## Starlette's Merkmale
 
-**ReadyApi** ist vollkommen kompatibel (und basiert auf) <a href="https://www.starlette.io/" class="external-link" target="_blank"><strong>Starlette</strong></a>. Das bedeutet, auch ihr eigener Starlette Quellcode funktioniert.
+**ReadyAPI** ist vollkommen kompatibel (und basiert auf) <a href="https://www.starlette.io/" class="external-link" target="_blank"><strong>Starlette</strong></a>. Das bedeutet, auch ihr eigener Starlette Quellcode funktioniert.
 
-`ReadyApi` ist eigentlich eine Unterklasse von `Starlette`. Wenn Sie also bereits Starlette kennen oder benutzen, können Sie das meiste Ihres Wissens direkt anwenden.
+`ReadyAPI` ist eigentlich eine Unterklasse von `Starlette`. Wenn Sie also bereits Starlette kennen oder benutzen, können Sie das meiste Ihres Wissens direkt anwenden.
 
-Mit **ReadyApi** bekommen Sie viele von **Starlette**'s Funktionen (da ReadyApi nur Starlette auf Steroiden ist):
+Mit **ReadyAPI** bekommen Sie viele von **Starlette**'s Funktionen (da ReadyAPI nur Starlette auf Steroiden ist):
 
 * Stark beeindruckende Performanz. Es ist <a href="https://github.com/encode/starlette#performance" class="external-link" target="_blank">eines der schnellsten Python Frameworks, auf Augenhöhe mit **NodeJS** und **Go**</a>.
 * **WebSocket**-Unterstützung.
@@ -177,7 +177,7 @@ Mit **ReadyApi** bekommen Sie viele von **Starlette**'s Funktionen (da ReadyApi 
 
 ## Pydantic's Merkmale
 
-**ReadyApi** ist vollkommen kompatibel (und basiert auf) <a href="https://pydantic-docs.helpmanual.io" class="external-link" target="_blank"><strong>Pydantic</strong></a>. Das bedeutet, auch jeder zusätzliche Pydantic Quellcode funktioniert.
+**ReadyAPI** ist vollkommen kompatibel (und basiert auf) <a href="https://pydantic-docs.helpmanual.io" class="external-link" target="_blank"><strong>Pydantic</strong></a>. Das bedeutet, auch jeder zusätzliche Pydantic Quellcode funktioniert.
 
 Verfügbar sind ebenso externe auf Pydantic basierende Bibliotheken, wie <abbr title="Object-Relational Mapper (Abbildung von Objekten auf relationale Strukturen)">ORM</abbr>s, <abbr title="Object-Document Mapper (Abbildung von Objekten auf nicht-relationale Strukturen)">ODM</abbr>s für Datenbanken.
 
@@ -185,7 +185,7 @@ Daher können Sie in vielen Fällen das Objekt einer Anfrage **direkt zur Datenb
 
 Das selbe gilt auch für die andere Richtung: Sie können jedes Objekt aus der Datenbank  **direkt zum Klienten** schicken.
 
-Mit **ReadyApi** bekommen Sie alle Funktionen von **Pydantic** (da ReadyApi für die gesamte Datenverarbeitung Pydantic nutzt):
+Mit **ReadyAPI** bekommen Sie alle Funktionen von **Pydantic** (da ReadyAPI für die gesamte Datenverarbeitung Pydantic nutzt):
 
 * **Kein Kopfzerbrechen**:
     * Sie müssen keine neue Schemadefinitionssprache lernen.

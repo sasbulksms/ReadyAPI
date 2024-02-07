@@ -14,7 +14,7 @@
 !!! note "技术细节"
     你也可以用 `from starlette.staticfiles import StaticFiles`。
 
-    **ReadyApi** 提供了和 `starlette.staticfiles` 相同的 `readyapi.staticfiles` ，只是为了方便你，开发者。但它确实来自Starlette。
+    **ReadyAPI** 提供了和 `starlette.staticfiles` 相同的 `readyapi.staticfiles` ，只是为了方便你，开发者。但它确实来自Starlette。
 
 ### 什么是"挂载"(Mounting)
 
@@ -30,7 +30,7 @@
 
  `directory="static"` 指向包含你的静态文件的目录名字。
 
-`name="static"` 提供了一个能被**ReadyApi**内部使用的名字。
+`name="static"` 提供了一个能被**ReadyAPI**内部使用的名字。
 
 所有这些参数可以不同于"`static`"，根据你应用的需要和具体细节调整它们。
 

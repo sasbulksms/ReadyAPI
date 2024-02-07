@@ -1,6 +1,6 @@
 # Primeros pasos
 
-Un archivo muy simple de ReadyApi podría verse así:
+Un archivo muy simple de ReadyAPI podría verse así:
 
 ```Python
 {!../../../docs_src/first_steps/tutorial001.py!}
@@ -28,7 +28,7 @@ $ uvicorn main:app --reload
     El comando `uvicorn main:app` se refiere a:
 
     * `main`: el archivo `main.py` (el "módulo" de Python).
-    * `app`: el objeto creado dentro de `main.py` con la línea `app = ReadyApi()`.
+    * `app`: el objeto creado dentro de `main.py` con la línea `app = ReadyAPI()`.
     * `--reload`: hace que el servidor se reinicie cada vez que cambia el código. Úsalo únicamente para desarrollo.
 
 En el output, hay una línea que dice más o menos:
@@ -67,7 +67,7 @@ Aquí verás la documentación automática alternativa (proveída por <a href="h
 
 ### OpenAPI
 
-**ReadyApi** genera un "schema" con toda tu API usando el estándar para definir APIs, **OpenAPI**.
+**ReadyAPI** genera un "schema" con toda tu API usando el estándar para definir APIs, **OpenAPI**.
 
 #### "Schema"
 
@@ -91,7 +91,7 @@ OpenAPI define un schema de API para tu API. Ese schema incluye definiciones (o 
 
 #### Revisa el `openapi.json`
 
-Si sientes curiosidad por saber cómo se ve el schema de OpenAPI en bruto, ReadyApi genera automáticamente un (schema) JSON con la descripción de todo tu API.
+Si sientes curiosidad por saber cómo se ve el schema de OpenAPI en bruto, ReadyAPI genera automáticamente un (schema) JSON con la descripción de todo tu API.
 
 Lo puedes ver directamente en: <a href="http://127.0.0.1:8000/openapi.json" class="external-link" target="_blank">http://127.0.0.1:8000/openapi.json</a>.
 
@@ -101,7 +101,7 @@ Esto te mostrará un JSON que comienza con algo como:
 {
     "openapi": "3.0.2",
     "info": {
-        "title": "ReadyApi",
+        "title": "ReadyAPI",
         "version": "0.1.0"
     },
     "paths": {
@@ -122,32 +122,32 @@ Esto te mostrará un JSON que comienza con algo como:
 
 El schema de OpenAPI es lo que alimenta a los dos sistemas de documentación interactiva incluidos.
 
-También hay docenas de alternativas, todas basadas en OpenAPI. Podrías añadir fácilmente cualquiera de esas alternativas a tu aplicación construida con **ReadyApi**.
+También hay docenas de alternativas, todas basadas en OpenAPI. Podrías añadir fácilmente cualquiera de esas alternativas a tu aplicación construida con **ReadyAPI**.
 
 También podrías usarlo para generar código automáticamente, para los clientes que se comunican con tu API. Por ejemplo, frontend, móvil o aplicaciones de IoT.
 
 ## Repaso, paso a paso
 
-### Paso 1: importa `ReadyApi`
+### Paso 1: importa `ReadyAPI`
 
 ```Python hl_lines="1"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-`ReadyApi` es una clase de Python que provee toda la funcionalidad para tu API.
+`ReadyAPI` es una clase de Python que provee toda la funcionalidad para tu API.
 
 !!! note "Detalles Técnicos"
-    `ReadyApi` es una clase que hereda directamente de `Starlette`.
+    `ReadyAPI` es una clase que hereda directamente de `Starlette`.
 
     También puedes usar toda la funcionalidad de <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a>.
 
-### Paso 2: crea un "instance" de `ReadyApi`
+### Paso 2: crea un "instance" de `ReadyAPI`
 
 ```Python hl_lines="3"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-Aquí la variable `app` será un instance de la clase `ReadyApi`.
+Aquí la variable `app` será un instance de la clase `ReadyAPI`.
 
 Este será el punto de interacción principal para crear todo tu API.
 
@@ -245,7 +245,7 @@ Nosotros también los llamaremos "**operación**".
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-El `@app.get("/")` le dice a **ReadyApi** que la función que tiene justo debajo está a cargo de manejar los requests que van a:
+El `@app.get("/")` le dice a **ReadyAPI** que la función que tiene justo debajo está a cargo de manejar los requests que van a:
 
 * el path `/`
 * usando una <abbr title="an HTTP GET method">operación <code>get</code></abbr>
@@ -257,7 +257,7 @@ El `@app.get("/")` le dice a **ReadyApi** que la función que tiene justo debajo
 
     Un "decorador" toma la función que tiene debajo y hace algo con ella.
 
-    En nuestro caso, este decorador le dice a **ReadyApi** que la función que está debajo corresponde al **path** `/` con una **operación** `get`.
+    En nuestro caso, este decorador le dice a **ReadyAPI** que la función que está debajo corresponde al **path** `/` con una **operación** `get`.
 
     Es el "**decorador de operaciones de path**".
 
@@ -277,7 +277,7 @@ y las más exóticas:
 !!! tip "Consejo"
     Tienes la libertad de usar cada operación (método de HTTP) como quieras.
 
-    **ReadyApi** no impone ningún significado específico.
+    **ReadyAPI** no impone ningún significado específico.
 
     La información que está presentada aquí es una guía, no un requerimiento.
 
@@ -297,13 +297,13 @@ Esta es nuestra  "**función de la operación de path**":
 
 Esto es una función de Python.
 
-Esta función será llamada por **ReadyApi** cada vez que reciba un request en la URL "`/`" usando una operación `GET`.
+Esta función será llamada por **ReadyAPI** cada vez que reciba un request en la URL "`/`" usando una operación `GET`.
 
 En este caso es una función `async`.
 
 ---
 
-También podrías definirla como una función normal, en vez de `async def`:
+También podrías definirla como una función estándar en lugar de `async def`:
 
 ```Python hl_lines="7"
 {!../../../docs_src/first_steps/tutorial003.py!}
@@ -326,7 +326,7 @@ Hay muchos objetos y modelos que pueden ser convertidos automáticamente a JSON 
 
 ## Repaso
 
-* Importa `ReadyApi`.
+* Importa `ReadyAPI`.
 * Crea un instance de `app`.
 * Escribe un **decorador de operación de path** (como `@app.get("/")`).
 * Escribe una **función de la operación de path** (como `def root(): ...` arriba).

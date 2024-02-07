@@ -1,9 +1,9 @@
-from readyapi import APIRouter, ReadyApi
+from readyapi import APIRouter, ReadyAPI
 from readyapi.testclient import TestClient
 
 
 def test_redirect_slashes_enabled():
-    app = ReadyApi()
+    app = ReadyAPI()
     router = APIRouter()
 
     @router.get("/hello/")
@@ -22,7 +22,7 @@ def test_redirect_slashes_enabled():
 
 
 def test_redirect_slashes_disabled():
-    app = ReadyApi(redirect_slashes=False)
+    app = ReadyAPI(redirect_slashes=False)
     router = APIRouter()
 
     @router.get("/hello/")

@@ -1,5 +1,5 @@
 import pytest
-from readyapi import ReadyApi, HTTPException
+from readyapi import HTTPException, ReadyAPI
 from readyapi.exceptions import RequestValidationError
 from readyapi.testclient import TestClient
 from starlette.responses import JSONResponse
@@ -17,7 +17,7 @@ def server_error_exception_handler(request, exception):
     return JSONResponse(status_code=500, content={"exception": "server-error"})
 
 
-app = ReadyApi(
+app = ReadyAPI(
     exception_handlers={
         HTTPException: http_exception_handler,
         RequestValidationError: request_validation_exception_handler,

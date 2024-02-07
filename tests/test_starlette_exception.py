@@ -1,8 +1,8 @@
-from readyapi import ReadyApi, HTTPException
+from readyapi import HTTPException, ReadyAPI
 from readyapi.testclient import TestClient
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-app = ReadyApi()
+app = ReadyAPI()
 
 items = {"foo": "The Foo Wrestlers"}
 
@@ -81,7 +81,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/http-no-body-statuscode-exception": {
                 "get": {

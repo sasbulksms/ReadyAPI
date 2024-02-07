@@ -31,7 +31,7 @@ Agora, a partir de uma perspectiva do desenvolvedor, aqui estão algumas coisas 
 * Depois de obter uma conexão segura, o protocolo de comunicação ainda é HTTP.
     * Os conteúdos são criptografados, embora sejam enviados com o protocolo HTTP.
 
-É uma prática comum ter um programa/servidor HTTP em execução no servidor (máquina, host, etc.) e gerenciar todas as partes HTTPS: enviando as solicitações HTTP descriptografadas para o aplicativo HTTP real em execução no mesmo servidor (a aplicação **ReadyApi**, neste caso), pegue a resposta HTTP do aplicativo, criptografe-a usando o certificado apropriado e envie-a de volta ao cliente usando HTTPS. Este servidor é frequentemente chamado de <a href="https://en.wikipedia.org/wiki/TLS_termination_proxy" class="external-link" target="_blank">TLS Termination Proxy</a>.
+É uma prática comum ter um programa/servidor HTTP em execução no servidor (máquina, host, etc.) e gerenciar todas as partes HTTPS: enviando as solicitações HTTP descriptografadas para o aplicativo HTTP real em execução no mesmo servidor (a aplicação **ReadyAPI**, neste caso), pegue a resposta HTTP do aplicativo, criptografe-a usando o certificado apropriado e envie-a de volta ao cliente usando HTTPS. Este servidor é frequentemente chamado de <a href="https://en.wikipedia.org/wiki/TLS_termination_proxy" class="external-link" target="_blank">TLS Termination Proxy</a>.
 
 ## Let's Encrypt
 

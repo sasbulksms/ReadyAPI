@@ -1,6 +1,6 @@
 # WebSocket
 
-**ReadyApi**で<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" class="external-link" target="_blank">WebSocket</a>が使用できます。
+**ReadyAPI**で<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" class="external-link" target="_blank">WebSocket</a>が使用できます。
 
 ## `WebSockets`のインストール
 
@@ -44,7 +44,7 @@ $ pip install websockets
 
 ## `websocket` を作成する
 
-**ReadyApi** アプリケーションで、`websocket` を作成します。
+**ReadyAPI** アプリケーションで、`websocket` を作成します。
 
 ```Python hl_lines="1  46-47"
 {!../../../docs_src/websockets/tutorial001.py!}
@@ -53,7 +53,7 @@ $ pip install websockets
 !!! note "技術詳細"
     `from starlette.websockets import WebSocket` を使用しても構いません.
 
-    **ReadyApi** は開発者の利便性のために、同じ `WebSocket` を提供します。しかし、こちらはStarletteから直接提供されるものです。
+    **ReadyAPI** は開発者の利便性のために、同じ `WebSocket` を提供します。しかし、こちらはStarletteから直接提供されるものです。
 
 ## メッセージの送受信
 
@@ -89,7 +89,7 @@ $ uvicorn main:app --reload
 
 <img src="/img/tutorial/websockets/image02.png">
 
-そして、 WebSocketを使用した**ReadyApi**アプリケーションが応答します。
+そして、 WebSocketを使用した**ReadyAPI**アプリケーションが応答します。
 
 <img src="/img/tutorial/websockets/image03.png">
 
@@ -110,7 +110,7 @@ WebSocketエンドポイントでは、`readyapi` から以下をインポート
 * `Path`
 * `Query`
 
-これらは、他のReadyApi エンドポイント/*path operation* の場合と同じように機能します。
+これらは、他のReadyAPI エンドポイント/*path operation* の場合と同じように機能します。
 
 ```Python hl_lines="58-65  68-83"
 {!../../../docs_src/websockets/tutorial002.py!}
@@ -176,7 +176,7 @@ Client #1596980209979 left the chat
 
     しかし、すべての接続がメモリ内の単一のリストで処理されるため、プロセスの実行中にのみ機能し、単一のプロセスでのみ機能することに注意してください。
 
-    もしReadyApiと簡単に統合できて、RedisやPostgreSQLなどでサポートされている、より堅牢なものが必要なら、<a href="https://github.com/encode/broadcaster" class="external-link" target="_blank">encode/broadcaster</a> を確認してください。
+    もしReadyAPIと簡単に統合できて、RedisやPostgreSQLなどでサポートされている、より堅牢なものが必要なら、<a href="https://github.com/encode/broadcaster" class="external-link" target="_blank">encode/broadcaster</a> を確認してください。
 
 ## その他のドキュメント
 

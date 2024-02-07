@@ -8,9 +8,9 @@
 
 ## ❎ 🔫 🛠️
 
-**ReadyApi** ⚓️ 🔛 💃 &amp; 🛠️ <abbr title="Asynchronous Server Gateway Interface">🔫</abbr> 🔧, 👆 💪 ⚙️ 🙆 🔫 🛠️.
+**ReadyAPI** ⚓️ 🔛 💃 &amp; 🛠️ <abbr title="Asynchronous Server Gateway Interface">🔫</abbr> 🔧, 👆 💪 ⚙️ 🙆 🔫 🛠️.
 
-🛠️ 🚫 ✔️ ⚒ ReadyApi ⚖️ 💃 👷, 📏 ⚫️ ⏩ 🔫 🔌.
+🛠️ 🚫 ✔️ ⚒ ReadyAPI ⚖️ 💃 👷, 📏 ⚫️ ⏩ 🔫 🔌.
 
 🏢, 🔫 🛠️ 🎓 👈 ⌛ 📨 🔫 📱 🥇 ❌.
 
@@ -24,15 +24,15 @@ app = SomeASGIApp()
 new_app = UnicornMiddleware(app, some_config="rainbow")
 ```
 
-✋️ ReadyApi (🤙 💃) 🚚 🙅 🌌 ⚫️ 👈 ⚒ 💭 👈 🔗 🛠️ 🍵 💽 ❌ &amp; 🛃 ⚠ 🐕‍🦺 👷 ☑.
+✋️ ReadyAPI (🤙 💃) 🚚 🙅 🌌 ⚫️ 👈 ⚒ 💭 👈 🔗 🛠️ 🍵 💽 ❌ &amp; 🛃 ⚠ 🐕‍🦺 👷 ☑.
 
 👈, 👆 ⚙️ `app.add_middleware()` (🖼 ⚜).
 
 ```Python
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from unicorn import UnicornMiddleware
 
-app = ReadyApi()
+app = ReadyAPI()
 
 app.add_middleware(UnicornMiddleware, some_config="rainbow")
 ```
@@ -41,12 +41,12 @@ app.add_middleware(UnicornMiddleware, some_config="rainbow")
 
 ## 🛠️ 🛠️
 
-**ReadyApi** 🔌 📚 🛠️ ⚠ ⚙️ 💼, 👥 🔜 👀 ⏭ ❔ ⚙️ 👫.
+**ReadyAPI** 🔌 📚 🛠️ ⚠ ⚙️ 💼, 👥 🔜 👀 ⏭ ❔ ⚙️ 👫.
 
 !!! note "📡 ℹ"
     ⏭ 🖼, 👆 💪 ⚙️ `from starlette.middleware.something import SomethingMiddleware`.
 
-    **ReadyApi** 🚚 📚 🛠️ `readyapi.middleware` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 🛠️ 👟 🔗 ⚪️➡️ 💃.
+    **ReadyAPI** 🚚 📚 🛠️ `readyapi.middleware` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 🛠️ 👟 🔗 ⚪️➡️ 💃.
 
 ## `HTTPSRedirectMiddleware`
 

@@ -4,7 +4,7 @@ Now that we have seen how to use `Path` and `Query`, let's see more advanced use
 
 ## Mix `Path`, `Query` and body parameters
 
-First, of course, you can mix `Path`, `Query` and request body parameter declarations freely and **ReadyApi** will know what to do.
+First, of course, you can mix `Path`, `Query` and request body parameter declarations freely and **ReadyAPI** will know what to do.
 
 And you can also declare body parameters as optional, by setting the default to `None`:
 
@@ -20,7 +20,7 @@ And you can also declare body parameters as optional, by setting the default to 
     {!> ../../../docs_src/body_multiple_params/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="19-21"
     {!> ../../../docs_src/body_multiple_params/tutorial001_an.py!}
@@ -35,7 +35,7 @@ And you can also declare body parameters as optional, by setting the default to 
     {!> ../../../docs_src/body_multiple_params/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -68,13 +68,13 @@ But you can also declare multiple body parameters, e.g. `item` and `user`:
     {!> ../../../docs_src/body_multiple_params/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="22"
     {!> ../../../docs_src/body_multiple_params/tutorial002.py!}
     ```
 
-In this case, **ReadyApi** will notice that there are more than one body parameters in the function (two parameters that are Pydantic models).
+In this case, **ReadyAPI** will notice that there are more than one body parameters in the function (two parameters that are Pydantic models).
 
 So, it will then use the parameter names as keys (field names) in the body, and expect a body like:
 
@@ -97,19 +97,19 @@ So, it will then use the parameter names as keys (field names) in the body, and 
     Notice that even though the `item` was declared the same way as before, it is now expected to be inside of the body with a key `item`.
 
 
-**ReadyApi** will do the automatic conversion from the request, so that the parameter `item` receives it's specific content and the same for `user`.
+**ReadyAPI** will do the automatic conversion from the request, so that the parameter `item` receives it's specific content and the same for `user`.
 
 It will perform the validation of the compound data, and will document it like that for the OpenAPI schema and automatic docs.
 
 ## Singular values in body
 
-The same way there is a `Query` and `Path` to define extra data for query and path parameters, **ReadyApi** provides an equivalent `Body`.
+The same way there is a `Query` and `Path` to define extra data for query and path parameters, **ReadyAPI** provides an equivalent `Body`.
 
 For example, extending the previous model, you could decide that you want to have another key `importance` in the same body, besides the `item` and `user`.
 
-If you declare it as is, because it is a singular value, **ReadyApi** will assume that it is a query parameter.
+If you declare it as is, because it is a singular value, **ReadyAPI** will assume that it is a query parameter.
 
-But you can instruct **ReadyApi** to treat it as another body key using `Body`:
+But you can instruct **ReadyAPI** to treat it as another body key using `Body`:
 
 === "Python 3.10+"
 
@@ -123,7 +123,7 @@ But you can instruct **ReadyApi** to treat it as another body key using `Body`:
     {!> ../../../docs_src/body_multiple_params/tutorial003_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="24"
     {!> ../../../docs_src/body_multiple_params/tutorial003_an.py!}
@@ -138,7 +138,7 @@ But you can instruct **ReadyApi** to treat it as another body key using `Body`:
     {!> ../../../docs_src/body_multiple_params/tutorial003_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -147,7 +147,7 @@ But you can instruct **ReadyApi** to treat it as another body key using `Body`:
     {!> ../../../docs_src/body_multiple_params/tutorial003.py!}
     ```
 
-In this case, **ReadyApi** will expect a body like:
+In this case, **ReadyAPI** will expect a body like:
 
 ```JSON
 {
@@ -197,7 +197,7 @@ For example:
     {!> ../../../docs_src/body_multiple_params/tutorial004_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="28"
     {!> ../../../docs_src/body_multiple_params/tutorial004_an.py!}
@@ -212,7 +212,7 @@ For example:
     {!> ../../../docs_src/body_multiple_params/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -228,7 +228,7 @@ For example:
 
 Let's say you only have a single `item` body parameter from a Pydantic model `Item`.
 
-By default, **ReadyApi** will then expect its body directly.
+By default, **ReadyAPI** will then expect its body directly.
 
 But if you want it to expect a JSON with a key `item` and inside of it the model contents, as it does when you declare extra body parameters, you can use the special `Body` parameter `embed`:
 
@@ -250,7 +250,7 @@ as in:
     {!> ../../../docs_src/body_multiple_params/tutorial005_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="18"
     {!> ../../../docs_src/body_multiple_params/tutorial005_an.py!}
@@ -265,7 +265,7 @@ as in:
     {!> ../../../docs_src/body_multiple_params/tutorial005_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -274,7 +274,7 @@ as in:
     {!> ../../../docs_src/body_multiple_params/tutorial005.py!}
     ```
 
-In this case **ReadyApi** will expect a body like:
+In this case **ReadyAPI** will expect a body like:
 
 ```JSON hl_lines="2"
 {
@@ -302,8 +302,8 @@ instead of:
 
 You can add multiple body parameters to your *path operation function*, even though a request can only have a single body.
 
-But **ReadyApi** will handle it, give you the correct data in your function, and validate and document the correct schema in the *path operation*.
+But **ReadyAPI** will handle it, give you the correct data in your function, and validate and document the correct schema in the *path operation*.
 
 You can also declare singular values to be received as part of the body.
 
-And you can instruct **ReadyApi** to embed the body in a key even when there is only a single parameter declared.
+And you can instruct **ReadyAPI** to embed the body in a key even when there is only a single parameter declared.

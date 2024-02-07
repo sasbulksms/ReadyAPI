@@ -14,7 +14,7 @@
 !!! note "📡 ℹ"
     👆 💪 ⚙️ `from starlette.staticfiles import StaticFiles`.
 
-    **ReadyApi** 🚚 🎏 `starlette.staticfiles` `readyapi.staticfiles` 🏪 👆, 👩‍💻. ✋️ ⚫️ 🤙 👟 🔗 ⚪️➡️ 💃.
+    **ReadyAPI** 🚚 🎏 `starlette.staticfiles` `readyapi.staticfiles` 🏪 👆, 👩‍💻. ✋️ ⚫️ 🤙 👟 🔗 ⚪️➡️ 💃.
 
 ### ⚫️❔ "🗜"
 
@@ -30,7 +30,7 @@
 
 `directory="static"` 🔗 📛 📁 👈 🔌 👆 🎻 📁.
 
-`name="static"` 🤝 ⚫️ 📛 👈 💪 ⚙️ 🔘 **ReadyApi**.
+`name="static"` 🤝 ⚫️ 📛 👈 💪 ⚙️ 🔘 **ReadyAPI**.
 
 🌐 👫 🔢 💪 🎏 🌘 "`static`", 🔆 👫 ⏮️ 💪 &amp; 🎯 ℹ 👆 👍 🈸.
 

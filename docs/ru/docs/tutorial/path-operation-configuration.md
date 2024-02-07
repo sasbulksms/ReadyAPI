@@ -25,7 +25,7 @@
     {!> ../../../docs_src/path_operation_configuration/tutorial001_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="3  17"
     {!> ../../../docs_src/path_operation_configuration/tutorial001.py!}
@@ -36,7 +36,7 @@
 !!! note "Технические детали"
     Вы также можете использовать `from starlette import status`.
 
-    **ReadyApi** предоставляет тот же `starlette.status` под псевдонимом `readyapi.status` для удобства разработчика. Но его источник - это непосредственно Starlette.
+    **ReadyAPI** предоставляет тот же `starlette.status` под псевдонимом `readyapi.status` для удобства разработчика. Но его источник - это непосредственно Starlette.
 
 ## Теги
 
@@ -54,7 +54,7 @@
     {!> ../../../docs_src/path_operation_configuration/tutorial002_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="17  22  27"
     {!> ../../../docs_src/path_operation_configuration/tutorial002.py!}
@@ -70,7 +70,7 @@
 
 В этих случаях, имеет смысл хранить теги в классе `Enum`.
 
-**ReadyApi** поддерживает это так же, как и в случае с обычными строками:
+**ReadyAPI** поддерживает это так же, как и в случае с обычными строками:
 
 ```Python hl_lines="1  8-10  13  18"
 {!../../../docs_src/path_operation_configuration/tutorial002b.py!}
@@ -92,7 +92,7 @@
     {!> ../../../docs_src/path_operation_configuration/tutorial003_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="20-21"
     {!> ../../../docs_src/path_operation_configuration/tutorial003.py!}
@@ -100,7 +100,7 @@
 
 ## Описание из строк документации
 
-Так как описания обычно длинные и содержат много строк, вы можете объявить описание *операции пути* в функции <abbr title="многострочный текст, первое выражение внутри функции (не присвоенный какой-либо переменной), используемый для документации">строки документации</abbr> и **ReadyApi** прочитает её отсюда.
+Так как описания обычно длинные и содержат много строк, вы можете объявить описание *операции пути* в функции <abbr title="многострочный текст, первое выражение внутри функции (не присвоенный какой-либо переменной), используемый для документации">строки документации</abbr> и **ReadyAPI** прочитает её отсюда.
 
 Вы можете использовать <a href="https://en.wikipedia.org/wiki/Markdown" class="external-link" target="_blank">Markdown</a> в строке документации, и он будет интерпретирован и отображён корректно (с учетом отступа в строке документации).
 
@@ -116,7 +116,7 @@
     {!> ../../../docs_src/path_operation_configuration/tutorial004_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="19-27"
     {!> ../../../docs_src/path_operation_configuration/tutorial004.py!}
@@ -142,7 +142,7 @@
     {!> ../../../docs_src/path_operation_configuration/tutorial005_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="21"
     {!> ../../../docs_src/path_operation_configuration/tutorial005.py!}
@@ -154,7 +154,7 @@
 !!! check "Технические детали"
     OpenAPI указывает, что каждой *операции пути* необходимо описание ответа.
 
-    Если вдруг вы не укажете его, то **ReadyApi** автоматически сгенерирует это описание с текстом "Successful response".
+    Если вдруг вы не укажете его, то **ReadyAPI** автоматически сгенерирует это описание с текстом "Successful response".
 
 <img src="/img/tutorial/path-operation-configuration/image03.png">
 

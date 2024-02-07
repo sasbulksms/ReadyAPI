@@ -4,7 +4,7 @@
 
 ## 混合使用 `Path`、`Query` 和请求体参数
 
-首先，毫无疑问地，你可以随意地混合使用 `Path`、`Query` 和请求体参数声明，**ReadyApi** 会知道该如何处理。
+首先，毫无疑问地，你可以随意地混合使用 `Path`、`Query` 和请求体参数声明，**ReadyAPI** 会知道该如何处理。
 
 你还可以通过将默认值设置为 `None` 来将请求体参数声明为可选参数：
 
@@ -20,7 +20,7 @@
     {!> ../../../docs_src/body_multiple_params/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="19-21"
     {!> ../../../docs_src/body_multiple_params/tutorial001_an.py!}
@@ -35,7 +35,7 @@
     {!> ../../../docs_src/body_multiple_params/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         尽可能选择使用 `Annotated` 的版本。
@@ -68,13 +68,13 @@
     {!> ../../../docs_src/body_multiple_params/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="22"
     {!> ../../../docs_src/body_multiple_params/tutorial002.py!}
     ```
 
-在这种情况下，**ReadyApi** 将注意到该函数中有多个请求体参数（两个 Pydantic 模型参数）。
+在这种情况下，**ReadyAPI** 将注意到该函数中有多个请求体参数（两个 Pydantic 模型参数）。
 
 因此，它将使用参数名称作为请求体中的键（字段名称），并期望一个类似于以下内容的请求体：
 
@@ -97,19 +97,19 @@
     请注意，即使 `item` 的声明方式与之前相同，但现在它被期望通过 `item` 键内嵌在请求体中。
 
 
-**ReadyApi** 将自动对请求中的数据进行转换，因此 `item` 参数将接收指定的内容，`user` 参数也是如此。
+**ReadyAPI** 将自动对请求中的数据进行转换，因此 `item` 参数将接收指定的内容，`user` 参数也是如此。
 
 它将执行对复合数据的校验，并且像现在这样为 OpenAPI 模式和自动化文档对其进行记录。
 
 ## 请求体中的单一值
 
-与使用 `Query` 和 `Path` 为查询参数和路径参数定义额外数据的方式相同，**ReadyApi** 提供了一个同等的 `Body`。
+与使用 `Query` 和 `Path` 为查询参数和路径参数定义额外数据的方式相同，**ReadyAPI** 提供了一个同等的 `Body`。
 
 例如，为了扩展先前的模型，你可能决定除了 `item` 和 `user` 之外，还想在同一请求体中具有另一个键 `importance`。
 
-如果你就按原样声明它，因为它是一个单一值，**ReadyApi** 将假定它是一个查询参数。
+如果你就按原样声明它，因为它是一个单一值，**ReadyAPI** 将假定它是一个查询参数。
 
-但是你可以使用 `Body` 指示 **ReadyApi** 将其作为请求体的另一个键进行处理。
+但是你可以使用 `Body` 指示 **ReadyAPI** 将其作为请求体的另一个键进行处理。
 
 
 === "Python 3.10+"
@@ -124,7 +124,7 @@
     {!> ../../../docs_src/body_multiple_params/tutorial003_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="24"
     {!> ../../../docs_src/body_multiple_params/tutorial003_an.py!}
@@ -139,7 +139,7 @@
     {!> ../../../docs_src/body_multiple_params/tutorial003_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         尽可能选择使用 `Annotated` 的版本。
@@ -148,7 +148,7 @@
     {!> ../../../docs_src/body_multiple_params/tutorial003.py!}
     ```
 
-在这种情况下，**ReadyApi** 将期望像这样的请求体：
+在这种情况下，**ReadyAPI** 将期望像这样的请求体：
 
 
 ```JSON
@@ -193,7 +193,7 @@ q: str = None
     {!> ../../../docs_src/body_multiple_params/tutorial004_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="28"
     {!> ../../../docs_src/body_multiple_params/tutorial004_an.py!}
@@ -208,7 +208,7 @@ q: str = None
     {!> ../../../docs_src/body_multiple_params/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         尽可能选择使用 `Annotated` 的版本。
@@ -225,7 +225,7 @@ q: str = None
 
 假设你只有一个来自 Pydantic 模型 `Item` 的请求体参数 `item`。
 
-默认情况下，**ReadyApi** 将直接期望这样的请求体。
+默认情况下，**ReadyAPI** 将直接期望这样的请求体。
 
 但是，如果你希望它期望一个拥有 `item` 键并在值中包含模型内容的 JSON，就像在声明额外的请求体参数时所做的那样，则可以使用一个特殊的 `Body` 参数 `embed`：
 
@@ -247,7 +247,7 @@ item: Item = Body(embed=True)
     {!> ../../../docs_src/body_multiple_params/tutorial005_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="18"
     {!> ../../../docs_src/body_multiple_params/tutorial005_an.py!}
@@ -262,7 +262,7 @@ item: Item = Body(embed=True)
     {!> ../../../docs_src/body_multiple_params/tutorial005_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         尽可能选择使用 `Annotated` 的版本。
@@ -271,7 +271,7 @@ item: Item = Body(embed=True)
     {!> ../../../docs_src/body_multiple_params/tutorial005.py!}
     ```
 
-在这种情况下，**ReadyApi** 将期望像这样的请求体：
+在这种情况下，**ReadyAPI** 将期望像这样的请求体：
 
 ```JSON hl_lines="2"
 {
@@ -299,8 +299,8 @@ item: Item = Body(embed=True)
 
 你可以添加多个请求体参数到*路径操作函数*中，即使一个请求只能有一个请求体。
 
-但是 **ReadyApi** 会处理它，在函数中为你提供正确的数据，并在*路径操作*中校验并记录正确的模式。
+但是 **ReadyAPI** 会处理它，在函数中为你提供正确的数据，并在*路径操作*中校验并记录正确的模式。
 
 你还可以声明将作为请求体的一部分所接收的单一值。
 
-你还可以指示 **ReadyApi** 在仅声明了一个请求体参数的情况下，将原本的请求体嵌入到一个键中。
+你还可以指示 **ReadyAPI** 在仅声明了一个请求体参数的情况下，将原本的请求体嵌入到一个键中。

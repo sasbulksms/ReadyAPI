@@ -2,7 +2,7 @@
 
 ## Caractéristiques supplémentaires
 
-Le [Tutoriel - Guide de l'utilisateur](../tutorial/){.internal-link target=_blank} devrait suffire à vous faire découvrir toutes les fonctionnalités principales de **ReadyApi**.
+Le [Tutoriel - Guide de l'utilisateur](../tutorial/){.internal-link target=_blank} devrait suffire à vous faire découvrir toutes les fonctionnalités principales de **ReadyAPI**.
 
 Dans les sections suivantes, vous verrez des options, configurations et fonctionnalités supplémentaires.
 
@@ -13,12 +13,12 @@ Dans les sections suivantes, vous verrez des options, configurations et fonction
 
 ## Lisez d'abord le didacticiel
 
-Vous pouvez utiliser la plupart des fonctionnalités de **ReadyApi** grâce aux connaissances du [Tutoriel - Guide de l'utilisateur](../tutorial/){.internal-link target=_blank}.
+Vous pouvez utiliser la plupart des fonctionnalités de **ReadyAPI** grâce aux connaissances du [Tutoriel - Guide de l'utilisateur](../tutorial/){.internal-link target=_blank}.
 
 Et les sections suivantes supposent que vous l'avez lu et que vous en connaissez les idées principales.
 
 ## Cours TestDriven.io
 
-Si vous souhaitez suivre un cours pour débutants avancés pour compléter cette section de la documentation, vous pouvez consulter : <a href="https://testdrive.io/courses/tdd-readyapi/" class="external- link" target="_blank">Développement piloté par les tests avec ReadyApi et Docker</a> par **TestDriven.io**.
+Si vous souhaitez suivre un cours pour débutants avancés pour compléter cette section de la documentation, vous pouvez consulter : <a href="https://testdrive.io/courses/tdd-readyapi/" class="external- link" target="_blank">Développement piloté par les tests avec ReadyAPI et Docker</a> par **TestDriven.io**.
 
-10 % de tous les bénéfices de ce cours sont reversés au développement de **ReadyApi**. 🎉 😄
+10 % de tous les bénéfices de ce cours sont reversés au développement de **ReadyAPI**. 🎉 😄

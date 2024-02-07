@@ -1,6 +1,6 @@
 # İlk Adımlar
 
-En basit ReadyApi dosyası şu şekildedir:
+En basit ReadyAPI dosyası şu şekildedir:
 
 ```Python
 {!../../../docs_src/first_steps/tutorial001.py!}
@@ -28,7 +28,7 @@ $ uvicorn main:app --reload
     `uvicorn main:app` komutu şunu ifade eder:
 
     * `main`: `main.py` dosyası (the Python "module").
-    * `app`: `main.py` dosyası içerisinde `app = ReadyApi()` satırıyla oluşturulan nesne.
+    * `app`: `main.py` dosyası içerisinde `app = ReadyAPI()` satırıyla oluşturulan nesne.
     * `--reload`: Kod değişikliği sonrasında sunucunun yeniden başlatılmasını sağlar. Yalnızca geliştirme için kullanın.
 
 Çıktıda şu şekilde bir satır vardır:
@@ -67,7 +67,7 @@ Otomatik oluşturulmuş(<a href="https://github.com/Rebilly/ReDoc" class="extern
 
 ### OpenAPI
 
-**ReadyApi**, **OpenAPI** standardını kullanarak tüm API'lerinizi açıklayan bir "şema" oluşturur.
+**ReadyAPI**, **OpenAPI** standardını kullanarak tüm API'lerinizi açıklayan bir "şema" oluşturur.
 
 #### "Şema"
 
@@ -91,7 +91,7 @@ OpenAPI, API'niz için bir API şeması tanımlar. Ve bu şema, JSON veri şemal
 
 #### `openapi.json` kontrol et
 
-OpenAPI şemasının nasıl göründüğünü merak ediyorsanız, ReadyApi otomatik olarak tüm API'nizin açıklamalarını içeren bir JSON (şema) oluşturur.
+OpenAPI şemasının nasıl göründüğünü merak ediyorsanız, ReadyAPI otomatik olarak tüm API'nizin açıklamalarını içeren bir JSON (şema) oluşturur.
 
 Doğrudan şu adreste görebilirsiniz: <a href="http://127.0.0.1:8000/openapi.json" class="external-link" target="_blank">http://127.0.0.1:8000/openapi.json</a>.
 
@@ -101,7 +101,7 @@ Aşağıdaki gibi bir şeyle başlayan bir JSON gösterecektir:
 {
     "openapi": "3.0.2",
     "info": {
-        "title": "ReadyApi",
+        "title": "ReadyAPI",
         "version": "0.1.0"
     },
     "paths": {
@@ -122,32 +122,32 @@ Aşağıdaki gibi bir şeyle başlayan bir JSON gösterecektir:
 
 OpenAPI şeması, dahili olarak bulunan iki etkileşimli dokümantasyon sistemine güç veren şeydir.
 
-Ve tamamen OpenAPI'ye dayalı düzinelerce alternatif vardır. **ReadyApi** ile oluşturulmuş uygulamanıza bu alternatiflerden herhangi birini kolayca ekleyebilirsiniz.
+Ve tamamen OpenAPI'ye dayalı düzinelerce alternatif vardır. **ReadyAPI** ile oluşturulmuş uygulamanıza bu alternatiflerden herhangi birini kolayca ekleyebilirsiniz.
 
 API'nizle iletişim kuran istemciler için otomatik olarak kod oluşturmak için de kullanabilirsiniz. Örneğin, frontend, mobil veya IoT uygulamaları.
 
 ## Adım adım özet
 
-### Adım 1: `ReadyApi`yi içe aktarın
+### Adım 1: `ReadyAPI`yi içe aktarın
 
 ```Python hl_lines="1"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-`ReadyApi`, API'niz için tüm fonksiyonları sağlayan bir Python sınıfıdır.
+`ReadyAPI`, API'niz için tüm fonksiyonları sağlayan bir Python sınıfıdır.
 
 !!! note "Teknik Detaylar"
-    `ReadyApi` doğrudan `Starlette` kalıtım alan bir sınıftır.
+    `ReadyAPI` doğrudan `Starlette` kalıtım alan bir sınıftır.
 
-    Tüm <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a> fonksiyonlarını `ReadyApi` ile de kullanabilirsiniz.
+    Tüm <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a> fonksiyonlarını `ReadyAPI` ile de kullanabilirsiniz.
 
-### Adım 2: Bir `ReadyApi` örneği oluşturun
+### Adım 2: Bir `ReadyAPI` örneği oluşturun
 
 ```Python hl_lines="3"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-Burada `app` değişkeni `ReadyApi` sınıfının bir örneği olacaktır.
+Burada `app` değişkeni `ReadyAPI` sınıfının bir örneği olacaktır.
 
 Bu tüm API'yi oluşturmak için ana etkileşim noktası olacaktır.
 
@@ -245,7 +245,7 @@ Bizde onlara "**işlemler**" diyeceğiz.
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-`@app.get("/")` **ReadyApi'ye** aşağıdaki fonksiyonun adresine giden istekleri işlemekten sorumlu olduğunu söyler:
+`@app.get("/")` **ReadyAPI'ye** aşağıdaki fonksiyonun adresine giden istekleri işlemekten sorumlu olduğunu söyler:
 
 * path `/`
 * <abbr title="an HTTP GET method"><code>get</code> işlemi</abbr> kullanılarak
@@ -258,7 +258,7 @@ Bizde onlara "**işlemler**" diyeceğiz.
 
     Bir "decorator" fonksiyonu alır ve bazı işlemler gerçekleştir.
 
-    Bizim durumumzda decarator **ReadyApi'ye** fonksiyonun bir `get` işlemi ile `/` pathine geldiğini söyler.
+    Bizim durumumzda decarator **ReadyAPI'ye** fonksiyonun bir `get` işlemi ile `/` pathine geldiğini söyler.
 
     Bu **path işlem decoratordür**
 
@@ -278,7 +278,7 @@ Ve daha egzotik olanları:
 !!! tip
     Her işlemi (HTTP method) istediğiniz gibi kullanmakta özgürsünüz.
 
-    **ReadyApi** herhangi bir özel anlamı zorlamaz.
+    **ReadyAPI** herhangi bir özel anlamı zorlamaz.
 
     Buradaki bilgiler bir gereklilik değil, bir kılavuz olarak sunulmaktadır.
 
@@ -298,7 +298,7 @@ Aşağıdakiler bizim **path işlem fonksiyonlarımızdır**:
 
 Bu bir Python fonksiyonudur.
 
-Bir `GET` işlemi kullanarak "`/`" URL'sine bir istek geldiğinde **ReadyApi** tarafından çağrılır.
+Bir `GET` işlemi kullanarak "`/`" URL'sine bir istek geldiğinde **ReadyAPI** tarafından çağrılır.
 
 Bu durumda bir `async` fonksiyonudur.
 
@@ -329,7 +329,7 @@ Otomatik olarak JSON'a dönüştürülecek(ORM'ler vb. dahil) başka birçok nes
 
 ## Özet
 
-* `ReadyApi`'yi içe aktarın.
+* `ReadyAPI`'yi içe aktarın.
 * Bir `app` örneği oluşturun.
 * **path işlem decorator** yazın. (`@app.get("/")` gibi)
 * **path işlem fonksiyonu** yazın. (`def root(): ...` gibi)

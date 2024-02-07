@@ -1,8 +1,8 @@
 from typing import List, Optional
 
-from readyapi import ReadyApi
-from readyapi.testclient import TestClient
 from pydantic import BaseModel
+from readyapi import ReadyAPI
+from readyapi.testclient import TestClient
 
 from .utils import PYDANTIC_V2, needs_pydanticv2
 
@@ -24,7 +24,7 @@ class Item(BaseModel):
 
 
 def get_app_client(separate_input_output_schemas: bool = True) -> TestClient:
-    app = ReadyApi(separate_input_output_schemas=separate_input_output_schemas)
+    app = ReadyAPI(separate_input_output_schemas=separate_input_output_schemas)
 
     @app.post("/items/")
     def create_item(item: Item):
@@ -137,7 +137,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/items/": {
                 "get": {
@@ -339,7 +339,7 @@ def test_openapi_schema_no_separate():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/items/": {
                 "get": {

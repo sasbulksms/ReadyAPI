@@ -1,6 +1,6 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.staticfiles import StaticFiles
 
-app = ReadyApi()
+app = ReadyAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")

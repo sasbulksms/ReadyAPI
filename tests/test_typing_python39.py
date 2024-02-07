@@ -1,4 +1,4 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 
 from .utils import needs_py310
@@ -13,7 +13,7 @@ def test_typing():
         tuple[int, ...]: [1, 2, 3],  # `tuple` is converted to `list`
     }
     for test_type, expect in types.items():
-        app = ReadyApi()
+        app = ReadyAPI()
 
         @app.post("/", response_model=test_type)
         def post_endpoint(input: test_type):

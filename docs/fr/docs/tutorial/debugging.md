@@ -4,7 +4,7 @@ Vous pouvez connecter le <abbr title="En anglais: debugger">débogueur</abbr> da
 
 ## Faites appel à `uvicorn`
 
-Dans votre application ReadyApi, importez et exécutez directement `uvicorn` :
+Dans votre application ReadyAPI, importez et exécutez directement `uvicorn` :
 
 ```Python hl_lines="1  15"
 {!../../../docs_src/debugging/tutorial001.py!}
@@ -79,7 +79,7 @@ Pour plus d'informations, consultez <a href="https://docs.python.org/3/library/_
 
 ## Exécutez votre code avec votre <abbr title="En anglais: debugger">débogueur</abbr>
 
-Parce que vous exécutez le serveur Uvicorn directement depuis votre code, vous pouvez appeler votre programme Python (votre application ReadyApi) directement depuis le <abbr title="En anglais: debugger">débogueur</abbr>.
+Parce que vous exécutez le serveur Uvicorn directement depuis votre code, vous pouvez appeler votre programme Python (votre application ReadyAPI) directement depuis le <abbr title="En anglais: debugger">débogueur</abbr>.
 
 ---
 
@@ -90,7 +90,7 @@ Par exemple, dans Visual Studio Code, vous pouvez :
 - Sélectionnez "Python".
 - Lancez le <abbr title="En anglais: debugger">débogueur</abbr> avec l'option "`Python: Current File (Integrated Terminal)`".
 
-Il démarrera alors le serveur avec votre code **ReadyApi**, s'arrêtera à vos points d'arrêt, etc.
+Il démarrera alors le serveur avec votre code **ReadyAPI**, s'arrêtera à vos points d'arrêt, etc.
 
 Voici à quoi cela pourrait ressembler :
 
@@ -105,7 +105,7 @@ Si vous utilisez Pycharm, vous pouvez :
 - Un menu contextuel s'affiche alors.
 - Sélectionnez le fichier à déboguer (dans ce cas, `main.py`).
 
-Il démarrera alors le serveur avec votre code **ReadyApi**, s'arrêtera à vos points d'arrêt, etc.
+Il démarrera alors le serveur avec votre code **ReadyAPI**, s'arrêtera à vos points d'arrêt, etc.
 
 Voici à quoi cela pourrait ressembler :
 

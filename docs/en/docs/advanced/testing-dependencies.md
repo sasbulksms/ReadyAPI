@@ -22,11 +22,11 @@ In this case, you can override the dependency that calls that provider, and use 
 
 ### Use the `app.dependency_overrides` attribute
 
-For these cases, your **ReadyApi** application has an attribute `app.dependency_overrides`, it is a simple `dict`.
+For these cases, your **ReadyAPI** application has an attribute `app.dependency_overrides`, it is a simple `dict`.
 
 To override a dependency for testing, you put as a key the original dependency (a function), and as the value, your dependency override (another function).
 
-And then **ReadyApi** will call that override instead of the original dependency.
+And then **ReadyAPI** will call that override instead of the original dependency.
 
 === "Python 3.10+"
 
@@ -40,7 +40,7 @@ And then **ReadyApi** will call that override instead of the original dependency
     {!> ../../../docs_src/dependency_testing/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="29-30  33"
     {!> ../../../docs_src/dependency_testing/tutorial001_an.py!}
@@ -55,7 +55,7 @@ And then **ReadyApi** will call that override instead of the original dependency
     {!> ../../../docs_src/dependency_testing/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -65,11 +65,11 @@ And then **ReadyApi** will call that override instead of the original dependency
     ```
 
 !!! tip
-    You can set a dependency override for a dependency used anywhere in your **ReadyApi** application.
+    You can set a dependency override for a dependency used anywhere in your **ReadyAPI** application.
 
     The original dependency could be used in a *path operation function*, a *path operation decorator* (when you don't use the return value), a `.include_router()` call, etc.
 
-    ReadyApi will still be able to override it.
+    ReadyAPI will still be able to override it.
 
 Then you can reset your overrides (remove them) by setting `app.dependency_overrides` to be an empty `dict`:
 

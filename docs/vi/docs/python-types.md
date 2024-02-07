@@ -6,11 +6,11 @@ Những **"type hints"** hay chú thích là một cú pháp đặc biệt cho p
 
 Bằng việc khai báo kiểu dữ liệu cho các biến của bạn, các trình soạn thảo và các công cụ có thể hỗ trợ bạn tốt hơn.
 
-Đây chỉ là một **hướng dẫn nhanh** về gợi ý kiểu dữ liệu trong Python. Nó chỉ bao gồm những điều cần thiết tối thiểu để sử dụng chúng với **ReadyApi**... đó thực sự là rất ít.
+Đây chỉ là một **hướng dẫn nhanh** về gợi ý kiểu dữ liệu trong Python. Nó chỉ bao gồm những điều cần thiết tối thiểu để sử dụng chúng với **ReadyAPI**... đó thực sự là rất ít.
 
-**ReadyApi** hoàn toàn được dựa trên những gợi ý kiểu dữ liệu, chúng mang đến nhiều ưu điểm và lợi ích.
+**ReadyAPI** hoàn toàn được dựa trên những gợi ý kiểu dữ liệu, chúng mang đến nhiều ưu điểm và lợi ích.
 
-Nhưng thậm chí nếu bạn không bao giờ sử dụng **ReadyApi**, bạn sẽ được lợi từ việc học một ít về chúng.
+Nhưng thậm chí nếu bạn không bao giờ sử dụng **ReadyAPI**, bạn sẽ được lợi từ việc học một ít về chúng.
 
 !!! note
     Nếu bạn là một chuyên gia về Python, và bạn đã biết mọi thứ về gợi ý kiểu dữ liệu, bỏ qua và đi tới chương tiếp theo.
@@ -127,7 +127,7 @@ Bây giờ bạn biết rằng bạn phải sửa nó, chuyển `age` sang một
 
 Bạn mới chỉ nhìn thấy những nơi chủ yếu để đặt khai báo kiểu dữ liệu. Như là các tham số của hàm.
 
-Đây cũng là nơi chủ yếu để bạn sử dụng chúng với **ReadyApi**.
+Đây cũng là nơi chủ yếu để bạn sử dụng chúng với **ReadyAPI**.
 
 ### Kiểu dữ liệu đơn giản
 
@@ -182,7 +182,7 @@ Ví dụ, hãy định nghĩa một biến là `list` các `str`.
     {!> ../../../docs_src/python_types/tutorial006_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     Từ `typing`, import `List` (với chữ cái `L` viết hoa):
 
@@ -230,7 +230,7 @@ Bạn sẽ làm điều tương tự để khai báo các `tuple` và  các `set
     {!> ../../../docs_src/python_types/tutorial007_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1  4"
     {!> ../../../docs_src/python_types/tutorial007.py!}
@@ -255,7 +255,7 @@ Tham số kiểu dữ liệu thứ hai dành cho giá trị của `dict`.
     {!> ../../../docs_src/python_types/tutorial008_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1  4"
     {!> ../../../docs_src/python_types/tutorial008.py!}
@@ -284,7 +284,7 @@ Trong Python 3.10 cũng có một **cú pháp mới** mà bạn có thể đặt
     {!> ../../../docs_src/python_types/tutorial008b_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1  4"
     {!> ../../../docs_src/python_types/tutorial008b.py!}
@@ -314,13 +314,13 @@ Sử dụng `Optional[str]` thay cho `str` sẽ cho phép trình soạn thảo g
     {!> ../../../docs_src/python_types/tutorial009_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1  4"
     {!> ../../../docs_src/python_types/tutorial009.py!}
     ```
 
-=== "Python 3.6+ alternative"
+=== "Python 3.8+ alternative"
 
     ```Python hl_lines="1  4"
     {!> ../../../docs_src/python_types/tutorial009b.py!}
@@ -404,7 +404,7 @@ Những kiểu dữ liệu này lấy tham số kiểu dữ liệu trong dấu n
     * `Optional`
     * ...and others.
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     * `List`
     * `Tuple`
@@ -464,7 +464,7 @@ Một ví dụ từ tài liệu chính thức của Pydantic:
     {!> ../../../docs_src/python_types/tutorial011_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     {!> ../../../docs_src/python_types/tutorial011.py!}
@@ -473,7 +473,7 @@ Một ví dụ từ tài liệu chính thức của Pydantic:
 !!! info
     Để học nhiều hơn về <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic, tham khảo tài liệu của nó</a>.
 
-**ReadyApi** được dựa hoàn toàn trên Pydantic.
+**ReadyAPI** được dựa hoàn toàn trên Pydantic.
 
 Bạn sẽ thấy nhiều ví dụ thực tế hơn trong [Hướng dẫn sử dụng](tutorial/index.md){.internal-link target=_blank}.
 
@@ -493,11 +493,11 @@ Python cũng có một tính năng cho phép đặt **metadata bổ sung** trong
     {!> ../../../docs_src/python_types/tutorial013_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     Ở phiên bản dưới Python 3.9, bạn import `Annotated` từ `typing_extensions`.
 
-    Nó đã được cài đặt sẵng cùng với **ReadyApi**.
+    Nó đã được cài đặt sẵng cùng với **ReadyAPI**.
 
     ```Python hl_lines="1  4"
     {!> ../../../docs_src/python_types/tutorial013.py!}
@@ -505,7 +505,7 @@ Python cũng có một tính năng cho phép đặt **metadata bổ sung** trong
 
 Python bản thân nó không làm bất kì điều gì với `Annotated`. Với các trình soạn thảo và các công cụ khác, kiểu dữ liệu vẫn là `str`.
 
-Nhưng bạn có thể sử dụng `Annotated` để cung cấp cho **ReadyApi** metadata bổ sung về cách mà bạn muốn ứng dụng của bạn xử lí.
+Nhưng bạn có thể sử dụng `Annotated` để cung cấp cho **ReadyAPI** metadata bổ sung về cách mà bạn muốn ứng dụng của bạn xử lí.
 
 Điều quan trọng cần nhớ là ***tham số kiểu dữ liệu* đầu tiên** bạn truyền tới `Annotated` là **kiểu giá trị thực sự**. Phần còn lại chỉ là metadata cho các công cụ khác.
 
@@ -519,16 +519,16 @@ Sau đó, bạn sẽ thấy sự **mạnh mẽ** mà nó có thể làm.
 
     Và code của bạn sẽ tương thích với nhiều công cụ và thư viện khác của Python. 🚀
 
-## Các gợi ý kiểu dữ liệu trong **ReadyApi**
+## Các gợi ý kiểu dữ liệu trong **ReadyAPI**
 
-**ReadyApi** lấy các ưu điểm của các gợi ý kiểu dữ liệu để thực hiện một số thứ.
+**ReadyAPI** lấy các ưu điểm của các gợi ý kiểu dữ liệu để thực hiện một số thứ.
 
-Với **ReadyApi**, bạn khai báo các tham số với gợi ý kiểu và bạn có được:
+Với **ReadyAPI**, bạn khai báo các tham số với gợi ý kiểu và bạn có được:
 
 * **Sự hỗ trợ từ các trình soạn thảo**.
 * **Kiểm tra kiểu dữ liệu (type checking)**.
 
-...và **ReadyApi** sử dụng các khia báo để:
+...và **ReadyAPI** sử dụng các khia báo để:
 
 * **Định nghĩa các yêu cầu**: từ tham số đường dẫn của request, tham số query, headers, bodies, các phụ thuộc (dependencies),...
 * **Chuyển dổi dữ liệu*: từ request sang kiểu dữ liệu được yêu cầu.
@@ -539,7 +539,7 @@ Với **ReadyApi**, bạn khai báo các tham số với gợi ý kiểu và b�
 
 Điều này có thể nghe trừu tượng. Đừng lo lắng. Bạn sẽ thấy tất cả chúng trong [Hướng dẫn sử dụng](tutorial/index.md){.internal-link target=_blank}.
 
-Điều quan trọng là bằng việc sử dụng các kiểu dữ liệu chuẩn của Python (thay vì thêm các lớp, decorators,...), **ReadyApi** sẽ thực hiện nhiều công việc cho bạn.
+Điều quan trọng là bằng việc sử dụng các kiểu dữ liệu chuẩn của Python (thay vì thêm các lớp, decorators,...), **ReadyAPI** sẽ thực hiện nhiều công việc cho bạn.
 
 !!! info
     Nếu bạn đã đi qua toàn bộ các hướng dẫn và quay trở lại để tìm hiểu nhiều hơn về các kiểu dữ liệu, một tài nguyên tốt như <a href="https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html" class="external-link" target="_blank">"cheat sheet" từ `mypy`</a>.

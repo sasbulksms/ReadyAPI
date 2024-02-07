@@ -1,6 +1,6 @@
 #  *️⃣
 
-👆 💪 ⚙️ <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" class="external-link" target="_blank"> *️⃣ </a> ⏮️ **ReadyApi**.
+👆 💪 ⚙️ <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" class="external-link" target="_blank"> *️⃣ </a> ⏮️ **ReadyAPI**.
 
 ## ❎ `WebSockets`
 
@@ -44,7 +44,7 @@ $ pip install websockets
 
 ## ✍ `websocket`
 
-👆 **ReadyApi** 🈸, ✍ `websocket`:
+👆 **ReadyAPI** 🈸, ✍ `websocket`:
 
 ```Python hl_lines="1  46-47"
 {!../../../docs_src/websockets/tutorial001.py!}
@@ -53,7 +53,7 @@ $ pip install websockets
 !!! note "📡 ℹ"
     👆 💪 ⚙️ `from starlette.websockets import WebSocket`.
 
-    **ReadyApi** 🚚 🎏 `WebSocket` 🔗 🏪 👆, 👩‍💻. ✋️ ⚫️ 👟 🔗 ⚪️➡️ 💃.
+    **ReadyAPI** 🚚 🎏 `WebSocket` 🔗 🏪 👆, 👩‍💻. ✋️ ⚫️ 👟 🔗 ⚪️➡️ 💃.
 
 ## ⌛ 📧 &amp; 📨 📧
 
@@ -89,7 +89,7 @@ $ uvicorn main:app --reload
 
 <img src="/img/tutorial/websockets/image02.png">
 
-&amp; 👆 **ReadyApi** 🈸 ⏮️ *️⃣ 🔜 📨 🔙:
+&amp; 👆 **ReadyAPI** 🈸 ⏮️ *️⃣ 🔜 📨 🔙:
 
 <img src="/img/tutorial/websockets/image03.png">
 
@@ -110,7 +110,7 @@ $ uvicorn main:app --reload
 * `Path`
 * `Query`
 
-👫 👷 🎏 🌌 🎏 ReadyApi 🔗/*➡ 🛠️*:
+👫 👷 🎏 🌌 🎏 ReadyAPI 🔗/*➡ 🛠️*:
 
 ```Python hl_lines="66-77  76-91"
 {!../../../docs_src/websockets/tutorial002.py!}
@@ -174,7 +174,7 @@ Client #1596980209979 left the chat
 
     ✋️ ✔️ 🤯 👈, 🌐 🍵 💾, 👁 📇, ⚫️ 🔜 🕴 👷 ⏪ 🛠️ 🏃, &amp; 🔜 🕴 👷 ⏮️ 👁 🛠️.
 
-    🚥 👆 💪 🕳 ⏩ 🛠️ ⏮️ ReadyApi ✋️ 👈 🌖 🏋️, 🐕‍🦺 ✳, ✳ ⚖️ 🎏, ✅ <a href="https://github.com/encode/broadcaster" class="external-link" target="_blank">🗜/📻</a>.
+    🚥 👆 💪 🕳 ⏩ 🛠️ ⏮️ ReadyAPI ✋️ 👈 🌖 🏋️, 🐕‍🦺 ✳, ✳ ⚖️ 🎏, ✅ <a href="https://github.com/encode/broadcaster" class="external-link" target="_blank">🗜/📻</a>.
 
 ## 🌅 ℹ
 

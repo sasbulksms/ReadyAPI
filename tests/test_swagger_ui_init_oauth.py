@@ -1,9 +1,9 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 
 swagger_ui_init_oauth = {"clientId": "the-foo-clients", "appName": "The Predendapp"}
 
-app = ReadyApi(swagger_ui_init_oauth=swagger_ui_init_oauth)
+app = ReadyAPI(swagger_ui_init_oauth=swagger_ui_init_oauth)
 
 
 @app.get("/items/")

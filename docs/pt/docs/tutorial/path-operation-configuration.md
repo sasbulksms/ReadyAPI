@@ -13,7 +13,7 @@ Você pode passar diretamente o código `int`, como `404`.
 
 Mas se você não se lembrar o que cada código numérico significa, pode usar as constantes de atalho em `status`:
 
-=== "Python 3.6 and above"
+=== "Python 3.8 and above"
 
     ```Python hl_lines="3  17"
     {!> ../../../docs_src/path_operation_configuration/tutorial001.py!}
@@ -36,13 +36,13 @@ Esse código de status será usado na resposta e será adicionado ao esquema Ope
 !!! note "Detalhes Técnicos"
     Você também poderia usar `from starlette import status`.
 
-    **ReadyApi** fornece o mesmo `starlette.status` como `readyapi.status` apenas como uma conveniência para você, o desenvolvedor. Mas vem diretamente do Starlette.
+    **ReadyAPI** fornece o mesmo `starlette.status` como `readyapi.status` apenas como uma conveniência para você, o desenvolvedor. Mas vem diretamente do Starlette.
 
 ## Tags
 
 Você pode adicionar tags para sua *operação de rota*, passe o parâmetro `tags` com uma `list` de `str` (comumente apenas um `str`):
 
-=== "Python 3.6 and above"
+=== "Python 3.8 and above"
 
     ```Python hl_lines="17  22  27"
     {!> ../../../docs_src/path_operation_configuration/tutorial002.py!}
@@ -70,7 +70,7 @@ Se você tem uma grande aplicação, você pode acabar acumulando **várias tags
 
 Nestes casos, pode fazer sentido armazenar as tags em um `Enum`.
 
-**ReadyApi** suporta isso da mesma maneira que com strings simples:
+**ReadyAPI** suporta isso da mesma maneira que com strings simples:
 
 ```Python hl_lines="1  8-10  13  18"
 {!../../../docs_src/path_operation_configuration/tutorial002b.py!}
@@ -80,7 +80,7 @@ Nestes casos, pode fazer sentido armazenar as tags em um `Enum`.
 
 Você pode adicionar um `summary` e uma `description`:
 
-=== "Python 3.6 and above"
+=== "Python 3.8 and above"
 
     ```Python hl_lines="20-21"
     {!> ../../../docs_src/path_operation_configuration/tutorial003.py!}
@@ -100,11 +100,11 @@ Você pode adicionar um `summary` e uma `description`:
 
 ## Descrição do docstring
 
-Como as descrições tendem a ser longas e cobrir várias linhas, você pode declarar a descrição da *operação de rota* na <abbr title="uma string de várias linhas como a primeira expressão dentro de uma função (não atribuída a nenhuma variável) usada para documentação">docstring</abbr> da função e o **ReadyApi** irá lê-la de lá.
+Como as descrições tendem a ser longas e cobrir várias linhas, você pode declarar a descrição da *operação de rota* na <abbr title="uma string de várias linhas como a primeira expressão dentro de uma função (não atribuída a nenhuma variável) usada para documentação">docstring</abbr> da função e o **ReadyAPI** irá lê-la de lá.
 
 Você pode escrever <a href="https://en.wikipedia.org/wiki/Markdown" class="external-link" target="_blank">Markdown</a> na docstring, ele será interpretado e exibido corretamente (levando em conta a indentação da docstring).
 
-=== "Python 3.6 and above"
+=== "Python 3.8 and above"
 
     ```Python hl_lines="19-27"
     {!> ../../../docs_src/path_operation_configuration/tutorial004.py!}
@@ -131,7 +131,7 @@ Ela será usada nas documentações interativas:
 
 Você pode especificar a descrição da resposta com o parâmetro `response_description`:
 
-=== "Python 3.6 and above"
+=== "Python 3.8 and above"
 
     ```Python hl_lines="21"
     {!> ../../../docs_src/path_operation_configuration/tutorial005.py!}
@@ -155,7 +155,7 @@ Você pode especificar a descrição da resposta com o parâmetro `response_desc
 !!! check
     OpenAPI especifica que cada *operação de rota* requer uma descrição de resposta.
 
-    Então, se você não fornecer uma, o **ReadyApi** irá gerar automaticamente uma de "Resposta bem-sucedida".
+    Então, se você não fornecer uma, o **ReadyAPI** irá gerar automaticamente uma de "Resposta bem-sucedida".
 
 <img src="/img/tutorial/path-operation-configuration/image03.png">
 

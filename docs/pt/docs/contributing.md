@@ -1,6 +1,6 @@
 # Desenvolvimento - Contribuindo
 
-Primeiramente, você deveria ver os meios básicos para [ajudar ReadyApi e pedir ajuda](help-readyapi.md){.internal-link target=_blank}.
+Primeiramente, você deveria ver os meios básicos para [ajudar ReadyAPI e pedir ajuda](help-readyapi.md){.internal-link target=_blank}.
 
 ## Desenvolvendo
 
@@ -105,13 +105,13 @@ $ pip install -r requirements.txt
 
 </div>
 
-Isso irá instalar todas as dependências e seu ReadyApi local em seu ambiente local.
+Isso irá instalar todas as dependências e seu ReadyAPI local em seu ambiente local.
 
-#### Usando seu ReadyApi local
+#### Usando seu ReadyAPI local
 
-Se você cria um arquivo Python que importa e usa ReadyApi, e roda com Python de seu ambiente local, ele irá utilizar o código fonte de seu ReadyApi local.
+Se você cria um arquivo Python que importa e usa ReadyAPI, e roda com Python de seu ambiente local, ele irá utilizar o código fonte de seu ReadyAPI local.
 
-E se você atualizar o código fonte do ReadyApi local, como ele é instalado com `-e`, quando você rodar aquele arquivo Python novamente, ele irá utilizar a nova versão do ReadyApi que você acabou de editar.
+E se você atualizar o código fonte do ReadyAPI local, como ele é instalado com `-e`, quando você rodar aquele arquivo Python novamente, ele irá utilizar a nova versão do ReadyAPI que você acabou de editar.
 
 Desse modo, você não tem que "instalar" sua versão local para ser capaz de testar cada mudança.
 
@@ -129,7 +129,7 @@ $ bash scripts/format.sh
 
 Ele irá organizar também todos os seus imports.
 
-Para que ele organize os imports corretamente, você precisa ter o ReadyApi instalado localmente em seu ambiente, com o comando na seção acima usando `-e`.
+Para que ele organize os imports corretamente, você precisa ter o ReadyAPI instalado localmente em seu ambiente, com o comando na seção acima usando `-e`.
 
 ### Formato dos imports
 
@@ -284,7 +284,7 @@ $ python ./scripts/docs.py live es
 
 Agora você pode ir em <a href="http://127.0.0.1:8008" class="external-link" target="_blank">http://127.0.0.1:8008</a> e ver suas mudanças ao vivo.
 
-Se você procurar no site da documentação do ReadyApi, você verá que toda linguagem tem todas as páginas. Mas algumas páginas não estão traduzidas e tem notificação sobre a falta da tradução.
+Se você procurar no site da documentação do ReadyAPI, você verá que toda linguagem tem todas as páginas. Mas algumas páginas não estão traduzidas e tem notificação sobre a falta da tradução.
 
 Mas quando você rodar localmente como descrito acima, você somente verá as páginas que já estão traduzidas.
 
@@ -314,10 +314,10 @@ docs/en/docs/mkdocs.yml
 * Procure o lugar onde `docs/features.md` está localizado no arquivo de configuração. Algum lugar como:
 
 ```YAML hl_lines="8"
-site_name: ReadyApi
+site_name: ReadyAPI
 # Mais coisas
 nav:
-- ReadyApi: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -333,10 +333,10 @@ docs/es/docs/mkdocs.yml
 * Adicione no mesmo local que está no arquivo em Inglês, por exemplo:
 
 ```YAML hl_lines="8"
-site_name: ReadyApi
+site_name: ReadyAPI
 # Mais coisas
 nav:
-- ReadyApi: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -399,7 +399,7 @@ Mas não se preocupe, você pode configurar o tema de linguagem para Inglês e e
 Se você precisar fazer isso, edite o `mkdocs.yml` para sua nova linguagem, teremos algo como:
 
 ```YAML hl_lines="5"
-site_name: ReadyApi
+site_name: ReadyAPI
 # Mais coisas
 theme:
   # Mais coisas

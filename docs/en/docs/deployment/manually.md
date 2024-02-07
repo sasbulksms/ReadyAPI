@@ -1,6 +1,6 @@
 # Run a Server Manually - Uvicorn
 
-The main thing you need to run a **ReadyApi** application in a remote server machine is an ASGI server program like **Uvicorn**.
+The main thing you need to run a **ReadyAPI** application in a remote server machine is an ASGI server program like **Uvicorn**.
 
 There are 3 main alternatives:
 
@@ -10,11 +10,11 @@ There are 3 main alternatives:
 
 ## Server Machine and Server Program
 
-There's a small detail about names to have in mind. 💡
+There's a small detail about names to keep in mind. 💡
 
 The word "**server**" is commonly used to refer to both the remote/cloud computer (the physical or virtual machine) and also the program that is running on that machine (e.g. Uvicorn).
 
-Just have that in mind when you read "server" in general, it could refer to one of those two things.
+Just keep in mind that when you read "server" in general, it could refer to one of those two things.
 
 When referring to the remote machine, it's common to call it **server**, but also **machine**, **VM** (virtual machine), **node**. Those all refer to some type of remote machine, normally running Linux, where you run programs.
 
@@ -94,7 +94,7 @@ You can then run your application the same way you have done in the tutorials, b
 
 ## Hypercorn with Trio
 
-Starlette and **ReadyApi** are based on <a href="https://anyio.readthedocs.io/en/stable/" class="external-link" target="_blank">AnyIO</a>, which makes them compatible with both Python's standard library <a href="https://docs.python.org/3/library/asyncio-task.html" class="external-link" target="_blank">asyncio</a> and <a href="https://trio.readthedocs.io/en/stable/" class="external-link" target="_blank">Trio</a>.
+Starlette and **ReadyAPI** are based on <a href="https://anyio.readthedocs.io/en/stable/" class="external-link" target="_blank">AnyIO</a>, which makes them compatible with both Python's standard library <a href="https://docs.python.org/3/library/asyncio-task.html" class="external-link" target="_blank">asyncio</a> and <a href="https://trio.readthedocs.io/en/stable/" class="external-link" target="_blank">Trio</a>.
 
 Nevertheless, Uvicorn is currently only compatible with asyncio, and it normally uses <a href="https://github.com/MagicStack/uvloop" class="external-link" target="_blank">`uvloop`</a>, the high-performance drop-in replacement for `asyncio`.
 

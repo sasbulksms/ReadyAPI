@@ -1,8 +1,8 @@
 from typing import Annotated
 
-from readyapi import ReadyApi, File, UploadFile
+from readyapi import File, ReadyAPI, UploadFile
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.post("/files/")

@@ -18,7 +18,7 @@
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="3-4"
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_an.py!}
@@ -33,7 +33,7 @@
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+ без Annotated"
+=== "Python 3.8+ без Annotated"
 
     !!! tip "Подсказка"
         Рекомендуется использовать версию с `Annotated` если возможно.
@@ -43,11 +43,11 @@
     ```
 
 !!! info "Информация"
-    Поддержка `Annotated` была добавлена в ReadyApi начиная с версии 0.95.0 (и с этой версии рекомендуется использовать этот подход).
+    Поддержка `Annotated` была добавлена в ReadyAPI начиная с версии 0.95.0 (и с этой версии рекомендуется использовать этот подход).
 
     Если вы используете более старую версию, вы столкнётесь с ошибками при попытке использовать `Annotated`.
 
-    Убедитесь, что вы [обновили версию ReadyApi](../deployment/versions.md#upgrading-the-readyapi-versions){.internal-link target=_blank} как минимум до 0.95.1 перед тем, как использовать `Annotated`.
+    Убедитесь, что вы [обновили версию ReadyAPI](../deployment/versions.md#upgrading-the-readyapi-versions){.internal-link target=_blank} как минимум до 0.95.1 перед тем, как использовать `Annotated`.
 
 ## Определите метаданные
 
@@ -67,7 +67,7 @@
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="11"
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_an.py!}
@@ -82,7 +82,7 @@
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+ без Annotated"
+=== "Python 3.8+ без Annotated"
 
     !!! tip "Подсказка"
         Рекомендуется использовать версию с `Annotated` если возможно.
@@ -113,11 +113,11 @@
 
 Но вы можете изменить порядок параметров, чтобы параметр без значения по умолчанию (query-параметр `q`) шёл первым.
 
-Это не имеет значения для **ReadyApi**. Он распознает параметры по их названиям, типам и значениям по умолчанию (`Query`, `Path`, и т.д.), ему не важен их порядок.
+Это не имеет значения для **ReadyAPI**. Он распознает параметры по их названиям, типам и значениям по умолчанию (`Query`, `Path`, и т.д.), ему не важен их порядок.
 
 Поэтому вы можете определить функцию так:
 
-=== "Python 3.6 без Annotated"
+=== "Python 3.8 без Annotated"
 
     !!! tip "Подсказка"
         Рекомендуется использовать версию с `Annotated` если возможно.
@@ -134,7 +134,7 @@
     {!> ../../../docs_src/path_params_numeric_validations/tutorial002_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/path_params_numeric_validations/tutorial002_an.py!}
@@ -174,7 +174,7 @@ Python не будет ничего делать с `*`, но он будет з
     {!> ../../../docs_src/path_params_numeric_validations/tutorial003_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/path_params_numeric_validations/tutorial003_an.py!}
@@ -192,13 +192,13 @@ Python не будет ничего делать с `*`, но он будет з
     {!> ../../../docs_src/path_params_numeric_validations/tutorial004_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/path_params_numeric_validations/tutorial004_an.py!}
     ```
 
-=== "Python 3.6+ без Annotated"
+=== "Python 3.8+ без Annotated"
 
     !!! tip "Подсказка"
         Рекомендуется использовать версию с `Annotated` если возможно.
@@ -220,13 +220,13 @@ Python не будет ничего делать с `*`, но он будет з
     {!> ../../../docs_src/path_params_numeric_validations/tutorial005_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/path_params_numeric_validations/tutorial005_an.py!}
     ```
 
-=== "Python 3.6+ без Annotated"
+=== "Python 3.8+ без Annotated"
 
     !!! tip "Подсказка"
         Рекомендуется использовать версию с `Annotated` если возможно.
@@ -251,13 +251,13 @@ Python не будет ничего делать с `*`, но он будет з
     {!> ../../../docs_src/path_params_numeric_validations/tutorial006_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="12"
     {!> ../../../docs_src/path_params_numeric_validations/tutorial006_an.py!}
     ```
 
-=== "Python 3.6+ без Annotated"
+=== "Python 3.8+ без Annotated"
 
     !!! tip "Подсказка"
         Рекомендуется использовать версию с `Annotated` если возможно.

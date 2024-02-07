@@ -24,7 +24,7 @@ That's what we'll solve, let's load the model before the requests are handled, b
 
 ## Lifespan
 
-You can define this *startup* and *shutdown* logic using the `lifespan` parameter of the `ReadyApi` app, and a "context manager" (I'll show you what that is in a second).
+You can define this *startup* and *shutdown* logic using the `lifespan` parameter of the `ReadyAPI` app, and a "context manager" (I'll show you what that is in a second).
 
 Let's start with an example and then see it in detail.
 
@@ -81,9 +81,9 @@ async with lifespan(app):
 
 When you create a context manager or an async context manager like above, what it does is that, before entering the `with` block, it will execute the code before the `yield`, and after exiting the `with` block, it will execute the code after the `yield`.
 
-In our code example above, we don't use it directly, but we pass it to ReadyApi for it to use it.
+In our code example above, we don't use it directly, but we pass it to ReadyAPI for it to use it.
 
-The `lifespan` parameter of the `ReadyApi` app takes an **async context manager**, so we can pass our new `lifespan` async context manager to it.
+The `lifespan` parameter of the `ReadyAPI` app takes an **async context manager**, so we can pass our new `lifespan` async context manager to it.
 
 ```Python hl_lines="22"
 {!../../../docs_src/events/tutorial003.py!}
@@ -92,7 +92,7 @@ The `lifespan` parameter of the `ReadyApi` app takes an **async context manager*
 ## Alternative Events (deprecated)
 
 !!! warning
-    The recommended way to handle the *startup* and *shutdown* is using the `lifespan` parameter of the `ReadyApi` app as described above.
+    The recommended way to handle the *startup* and *shutdown* is using the `lifespan` parameter of the `ReadyAPI` app as described above. If you provide a `lifespan` parameter, `startup` and `shutdown` event handlers will no longer be called. It's all `lifespan` or all events, not both.
 
     You can probably skip this part.
 
@@ -159,4 +159,4 @@ Underneath, in the ASGI technical specification, this is part of the <a href="ht
 
 ## Sub Applications
 
-🚨 Have in mind that these lifespan events (startup and shutdown) will only be executed for the main application, not for [Sub Applications - Mounts](./sub-applications.md){.internal-link target=_blank}.
+🚨 Keep in mind that these lifespan events (startup and shutdown) will only be executed for the main application, not for [Sub Applications - Mounts](./sub-applications.md){.internal-link target=_blank}.

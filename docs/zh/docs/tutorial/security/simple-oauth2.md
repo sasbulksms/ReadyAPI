@@ -4,7 +4,7 @@
 
 ## 获取 `username` 和 `password`
 
-首先，使用 **ReadyApi** 安全工具获取 `username` 和 `password`。
+首先，使用 **ReadyAPI** 安全工具获取 `username` 和 `password`。
 
 OAuth2 规范要求使用**密码流**时，客户端或用户必须以表单数据形式发送 `username` 和 `password` 字段。
 
@@ -44,7 +44,7 @@ OAuth2 还支持客户端发送**`scope`**表单字段。
 
 ## 获取 `username` 和 `password` 的代码
 
-接下来，使用 **ReadyApi** 工具获取用户名与密码。
+接下来，使用 **ReadyAPI** 工具获取用户名与密码。
 
 ### `OAuth2PasswordRequestForm`
 
@@ -72,13 +72,13 @@ OAuth2 还支持客户端发送**`scope`**表单字段。
 
 !!! info "说明"
 
-    `OAuth2PasswordRequestForm` 与 `OAuth2PasswordBearer` 一样，都不是 ReadyApi 的特殊类。
+    `OAuth2PasswordRequestForm` 与 `OAuth2PasswordBearer` 一样，都不是 ReadyAPI 的特殊类。
 
-    **ReadyApi** 把 `OAuth2PasswordBearer` 识别为安全方案。因此，可以通过这种方式把它添加至 OpenAPI。
+    **ReadyAPI** 把 `OAuth2PasswordBearer` 识别为安全方案。因此，可以通过这种方式把它添加至 OpenAPI。
 
     但 `OAuth2PasswordRequestForm` 只是可以自行编写的类依赖项，也可以直接声明 `Form` 参数。
 
-    但由于这种用例很常见，ReadyApi 为了简便，就直接提供了对它的支持。
+    但由于这种用例很常见，ReadyAPI 为了简便，就直接提供了对它的支持。
 
 ### 使用表单数据
 
@@ -174,7 +174,7 @@ UserInDB(
 
     这几乎是唯一需要开发者牢记在心，并按规范要求正确执行的事。
 
-    **ReadyApi** 则负责处理其它的工作。
+    **ReadyAPI** 则负责处理其它的工作。
 
 ## 更新依赖项
 

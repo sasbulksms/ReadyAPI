@@ -4,7 +4,7 @@
 
 👫 💪 **⏬** 👆 💪 👫.
 
-**ReadyApi** 🔜 ✊ 💅 🔬 👫.
+**ReadyAPI** 🔜 ✊ 💅 🔬 👫.
 
 ## 🥇 🔗 "☑"
 
@@ -68,7 +68,7 @@
 !!! info
     👀 👈 👥 🕴 📣 1️⃣ 🔗 *➡ 🛠️ 🔢*, `query_or_cookie_extractor`.
 
-    ✋️ **ReadyApi** 🔜 💭 👈 ⚫️ ✔️ ❎ `query_extractor` 🥇, 🚶‍♀️ 🏁 👈 `query_or_cookie_extractor` ⏪ 🤙 ⚫️.
+    ✋️ **ReadyAPI** 🔜 💭 👈 ⚫️ ✔️ ❎ `query_extractor` 🥇, 🚶‍♀️ 🏁 👈 `query_or_cookie_extractor` ⏪ 🤙 ⚫️.
 
 ```mermaid
 graph TB
@@ -83,7 +83,7 @@ query_extractor --> query_or_cookie_extractor --> read_query
 
 ## ⚙️ 🎏 🔗 💗 🕰
 
-🚥 1️⃣ 👆 🔗 📣 💗 🕰 🎏 *➡ 🛠️*, 🖼, 💗 🔗 ✔️ ⚠ 🎧-🔗, **ReadyApi** 🔜 💭 🤙 👈 🎧-🔗 🕴 🕐 📍 📨.
+🚥 1️⃣ 👆 🔗 📣 💗 🕰 🎏 *➡ 🛠️*, 🖼, 💗 🔗 ✔️ ⚠ 🎧-🔗, **ReadyAPI** 🔜 💭 🤙 👈 🎧-🔗 🕴 🕐 📍 📨.
 
 &amp; ⚫️ 🔜 🖊 📨 💲 <abbr title="A utility/system to store computed/generated values, to re-use them instead of computing them again.">"💾"</abbr> &amp; 🚶‍♀️ ⚫️ 🌐 "⚓️" 👈 💪 ⚫️ 👈 🎯 📨, ↩️ 🤙 🔗 💗 🕰 🎏 📨.
 

@@ -1,6 +1,6 @@
 # Paramètres de requête et validations de chaînes de caractères
 
-**ReadyApi** vous permet de déclarer des informations et des validateurs additionnels pour vos paramètres de requêtes.
+**ReadyAPI** vous permet de déclarer des informations et des validateurs additionnels pour vos paramètres de requêtes.
 
 Commençons avec cette application pour exemple :
 
@@ -8,10 +8,10 @@ Commençons avec cette application pour exemple :
 {!../../../docs_src/query_params_str_validations/tutorial001.py!}
 ```
 
-Le paramètre de requête `q` a pour type `Union[str, None]` (ou `str | None` en Python 3.10), signifiant qu'il est de type `str` mais pourrait aussi être égal à `None`, et bien sûr, la valeur par défaut est `None`, donc **ReadyApi** saura qu'il n'est pas requis.
+Le paramètre de requête `q` a pour type `Union[str, None]` (ou `str | None` en Python 3.10), signifiant qu'il est de type `str` mais pourrait aussi être égal à `None`, et bien sûr, la valeur par défaut est `None`, donc **ReadyAPI** saura qu'il n'est pas requis.
 
 !!! note
-    **ReadyApi** saura que la valeur de `q` n'est pas requise grâce à la valeur par défaut `= None`.
+    **ReadyAPI** saura que la valeur de `q` n'est pas requise grâce à la valeur par défaut `= None`.
 
     Le `Union` dans `Union[str, None]` permettra à votre éditeur de vous offrir un meilleur support et de détecter les erreurs.
 
@@ -100,7 +100,7 @@ Cette expression régulière vérifie que la valeur passée comme paramètre :
 
 Si vous vous sentez perdu avec le concept d'**expression régulière**, pas d'inquiétudes. Il s'agit d'une notion difficile pour beaucoup, et l'on peut déjà réussir à faire beaucoup sans jamais avoir à les manipuler.
 
-Mais si vous décidez d'apprendre à les utiliser, sachez qu'ensuite vous pouvez les utiliser directement dans **ReadyApi**.
+Mais si vous décidez d'apprendre à les utiliser, sachez qu'ensuite vous pouvez les utiliser directement dans **ReadyAPI**.
 
 ## Valeurs par défaut
 
@@ -144,7 +144,7 @@ Donc pour déclarer une valeur comme requise tout en utilisant `Query`, il faut 
 !!! info
     Si vous n'avez jamais vu ce `...` auparavant : c'est une des constantes natives de Python <a href="https://docs.python.org/fr/3/library/constants.html#Ellipsis" class="external-link" target="_blank">appelée "Ellipsis"</a>.
 
-Cela indiquera à **ReadyApi** que la présence de ce paramètre est obligatoire.
+Cela indiquera à **ReadyAPI** que la présence de ce paramètre est obligatoire.
 
 ## Liste de paramètres / valeurs multiples via Query
 
@@ -218,7 +218,7 @@ Il est aussi possible d'utiliser directement `list` plutôt que `List[str]` :
 ```
 
 !!! note
-    Dans ce cas-là, **ReadyApi** ne vérifiera pas le contenu de la liste.
+    Dans ce cas-là, **ReadyAPI** ne vérifiera pas le contenu de la liste.
 
     Par exemple, `List[int]` vérifiera (et documentera) que la liste est bien entièrement composée d'entiers. Alors qu'un simple `list` ne ferait pas cette vérification.
 

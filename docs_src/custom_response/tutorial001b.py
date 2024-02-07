@@ -1,7 +1,7 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.responses import ORJSONResponse
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/", response_class=ORJSONResponse)

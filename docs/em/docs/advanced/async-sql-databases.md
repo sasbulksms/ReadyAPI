@@ -1,6 +1,6 @@
 # 🔁 🗄 (🔗) 💽
 
-👆 💪 ⚙️ <a href="https://github.com/encode/databases" class="external-link" target="_blank">`encode/databases`</a> ⏮️ **ReadyApi** 🔗 💽 ⚙️ `async` &amp; `await`.
+👆 💪 ⚙️ <a href="https://github.com/encode/databases" class="external-link" target="_blank">`encode/databases`</a> ⏮️ **ReadyAPI** 🔗 💽 ⚙️ `async` &amp; `await`.
 
 ⚫️ 🔗 ⏮️:
 
@@ -13,7 +13,7 @@
 ⏪, 👆 🏭 🈸, 👆 💪 💚 ⚙️ 💽 💽 💖 **✳**.
 
 !!! tip
-    👆 💪 🛠️ 💭 ⚪️➡️ 📄 🔃 🇸🇲 🐜 ([🗄 (🔗) 💽](../tutorial/sql-databases.md){.internal-link target=_blank}), 💖 ⚙️ 🚙 🔢 🎭 🛠️ 💽, 🔬 👆 **ReadyApi** 📟.
+    👆 💪 🛠️ 💭 ⚪️➡️ 📄 🔃 🇸🇲 🐜 ([🗄 (🔗) 💽](../tutorial/sql-databases.md){.internal-link target=_blank}), 💖 ⚙️ 🚙 🔢 🎭 🛠️ 💽, 🔬 👆 **ReadyAPI** 📟.
 
     👉 📄 🚫 ✔ 📚 💭, 🌓 😑 <a href="https://www.starlette.io/database/" class="external-link" target="_blank">💃</a>.
 
@@ -49,7 +49,7 @@
 
 👉 💼, 👥 🏗 🏓 🎏 🐍 📁, ✋️ 🏭, 👆 🔜 🎲 💚 ✍ 👫 ⏮️ ⚗, 🛠️ ⏮️ 🛠️, ♒️.
 
-📥, 👉 📄 🔜 🏃 🔗, ▶️️ ⏭ ▶️ 👆 **ReadyApi** 🈸.
+📥, 👉 📄 🔜 🏃 🔗, ▶️️ ⏭ ▶️ 👆 **ReadyAPI** 🈸.
 
 * ✍ `engine`.
 * ✍ 🌐 🏓 ⚪️➡️ `metadata` 🎚.
@@ -75,7 +75,7 @@
 
 ## 🔗 &amp; 🔌
 
-* ✍ 👆 `ReadyApi` 🈸.
+* ✍ 👆 `ReadyAPI` 🈸.
 * ✍ 🎉 🐕‍🦺 🔗 &amp; 🔌 ⚪️➡️ 💽.
 
 ```Python hl_lines="42  45-47  50-52"

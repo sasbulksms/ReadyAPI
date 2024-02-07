@@ -21,7 +21,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/users/": {
                 "get": {
@@ -85,7 +85,7 @@ def test_openapi_schema():
                 "Subscription": {
                     "properties": {
                         "username": {"type": "string", "title": "Username"},
-                        "montly_fee": {"type": "number", "title": "Montly Fee"},
+                        "monthly_fee": {"type": "number", "title": "Monthly Fee"},
                         "start_date": {
                             "type": "string",
                             "format": "date-time",
@@ -93,7 +93,7 @@ def test_openapi_schema():
                         },
                     },
                     "type": "object",
-                    "required": ["username", "montly_fee", "start_date"],
+                    "required": ["username", "monthly_fee", "start_date"],
                     "title": "Subscription",
                 },
                 "ValidationError": {

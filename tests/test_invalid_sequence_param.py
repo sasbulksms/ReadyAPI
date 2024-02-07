@@ -1,13 +1,13 @@
 from typing import Dict, List, Optional, Tuple
 
 import pytest
-from readyapi import ReadyApi, Query
 from pydantic import BaseModel
+from readyapi import Query, ReadyAPI
 
 
 def test_invalid_sequence():
     with pytest.raises(AssertionError):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         class Item(BaseModel):
             title: str
@@ -19,7 +19,7 @@ def test_invalid_sequence():
 
 def test_invalid_tuple():
     with pytest.raises(AssertionError):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         class Item(BaseModel):
             title: str
@@ -31,7 +31,7 @@ def test_invalid_tuple():
 
 def test_invalid_dict():
     with pytest.raises(AssertionError):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         class Item(BaseModel):
             title: str
@@ -43,7 +43,7 @@ def test_invalid_dict():
 
 def test_invalid_simple_dict():
     with pytest.raises(AssertionError):
-        app = ReadyApi()
+        app = ReadyAPI()
 
         class Item(BaseModel):
             title: str

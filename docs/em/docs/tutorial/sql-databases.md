@@ -1,6 +1,6 @@
 # 🗄 (🔗) 💽
 
-**ReadyApi** 🚫 🚚 👆 ⚙️ 🗄 (🔗) 💽.
+**ReadyAPI** 🚫 🚚 👆 ⚙️ 🗄 (🔗) 💽.
 
 ✋️ 👆 💪 ⚙️ 🙆 🔗 💽 👈 👆 💚.
 
@@ -19,16 +19,16 @@
 ⏪, 👆 🏭 🈸, 👆 💪 💚 ⚙️ 💽 💽 💖 **✳**.
 
 !!! tip
-    📤 🛂 🏗 🚂 ⏮️ **ReadyApi** &amp; **✳**, 🌐 ⚓️ 🔛 **☁**, 🔌 🕸 &amp; 🌖 🧰: <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-postgresql</a>
+    📤 🛂 🏗 🚂 ⏮️ **ReadyAPI** &amp; **✳**, 🌐 ⚓️ 🔛 **☁**, 🔌 🕸 &amp; 🌖 🧰: <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-postgresql</a>
 
 !!! note
     👀 👈 📚 📟 🐩 `SQLAlchemy` 📟 👆 🔜 ⚙️ ⏮️ 🙆 🛠️.
 
-     **ReadyApi** 🎯 📟 🤪 🕧.
+     **ReadyAPI** 🎯 📟 🤪 🕧.
 
 ## 🐜
 
-**ReadyApi** 👷 ⏮️ 🙆 💽 &amp; 🙆 👗 🗃 💬 💽.
+**ReadyAPI** 👷 ⏮️ 🙆 💽 &amp; 🙆 👗 🗃 💬 💽.
 
 ⚠ ⚓ ⚙️ "🐜": "🎚-🔗 🗺" 🗃.
 
@@ -154,7 +154,7 @@ connect_args={"check_same_thread": False}
 
     👉 ❎ 😫 🤝 🎏 🔗 🎏 👜 (🎏 📨).
 
-    ✋️ ReadyApi, ⚙️ 😐 🔢 (`def`) 🌅 🌘 1️⃣ 🧵 💪 🔗 ⏮️ 💽 🎏 📨, 👥 💪 ⚒ 🗄 💭 👈 ⚫️ 🔜 ✔ 👈 ⏮️ `connect_args={"check_same_thread": False}`.
+    ✋️ ReadyAPI, ⚙️ 😐 🔢 (`def`) 🌅 🌘 1️⃣ 🧵 💪 🔗 ⏮️ 💽 🎏 📨, 👥 💪 ⚒ 🗄 💭 👈 ⚫️ 🔜 ✔ 👈 ⏮️ `connect_args={"check_same_thread": False}`.
 
     , 👥 🔜 ⚒ 💭 🔠 📨 🤚 🚮 👍 💽 🔗 🎉 🔗, 📤 🙅‍♂ 💪 👈 🔢 🛠️.
 
@@ -473,7 +473,7 @@ current_user.items
 
     `Item(**item.dict(), owner_id=user_id)`
 
-## 👑 **ReadyApi** 📱
+## 👑 **ReadyAPI** 📱
 
 &amp; 🔜 📁 `sql_app/main.py` ➡️ 🛠️ &amp; ⚙️ 🌐 🎏 🍕 👥 ✍ ⏭.
 
@@ -501,7 +501,7 @@ current_user.items
 
 "🛠️" ⚒ 🔁 💪 🕐❔ 👆 🔀 📊 👆 🇸🇲 🏷, 🚮 🆕 🔢, ♒️. 🔁 👈 🔀 💽, 🚮 🆕 🏓, 🆕 🏓, ♒️.
 
-👆 💪 🔎 🖼 ⚗ ReadyApi 🏗 📄 ⚪️➡️ [🏗 ⚡ - 📄](../project-generation.md){.internal-link target=_blank}. 🎯 <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql/tree/master/%7B%7Bcookiecutter.project_slug%7D%7D/backend/app/alembic/" class="external-link" target="_blank"> `alembic` 📁 ℹ 📟</a>.
+👆 💪 🔎 🖼 ⚗ ReadyAPI 🏗 📄 ⚪️➡️ [🏗 ⚡ - 📄](../project-generation.md){.internal-link target=_blank}. 🎯 <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql/tree/master/src/backend/app/alembic/" class="external-link" target="_blank"> `alembic` 📁 ℹ 📟</a>.
 
 ### ✍ 🔗
 
@@ -557,9 +557,9 @@ current_user.items
 
     ✋️ 📣 🆎 `Session`, 👨‍🎨 🔜 💪 💭 💪 👩‍🔬 (`.add()`, `.query()`, `.commit()`, ♒️) &amp; 💪 🚚 👍 🐕‍🦺 (💖 🛠️). 🆎 📄 🚫 📉 ☑ 🎚.
 
-### ✍ 👆 **ReadyApi** *➡ 🛠️*
+### ✍ 👆 **ReadyAPI** *➡ 🛠️*
 
-🔜, 😒, 📥 🐩 **ReadyApi** *➡ 🛠️* 📟.
+🔜, 😒, 📥 🐩 **ReadyAPI** *➡ 🛠️* 📟.
 
 === "🐍 3️⃣.6️⃣ &amp; 🔛"
 
@@ -624,11 +624,11 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
 
 ## 🛠️
 
-↩️ 👥 ⚙️ 🇸🇲 🔗 &amp; 👥 🚫 🚚 🙆 😇 🔌-⚫️ 👷 ⏮️ **ReadyApi**, 👥 💪 🛠️ 💽 <abbr title="Automatically updating the database to have any new column we define in our models.">🛠️</abbr> ⏮️ <a href="https://alembic.sqlalchemy.org" class="external-link" target="_blank">⚗</a> 🔗.
+↩️ 👥 ⚙️ 🇸🇲 🔗 &amp; 👥 🚫 🚚 🙆 😇 🔌-⚫️ 👷 ⏮️ **ReadyAPI**, 👥 💪 🛠️ 💽 <abbr title="Automatically updating the database to have any new column we define in our models.">🛠️</abbr> ⏮️ <a href="https://alembic.sqlalchemy.org" class="external-link" target="_blank">⚗</a> 🔗.
 
-&amp; 📟 🔗 🇸🇲 &amp; 🇸🇲 🏷 🖖 🎏 🔬 📁, 👆 🔜 💪 🎭 🛠️ ⏮️ ⚗ 🍵 ✔️ ❎ ReadyApi, Pydantic, ⚖️ 🕳 🙆.
+&amp; 📟 🔗 🇸🇲 &amp; 🇸🇲 🏷 🖖 🎏 🔬 📁, 👆 🔜 💪 🎭 🛠️ ⏮️ ⚗ 🍵 ✔️ ❎ ReadyAPI, Pydantic, ⚖️ 🕳 🙆.
 
-🎏 🌌, 👆 🔜 💪 ⚙️ 🎏 🇸🇲 🏷 &amp; 🚙 🎏 🍕 👆 📟 👈 🚫 🔗 **ReadyApi**.
+🎏 🌌, 👆 🔜 💪 ⚙️ 🎏 🇸🇲 🏷 &amp; 🚙 🎏 🍕 👆 📟 👈 🚫 🔗 **ReadyAPI**.
 
 🖼, 🖥 📋 👨‍🏭 ⏮️ <a href="https://docs.celeryq.dev" class="external-link" target="_blank">🥒</a>, <a href="https://python-rq.org/" class="external-link" target="_blank">🅿</a>, ⚖️ <a href="https://arq-docs.helpmanual.io/" class="external-link" target="_blank">📶</a>.
 
@@ -715,13 +715,13 @@ $ uvicorn sql_app.main:app --reload
 
 &amp; ⤴️, 👆 💪 📂 👆 🖥 <a href="http://127.0.0.1:8000/docs" class="external-link" target="_blank">http://127.0.0.1:8000/docs</a>.
 
-&amp; 👆 🔜 💪 🔗 ⏮️ 👆 **ReadyApi** 🈸, 👂 📊 ⚪️➡️ 🎰 💽:
+&amp; 👆 🔜 💪 🔗 ⏮️ 👆 **ReadyAPI** 🈸, 👂 📊 ⚪️➡️ 🎰 💽:
 
 <img src="/img/tutorial/sql-databases/image01.png">
 
 ## 🔗 ⏮️ 💽 🔗
 
-🚥 👆 💚 🔬 🗄 💽 (📁) 🔗, ➡ ReadyApi, ℹ 🚮 🎚, 🚮 🏓, 🏓, ⏺, 🔀 📊, ♒️. 👆 💪 ⚙️ <a href="https://sqlitebrowser.org/" class="external-link" target="_blank">💽 🖥 🗄</a>.
+🚥 👆 💚 🔬 🗄 💽 (📁) 🔗, ➡ ReadyAPI, ℹ 🚮 🎚, 🚮 🏓, 🏓, ⏺, 🔀 📊, ♒️. 👆 💪 ⚙️ <a href="https://sqlitebrowser.org/" class="external-link" target="_blank">💽 🖥 🗄</a>.
 
 ⚫️ 🔜 👀 💖 👉:
 
@@ -781,6 +781,6 @@ $ uvicorn sql_app.main:app --reload
     ⚫️ 🎲 👍 ⚙️ 🔗 ⏮️ `yield` 🕐❔ 👫 🥃 ⚙️ 💼.
 
 !!! info
-    🔗 ⏮️ `yield` 🚮 ⏳ **ReadyApi**.
+    🔗 ⏮️ `yield` 🚮 ⏳ **ReadyAPI**.
 
     ⏮️ ⏬ 👉 🔰 🕴 ✔️ 🖼 ⏮️ 🛠️ &amp; 📤 🎲 📚 🈸 ⚙️ 🛠️ 💽 🎉 🧾.

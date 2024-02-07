@@ -30,7 +30,7 @@
 !!! note
     一些响应状态码（请参阅下一部分）表示响应没有响应体。
 
-    ReadyApi 知道这一点，并将生成表明没有响应体的 OpenAPI 文档。
+    ReadyAPI 知道这一点，并将生成表明没有响应体的 OpenAPI 文档。
 
 ## 关于 HTTP 状态码
 
@@ -82,7 +82,7 @@
 !!! note "技术细节"
     你也可以使用 `from starlette import status`。
 
-    为了给你（即开发者）提供方便，**ReadyApi** 提供了与 `starlette.status` 完全相同的 `readyapi.status`。但它直接来自于 Starlette。
+    为了给你（即开发者）提供方便，**ReadyAPI** 提供了与 `starlette.status` 完全相同的 `readyapi.status`。但它直接来自于 Starlette。
 
 ## 更改默认状态码
 

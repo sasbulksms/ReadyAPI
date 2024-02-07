@@ -1,5 +1,5 @@
-from readyapi import ReadyApi
 from pydantic import BaseModel
+from readyapi import ReadyAPI
 
 
 class Item(BaseModel):
@@ -7,7 +7,7 @@ class Item(BaseModel):
     description: str | None = None
 
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.post("/items/")

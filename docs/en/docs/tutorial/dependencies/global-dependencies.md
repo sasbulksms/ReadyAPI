@@ -2,7 +2,7 @@
 
 For some types of applications you might want to add dependencies to the whole application.
 
-Similar to the way you can [add `dependencies` to the *path operation decorators*](dependencies-in-path-operation-decorators.md){.internal-link target=_blank}, you can add them to the `ReadyApi` application.
+Similar to the way you can [add `dependencies` to the *path operation decorators*](dependencies-in-path-operation-decorators.md){.internal-link target=_blank}, you can add them to the `ReadyAPI` application.
 
 In that case, they will be applied to all the *path operations* in the application:
 
@@ -12,13 +12,13 @@ In that case, they will be applied to all the *path operations* in the applicati
     {!> ../../../docs_src/dependencies/tutorial012_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="16"
     {!> ../../../docs_src/dependencies/tutorial012_an.py!}
     ```
 
-=== "Python 3.6 non-Annotated"
+=== "Python 3.8 non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.

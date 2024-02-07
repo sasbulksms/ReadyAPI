@@ -86,9 +86,9 @@ $ pip install "passlib[bcrypt]"
 !!! tip
     With `passlib`, you could even configure it to be able to read passwords created by **Django**, a **Flask** security plug-in or many others.
 
-    So, you would be able to, for example, share the same data from a Django application in a database with a ReadyApi application. Or gradually migrate a Django application using the same database.
+    So, you would be able to, for example, share the same data from a Django application in a database with a ReadyAPI application. Or gradually migrate a Django application using the same database.
 
-    And your users would be able to login from your Django app or from your **ReadyApi** app, at the same time.
+    And your users would be able to login from your Django app or from your **ReadyAPI** app, at the same time.
 
 ## Hash and verify the passwords
 
@@ -121,7 +121,7 @@ And another one to authenticate and return a user.
     {!> ../../../docs_src/security/tutorial004_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="7  49  56-57  60-61  70-76"
     {!> ../../../docs_src/security/tutorial004_an.py!}
@@ -136,7 +136,7 @@ And another one to authenticate and return a user.
     {!> ../../../docs_src/security/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -188,7 +188,7 @@ Create a utility function to generate a new access token.
     {!> ../../../docs_src/security/tutorial004_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="6  13-15  29-31 79-87"
     {!> ../../../docs_src/security/tutorial004_an.py!}
@@ -203,7 +203,7 @@ Create a utility function to generate a new access token.
     {!> ../../../docs_src/security/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -232,7 +232,7 @@ If the token is invalid, return an HTTP error right away.
     {!> ../../../docs_src/security/tutorial004_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="90-107"
     {!> ../../../docs_src/security/tutorial004_an.py!}
@@ -247,7 +247,7 @@ If the token is invalid, return an HTTP error right away.
     {!> ../../../docs_src/security/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -274,7 +274,7 @@ Create a real JWT access token and return it
     {!> ../../../docs_src/security/tutorial004_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="118-133"
     {!> ../../../docs_src/security/tutorial004_an.py!}
@@ -285,16 +285,16 @@ Create a real JWT access token and return it
     !!! tip
         Prefer to use the `Annotated` version if possible.
 
-    ```Python hl_lines="114-127"
+    ```Python hl_lines="114-129"
     {!> ../../../docs_src/security/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
 
-    ```Python hl_lines="115-128"
+    ```Python hl_lines="115-130"
     {!> ../../../docs_src/security/tutorial004.py!}
     ```
 
@@ -318,7 +318,7 @@ In those cases, several of those entities could have the same ID, let's say `foo
 
 So, to avoid ID collisions, when creating the JWT token for the user, you could prefix the value of the `sub` key, e.g. with `username:`. So, in this example, the value of `sub` could have been: `username:johndoe`.
 
-The important thing to have in mind is that the `sub` key should have a unique identifier across the entire application, and it should be a string.
+The important thing to keep in mind is that the `sub` key should have a unique identifier across the entire application, and it should be a string.
 
 ## Check it
 
@@ -368,11 +368,11 @@ You can use them to add a specific set of permissions to a JWT token.
 
 Then you can give this token to a user directly or a third party, to interact with your API with a set of restrictions.
 
-You can learn how to use them and how they are integrated into **ReadyApi** later in the **Advanced User Guide**.
+You can learn how to use them and how they are integrated into **ReadyAPI** later in the **Advanced User Guide**.
 
 ## Recap
 
-With what you have seen up to now, you can set up a secure **ReadyApi** application using standards like OAuth2 and JWT.
+With what you have seen up to now, you can set up a secure **ReadyAPI** application using standards like OAuth2 and JWT.
 
 In almost any framework handling the security becomes a rather complex subject quite quickly.
 
@@ -380,11 +380,11 @@ Many packages that simplify it a lot have to make many compromises with the data
 
 ---
 
-**ReadyApi** doesn't make any compromise with any database, data model or tool.
+**ReadyAPI** doesn't make any compromise with any database, data model or tool.
 
 It gives you all the flexibility to choose the ones that fit your project the best.
 
-And you can use directly many well maintained and widely used packages like `passlib` and `python-jose`, because **ReadyApi** doesn't require any complex mechanisms to integrate external packages.
+And you can use directly many well maintained and widely used packages like `passlib` and `python-jose`, because **ReadyAPI** doesn't require any complex mechanisms to integrate external packages.
 
 But it provides you the tools to simplify the process as much as possible without compromising flexibility, robustness, or security.
 

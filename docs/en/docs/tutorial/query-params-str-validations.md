@@ -1,6 +1,6 @@
 # Query Parameters and String Validations
 
-**ReadyApi** allows you to declare additional information and validation for your parameters.
+**ReadyAPI** allows you to declare additional information and validation for your parameters.
 
 Let's take this application as example:
 
@@ -10,16 +10,16 @@ Let's take this application as example:
     {!> ../../../docs_src/query_params_str_validations/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/query_params_str_validations/tutorial001.py!}
     ```
 
-The query parameter `q` is of type `Union[str, None]` (or `str | None` in Python 3.10), that means that it's of type `str` but could also be `None`, and indeed, the default value is `None`, so ReadyApi will know it's not required.
+The query parameter `q` is of type `Union[str, None]` (or `str | None` in Python 3.10), that means that it's of type `str` but could also be `None`, and indeed, the default value is `None`, so ReadyAPI will know it's not required.
 
 !!! note
-    ReadyApi will know that the value of `q` is not required because of the default value `= None`.
+    ReadyAPI will know that the value of `q` is not required because of the default value `= None`.
 
     The `Union` in `Union[str, None]` will allow your editor to give you better support and detect errors.
 
@@ -42,28 +42,28 @@ To achieve that, first import:
     {!> ../../../docs_src/query_params_str_validations/tutorial002_an_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     In versions of Python below Python 3.9 you import `Annotated` from `typing_extensions`.
 
-    It will already be installed with ReadyApi.
+    It will already be installed with ReadyAPI.
 
     ```Python hl_lines="3-4"
     {!> ../../../docs_src/query_params_str_validations/tutorial002_an.py!}
     ```
 
 !!! info
-    ReadyApi added support for `Annotated` (and started recommending it) in version 0.95.0.
+    ReadyAPI added support for `Annotated` (and started recommending it) in version 0.95.0.
 
     If you have an older version, you would get errors when trying to use `Annotated`.
 
-    Make sure you [Upgrade the ReadyApi version](../deployment/versions.md#upgrading-the-readyapi-versions){.internal-link target=_blank} to at least 0.95.1 before using `Annotated`.
+    Make sure you [Upgrade the ReadyAPI version](../deployment/versions.md#upgrading-the-readyapi-versions){.internal-link target=_blank} to at least 0.95.1 before using `Annotated`.
 
 ## Use `Annotated` in the type for the `q` parameter
 
 Remember I told you before that `Annotated` can be used to add metadata to your parameters in the [Python Types Intro](../python-types.md#type-hints-with-metadata-annotations){.internal-link target=_blank}?
 
-Now it's the time to use it with ReadyApi. 🚀
+Now it's the time to use it with ReadyAPI. 🚀
 
 We had this type annotation:
 
@@ -73,7 +73,7 @@ We had this type annotation:
     q: str | None = None
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     q: Union[str, None] = None
@@ -87,7 +87,7 @@ What we will do is wrap that with `Annotated`, so it becomes:
     q: Annotated[str | None] = None
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     q: Annotated[Union[str, None]] = None
@@ -107,7 +107,7 @@ Now that we have this `Annotated` where we can put more metadata, add `Query` to
     {!> ../../../docs_src/query_params_str_validations/tutorial002_an_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="10"
     {!> ../../../docs_src/query_params_str_validations/tutorial002_an.py!}
@@ -115,9 +115,9 @@ Now that we have this `Annotated` where we can put more metadata, add `Query` to
 
 Notice that the default value is still `None`, so the parameter is still optional.
 
-But now, having `Query(max_length=50)` inside of `Annotated`, we are telling ReadyApi that we want it to extract this value from the query parameters (this would have been the default anyway 🤷) and that we want to have **additional validation** for this value (that's why we do this, to get the additional validation). 😎
+But now, having `Query(max_length=50)` inside of `Annotated`, we are telling ReadyAPI that we want it to extract this value from the query parameters (this would have been the default anyway 🤷) and that we want to have **additional validation** for this value (that's why we do this, to get the additional validation). 😎
 
-ReadyApi will now:
+ReadyAPI will now:
 
 * **Validate** the data making sure that the max length is 50 characters
 * Show a **clear error** for the client when the data is not valid
@@ -125,7 +125,7 @@ ReadyApi will now:
 
 ## Alternative (old) `Query` as the default value
 
-Previous versions of ReadyApi (before <abbr title="before 2023-03">0.95.0</abbr>) required you to use `Query` as the default value of your parameter, instead of putting it in `Annotated`, there's a high chance that you will see code using it around, so I'll explain it to you.
+Previous versions of ReadyAPI (before <abbr title="before 2023-03">0.95.0</abbr>) required you to use `Query` as the default value of your parameter, instead of putting it in `Annotated`, there's a high chance that you will see code using it around, so I'll explain it to you.
 
 !!! tip
     For new code and whenever possible, use `Annotated` as explained above. There are multiple advantages (explained below) and no disadvantages. 🍰
@@ -138,13 +138,13 @@ This is how you would use `Query()` as the default value of your function parame
     {!> ../../../docs_src/query_params_str_validations/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/query_params_str_validations/tutorial002.py!}
     ```
 
-As in this case (without using `Annotated`) we have to replace the default value `None` in the function with `Query()`, we now need to set the default value with the parameter `Query(default=None)`, it serves the same purpose of defining that default value (at least for ReadyApi).
+As in this case (without using `Annotated`) we have to replace the default value `None` in the function with `Query()`, we now need to set the default value with the parameter `Query(default=None)`, it serves the same purpose of defining that default value (at least for ReadyAPI).
 
 So:
 
@@ -173,7 +173,7 @@ q: str | None = None
 But it declares it explicitly as being a query parameter.
 
 !!! info
-    Have in mind that the most important part to make a parameter optional is the part:
+    Keep in mind that the most important part to make a parameter optional is the part:
 
     ```Python
     = None
@@ -187,7 +187,7 @@ But it declares it explicitly as being a query parameter.
 
     as it will use that `None` as the default value, and that way make the parameter **not required**.
 
-    The `Union[str, None]` part allows your editor to provide better support, but it is not what tells ReadyApi that this parameter is not required.
+    The `Union[str, None]` part allows your editor to provide better support, but it is not what tells ReadyAPI that this parameter is not required.
 
 Then, we can pass more parameters to `Query`. In this case, the `max_length` parameter that applies to strings:
 
@@ -199,7 +199,7 @@ This will validate the data, show a clear error when the data is not valid, and 
 
 ### `Query` as the default value or in `Annotated`
 
-Have in mind that when using `Query` inside of `Annotated` you cannot use the `default` parameter for `Query`.
+Keep in mind that when using `Query` inside of `Annotated` you cannot use the `default` parameter for `Query`.
 
 Instead use the actual default value of the function parameter. Otherwise, it would be inconsistent.
 
@@ -229,9 +229,9 @@ q: str = Query(default="rick")
 
 The **default** value of the **function parameter** is the **actual default** value, that's more intuitive with Python in general. 😌
 
-You could **call** that same function in **other places** without ReadyApi, and it would **work as expected**. If there's a **required** parameter (without a default value), your **editor** will let you know with an error, **Python** will also complain if you run it without passing the required parameter.
+You could **call** that same function in **other places** without ReadyAPI, and it would **work as expected**. If there's a **required** parameter (without a default value), your **editor** will let you know with an error, **Python** will also complain if you run it without passing the required parameter.
 
-When you don't use `Annotated` and instead use the **(old) default value style**, if you call that function without ReadyApi in **other place**, you have to **remember** to pass the arguments to the function for it to work correctly, otherwise the values will be different from what you expect (e.g. `QueryInfo` or something similar instead of `str`). And your editor won't complain, and Python won't complain running that function, only when the operations inside error out.
+When you don't use `Annotated` and instead use the **(old) default value style**, if you call that function without ReadyAPI in **other place**, you have to **remember** to pass the arguments to the function for it to work correctly, otherwise the values will be different from what you expect (e.g. `QueryInfo` or something similar instead of `str`). And your editor won't complain, and Python won't complain running that function, only when the operations inside error out.
 
 Because `Annotated` can have more than one metadata annotation, you could now even use the same function with other tools, like <a href="https://typer.khulnasoft.com/" class="external-link" target="_blank">Typer</a>. 🚀
 
@@ -251,7 +251,7 @@ You can also add a parameter `min_length`:
     {!> ../../../docs_src/query_params_str_validations/tutorial003_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="11"
     {!> ../../../docs_src/query_params_str_validations/tutorial003_an.py!}
@@ -266,7 +266,7 @@ You can also add a parameter `min_length`:
     {!> ../../../docs_src/query_params_str_validations/tutorial003_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -291,7 +291,7 @@ You can define a <abbr title="A regular expression, regex or regexp is a sequenc
     {!> ../../../docs_src/query_params_str_validations/tutorial004_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="12"
     {!> ../../../docs_src/query_params_str_validations/tutorial004_an.py!}
@@ -306,7 +306,7 @@ You can define a <abbr title="A regular expression, regex or regexp is a sequenc
     {!> ../../../docs_src/query_params_str_validations/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -323,11 +323,11 @@ This specific regular expression pattern checks that the received parameter valu
 
 If you feel lost with all these **"regular expression"** ideas, don't worry. They are a hard topic for many people. You can still do a lot of stuff without needing regular expressions yet.
 
-But whenever you need them and go and learn them, know that you can already use them directly in **ReadyApi**.
+But whenever you need them and go and learn them, know that you can already use them directly in **ReadyAPI**.
 
 ### Pydantic v1 `regex` instead of `pattern`
 
-Before Pydantic version 2 and before ReadyApi 0.100.0, the parameter was called `regex` instead of `pattern`, but it's now deprecated.
+Before Pydantic version 2 and before ReadyAPI 0.100.0, the parameter was called `regex` instead of `pattern`, but it's now deprecated.
 
 You could still see some code using it:
 
@@ -351,13 +351,13 @@ Let's say that you want to declare the `q` query parameter to have a `min_length
     {!> ../../../docs_src/query_params_str_validations/tutorial005_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="8"
     {!> ../../../docs_src/query_params_str_validations/tutorial005_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -405,13 +405,13 @@ So, when you need to declare a value as required while using `Query`, you can si
     {!> ../../../docs_src/query_params_str_validations/tutorial006_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="8"
     {!> ../../../docs_src/query_params_str_validations/tutorial006_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -435,13 +435,13 @@ There's an alternative way to explicitly declare that a value is required. You c
     {!> ../../../docs_src/query_params_str_validations/tutorial006b_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="8"
     {!> ../../../docs_src/query_params_str_validations/tutorial006b_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -453,9 +453,9 @@ There's an alternative way to explicitly declare that a value is required. You c
 !!! info
     If you hadn't seen that `...` before: it is a special single value, it is <a href="https://docs.python.org/3/library/constants.html#Ellipsis" class="external-link" target="_blank">part of Python and is called "Ellipsis"</a>.
 
-    It is used by Pydantic and ReadyApi to explicitly declare that a value is required.
+    It is used by Pydantic and ReadyAPI to explicitly declare that a value is required.
 
-This will let **ReadyApi** know that this parameter is required.
+This will let **ReadyAPI** know that this parameter is required.
 
 ### Required with `None`
 
@@ -475,7 +475,7 @@ To do that, you can declare that `None` is a valid type but still use `...` as t
     {!> ../../../docs_src/query_params_str_validations/tutorial006c_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="10"
     {!> ../../../docs_src/query_params_str_validations/tutorial006c_an.py!}
@@ -490,7 +490,7 @@ To do that, you can declare that `None` is a valid type but still use `...` as t
     {!> ../../../docs_src/query_params_str_validations/tutorial006c_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -500,35 +500,10 @@ To do that, you can declare that `None` is a valid type but still use `...` as t
     ```
 
 !!! tip
-    Pydantic, which is what powers all the data validation and serialization in ReadyApi, has a special behavior when you use `Optional` or `Union[Something, None]` without a default value, you can read more about it in the Pydantic docs about <a href="https://pydantic-docs.helpmanual.io/usage/models/#required-optional-fields" class="external-link" target="_blank">Required Optional fields</a>.
-
-### Use Pydantic's `Required` instead of Ellipsis (`...`)
-
-If you feel uncomfortable using `...`, you can also import and use `Required` from Pydantic:
-
-=== "Python 3.9+"
-
-    ```Python hl_lines="4  10"
-    {!> ../../../docs_src/query_params_str_validations/tutorial006d_an_py39.py!}
-    ```
-
-=== "Python 3.6+"
-
-    ```Python hl_lines="2  9"
-    {!> ../../../docs_src/query_params_str_validations/tutorial006d_an.py!}
-    ```
-
-=== "Python 3.6+ non-Annotated"
-
-    !!! tip
-        Prefer to use the `Annotated` version if possible.
-
-    ```Python hl_lines="2  8"
-    {!> ../../../docs_src/query_params_str_validations/tutorial006d.py!}
-    ```
+    Pydantic, which is what powers all the data validation and serialization in ReadyAPI, has a special behavior when you use `Optional` or `Union[Something, None]` without a default value, you can read more about it in the Pydantic docs about <a href="https://pydantic-docs.helpmanual.io/usage/models/#required-optional-fields" class="external-link" target="_blank">Required Optional fields</a>.
 
 !!! tip
-    Remember that in most of the cases, when something is required, you can simply omit the default, so you normally don't have to use `...` nor `Required`.
+    Remember that in most of the cases, when something is required, you can simply omit the default, so you normally don't have to use `...`.
 
 ## Query parameter list / multiple values
 
@@ -548,7 +523,7 @@ For example, to declare a query parameter `q` that can appear multiple times in 
     {!> ../../../docs_src/query_params_str_validations/tutorial011_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="10"
     {!> ../../../docs_src/query_params_str_validations/tutorial011_an.py!}
@@ -572,7 +547,7 @@ For example, to declare a query parameter `q` that can appear multiple times in 
     {!> ../../../docs_src/query_params_str_validations/tutorial011_py39.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -617,7 +592,7 @@ And you can also define a default `list` of values if none are provided:
     {!> ../../../docs_src/query_params_str_validations/tutorial012_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="10"
     {!> ../../../docs_src/query_params_str_validations/tutorial012_an.py!}
@@ -632,7 +607,7 @@ And you can also define a default `list` of values if none are provided:
     {!> ../../../docs_src/query_params_str_validations/tutorial012_py39.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -668,13 +643,13 @@ You can also use `list` directly instead of `List[str]` (or `list[str]` in Pytho
     {!> ../../../docs_src/query_params_str_validations/tutorial013_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="8"
     {!> ../../../docs_src/query_params_str_validations/tutorial013_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -684,7 +659,7 @@ You can also use `list` directly instead of `List[str]` (or `list[str]` in Pytho
     ```
 
 !!! note
-    Have in mind that in this case, ReadyApi won't check the contents of the list.
+    Keep in mind that in this case, ReadyAPI won't check the contents of the list.
 
     For example, `List[int]` would check (and document) that the contents of the list are integers. But `list` alone wouldn't.
 
@@ -695,7 +670,7 @@ You can add more information about the parameter.
 That information will be included in the generated OpenAPI and used by the documentation user interfaces and external tools.
 
 !!! note
-    Have in mind that different tools might have different levels of OpenAPI support.
+    Keep in mind that different tools might have different levels of OpenAPI support.
 
     Some of them might not show all the extra information declared yet, although in most of the cases, the missing feature is already planned for development.
 
@@ -713,7 +688,7 @@ You can add a `title`:
     {!> ../../../docs_src/query_params_str_validations/tutorial007_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="11"
     {!> ../../../docs_src/query_params_str_validations/tutorial007_an.py!}
@@ -728,7 +703,7 @@ You can add a `title`:
     {!> ../../../docs_src/query_params_str_validations/tutorial007_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -751,7 +726,7 @@ And a `description`:
     {!> ../../../docs_src/query_params_str_validations/tutorial008_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="15"
     {!> ../../../docs_src/query_params_str_validations/tutorial008_an.py!}
@@ -762,11 +737,11 @@ And a `description`:
     !!! tip
         Prefer to use the `Annotated` version if possible.
 
-    ```Python hl_lines="12"
+    ```Python hl_lines="11"
     {!> ../../../docs_src/query_params_str_validations/tutorial008_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -805,7 +780,7 @@ Then you can declare an `alias`, and that alias is what will be used to find the
     {!> ../../../docs_src/query_params_str_validations/tutorial009_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="10"
     {!> ../../../docs_src/query_params_str_validations/tutorial009_an.py!}
@@ -820,7 +795,7 @@ Then you can declare an `alias`, and that alias is what will be used to find the
     {!> ../../../docs_src/query_params_str_validations/tutorial009_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -849,7 +824,7 @@ Then pass the parameter `deprecated=True` to `Query`:
     {!> ../../../docs_src/query_params_str_validations/tutorial010_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="20"
     {!> ../../../docs_src/query_params_str_validations/tutorial010_an.py!}
@@ -860,11 +835,11 @@ Then pass the parameter `deprecated=True` to `Query`:
     !!! tip
         Prefer to use the `Annotated` version if possible.
 
-    ```Python hl_lines="17"
+    ```Python hl_lines="16"
     {!> ../../../docs_src/query_params_str_validations/tutorial010_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -893,7 +868,7 @@ To exclude a query parameter from the generated OpenAPI schema (and thus, from t
     {!> ../../../docs_src/query_params_str_validations/tutorial014_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="11"
     {!> ../../../docs_src/query_params_str_validations/tutorial014_an.py!}
@@ -908,7 +883,7 @@ To exclude a query parameter from the generated OpenAPI schema (and thus, from t
     {!> ../../../docs_src/query_params_str_validations/tutorial014_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.

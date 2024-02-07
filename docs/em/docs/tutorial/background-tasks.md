@@ -19,7 +19,7 @@
 {!../../../docs_src/background_tasks/tutorial001.py!}
 ```
 
-**ReadyApi** 🔜 ✍ 🎚 🆎 `BackgroundTasks` 👆 &amp; 🚶‍♀️ ⚫️ 👈 🔢.
+**ReadyAPI** 🔜 ✍ 🎚 🆎 `BackgroundTasks` 👆 &amp; 🚶‍♀️ ⚫️ 👈 🔢.
 
 ## ✍ 📋 🔢
 
@@ -27,7 +27,7 @@
 
 ⚫️ 🐩 🔢 👈 💪 📨 🔢.
 
-⚫️ 💪 `async def` ⚖️ 😐 `def` 🔢, **ReadyApi** 🔜 💭 ❔ 🍵 ⚫️ ☑.
+⚫️ 💪 `async def` ⚖️ 😐 `def` 🔢, **ReadyAPI** 🔜 💭 ❔ 🍵 ⚫️ ☑.
 
 👉 💼, 📋 🔢 🔜 ✍ 📁 (⚖ 📨 📧).
 
@@ -55,7 +55,7 @@
 
 ⚙️ `BackgroundTasks` 👷 ⏮️ 🔗 💉 ⚙️, 👆 💪 📣 🔢 🆎 `BackgroundTasks` 💗 🎚: *➡ 🛠️ 🔢*, 🔗 (☑), 🎧-🔗, ♒️.
 
-**ReadyApi** 💭 ⚫️❔ 🔠 💼 &amp; ❔ 🏤-⚙️ 🎏 🎚, 👈 🌐 🖥 📋 🔗 👯‍♂️ &amp; 🏃 🖥 ⏮️:
+**ReadyAPI** 💭 ⚫️❔ 🔠 💼 &amp; ❔ 🏤-⚙️ 🎏 🎚, 👈 🌐 🖥 📋 🔗 👯‍♂️ &amp; 🏃 🖥 ⏮️:
 
 === "🐍 3️⃣.6️⃣ &amp; 🔛"
 
@@ -79,11 +79,11 @@
 
 🎓 `BackgroundTasks` 👟 🔗 ⚪️➡️ <a href="https://www.starlette.io/background/" class="external-link" target="_blank">`starlette.background`</a>.
 
-⚫️ 🗄/🔌 🔗 🔘 ReadyApi 👈 👆 💪 🗄 ⚫️ ⚪️➡️ `readyapi` &amp; ❎ 😫 🗄 🎛 `BackgroundTask` (🍵 `s` 🔚) ⚪️➡️ `starlette.background`.
+⚫️ 🗄/🔌 🔗 🔘 ReadyAPI 👈 👆 💪 🗄 ⚫️ ⚪️➡️ `readyapi` &amp; ❎ 😫 🗄 🎛 `BackgroundTask` (🍵 `s` 🔚) ⚪️➡️ `starlette.background`.
 
-🕴 ⚙️ `BackgroundTasks` (&amp; 🚫 `BackgroundTask`), ⚫️ ⤴️ 💪 ⚙️ ⚫️ *➡ 🛠️ 🔢* 🔢 &amp; ✔️ **ReadyApi** 🍵 🎂 👆, 💖 🕐❔ ⚙️ `Request` 🎚 🔗.
+🕴 ⚙️ `BackgroundTasks` (&amp; 🚫 `BackgroundTask`), ⚫️ ⤴️ 💪 ⚙️ ⚫️ *➡ 🛠️ 🔢* 🔢 &amp; ✔️ **ReadyAPI** 🍵 🎂 👆, 💖 🕐❔ ⚙️ `Request` 🎚 🔗.
 
-⚫️ 💪 ⚙️ `BackgroundTask` 😞 ReadyApi, ✋️ 👆 ✔️ ✍ 🎚 👆 📟 &amp; 📨 💃 `Response` 🔌 ⚫️.
+⚫️ 💪 ⚙️ `BackgroundTask` 😞 ReadyAPI, ✋️ 👆 ✔️ ✍ 🎚 👆 📟 &amp; 📨 💃 `Response` 🔌 ⚫️.
 
 👆 💪 👀 🌖 ℹ <a href="https://www.starlette.io/background/" class="external-link" target="_blank">💃 🛂 🩺 🖥 📋</a>.
 
@@ -95,7 +95,7 @@
 
 👀 🖼, ✅ [🏗 🚂](../project-generation.md){.internal-link target=_blank}, 👫 🌐 🔌 🥒 ⏪ 📶.
 
-✋️ 🚥 👆 💪 🔐 🔢 &amp; 🎚 ⚪️➡️ 🎏 **ReadyApi** 📱, ⚖️ 👆 💪 🎭 🤪 🖥 📋 (💖 📨 📧 📨), 👆 💪 🎯 ⚙️ `BackgroundTasks`.
+✋️ 🚥 👆 💪 🔐 🔢 &amp; 🎚 ⚪️➡️ 🎏 **ReadyAPI** 📱, ⚖️ 👆 💪 🎭 🤪 🖥 📋 (💖 📨 📧 📨), 👆 💪 🎯 ⚙️ `BackgroundTasks`.
 
 ## 🌃
 

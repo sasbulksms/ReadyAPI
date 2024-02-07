@@ -69,7 +69,7 @@ http://127.0.0.1:8000/items/?skip=20
     {!> ../../../docs_src/query_params/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/query_params/tutorial002.py!}
@@ -78,7 +78,7 @@ http://127.0.0.1:8000/items/?skip=20
 В этом случае, параметр  `q` будет не обязательным и будет иметь значение `None` по умолчанию.
 
 !!! Важно
-    Также обратите внимание, что **ReadyApi** достаточно умён чтобы заметить, что параметр `item_id` является path-параметром, а `q` нет, поэтому, это параметр запроса.
+    Также обратите внимание, что **ReadyAPI** достаточно умён чтобы заметить, что параметр `item_id` является path-параметром, а `q` нет, поэтому, это параметр запроса.
 
 ## Преобразование типа параметра запроса
 
@@ -90,7 +90,7 @@ http://127.0.0.1:8000/items/?skip=20
     {!> ../../../docs_src/query_params/tutorial003_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/query_params/tutorial003.py!}
@@ -131,7 +131,7 @@ http://127.0.0.1:8000/items/foo?short=yes
 
 ## Смешивание query-параметров и path-параметров
 
-Вы можете объявлять несколько query-параметров и path-параметров одновременно,**ReadyApi** сам разберётся, что чем является.
+Вы можете объявлять несколько query-параметров и path-параметров одновременно,**ReadyAPI** сам разберётся, что чем является.
 
 И вы не обязаны объявлять их в каком-либо определенном порядке.
 
@@ -143,7 +143,7 @@ http://127.0.0.1:8000/items/foo?short=yes
     {!> ../../../docs_src/query_params/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="8  10"
     {!> ../../../docs_src/query_params/tutorial004.py!}
@@ -209,7 +209,7 @@ http://127.0.0.1:8000/items/foo-item?needy=sooooneedy
     {!> ../../../docs_src/query_params/tutorial006_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="10"
     {!> ../../../docs_src/query_params/tutorial006.py!}

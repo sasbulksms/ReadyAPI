@@ -20,13 +20,13 @@ Pour commencer, importez `BackgroundTasks` et définissez un paramètre dans vot
 {!../../../docs_src/background_tasks/tutorial001.py!}
 ```
 
-**ReadyApi** créera l'objet de type `BackgroundTasks` pour vous et le passera comme paramètre.
+**ReadyAPI** créera l'objet de type `BackgroundTasks` pour vous et le passera comme paramètre.
 
 ## Créer une fonction de tâche
 
 Une fonction à exécuter comme tâche d'arrière-plan est juste une fonction standard qui peut recevoir des paramètres.
 
-Elle peut être une fonction asynchrone (`async def`) ou une fonction normale (`def`), **ReadyApi** saura la gérer correctement.
+Elle peut être une fonction asynchrone (`async def`) ou une fonction normale (`def`), **ReadyAPI** saura la gérer correctement.
 
 Dans cet exemple, la fonction de tâche écrira dans un fichier (afin de simuler un envoi d'email).
 
@@ -55,7 +55,7 @@ Dans votre *fonction de chemin*, passez votre fonction de tâche à l'objet de t
 
 Utiliser `BackgroundTasks` fonctionne aussi avec le système d'injection de dépendances. Vous pouvez déclarer un paramètre de type `BackgroundTasks` à différents niveaux : dans une *fonction de chemin*, dans une dépendance, dans une sous-dépendance...
 
-**ReadyApi** sait quoi faire dans chaque cas et comment réutiliser le même objet, afin que tous les paramètres de type `BackgroundTasks` soient fusionnés et que les tâches soient exécutées en arrière-plan :
+**ReadyAPI** sait quoi faire dans chaque cas et comment réutiliser le même objet, afin que tous les paramètres de type `BackgroundTasks` soient fusionnés et que les tâches soient exécutées en arrière-plan :
 
 ```Python hl_lines="13  15  22  25"
 {!../../../docs_src/background_tasks/tutorial002.py!}
@@ -71,11 +71,11 @@ Et ensuite une autre tâche d'arrière-plan (générée dans les paramètres de 
 
 La classe `BackgroundTasks` provient directement de <a href="https://www.starlette.io/background/" class="external-link" target="_blank">`starlette.background`</a>.
 
-Elle est importée/incluse directement dans **ReadyApi** pour que vous puissiez l'importer depuis `readyapi` et éviter d'importer accidentellement `BackgroundTask` (sans `s` à la fin) depuis `starlette.background`.
+Elle est importée/incluse directement dans **ReadyAPI** pour que vous puissiez l'importer depuis `readyapi` et éviter d'importer accidentellement `BackgroundTask` (sans `s` à la fin) depuis `starlette.background`.
 
-En utilisant seulement `BackgroundTasks` (et non `BackgroundTask`), il est possible de l'utiliser en tant que paramètre de *fonction de chemin* et de laisser **ReadyApi** gérer le reste pour vous, comme en utilisant l'objet `Request` directement.
+En utilisant seulement `BackgroundTasks` (et non `BackgroundTask`), il est possible de l'utiliser en tant que paramètre de *fonction de chemin* et de laisser **ReadyAPI** gérer le reste pour vous, comme en utilisant l'objet `Request` directement.
 
-Il est tout de même possible d'utiliser `BackgroundTask` seul dans **ReadyApi**, mais dans ce cas il faut créer l'objet dans le code et renvoyer une `Response` Starlette l'incluant.
+Il est tout de même possible d'utiliser `BackgroundTask` seul dans **ReadyAPI**, mais dans ce cas il faut créer l'objet dans le code et renvoyer une `Response` Starlette l'incluant.
 
 Plus de détails sont disponibles dans <a href="https://www.starlette.io/background/" class="external-link" target="_blank">la documentation officielle de Starlette sur les tâches d'arrière-plan</a> (via leurs classes `BackgroundTasks`et `BackgroundTask`).
 
@@ -87,7 +87,7 @@ Ces outils nécessitent généralement des configurations plus complexes ainsi q
 
 Pour voir un exemple, allez voir les [Générateurs de projets](../project-generation.md){.internal-link target=_blank}, ils incluent tous Celery déjà configuré.
 
-Mais si vous avez besoin d'accéder aux variables et objets de la même application **ReadyApi**, ou si vous avez besoin d'effectuer de petites tâches d'arrière-plan (comme envoyer des notifications par email), vous pouvez simplement vous contenter d'utiliser `BackgroundTasks`.
+Mais si vous avez besoin d'accéder aux variables et objets de la même application **ReadyAPI**, ou si vous avez besoin d'effectuer de petites tâches d'arrière-plan (comme envoyer des notifications par email), vous pouvez simplement vous contenter d'utiliser `BackgroundTasks`.
 
 ## Résumé
 

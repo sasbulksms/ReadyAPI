@@ -1,11 +1,11 @@
 from typing import List, Tuple
 
 from dirty_equals import IsDict
-from readyapi import ReadyApi, Form
-from readyapi.testclient import TestClient
 from pydantic import BaseModel
+from readyapi import Form, ReadyAPI
+from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class ItemGroup(BaseModel):
@@ -88,7 +88,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/model-with-tuple/": {
                 "post": {

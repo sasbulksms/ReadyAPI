@@ -1,6 +1,6 @@
 # Développement - Contribuer
 
-Tout d'abord, vous voudrez peut-être voir les moyens de base pour [aider ReadyApi et obtenir de l'aide](help-readyapi.md){.internal-link target=_blank}.
+Tout d'abord, vous voudrez peut-être voir les moyens de base pour [aider ReadyAPI et obtenir de l'aide](help-readyapi.md){.internal-link target=_blank}.
 
 ## Développement
 
@@ -93,7 +93,7 @@ Si celui-ci montre le binaire `pip` à `env/bin/pip`, alors ça a fonctionné. �
 
 ### Flit
 
-**ReadyApi** utilise <a href="https://flit.readthedocs.io/en/latest/index.html" class="external-link" target="_blank">Flit</a> pour build, packager et publier le projet.
+**ReadyAPI** utilise <a href="https://flit.readthedocs.io/en/latest/index.html" class="external-link" target="_blank">Flit</a> pour build, packager et publier le projet.
 
 Après avoir activé l'environnement comme décrit ci-dessus, installez `flit` :
 
@@ -137,13 +137,13 @@ Et maintenant, utilisez `flit` pour installer les dépendances de développement
 
     </div>
 
-Il installera toutes les dépendances et votre ReadyApi local dans votre environnement local.
+Il installera toutes les dépendances et votre ReadyAPI local dans votre environnement local.
 
-#### Utiliser votre ReadyApi local
+#### Utiliser votre ReadyAPI local
 
-Si vous créez un fichier Python qui importe et utilise ReadyApi, et que vous l'exécutez avec le Python de votre environnement local, il utilisera votre code source ReadyApi local.
+Si vous créez un fichier Python qui importe et utilise ReadyAPI, et que vous l'exécutez avec le Python de votre environnement local, il utilisera votre code source ReadyAPI local.
 
-Et si vous mettez à jour le code source local de ReadyApi, tel qu'il est installé avec `--symlink` (ou `--pth-file` sous Windows), lorsque vous exécutez à nouveau ce fichier Python, il utilisera la nouvelle version de ReadyApi que vous venez d'éditer.
+Et si vous mettez à jour le code source local de ReadyAPI, tel qu'il est installé avec `--symlink` (ou `--pth-file` sous Windows), lorsque vous exécutez à nouveau ce fichier Python, il utilisera la nouvelle version de ReadyAPI que vous venez d'éditer.
 
 De cette façon, vous n'avez pas à "installer" votre version locale pour pouvoir tester chaque changement.
 
@@ -161,7 +161,7 @@ $ bash scripts/format.sh
 
 Il effectuera également un tri automatique de touts vos imports.
 
-Pour qu'il puisse les trier correctement, vous devez avoir ReadyApi installé localement dans votre environnement, avec la commande dans la section ci-dessus en utilisant `--symlink` (ou `--pth-file` sous Windows).
+Pour qu'il puisse les trier correctement, vous devez avoir ReadyAPI installé localement dans votre environnement, avec la commande dans la section ci-dessus en utilisant `--symlink` (ou `--pth-file` sous Windows).
 
 ### Formatage des imports
 
@@ -316,7 +316,7 @@ $ python ./scripts/docs.py live es
 
 Vous pouvez maintenant aller sur <a href="http://127.0.0.1:8008" class="external-link" target="_blank">http://127.0.0.1:8008</a> et voir vos changements en direct.
 
-Si vous regardez le site web ReadyApi docs, vous verrez que chaque langue a toutes les pages. Mais certaines pages ne sont pas traduites et sont accompagnées d'une notification concernant la traduction manquante.
+Si vous regardez le site web ReadyAPI docs, vous verrez que chaque langue a toutes les pages. Mais certaines pages ne sont pas traduites et sont accompagnées d'une notification concernant la traduction manquante.
 
 Mais si vous le gérez localement de cette manière, vous ne verrez que les pages déjà traduites.
 
@@ -346,10 +346,10 @@ docs/en/docs/mkdocs.yml
 * Trouvez l'endroit où cette `docs/features.md` se trouve dans le fichier de configuration. Quelque part comme :
 
 ```YAML hl_lines="8"
-site_name: ReadyApi
+site_name: ReadyAPI
 # More stuff
 nav:
-- ReadyApi: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -365,10 +365,10 @@ docs/es/docs/mkdocs.yml
 * Ajoutez-le à l'endroit exact où il se trouvait pour l'anglais, par exemple :
 
 ```YAML hl_lines="8"
-site_name: ReadyApi
+site_name: ReadyAPI
 # More stuff
 nav:
-- ReadyApi: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -431,7 +431,7 @@ Mais ne vous inquiétez pas, vous pouvez définir la langue du thème en anglais
 Si vous avez besoin de faire cela, modifiez le fichier `mkdocs.yml` pour votre nouvelle langue, il aura quelque chose comme :
 
 ```YAML hl_lines="5"
-site_name: ReadyApi
+site_name: ReadyAPI
 # More stuff
 theme:
   # More stuff

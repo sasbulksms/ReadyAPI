@@ -1,13 +1,13 @@
 from typing import Optional
 
 from dirty_equals import IsDict
-from readyapi import Depends, ReadyApi, Security
+from pydantic import BaseModel
+from readyapi import Depends, ReadyAPI, Security
 from readyapi.security import OAuth2, OAuth2PasswordRequestFormStrict
 from readyapi.testclient import TestClient
 from readyapi.utils import match_pydantic_error_url
-from pydantic import BaseModel
 
-app = ReadyApi()
+app = ReadyAPI()
 
 reusable_oauth2 = OAuth2(
     flows={
@@ -201,7 +201,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/login": {
                 "post": {

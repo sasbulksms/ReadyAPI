@@ -38,7 +38,7 @@ Pythonのformat文字列と同様のシンタックスで「パスパラメー�
 !!! check "確認"
     関数が受け取った（および返した）値は、文字列の `"3"` ではなく、Pythonの `int` としての `3` であることに注意してください。
 
-    したがって、型宣言を使用すると、**ReadyApi**は自動リクエスト <abbr title="HTTPリクエストで受け取った文字列をPythonデータへ変換する">"解析"</abbr> を行います。
+    したがって、型宣言を使用すると、**ReadyAPI**は自動リクエスト <abbr title="HTTPリクエストで受け取った文字列をPythonデータへ変換する">"解析"</abbr> を行います。
 
 ## データバリデーション
 
@@ -64,7 +64,7 @@ Pythonのformat文字列と同様のシンタックスで「パスパラメー�
 <a href="http://127.0.0.1:8000/items/4.2" class="external-link" target="_blank">http://127.0.0.1:8000/items/4.2</a> で見られるように、intのかわりに `float` が与えられた場合にも同様なエラーが表示されます。
 
 !!! check "確認"
-    したがって、Pythonの型宣言を使用することで、**ReadyApi**はデータのバリデーションを行います。
+    したがって、Pythonの型宣言を使用することで、**ReadyAPI**はデータのバリデーションを行います。
 
     表示されたエラーには問題のある箇所が明確に指摘されていることに注意してください。
 
@@ -77,7 +77,7 @@ Pythonのformat文字列と同様のシンタックスで「パスパラメー�
 <img src="/img/tutorial/path-params/image01.png">
 
 !!! check "確認"
-    繰り返しになりますが、Python型宣言を使用するだけで、**ReadyApi**は対話的なAPIドキュメントを自動的に生成します（Swagger UIを統合）。
+    繰り返しになりますが、Python型宣言を使用するだけで、**ReadyAPI**は対話的なAPIドキュメントを自動的に生成します（Swagger UIを統合）。
 
     パスパラメータが整数として宣言されていることに注意してください。
 
@@ -85,7 +85,7 @@ Pythonのformat文字列と同様のシンタックスで「パスパラメー�
 
 また、生成されたスキーマが <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md" class="external-link" target="_blank">OpenAPI</a> 標準に従っているので、互換性のあるツールが多数あります。
 
-このため、**ReadyApi**自体が代替のAPIドキュメントを提供します（ReDocを使用）。これは、 <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a> にアクセスすると確認できます。
+このため、**ReadyAPI**自体が代替のAPIドキュメントを提供します（ReDocを使用）。これは、 <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a> にアクセスすると確認できます。
 
 <img src="/img/tutorial/path-params/image02.png">
 
@@ -205,7 +205,7 @@ Pythonのformat文字列と同様のシンタックスで「パスパラメー�
 
 OpenAPIはテストや定義が困難なシナリオにつながる可能性があるため、内部に*パス*を含む*パスパラメータ*の宣言をサポートしていません。
 
-それにも関わらず、Starletteの内部ツールのひとつを使用することで、**ReadyApi**はそれが実現できます。
+それにも関わらず、Starletteの内部ツールのひとつを使用することで、**ReadyAPI**はそれが実現できます。
 
 そして、パラメータがパスを含むべきであることを明示的にドキュメントに追加することなく、機能します。
 
@@ -232,7 +232,7 @@ Starletteのオプションを直接使用することで、以下のURLの様�
 
 ## まとめ
 
-簡潔で、本質的で、標準的なPythonの型宣言を使用することで、**ReadyApi**は以下を行います:
+簡潔で、本質的で、標準的なPythonの型宣言を使用することで、**ReadyAPI**は以下を行います:
 
 * エディターサポート: エラーチェック、自動補完、など
 * データ「<abbr title="HTTPリクエストで受け取った文字列をPythonデータへ変換する">解析</abbr>」
@@ -241,4 +241,4 @@ Starletteのオプションを直接使用することで、以下のURLの様�
 
 そしてこれはたった一度宣言するだけです。
 
-これは恐らく、(パフォーマンスを除いて) 他のフレームワークと比較したときの、**ReadyApi**の主な目に見える利点です。
+これは恐らく、(パフォーマンスを除いて) 他のフレームワークと比較したときの、**ReadyAPI**の主な目に見える利点です。

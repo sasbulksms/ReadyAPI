@@ -1,8 +1,8 @@
 from typing import Any
 
-from readyapi import ReadyApi
-from readyapi.testclient import TestClient
 from pydantic import BaseModel, ConfigDict
+from readyapi import ReadyAPI
+from readyapi.testclient import TestClient
 
 from .utils import needs_pydanticv1, needs_pydanticv2
 
@@ -28,7 +28,7 @@ def test_read_with_orm_mode() -> None:
 
         model_config = {"from_attributes": True}
 
-    app = ReadyApi()
+    app = ReadyAPI()
 
     @app.post("/people/", response_model=PersonRead)
     def create_person(person: PersonCreate) -> Any:
@@ -70,7 +70,7 @@ def test_read_with_orm_mode_pv1() -> None:
         class Config:
             orm_mode = True
 
-    app = ReadyApi()
+    app = ReadyAPI()
 
     @app.post("/people/", response_model=PersonRead)
     def create_person(person: PersonCreate) -> Any:

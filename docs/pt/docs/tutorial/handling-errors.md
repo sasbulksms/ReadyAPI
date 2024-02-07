@@ -70,7 +70,7 @@ Mas se o cliente faz uma requisição para `http://example.com/items/bar` (ou se
     Quando você lançar um `HTTPException`, você pode passar qualquer valor convertível em JSON como parâmetro de `detail`, e não apenas `str`.
 
     Você pode passar um `dict` ou um `list`, etc.
-    Esses tipos de dados são manipulados automaticamente pelo **ReadyApi** e convertidos em JSON.
+    Esses tipos de dados são manipulados automaticamente pelo **ReadyAPI** e convertidos em JSON.
 
 
 ## Adicione headers customizados
@@ -91,7 +91,7 @@ Você pode adicionar manipuladores de exceção customizados com <a href="https:
 
 Digamos que você tenha uma exceção customizada `UnicornException` que você (ou uma biblioteca que você use) precise lançar (`raise`).
 
-Nesse cenário, se você precisa manipular essa exceção de modo global com o ReadyApi, você pode adicionar um manipulador de exceção customizada com `@app.exception_handler()`.
+Nesse cenário, se você precisa manipular essa exceção de modo global com o ReadyAPI, você pode adicionar um manipulador de exceção customizada com `@app.exception_handler()`.
 
 ```Python hl_lines="5-7  13-18  24"
 {!../../../docs_src/handling_errors/tutorial003.py!}
@@ -110,11 +110,11 @@ Dessa forma você receberá um erro "limpo", com o HTTP status code `418` e um J
 !!! note "Detalhes Técnicos"
     Você também pode usar `from starlette.requests import Request` and `from starlette.responses import JSONResponse`.
 
-    **ReadyApi** disponibiliza o mesmo `starlette.responses` através do `readyapi.responses` por conveniência ao desenvolvedor. Contudo, a maior parte das respostas disponíveis vem diretamente do Starlette. O mesmo acontece com o `Request`.
+    **ReadyAPI** disponibiliza o mesmo `starlette.responses` através do `readyapi.responses` por conveniência ao desenvolvedor. Contudo, a maior parte das respostas disponíveis vem diretamente do Starlette. O mesmo acontece com o `Request`.
 
 ## Sobrescreva o manipulador padrão de exceções
 
-**ReadyApi** tem alguns manipuladores padrão de exceções.
+**ReadyAPI** tem alguns manipuladores padrão de exceções.
 
 Esses manipuladores são os responsáveis por retornar o JSON padrão de respostas quando você lança (`raise`) o `HTTPException` e quando a requisição tem dados invalidos.
 
@@ -122,7 +122,7 @@ Você pode sobrescrever esses manipuladores de exceção com os seus próprios m
 
 ## Sobrescreva exceções de validação da requisição
 
-Quando a requisição contém dados inválidos, **ReadyApi** internamente lança para o `RequestValidationError`.
+Quando a requisição contém dados inválidos, **ReadyAPI** internamente lança para o `RequestValidationError`.
 
 Para sobrescrevê-lo, importe o `RequestValidationError` e use-o com o `@app.exception_handler(RequestValidationError)` para decorar o manipulador de exceções.
 
@@ -162,7 +162,7 @@ path -> item_id
 
 `RequestValidationError` é uma subclasse do <a href="https://pydantic-docs.helpmanual.io/#error-handling" class="external-link" target="_blank">`ValidationError`</a> existente no Pydantic.
 
-**ReadyApi** faz uso dele para que você veja o erro no seu log, caso você utilize um modelo de Pydantic em `response_model`, e seus dados tenham erro.
+**ReadyAPI** faz uso dele para que você veja o erro no seu log, caso você utilize um modelo de Pydantic em `response_model`, e seus dados tenham erro.
 
 Contudo, o cliente ou usuário não terão acesso a ele. Ao contrário, o cliente receberá um "Internal Server Error" com o HTTP status code `500`.
 
@@ -181,7 +181,7 @@ Por exemplo, você pode querer retornar uma *response* em *plain text* ao invés
 !!! note "Detalhes Técnicos"
     Você pode usar `from starlette.responses import PlainTextResponse`.
 
-    **ReadyApi** disponibiliza o mesmo `starlette.responses` como `readyapi.responses`, como conveniência a você, desenvolvedor. Contudo, a maior parte das respostas disponíveis vem diretamente do Starlette.
+    **ReadyAPI** disponibiliza o mesmo `starlette.responses` como `readyapi.responses`, como conveniência a você, desenvolvedor. Contudo, a maior parte das respostas disponíveis vem diretamente do Starlette.
 
 
 ### Use o body do `RequestValidationError`.
@@ -220,17 +220,17 @@ Você receberá uma *response* informando-o de que a data é inválida, e conten
 }
 ```
 
-#### O `HTTPException` do ReadyApi vs o `HTTPException` do Starlette.
+#### O `HTTPException` do ReadyAPI vs o `HTTPException` do Starlette.
 
-O **ReadyApi** tem o seu próprio `HTTPException`.
+O **ReadyAPI** tem o seu próprio `HTTPException`.
 
-E a classe de erro `HTTPException` do **ReadyApi** herda da classe de erro do `HTTPException` do Starlette.
+E a classe de erro `HTTPException` do **ReadyAPI** herda da classe de erro do `HTTPException` do Starlette.
 
-A diferença entre os dois é a de que o `HTTPException` do **ReadyApi** permite que você adicione *headers* que serão incluídos nas *responses*.
+A diferença entre os dois é a de que o `HTTPException` do **ReadyAPI** permite que você adicione *headers* que serão incluídos nas *responses*.
 
 Esses *headers* são necessários/utilizados internamente pelo OAuth 2.0 e também por outras utilidades de segurança.
 
-Portanto, você pode continuar lançando o `HTTPException` do **ReadyApi** normalmente no seu código.
+Portanto, você pode continuar lançando o `HTTPException` do **ReadyAPI** normalmente no seu código.
 
 Porém, quando você registrar um manipulador de exceção, você deve registrá-lo através do `HTTPException` do Starlette.
 
@@ -240,9 +240,9 @@ Dessa forma, se qualquer parte do código interno, extensão ou plug-in do Starl
 from starlette.exceptions import HTTPException as StarletteHTTPException
 ```
 
-### Re-use os manipulares de exceção do **ReadyApi**
+### Re-use os manipulares de exceção do **ReadyAPI**
 
-Se você quer usar a exceção em conjunto com o mesmo manipulador de exceção *default* do **ReadyApi**, você pode importar e re-usar esses manipuladores de exceção do `readyapi.exception_handlers`:
+Se você quer usar a exceção em conjunto com o mesmo manipulador de exceção *default* do **ReadyAPI**, você pode importar e re-usar esses manipuladores de exceção do `readyapi.exception_handlers`:
 
 ```Python hl_lines="2-5  15  21"
 {!../../../docs_src/handling_errors/tutorial006.py!}

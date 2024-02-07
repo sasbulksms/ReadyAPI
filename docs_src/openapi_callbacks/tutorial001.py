@@ -1,9 +1,9 @@
 from typing import Union
 
-from readyapi import APIRouter, ReadyApi
 from pydantic import BaseModel, HttpUrl
+from readyapi import APIRouter, ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Invoice(BaseModel):

@@ -1,19 +1,19 @@
 from datetime import datetime
 
-from readyapi import ReadyApi, Security
+from pydantic import BaseModel
+from readyapi import ReadyAPI, Security
 from readyapi.security import HTTPBearer
 from readyapi.testclient import TestClient
-from pydantic import BaseModel
 from typing_extensions import Annotated
 
-app = ReadyApi()
+app = ReadyAPI()
 
 bearer_scheme = HTTPBearer()
 
 
 class Subscription(BaseModel):
     username: str
-    montly_fee: float
+    monthly_fee: float
     start_date: datetime
 
 
@@ -41,7 +41,7 @@ def test_openapi_schema():
     # insert_assert(response.json())
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {},
         "webhooks": {
             "new-subscription": {
@@ -93,7 +93,7 @@ def test_openapi_schema():
                 "Subscription": {
                     "properties": {
                         "username": {"type": "string", "title": "Username"},
-                        "montly_fee": {"type": "number", "title": "Montly Fee"},
+                        "monthly_fee": {"type": "number", "title": "Monthly Fee"},
                         "start_date": {
                             "type": "string",
                             "format": "date-time",
@@ -101,7 +101,7 @@ def test_openapi_schema():
                         },
                     },
                     "type": "object",
-                    "required": ["username", "montly_fee", "start_date"],
+                    "required": ["username", "monthly_fee", "start_date"],
                     "title": "Subscription",
                 },
                 "ValidationError": {

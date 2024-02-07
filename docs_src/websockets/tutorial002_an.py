@@ -3,8 +3,8 @@ from typing import Union
 from readyapi import (
     Cookie,
     Depends,
-    ReadyApi,
     Query,
+    ReadyAPI,
     WebSocket,
     WebSocketException,
     status,
@@ -12,7 +12,7 @@ from readyapi import (
 from readyapi.responses import HTMLResponse
 from typing_extensions import Annotated
 
-app = ReadyApi()
+app = ReadyAPI()
 
 html = """
 <!DOCTYPE html>

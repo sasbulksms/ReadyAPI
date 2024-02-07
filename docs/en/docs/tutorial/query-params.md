@@ -69,7 +69,7 @@ The same way, you can declare optional query parameters, by setting their defaul
     {!> ../../../docs_src/query_params/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/query_params/tutorial002.py!}
@@ -78,7 +78,7 @@ The same way, you can declare optional query parameters, by setting their defaul
 In this case, the function parameter `q` will be optional, and will be `None` by default.
 
 !!! check
-    Also notice that **ReadyApi** is smart enough to notice that the path parameter `item_id` is a path parameter and `q` is not, so, it's a query parameter.
+    Also notice that **ReadyAPI** is smart enough to notice that the path parameter `item_id` is a path parameter and `q` is not, so, it's a query parameter.
 
 ## Query parameter type conversion
 
@@ -90,7 +90,7 @@ You can also declare `bool` types, and they will be converted:
     {!> ../../../docs_src/query_params/tutorial003_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/query_params/tutorial003.py!}
@@ -131,7 +131,7 @@ or any other case variation (uppercase, first letter in uppercase, etc), your fu
 
 ## Multiple path and query parameters
 
-You can declare multiple path parameters and query parameters at the same time, **ReadyApi** knows which is which.
+You can declare multiple path parameters and query parameters at the same time, **ReadyAPI** knows which is which.
 
 And you don't have to declare them in any specific order.
 
@@ -143,7 +143,7 @@ They will be detected by name:
     {!> ../../../docs_src/query_params/tutorial004_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="8  10"
     {!> ../../../docs_src/query_params/tutorial004.py!}
@@ -173,16 +173,18 @@ http://127.0.0.1:8000/items/foo-item
 
 ```JSON
 {
-    "detail": [
-        {
-            "loc": [
-                "query",
-                "needy"
-            ],
-            "msg": "field required",
-            "type": "value_error.missing"
-        }
-    ]
+  "detail": [
+    {
+      "type": "missing",
+      "loc": [
+        "query",
+        "needy"
+      ],
+      "msg": "Field required",
+      "input": null,
+      "url": "https://errors.pydantic.dev/2.1/v/missing"
+    }
+  ]
 }
 ```
 
@@ -209,7 +211,7 @@ And of course, you can define some parameters as required, some as having a defa
     {!> ../../../docs_src/query_params/tutorial006_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="10"
     {!> ../../../docs_src/query_params/tutorial006.py!}

@@ -6,11 +6,11 @@ These **"type hints"** or annotations are a special syntax that allow declaring 
 
 By declaring types for your variables, editors and tools can give you better support.
 
-This is just a **quick tutorial / refresher** about Python type hints. It covers only the minimum necessary to use them with **ReadyApi**... which is actually very little.
+This is just a **quick tutorial / refresher** about Python type hints. It covers only the minimum necessary to use them with **ReadyAPI**... which is actually very little.
 
-**ReadyApi** is all based on these type hints, they give it many advantages and benefits.
+**ReadyAPI** is all based on these type hints, they give it many advantages and benefits.
 
-But even if you never use **ReadyApi**, you would benefit from learning a bit about them.
+But even if you never use **ReadyAPI**, you would benefit from learning a bit about them.
 
 !!! note
     If you are a Python expert, and you already know everything about type hints, skip to the next chapter.
@@ -127,7 +127,7 @@ Now you know that you have to fix it, convert `age` to a string with `str(age)`:
 
 You just saw the main place to declare type hints. As function parameters.
 
-This is also the main place you would use them with **ReadyApi**.
+This is also the main place you would use them with **ReadyAPI**.
 
 ### Simple types
 
@@ -182,7 +182,7 @@ For example, let's define a variable to be a `list` of `str`.
     {!> ../../../docs_src/python_types/tutorial006_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     From `typing`, import `List` (with a capital `L`):
 
@@ -230,7 +230,7 @@ You would do the same to declare `tuple`s and `set`s:
     {!> ../../../docs_src/python_types/tutorial007_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1  4"
     {!> ../../../docs_src/python_types/tutorial007.py!}
@@ -255,7 +255,7 @@ The second type parameter is for the values of the `dict`:
     {!> ../../../docs_src/python_types/tutorial008_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1  4"
     {!> ../../../docs_src/python_types/tutorial008.py!}
@@ -281,7 +281,7 @@ In Python 3.10 there's also a **new syntax** where you can put the possible type
     {!> ../../../docs_src/python_types/tutorial008b_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1  4"
     {!> ../../../docs_src/python_types/tutorial008b.py!}
@@ -311,13 +311,13 @@ This also means that in Python 3.10, you can use `Something | None`:
     {!> ../../../docs_src/python_types/tutorial009_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1  4"
     {!> ../../../docs_src/python_types/tutorial009.py!}
     ```
 
-=== "Python 3.6+ alternative"
+=== "Python 3.8+ alternative"
 
     ```Python hl_lines="1  4"
     {!> ../../../docs_src/python_types/tutorial009b.py!}
@@ -375,10 +375,10 @@ These types that take type parameters in square brackets are called **Generic ty
     * `set`
     * `dict`
 
-    And the same as with Python 3.6, from the `typing` module:
+    And the same as with Python 3.8, from the `typing` module:
 
     * `Union`
-    * `Optional` (the same as with Python 3.6)
+    * `Optional` (the same as with Python 3.8)
     * ...and others.
 
     In Python 3.10, as an alternative to using the generics `Union` and `Optional`, you can use the <abbr title='also called "bitwise or operator", but that meaning is not relevant here'>vertical bar (`|`)</abbr> to declare unions of types, that's a lot better and simpler.
@@ -392,13 +392,13 @@ These types that take type parameters in square brackets are called **Generic ty
     * `set`
     * `dict`
 
-    And the same as with Python 3.6, from the `typing` module:
+    And the same as with Python 3.8, from the `typing` module:
 
     * `Union`
     * `Optional`
     * ...and others.
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     * `List`
     * `Tuple`
@@ -458,7 +458,7 @@ An example from the official Pydantic docs:
     {!> ../../../docs_src/python_types/tutorial011_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     {!> ../../../docs_src/python_types/tutorial011.py!}
@@ -467,7 +467,7 @@ An example from the official Pydantic docs:
 !!! info
     To learn more about <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic, check its docs</a>.
 
-**ReadyApi** is all based on Pydantic.
+**ReadyAPI** is all based on Pydantic.
 
 You will see a lot more of all this in practice in the [Tutorial - User Guide](tutorial/index.md){.internal-link target=_blank}.
 
@@ -486,11 +486,11 @@ Python also has a feature that allows putting **additional metadata** in these t
     {!> ../../../docs_src/python_types/tutorial013_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     In versions below Python 3.9, you import `Annotated` from `typing_extensions`.
 
-    It will already be installed with **ReadyApi**.
+    It will already be installed with **ReadyAPI**.
 
     ```Python hl_lines="1  4"
     {!> ../../../docs_src/python_types/tutorial013.py!}
@@ -498,7 +498,7 @@ Python also has a feature that allows putting **additional metadata** in these t
 
 Python itself doesn't do anything with this `Annotated`. And for editors and other tools, the type is still `str`.
 
-But you can use this space in `Annotated` to provide **ReadyApi** with additional metadata about how you want your application to behave.
+But you can use this space in `Annotated` to provide **ReadyAPI** with additional metadata about how you want your application to behave.
 
 The important thing to remember is that **the first *type parameter*** you pass to `Annotated` is the **actual type**. The rest, is just metadata for other tools.
 
@@ -511,16 +511,16 @@ Later you will see how **powerful** it can be.
 
     And also that your code will be very compatible with many other Python tools and libraries. 🚀
 
-## Type hints in **ReadyApi**
+## Type hints in **ReadyAPI**
 
-**ReadyApi** takes advantage of these type hints to do several things.
+**ReadyAPI** takes advantage of these type hints to do several things.
 
-With **ReadyApi** you declare parameters with type hints and you get:
+With **ReadyAPI** you declare parameters with type hints and you get:
 
 * **Editor support**.
 * **Type checks**.
 
-...and **ReadyApi** uses the same declarations to:
+...and **ReadyAPI** uses the same declarations to:
 
 * **Define requirements**: from request path parameters, query parameters, headers, bodies, dependencies, etc.
 * **Convert data**: from the request to the required type.
@@ -531,7 +531,7 @@ With **ReadyApi** you declare parameters with type hints and you get:
 
 This might all sound abstract. Don't worry. You'll see all this in action in the [Tutorial - User Guide](tutorial/index.md){.internal-link target=_blank}.
 
-The important thing is that by using standard Python types, in a single place (instead of adding more classes, decorators, etc), **ReadyApi** will do a lot of the work for you.
+The important thing is that by using standard Python types, in a single place (instead of adding more classes, decorators, etc), **ReadyAPI** will do a lot of the work for you.
 
 !!! info
     If you already went through all the tutorial and came back to see more about types, a good resource is <a href="https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html" class="external-link" target="_blank">the "cheat sheet" from `mypy`</a>.

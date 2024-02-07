@@ -4,7 +4,7 @@ Visual Studio CodeやPyCharmなどを使用して、エディター上でデバ�
 
 ## `uvicorn` の実行
 
-ReadyApiアプリケーション上で、`uvicorn` を直接インポートして実行します:
+ReadyAPIアプリケーション上で、`uvicorn` を直接インポートして実行します:
 
 ```Python hl_lines="1  15"
 {!../../../docs_src/debugging/tutorial001.py!}
@@ -79,7 +79,7 @@ from myapp import app
 
 ## デバッガーでコードを実行
 
-コードから直接Uvicornサーバーを実行しているため、デバッガーから直接Pythonプログラム (ReadyApiアプリケーション) を呼び出せます。
+コードから直接Uvicornサーバーを実行しているため、デバッガーから直接Pythonプログラム (ReadyAPIアプリケーション) を呼び出せます。
 
 ---
 
@@ -90,7 +90,7 @@ from myapp import app
 * 「Python」を選択。
 * オプション「`Python: Current File (Integrated Terminal)`」を指定してデバッガーを実行。
 
-すると、**ReadyApi** コードでサーバーが起動され、ブレークポイントで停止したりするでしょう。
+すると、**ReadyAPI** コードでサーバーが起動され、ブレークポイントで停止したりするでしょう。
 
 以下の様な画面になります:
 
@@ -105,7 +105,7 @@ Pycharmを使用する場合、次のことが可能です:
 * 次にコンテキストメニューが表示される。
 * デバッグするファイル (ここでは `main.py`) を選択。
 
-すると、**ReadyApi** コードでサーバーが起動され、ブレークポイントで停止したりするでしょう。
+すると、**ReadyAPI** コードでサーバーが起動され、ブレークポイントで停止したりするでしょう。
 
 以下の様な画面になります:
 

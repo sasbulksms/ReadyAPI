@@ -1,6 +1,6 @@
 # 开发 - 贡献
 
-首先，你最好先了解 [帮助 ReadyApi 及获取帮助](help-readyapi.md){.internal-link target=_blank}的基本方式。
+首先，你最好先了解 [帮助 ReadyAPI 及获取帮助](help-readyapi.md){.internal-link target=_blank}的基本方式。
 
 ## 开发
 
@@ -104,13 +104,13 @@ $ pip install -r requirements.txt
 
 </div>
 
-这将在虚拟环境中安装所有依赖和本地版本的 ReadyApi。
+这将在虚拟环境中安装所有依赖和本地版本的 ReadyAPI。
 
-#### 使用本地 ReadyApi
+#### 使用本地 ReadyAPI
 
-如果你创建一个导入并使用 ReadyApi 的 Python 文件，然后使用虚拟环境中的 Python 运行它，它将使用你本地的 ReadyApi 源码。
+如果你创建一个导入并使用 ReadyAPI 的 Python 文件，然后使用虚拟环境中的 Python 运行它，它将使用你本地的 ReadyAPI 源码。
 
-并且如果你更改该本地 ReadyApi 的源码，由于它是通过 `-e` 安装的，当你再次运行那个 Python 文件，它将使用你刚刚编辑过的最新版本的 ReadyApi。
+并且如果你更改该本地 ReadyAPI 的源码，由于它是通过 `-e` 安装的，当你再次运行那个 Python 文件，它将使用你刚刚编辑过的最新版本的 ReadyAPI。
 
 这样，你不必再去重新"安装"你的本地版本即可测试所有更改。
 
@@ -128,7 +128,7 @@ $ bash scripts/format.sh
 
 它还会自动对所有导入代码进行整理。
 
-为了使整理正确进行，你需要在当前环境中安装本地的 ReadyApi，即在运行上述段落中的命令时添加 `-e`。
+为了使整理正确进行，你需要在当前环境中安装本地的 ReadyAPI，即在运行上述段落中的命令时添加 `-e`。
 
 ### 格式化导入
 
@@ -283,7 +283,7 @@ $ python ./scripts/docs.py live es
 
 现在你可以访问 <a href="http://127.0.0.1:8008" class="external-link" target="_blank">http://127.0.0.1:8008</a> 实时查看你所做的更改。
 
-如果你查看 ReadyApi 的线上文档网站，会看到每种语言都有所有页面。但是某些页面并未被翻译并且会有一处关于缺少翻译的提示。
+如果你查看 ReadyAPI 的线上文档网站，会看到每种语言都有所有页面。但是某些页面并未被翻译并且会有一处关于缺少翻译的提示。
 
 但是当你像上面这样在本地运行文档时，你只会看到已经翻译的页面。
 
@@ -313,10 +313,10 @@ docs/en/docs/mkdocs.yml
 * 在配置文件中找到 `docs/features.md` 所在的位置。结果像这样：
 
 ```YAML hl_lines="8"
-site_name: ReadyApi
+site_name: ReadyAPI
 # More stuff
 nav:
-- ReadyApi: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -332,10 +332,10 @@ docs/es/docs/mkdocs.yml
 * 将其添加到与英语文档完全相同的位置，例如：
 
 ```YAML hl_lines="8"
-site_name: ReadyApi
+site_name: ReadyAPI
 # More stuff
 nav:
-- ReadyApi: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -398,7 +398,7 @@ jinja2.exceptions.TemplateNotFound: partials/language/xx.html
 如果你需要这么做，编辑新语言目录下的 `mkdocs.yml`，它将有类似下面的内容：
 
 ```YAML hl_lines="5"
-site_name: ReadyApi
+site_name: ReadyAPI
 # More stuff
 theme:
   # More stuff

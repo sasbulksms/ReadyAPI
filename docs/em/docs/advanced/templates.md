@@ -1,10 +1,10 @@
 # 📄
 
-👆 💪 ⚙️ 🙆 📄 🚒 👆 💚 ⏮️ **ReadyApi**.
+👆 💪 ⚙️ 🙆 📄 🚒 👆 💚 ⏮️ **ReadyAPI**.
 
 ⚠ ⚒ Jinja2️⃣, 🎏 1️⃣ ⚙️ 🏺 &amp; 🎏 🧰.
 
-📤 🚙 🔗 ⚫️ 💪 👈 👆 💪 ⚙️ 🔗 👆 **ReadyApi** 🈸 (🚚 💃).
+📤 🚙 🔗 ⚫️ 💪 👈 👆 💪 ⚙️ 🔗 👆 **ReadyAPI** 🈸 (🚚 💃).
 
 ## ❎ 🔗
 
@@ -27,7 +27,7 @@ $ pip install jinja2
 * 📣 `Request` 🔢 *➡ 🛠️* 👈 🔜 📨 📄.
 * ⚙️ `templates` 👆 ✍ ✍ &amp; 📨 `TemplateResponse`, 🚶‍♀️ `request` 1️⃣ 🔑-💲 👫 Jinja2️⃣ "🔑".
 
-```Python hl_lines="4  11  15-16"
+```Python hl_lines="4  11  15-18"
 {!../../../docs_src/templates/tutorial001.py!}
 ```
 
@@ -40,7 +40,7 @@ $ pip install jinja2
 !!! note "📡 ℹ"
     👆 💪 ⚙️ `from starlette.templating import Jinja2Templates`.
 
-    **ReadyApi** 🚚 🎏 `starlette.templating` `readyapi.templating` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 📨 👟 🔗 ⚪️➡️ 💃. 🎏 ⏮️ `Request` &amp; `StaticFiles`.
+    **ReadyAPI** 🚚 🎏 `starlette.templating` `readyapi.templating` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 📨 👟 🔗 ⚪️➡️ 💃. 🎏 ⏮️ `Request` &amp; `StaticFiles`.
 
 ## ✍ 📄
 
@@ -70,7 +70,7 @@ $ pip install jinja2
 {!../../../docs_src/templates/static/styles.css!}
 ```
 
-&amp; ↩️ 👆 ⚙️ `StaticFiles`, 👈 🎚 📁 🔜 🍦 🔁 👆 **ReadyApi** 🈸 📛 `/static/styles.css`.
+&amp; ↩️ 👆 ⚙️ `StaticFiles`, 👈 🎚 📁 🔜 🍦 🔁 👆 **ReadyAPI** 🈸 📛 `/static/styles.css`.
 
 ## 🌅 ℹ
 

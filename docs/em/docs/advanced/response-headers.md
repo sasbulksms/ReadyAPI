@@ -14,7 +14,7 @@
 
 &amp; 🚥 👆 📣 `response_model`, ⚫️ 🔜 ⚙️ ⛽ &amp; 🗜 🎚 👆 📨.
 
-**ReadyApi** 🔜 ⚙️ 👈 *🔀* 📨 ⚗ 🎚 (🍪 &amp; 👔 📟), &amp; 🔜 🚮 👫 🏁 📨 👈 🔌 💲 👆 📨, ⛽ 🙆 `response_model`.
+**ReadyAPI** 🔜 ⚙️ 👈 *🔀* 📨 ⚗ 🎚 (🍪 &amp; 👔 📟), &amp; 🔜 🚮 👫 🏁 📨 👈 🔌 💲 👆 📨, ⛽ 🙆 `response_model`.
 
 👆 💪 📣 `Response` 🔢 🔗, &amp; ⚒ 🎚 (&amp; 🍪) 👫.
 
@@ -31,9 +31,9 @@
 !!! note "📡 ℹ"
     👆 💪 ⚙️ `from starlette.responses import Response` ⚖️ `from starlette.responses import JSONResponse`.
 
-    **ReadyApi** 🚚 🎏 `starlette.responses` `readyapi.responses` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 📨 👟 🔗 ⚪️➡️ 💃.
+    **ReadyAPI** 🚚 🎏 `starlette.responses` `readyapi.responses` 🏪 👆, 👩‍💻. ✋️ 🌅 💪 📨 👟 🔗 ⚪️➡️ 💃.
 
-     &amp; `Response` 💪 ⚙️ 🛎 ⚒ 🎚 &amp; 🍪, **ReadyApi** 🚚 ⚫️ `readyapi.Response`.
+     &amp; `Response` 💪 ⚙️ 🛎 ⚒ 🎚 &amp; 🍪, **ReadyAPI** 🚚 ⚫️ `readyapi.Response`.
 
 ## 🛃 🎚
 

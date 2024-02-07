@@ -4,8 +4,8 @@ import pytest
 from readyapi import (
     APIRouter,
     Depends,
-    ReadyApi,
     Header,
+    ReadyAPI,
     WebSocket,
     WebSocketDisconnect,
     status,
@@ -16,7 +16,7 @@ from readyapi.testclient import TestClient
 router = APIRouter()
 prefix_router = APIRouter()
 native_prefix_route = APIRouter(prefix="/native")
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.websocket_route("/")
@@ -105,7 +105,7 @@ async def router_ws_custom_error(websocket: WebSocket):
 
 
 def make_app(app=None, **kwargs):
-    app = app or ReadyApi(**kwargs)
+    app = app or ReadyAPI(**kwargs)
     app.include_router(router)
     app.include_router(prefix_router, prefix="/prefix")
     app.include_router(native_prefix_route)

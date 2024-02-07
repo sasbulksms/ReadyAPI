@@ -1,16 +1,16 @@
 # テスト
 
-<a href="https://www.starlette.io/testclient/" class="external-link" target="_blank">Starlette</a> のおかげで、**ReadyApi** アプリケーションのテストは簡単で楽しいものになっています。
+<a href="https://www.starlette.io/testclient/" class="external-link" target="_blank">Starlette</a> のおかげで、**ReadyAPI** アプリケーションのテストは簡単で楽しいものになっています。
 
 <a href="https://www.python-httpx.org" class="external-link" target="_blank">HTTPX</a> がベースなので、非常に使いやすく直感的です。
 
-これを使用すると、**ReadyApi** と共に <a href="https://docs.pytest.org/" class="external-link" target="_blank">pytest</a> を直接利用できます。
+これを使用すると、**ReadyAPI** と共に <a href="https://docs.pytest.org/" class="external-link" target="_blank">pytest</a> を直接利用できます。
 
 ## `TestClient` を使用
 
 `TestClient` をインポートします。
 
-`TestClient` を作成し、**ReadyApi** に渡します。
+`TestClient` を作成し、**ReadyAPI** に渡します。
 
 `test_` から始まる名前の関数を作成します (これは `pytest` の標準的なコンベンションです)。
 
@@ -32,20 +32,20 @@
 !!! note "技術詳細"
     `from starlette.testclient import TestClient` も使用できます。
 
-    **ReadyApi** は開発者の利便性のために `readyapi.testclient` と同じ `starlette.testclient` を提供します。しかし、実際にはStarletteから直接渡されています。
+    **ReadyAPI** は開発者の利便性のために `readyapi.testclient` と同じ `starlette.testclient` を提供します。しかし、実際にはStarletteから直接渡されています。
 
 !!! tip "豆知識"
-    ReadyApiアプリケーションへのリクエストの送信とは別に、テストで `async` 関数 (非同期データベース関数など) を呼び出したい場合は、高度なチュートリアルの[Async Tests](../advanced/async-tests.md){.internal-link target=_blank} を参照してください。
+    ReadyAPIアプリケーションへのリクエストの送信とは別に、テストで `async` 関数 (非同期データベース関数など) を呼び出したい場合は、高度なチュートリアルの[Async Tests](../advanced/async-tests.md){.internal-link target=_blank} を参照してください。
 
 ## テストの分離
 
 実際のアプリケーションでは、おそらくテストを別のファイルに保存します。
 
-また、**ReadyApi** アプリケーションは、複数のファイル/モジュールなどで構成されている場合もあります。
+また、**ReadyAPI** アプリケーションは、複数のファイル/モジュールなどで構成されている場合もあります。
 
-### **ReadyApi** アプリファイル
+### **ReadyAPI** アプリファイル
 
-**ReadyApi** アプリに `main.py` ファイルがあるとします:
+**ReadyAPI** アプリに `main.py` ファイルがあるとします:
 
 ```Python
 {!../../../docs_src/app_testing/main.py!}
@@ -64,9 +64,9 @@
 次に、この例を拡張し、詳細を追加して、さまざまなパーツをテストする方法を確認しましょう。
 
 
-### 拡張版 **ReadyApi** アプリファイル
+### 拡張版 **ReadyAPI** アプリファイル
 
-**ReadyApi** アプリに `main_b.py` ファイルがあるとします。
+**ReadyAPI** アプリに `main_b.py` ファイルがあるとします。
 
 そのファイルには、エラーを返す可能性のある `GET` オペレーションがあります。
 

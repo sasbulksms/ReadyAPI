@@ -1,10 +1,10 @@
 from typing import Dict
 
-from readyapi import ReadyApi
-from readyapi.testclient import TestClient
 from pydantic import BaseModel
+from readyapi import ReadyAPI
+from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Items(BaseModel):
@@ -30,7 +30,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/foo": {
                 "post": {

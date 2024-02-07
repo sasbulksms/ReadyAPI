@@ -1,6 +1,6 @@
 # Additional Status Codes
 
-By default, **ReadyApi** will return the responses using a `JSONResponse`, putting the content you return from your *path operation* inside of that `JSONResponse`.
+By default, **ReadyAPI** will return the responses using a `JSONResponse`, putting the content you return from your *path operation* inside of that `JSONResponse`.
 
 It will use the default status code or the one you set in your *path operation*.
 
@@ -26,7 +26,7 @@ To achieve that, import `JSONResponse`, and return your content there directly, 
     {!> ../../../docs_src/additional_status_codes/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="4  26"
     {!> ../../../docs_src/additional_status_codes/tutorial001_an.py!}
@@ -41,7 +41,7 @@ To achieve that, import `JSONResponse`, and return your content there directly, 
     {!> ../../../docs_src/additional_status_codes/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -60,10 +60,10 @@ To achieve that, import `JSONResponse`, and return your content there directly, 
 !!! note "Technical Details"
     You could also use `from starlette.responses import JSONResponse`.
 
-    **ReadyApi** provides the same `starlette.responses` as `readyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette. The same with `status`.
+    **ReadyAPI** provides the same `starlette.responses` as `readyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette. The same with `status`.
 
 ## OpenAPI and API docs
 
-If you return additional status codes and responses directly, they won't be included in the OpenAPI schema (the API docs), because ReadyApi doesn't have a way to know beforehand what you are going to return.
+If you return additional status codes and responses directly, they won't be included in the OpenAPI schema (the API docs), because ReadyAPI doesn't have a way to know beforehand what you are going to return.
 
 But you can document that in your code, using: [Additional Responses](additional-responses.md){.internal-link target=_blank}.

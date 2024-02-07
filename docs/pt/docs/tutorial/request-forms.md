@@ -39,7 +39,7 @@ Com `Form` você pode declarar os mesmos metadados e validação que com `Body` 
 
 A forma como os formulários HTML (`<form></form>`) enviam os dados para o servidor normalmente usa uma codificação "especial" para esses dados, é diferente do JSON.
 
-O **ReadyApi** fará a leitura desses dados no lugar certo em vez de JSON.
+O **ReadyAPI** fará a leitura desses dados no lugar certo em vez de JSON.
 
 !!! note "Detalhes técnicos"
     Os dados dos formulários são normalmente codificados usando o "tipo de mídia" `application/x-www-form-urlencoded`.
@@ -51,7 +51,7 @@ O **ReadyApi** fará a leitura desses dados no lugar certo em vez de JSON.
 !!! warning "Aviso"
     Você pode declarar vários parâmetros `Form` em uma *operação de caminho*, mas não pode declarar campos `Body` que espera receber como JSON, pois a solicitação terá o corpo codificado usando `application/x-www- form-urlencoded` em vez de `application/json`.
 
-    Esta não é uma limitação do **ReadyApi**, é parte do protocolo HTTP.
+    Esta não é uma limitação do **ReadyAPI**, é parte do protocolo HTTP.
 
 ## Recapitulando
 

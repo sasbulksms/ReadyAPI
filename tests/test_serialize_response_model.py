@@ -1,10 +1,10 @@
 from typing import Dict, List, Optional
 
-from readyapi import ReadyApi
 from pydantic import BaseModel, Field
+from readyapi import ReadyAPI
 from starlette.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

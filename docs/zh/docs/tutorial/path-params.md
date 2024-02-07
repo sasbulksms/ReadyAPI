@@ -38,7 +38,7 @@
 !!! check
     注意函数接收（并返回）的值为 3，是一个 Python `int` 值，而不是字符串 `"3"`。
 
-    所以，**ReadyApi** 通过上面的类型声明提供了对请求的自动<abbr title="将来自 HTTP 请求中的字符串转换为 Python 数据类型">"解析"</abbr>。
+    所以，**ReadyAPI** 通过上面的类型声明提供了对请求的自动<abbr title="将来自 HTTP 请求中的字符串转换为 Python 数据类型">"解析"</abbr>。
 
 ## 数据校验
 
@@ -64,7 +64,7 @@
 如果你提供的是 `float` 而非整数也会出现同样的错误，比如： <a href="http://127.0.0.1:8000/items/4.2" class="external-link" target="_blank">http://127.0.0.1:8000/items/4.2</a>
 
 !!! check
-    所以，通过同样的 Python 类型声明，**ReadyApi** 提供了数据校验功能。
+    所以，通过同样的 Python 类型声明，**ReadyAPI** 提供了数据校验功能。
 
     注意上面的错误同样清楚地指出了校验未通过的具体原因。
 
@@ -77,7 +77,7 @@
 <img src="https://readyapi.khulnasoft.com/img/tutorial/path-params/image01.png">
 
 !!! check
-    再一次，还是通过相同的 Python 类型声明，**ReadyApi** 为你提供了自动生成的交互式文档（集成 Swagger UI）。
+    再一次，还是通过相同的 Python 类型声明，**ReadyAPI** 为你提供了自动生成的交互式文档（集成 Swagger UI）。
 
     注意这里的路径参数被声明为一个整数。
 
@@ -85,7 +85,7 @@
 
 由于生成的 API 模式来自于 <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md" class="external-link" target="_blank">OpenAPI</a> 标准，所以有很多工具与其兼容。
 
-正因如此，**ReadyApi** 内置了一个可选的 API 文档（使用 Redoc）：
+正因如此，**ReadyAPI** 内置了一个可选的 API 文档（使用 Redoc）：
 
 <img src="https://readyapi.khulnasoft.com/img/tutorial/path-params/image02.png">
 
@@ -195,7 +195,7 @@
 
 OpenAPI 不支持任何方式去声明*路径参数*以在其内部包含*路径*，因为这可能会导致难以测试和定义的情况出现。
 
-不过，你仍然可以通过 Starlette 的一个内部工具在 **ReadyApi** 中实现它。
+不过，你仍然可以通过 Starlette 的一个内部工具在 **ReadyAPI** 中实现它。
 
 而且文档依旧可以使用，但是不会添加任何该参数应包含路径的说明。
 
@@ -222,7 +222,7 @@ OpenAPI 不支持任何方式去声明*路径参数*以在其内部包含*路径
 
 ## 总结
 
-使用 **ReadyApi**，通过简短、直观和标准的 Python 类型声明，你将获得：
+使用 **ReadyAPI**，通过简短、直观和标准的 Python 类型声明，你将获得：
 
 * 编辑器支持：错误检查，代码补全等
 * 数据 "<abbr title="将来自 HTTP 请求中的字符串转换为 Python 数据类型">解析</abbr>"
@@ -231,4 +231,4 @@ OpenAPI 不支持任何方式去声明*路径参数*以在其内部包含*路径
 
 而且你只需要声明一次即可。
 
-这可能是 **ReadyApi** 与其他框架相比主要的明显优势（除了原始性能以外）。
+这可能是 **ReadyAPI** 与其他框架相比主要的明显优势（除了原始性能以外）。

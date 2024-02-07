@@ -1,5 +1,5 @@
 import pytest
-from readyapi import Body, Depends, ReadyApi, HTTPException
+from readyapi import Body, Depends, HTTPException, ReadyAPI
 from readyapi.testclient import TestClient
 
 initial_fake_database = {"rick": "Rick Sanchez"}
@@ -10,7 +10,7 @@ initial_state = {"except": False, "finally": False}
 
 state = initial_state.copy()
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 async def get_database():

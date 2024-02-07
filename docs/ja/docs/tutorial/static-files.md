@@ -14,7 +14,7 @@
 !!! note "技術詳細"
     `from starlette.staticfiles import StaticFiles` も使用できます。
 
-    **ReadyApi**は、開発者の利便性のために、`starlette.staticfiles` と同じ `readyapi.staticfiles` を提供します。しかし、実際にはStarletteから直接渡されています。
+    **ReadyAPI**は、開発者の利便性のために、`starlette.staticfiles` と同じ `readyapi.staticfiles` を提供します。しかし、実際にはStarletteから直接渡されています。
 
 ### 「マウント」とは
 
@@ -30,7 +30,7 @@
 
 `directory="static"` は、静的ファイルを含むディレクトリの名前を指します。
 
-`name="static"` は、**ReadyApi** が内部で使用できる名前を付けます。
+`name="static"` は、**ReadyAPI** が内部で使用できる名前を付けます。
 
 これらのパラメータはすべて「`静的`」とは異なる場合があり、独自のアプリケーションのニーズと詳細に合わせて調整します。
 

@@ -1,10 +1,10 @@
 from typing import List
 
-from readyapi import ReadyApi
-from readyapi.testclient import TestClient
 from pydantic import BaseModel
+from readyapi import ReadyAPI
+from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class UserBase(BaseModel):

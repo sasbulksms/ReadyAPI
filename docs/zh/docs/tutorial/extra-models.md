@@ -23,7 +23,7 @@
     {!> ../../../docs_src/extra_models/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9  11  16  22  24  29-30  33-35  40-41"
     {!> ../../../docs_src/extra_models/tutorial001.py!}
@@ -144,7 +144,7 @@ UserInDB(
 
 ## 减少重复
 
-减少代码重复是 **ReadyApi** 的核心思想之一。
+减少代码重复是 **ReadyAPI** 的核心思想之一。
 
 因为代码重复会增加出现 bug、安全性问题、代码失步问题（当你在一个位置更新了代码但没有在其他位置更新）等的可能性。
 
@@ -164,7 +164,7 @@ UserInDB(
     {!> ../../../docs_src/extra_models/tutorial002_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9  15-16  19-20  23-24"
     {!> ../../../docs_src/extra_models/tutorial002.py!}
@@ -188,7 +188,7 @@ UserInDB(
     {!> ../../../docs_src/extra_models/tutorial003_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1  14-15  18-20  33"
     {!> ../../../docs_src/extra_models/tutorial003.py!}
@@ -206,7 +206,7 @@ UserInDB(
     {!> ../../../docs_src/extra_models/tutorial004_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1  20"
     {!> ../../../docs_src/extra_models/tutorial004.py!}
@@ -226,7 +226,7 @@ UserInDB(
     {!> ../../../docs_src/extra_models/tutorial005_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1  8"
     {!> ../../../docs_src/extra_models/tutorial005.py!}

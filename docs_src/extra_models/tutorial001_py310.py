@@ -1,7 +1,7 @@
-from readyapi import ReadyApi
 from pydantic import BaseModel, EmailStr
+from readyapi import ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class UserIn(BaseModel):

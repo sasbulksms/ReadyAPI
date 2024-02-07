@@ -1,6 +1,6 @@
 # ☁ (📎 / 🦏 💽) 💽
 
-**ReadyApi** 💪 🛠️ ⏮️ 🙆 <abbr title="Distributed database (Big Data), also 'Not Only SQL'">☁</abbr>.
+**ReadyAPI** 💪 🛠️ ⏮️ 🙆 <abbr title="Distributed database (Big Data), also 'Not Only SQL'">☁</abbr>.
 
 📥 👥 🔜 👀 🖼 ⚙️ **<a href="https://www.couchbase.com/" class="external-link" target="_blank">🗄</a>**, <abbr title="Document here refers to a JSON object (a dict), with keys and values, and those values can also be other JSON objects, arrays (lists), numbers, strings, booleans, etc.">📄</abbr> 🧢 ☁ 💽.
 
@@ -13,7 +13,7 @@
 * **✳**, ♒️.
 
 !!! tip
-    📤 🛂 🏗 🚂 ⏮️ **ReadyApi** &amp; **🗄**, 🌐 ⚓️ 🔛 **☁**, 🔌 🕸 &amp; 🌖 🧰: <a href="https://github.com/khulnasoft/full-stack-readyapi-couchbase" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-couchbase</a>
+    📤 🛂 🏗 🚂 ⏮️ **ReadyAPI** &amp; **🗄**, 🌐 ⚓️ 🔛 **☁**, 🔌 🕸 &amp; 🌖 🧰: <a href="https://github.com/khulnasoft/full-stack-readyapi-couchbase" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-couchbase</a>
 
 ## 🗄 🗄 🦲
 
@@ -131,9 +131,9 @@
 UserInDB(username="johndoe", hashed_password="some_hash")
 ```
 
-## ✍ 👆 **ReadyApi** 📟
+## ✍ 👆 **ReadyAPI** 📟
 
-### ✍ `ReadyApi` 📱
+### ✍ `ReadyAPI` 📱
 
 ```Python hl_lines="46"
 {!../../../docs_src/nosql_databases/tutorial001.py!}

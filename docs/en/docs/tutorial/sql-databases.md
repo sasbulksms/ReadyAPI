@@ -7,7 +7,7 @@
 
     The new docs will include Pydantic v2 and will use <a href="https://sqlmodel.khulnasoft.com/" class="external-link" target="_blank">SQLModel</a> (which is also based on SQLAlchemy) once it is updated to use Pydantic v2 as well.
 
-**ReadyApi** doesn't require you to use a SQL (relational) database.
+**ReadyAPI** doesn't require you to use a SQL (relational) database.
 
 But you can use any relational database that you want.
 
@@ -26,16 +26,16 @@ In this example, we'll use **SQLite**, because it uses a single file and Python 
 Later, for your production application, you might want to use a database server like **PostgreSQL**.
 
 !!! tip
-    There is an official project generator with **ReadyApi** and **PostgreSQL**, all based on **Docker**, including a frontend and more tools: <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-postgresql</a>
+    There is an official project generator with **ReadyAPI** and **PostgreSQL**, all based on **Docker**, including a frontend and more tools: <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-postgresql</a>
 
 !!! note
     Notice that most of the code is the standard `SQLAlchemy` code you would use with any framework.
 
-    The **ReadyApi** specific code is as small as always.
+    The **ReadyAPI** specific code is as small as always.
 
 ## ORMs
 
-**ReadyApi** works with any database and any style of library to talk to the database.
+**ReadyAPI** works with any database and any style of library to talk to the database.
 
 A common pattern is to use an "ORM": an "object-relational mapping" library.
 
@@ -161,7 +161,7 @@ connect_args={"check_same_thread": False}
 
     This is to prevent accidentally sharing the same connection for different things (for different requests).
 
-    But in ReadyApi, using normal functions (`def`) more than one thread could interact with the database for the same request, so we need to make SQLite know that it should allow that with `connect_args={"check_same_thread": False}`.
+    But in ReadyAPI, using normal functions (`def`) more than one thread could interact with the database for the same request, so we need to make SQLite know that it should allow that with `connect_args={"check_same_thread": False}`.
 
     Also, we will make sure each request gets its own database connection session in a dependency, so there's no need for that default mechanism.
 
@@ -281,7 +281,7 @@ But for security, the `password` won't be in other Pydantic *models*, for exampl
     {!> ../../../docs_src/sql_databases/sql_app_py39/schemas.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="3  6-8  11-12  23-24  27-28"
     {!> ../../../docs_src/sql_databases/sql_app/schemas.py!}
@@ -301,7 +301,7 @@ while Pydantic *models* declare the types using `:`, the new type annotation syn
 name: str
 ```
 
-Have it in mind, so you don't get confused when using `=` and `:` with them.
+Keep these in mind, so you don't get confused when using `=` and `:` with them.
 
 ### Create Pydantic *models* / schemas for reading / returning
 
@@ -325,7 +325,7 @@ Not only the IDs of those items, but all the data that we defined in the Pydanti
     {!> ../../../docs_src/sql_databases/sql_app_py39/schemas.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="15-17  31-34"
     {!> ../../../docs_src/sql_databases/sql_app/schemas.py!}
@@ -354,7 +354,7 @@ In the `Config` class, set the attribute `orm_mode = True`.
     {!> ../../../docs_src/sql_databases/sql_app_py39/schemas.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="15  19-20  31  36-37"
     {!> ../../../docs_src/sql_databases/sql_app/schemas.py!}
@@ -451,6 +451,11 @@ The steps are:
 {!../../../docs_src/sql_databases/sql_app/crud.py!}
 ```
 
+!!! info
+    In Pydantic v1 the method was called `.dict()`, it was deprecated (but still supported) in Pydantic v2, and renamed to `.model_dump()`.
+
+    The examples here use `.dict()` for compatibility with Pydantic v1, but you should use `.model_dump()` instead if you can use Pydantic v2.
+
 !!! tip
     The SQLAlchemy model for `User` contains a `hashed_password` that should contain a secure hashed version of the password.
 
@@ -480,7 +485,7 @@ The steps are:
 
     `Item(**item.dict(), owner_id=user_id)`
 
-## Main **ReadyApi** app
+## Main **ReadyAPI** app
 
 And now in the file `sql_app/main.py` let's integrate and use all the other parts we created before.
 
@@ -494,7 +499,7 @@ In a very simplistic way create the database tables:
     {!> ../../../docs_src/sql_databases/sql_app_py39/main.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/sql_databases/sql_app/main.py!}
@@ -508,7 +513,7 @@ And you would also use Alembic for "migrations" (that's its main job).
 
 A "migration" is the set of steps needed whenever you change the structure of your SQLAlchemy models, add a new attribute, etc. to replicate those changes in the database, add a new column, a new table, etc.
 
-You can find an example of Alembic in a ReadyApi project in the templates from [Project Generation - Template](../project-generation.md){.internal-link target=_blank}. Specifically in <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql/tree/master/%7B%7Bcookiecutter.project_slug%7D%7D/backend/app/alembic/" class="external-link" target="_blank">the `alembic` directory in the source code</a>.
+You can find an example of Alembic in a ReadyAPI project in the templates from [Project Generation - Template](../project-generation.md){.internal-link target=_blank}. Specifically in <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql/tree/master/src/backend/app/alembic" class="external-link" target="_blank">the `alembic` directory in the source code</a>.
 
 ### Create a dependency
 
@@ -528,7 +533,7 @@ Our dependency will create a new SQLAlchemy `SessionLocal` that will be used in 
     {!> ../../../docs_src/sql_databases/sql_app_py39/main.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="15-20"
     {!> ../../../docs_src/sql_databases/sql_app/main.py!}
@@ -553,7 +558,7 @@ This will then give us better editor support inside the *path operation function
     {!> ../../../docs_src/sql_databases/sql_app_py39/main.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="24  32  38  47  53"
     {!> ../../../docs_src/sql_databases/sql_app/main.py!}
@@ -564,9 +569,9 @@ This will then give us better editor support inside the *path operation function
 
     But by declaring the type as `Session`, the editor now can know the available methods (`.add()`, `.query()`, `.commit()`, etc) and can provide better support (like completion). The type declaration doesn't affect the actual object.
 
-### Create your **ReadyApi** *path operations*
+### Create your **ReadyAPI** *path operations*
 
-Now, finally, here's the standard **ReadyApi** *path operations* code.
+Now, finally, here's the standard **ReadyAPI** *path operations* code.
 
 === "Python 3.9+"
 
@@ -574,7 +579,7 @@ Now, finally, here's the standard **ReadyApi** *path operations* code.
     {!> ../../../docs_src/sql_databases/sql_app_py39/main.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="23-28  31-34  37-42  45-49  52-55"
     {!> ../../../docs_src/sql_databases/sql_app/main.py!}
@@ -624,18 +629,18 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
 ```
 
 !!! info
-    If you need to connect to your relational database asynchronously, see [Async SQL (Relational) Databases](../advanced/async-sql-databases.md){.internal-link target=_blank}.
+    If you need to connect to your relational database asynchronously, see [Async SQL (Relational) Databases](../how-to/async-sql-encode-databases.md){.internal-link target=_blank}.
 
 !!! note "Very Technical Details"
     If you are curious and have a deep technical knowledge, you can check the very technical details of how this `async def` vs `def` is handled in the [Async](../async.md#very-technical-details){.internal-link target=_blank} docs.
 
 ## Migrations
 
-Because we are using SQLAlchemy directly and we don't require any kind of plug-in for it to work with **ReadyApi**, we could integrate database <abbr title="Automatically updating the database to have any new column we define in our models.">migrations</abbr> with <a href="https://alembic.sqlalchemy.org" class="external-link" target="_blank">Alembic</a> directly.
+Because we are using SQLAlchemy directly and we don't require any kind of plug-in for it to work with **ReadyAPI**, we could integrate database <abbr title="Automatically updating the database to have any new column we define in our models.">migrations</abbr> with <a href="https://alembic.sqlalchemy.org" class="external-link" target="_blank">Alembic</a> directly.
 
-And as the code related to SQLAlchemy and the SQLAlchemy models lives in separate independent files, you would even be able to perform the migrations with Alembic without having to install ReadyApi, Pydantic, or anything else.
+And as the code related to SQLAlchemy and the SQLAlchemy models lives in separate independent files, you would even be able to perform the migrations with Alembic without having to install ReadyAPI, Pydantic, or anything else.
 
-The same way, you would be able to use the same SQLAlchemy models and utilities in other parts of your code that are not related to **ReadyApi**.
+The same way, you would be able to use the same SQLAlchemy models and utilities in other parts of your code that are not related to **ReadyAPI**.
 
 For example, in a background task worker with <a href="https://docs.celeryq.dev" class="external-link" target="_blank">Celery</a>, <a href="https://python-rq.org/" class="external-link" target="_blank">RQ</a>, or <a href="https://arq-docs.helpmanual.io/" class="external-link" target="_blank">ARQ</a>.
 
@@ -673,7 +678,7 @@ For example, in a background task worker with <a href="https://docs.celeryq.dev"
     {!> ../../../docs_src/sql_databases/sql_app_py39/schemas.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     {!> ../../../docs_src/sql_databases/sql_app/schemas.py!}
@@ -693,7 +698,7 @@ For example, in a background task worker with <a href="https://docs.celeryq.dev"
     {!> ../../../docs_src/sql_databases/sql_app_py39/main.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python
     {!> ../../../docs_src/sql_databases/sql_app/main.py!}
@@ -722,13 +727,13 @@ $ uvicorn sql_app.main:app --reload
 
 And then, you can open your browser at <a href="http://127.0.0.1:8000/docs" class="external-link" target="_blank">http://127.0.0.1:8000/docs</a>.
 
-And you will be able to interact with your **ReadyApi** application, reading data from a real database:
+And you will be able to interact with your **ReadyAPI** application, reading data from a real database:
 
 <img src="/img/tutorial/sql-databases/image01.png">
 
 ## Interact with the database directly
 
-If you want to explore the SQLite database (file) directly, independently of ReadyApi, to debug its contents, add tables, columns, records, modify data, etc. you can use <a href="https://sqlitebrowser.org/" class="external-link" target="_blank">DB Browser for SQLite</a>.
+If you want to explore the SQLite database (file) directly, independently of ReadyAPI, to debug its contents, add tables, columns, records, modify data, etc. you can use <a href="https://sqlitebrowser.org/" class="external-link" target="_blank">DB Browser for SQLite</a>.
 
 It will look like this:
 
@@ -752,7 +757,7 @@ The middleware we'll add (just a function) will create a new SQLAlchemy `Session
     {!> ../../../docs_src/sql_databases/sql_app_py39/alt_main.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="14-22"
     {!> ../../../docs_src/sql_databases/sql_app/alt_main.py!}
@@ -788,6 +793,6 @@ Adding a **middleware** here is similar to what a dependency with `yield` does, 
     It's probably better to use dependencies with `yield` when they are enough for the use case.
 
 !!! info
-    Dependencies with `yield` were added recently to **ReadyApi**.
+    Dependencies with `yield` were added recently to **ReadyAPI**.
 
     A previous version of this tutorial only had the examples with a middleware and there are probably several applications using the middleware for database session management.

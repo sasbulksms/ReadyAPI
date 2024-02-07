@@ -1,9 +1,9 @@
 from typing import Union
 
-from readyapi import Body, ReadyApi, Query
+from readyapi import Body, Query, ReadyAPI
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/query")

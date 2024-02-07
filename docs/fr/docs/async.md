@@ -44,11 +44,11 @@ Si vous ne savez pas, utilisez seulement `def` comme vous le feriez habituelleme
 
 ---
 
-**Note** : vous pouvez mélanger `def` et `async def` dans vos *fonctions de chemin* autant que nécessaire, **ReadyApi** saura faire ce qu'il faut avec.
+**Note** : vous pouvez mélanger `def` et `async def` dans vos *fonctions de chemin* autant que nécessaire, **ReadyAPI** saura faire ce qu'il faut avec.
 
-Au final, peu importe le cas parmi ceux ci-dessus, **ReadyApi** fonctionnera de manière asynchrone et sera extrêmement rapide.
+Au final, peu importe le cas parmi ceux ci-dessus, **ReadyAPI** fonctionnera de manière asynchrone et sera extrêmement rapide.
 
-Mais si vous suivez bien les instructions ci-dessus, alors **ReadyApi** pourra effectuer quelques optimisations et ainsi améliorer les performances.
+Mais si vous suivez bien les instructions ci-dessus, alors **ReadyAPI** pourra effectuer quelques optimisations et ainsi améliorer les performances.
 
 ## Détails techniques
 
@@ -207,7 +207,7 @@ C'est pourquoi il est logique d'utiliser du code asynchrone ⏸🔀⏯ pour des 
 
 Ce type d'asynchronicité est ce qui a rendu NodeJS populaire (bien que NodeJS ne soit pas parallèle) et c'est la force du Go en tant que langage de programmation.
 
-Et c'est le même niveau de performance que celui obtenu avec **ReadyApi**.
+Et c'est le même niveau de performance que celui obtenu avec **ReadyAPI**.
 
 Et comme on peut avoir du parallélisme et de l'asynchronicité en même temps, on obtient des performances plus hautes que la plupart des frameworks NodeJS et égales à celles du Go, qui est un langage compilé plus proche du C <a href="https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=query&l=zijmkf-1" class="external-link" target="_blank">(tout ça grâce à Starlette)</a>.
 
@@ -250,11 +250,11 @@ Par exemple :
 
 ### Concurrence + Parallélisme : Web + Machine Learning
 
-Avec **ReadyApi** vous pouvez bénéficier de la concurrence qui est très courante en développement web (c'est l'attrait principal de NodeJS).
+Avec **ReadyAPI** vous pouvez bénéficier de la concurrence qui est très courante en développement web (c'est l'attrait principal de NodeJS).
 
 Mais vous pouvez aussi profiter du parallélisme et multiprocessing afin de gérer des charges **CPU bound** qui sont récurrentes dans les systèmes de *Machine Learning*.
 
-Ça, ajouté au fait que Python soit le langage le plus populaire pour la **Data Science**, le **Machine Learning** et surtout le **Deep Learning**, font de **ReadyApi** un très bon choix pour les APIs et applications de **Data Science** / **Machine Learning**.
+Ça, ajouté au fait que Python soit le langage le plus populaire pour la **Data Science**, le **Machine Learning** et surtout le **Deep Learning**, font de **ReadyAPI** un très bon choix pour les APIs et applications de **Data Science** / **Machine Learning**.
 
 Pour comprendre comment mettre en place ce parallélisme en production, allez lire la section [Déploiement](deployment/index.md){.internal-link target=_blank}.
 
@@ -315,9 +315,9 @@ Mais en même temps, les fonctions définies avec `async def` doivent être appe
 
 Vous avez donc remarqué ce paradoxe d'oeuf et de la poule, comment appelle-t-on la première fonction `async` ?
 
-Si vous utilisez **ReadyApi**, pas besoin de vous en inquiéter, car cette "première" fonction sera votre *fonction de chemin* ; et **ReadyApi** saura comment arriver au résultat attendu.
+Si vous utilisez **ReadyAPI**, pas besoin de vous en inquiéter, car cette "première" fonction sera votre *fonction de chemin* ; et **ReadyAPI** saura comment arriver au résultat attendu.
 
-Mais si vous utilisez `async` / `await` sans **ReadyApi**, <a href="https://docs.python.org/3/library/asyncio-task.html#coroutine" class="external-link" target="_blank">allez jetez un coup d'oeil à la documentation officielle de Python</a>.
+Mais si vous utilisez `async` / `await` sans **ReadyAPI**, <a href="https://docs.python.org/3/library/asyncio-task.html#coroutine" class="external-link" target="_blank">allez jetez un coup d'oeil à la documentation officielle de Python</a>.
 
 ### Autres formes de code asynchrone
 
@@ -348,24 +348,24 @@ Reprenons la phrase du début de la page :
 
 Ceci devrait être plus compréhensible désormais. ✨
 
-Tout ceci est donc ce qui donne sa force à **ReadyApi** (à travers Starlette) et lui permet d'avoir des performances aussi impressionnantes.
+Tout ceci est donc ce qui donne sa force à **ReadyAPI** (à travers Starlette) et lui permet d'avoir des performances aussi impressionnantes.
 
 ## Détails très techniques
 
 !!! warning "Attention !"
     Vous pouvez probablement ignorer cela.
 
-    Ce sont des détails très poussés sur comment **ReadyApi** fonctionne en arrière-plan.
+    Ce sont des détails très poussés sur comment **ReadyAPI** fonctionne en arrière-plan.
 
-    Si vous avez de bonnes connaissances techniques (coroutines, threads, code bloquant, etc.) et êtes curieux de comment **ReadyApi** gère `async def` versus le `def` classique, cette partie est faite pour vous.
+    Si vous avez de bonnes connaissances techniques (coroutines, threads, code bloquant, etc.) et êtes curieux de comment **ReadyAPI** gère `async def` versus le `def` classique, cette partie est faite pour vous.
 
 ### Fonctions de chemin
 
 Quand vous déclarez une *fonction de chemin* avec un `def` normal et non `async def`, elle est exécutée dans un groupe de threads (threadpool) externe qui est ensuite attendu, plutôt que d'être appelée directement (car cela bloquerait le serveur).
 
-Si vous venez d'un autre framework asynchrone qui ne fonctionne pas comme de la façon décrite ci-dessus et que vous êtes habitués à définir des *fonctions de chemin* basiques avec un simple `def` pour un faible gain de performance (environ 100 nanosecondes), veuillez noter que dans **ReadyApi**, l'effet serait plutôt contraire. Dans ces cas-là, il vaut mieux utiliser `async def` à moins que votre *fonction de chemin* utilise du code qui effectue des opérations <abbr title="Input/Output ou Entrées et Sorties ">I/O</abbr> bloquantes.
+Si vous venez d'un autre framework asynchrone qui ne fonctionne pas comme de la façon décrite ci-dessus et que vous êtes habitués à définir des *fonctions de chemin* basiques avec un simple `def` pour un faible gain de performance (environ 100 nanosecondes), veuillez noter que dans **ReadyAPI**, l'effet serait plutôt contraire. Dans ces cas-là, il vaut mieux utiliser `async def` à moins que votre *fonction de chemin* utilise du code qui effectue des opérations <abbr title="Input/Output ou Entrées et Sorties ">I/O</abbr> bloquantes.
 
-Au final, dans les deux situations, il est fort probable que **ReadyApi** soit tout de même [plus rapide](/#performance){.internal-link target=_blank} que (ou au moins de vitesse égale à) votre framework précédent.
+Au final, dans les deux situations, il est fort probable que **ReadyAPI** soit tout de même [plus rapide](/#performance){.internal-link target=_blank} que (ou au moins de vitesse égale à) votre framework précédent.
 
 ### Dépendances
 
@@ -377,9 +377,9 @@ Vous pouvez avoir de multiples dépendances et sous-dépendances dépendant les 
 
 ### Autres fonctions utilitaires
 
-Toute autre fonction utilitaire que vous appelez directement peut être créée avec un classique `def` ou avec `async def` et **ReadyApi** n'aura pas d'impact sur la façon dont vous l'appelez.
+Toute autre fonction utilitaire que vous appelez directement peut être créée avec un classique `def` ou avec `async def` et **ReadyAPI** n'aura pas d'impact sur la façon dont vous l'appelez.
 
-Contrairement aux fonctions que **ReadyApi** appelle pour vous : les *fonctions de chemin* et dépendances.
+Contrairement aux fonctions que **ReadyAPI** appelle pour vous : les *fonctions de chemin* et dépendances.
 
 Si votre fonction utilitaire est une fonction classique définie avec `def`, elle sera appelée directement (telle qu'écrite dans votre code), pas dans une threadpool, si la fonction est définie avec `async def` alors vous devrez attendre (avec `await`) que cette fonction se termine avant de passer à la suite du code.
 

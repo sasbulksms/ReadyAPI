@@ -1,11 +1,11 @@
 from typing import List
 
-from readyapi import ReadyApi
+from pydantic import BaseModel, ConfigDict, Field
+from readyapi import ReadyAPI
 from readyapi._compat import PYDANTIC_V2
 from readyapi.testclient import TestClient
-from pydantic import BaseModel, ConfigDict, Field
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Model(BaseModel):
@@ -151,7 +151,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/dict": {
                 "get": {

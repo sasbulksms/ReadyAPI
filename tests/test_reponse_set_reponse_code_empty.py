@@ -1,9 +1,9 @@
 from typing import Any
 
-from readyapi import ReadyApi, Response
+from readyapi import ReadyAPI, Response
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.delete(
@@ -33,7 +33,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/{id}": {
                 "delete": {

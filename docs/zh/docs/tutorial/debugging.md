@@ -4,7 +4,7 @@
 
 ## 调用 `uvicorn`
 
-在你的 ReadyApi 应用中直接导入 `uvicorn` 并运行：
+在你的 ReadyAPI 应用中直接导入 `uvicorn` 并运行：
 
 ```Python hl_lines="1  15"
 {!../../../docs_src/debugging/tutorial001.py!}
@@ -75,7 +75,7 @@ from myapp import app
 
 ## 使用你的调试器运行代码
 
-由于是从代码直接运行的 Uvicorn 服务器，所以你可以从调试器直接调用 Python 程序（你的 ReadyApi 应用）。
+由于是从代码直接运行的 Uvicorn 服务器，所以你可以从调试器直接调用 Python 程序（你的 ReadyAPI 应用）。
 
 ---
 
@@ -86,7 +86,7 @@ from myapp import app
 * 选中「Python」
 * 运行「Python：当前文件（集成终端）」选项的调试器。
 
-然后它会使用你的 **ReadyApi** 代码开启服务器，停在断点处，等等。
+然后它会使用你的 **ReadyAPI** 代码开启服务器，停在断点处，等等。
 
 看起来可能是这样：
 
@@ -101,7 +101,7 @@ from myapp import app
 * 然后出现一个上下文菜单。
 * 选择要调试的文件（本例中的 `main.py`）。
 
-然后它会使用你的 **ReadyApi** 代码开启服务器，停在断点处，等等。
+然后它会使用你的 **ReadyAPI** 代码开启服务器，停在断点处，等等。
 
 看起来可能是这样：
 

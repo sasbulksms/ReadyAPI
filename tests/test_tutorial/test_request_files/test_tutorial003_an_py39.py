@@ -1,5 +1,5 @@
 import pytest
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 
 from ...utils import needs_py39
@@ -13,7 +13,7 @@ def get_app():
 
 
 @pytest.fixture(name="client")
-def get_client(app: ReadyApi):
+def get_client(app: ReadyAPI):
     client = TestClient(app)
     return client
 
@@ -30,7 +30,7 @@ file_required = {
 
 
 @needs_py39
-def test_post_files(tmp_path, app: ReadyApi):
+def test_post_files(tmp_path, app: ReadyAPI):
     path = tmp_path / "test.txt"
     path.write_bytes(b"<file content>")
     path2 = tmp_path / "test2.txt"
@@ -50,7 +50,7 @@ def test_post_files(tmp_path, app: ReadyApi):
 
 
 @needs_py39
-def test_post_upload_file(tmp_path, app: ReadyApi):
+def test_post_upload_file(tmp_path, app: ReadyAPI):
     path = tmp_path / "test.txt"
     path.write_bytes(b"<file content>")
     path2 = tmp_path / "test2.txt"
@@ -70,7 +70,7 @@ def test_post_upload_file(tmp_path, app: ReadyApi):
 
 
 @needs_py39
-def test_get_root(app: ReadyApi):
+def test_get_root(app: ReadyAPI):
     client = TestClient(app)
     response = client.get("/")
     assert response.status_code == 200, response.text
@@ -83,7 +83,7 @@ def test_openapi_schema(client: TestClient):
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/files/": {
                 "post": {

@@ -18,13 +18,13 @@ As you saw in the previous chapter about [Deployment Concepts](./concepts.md){.i
 Here I'll show you how to use <a href="https://gunicorn.org/" class="external-link" target="_blank">**Gunicorn**</a> with **Uvicorn worker processes**.
 
 !!! info
-    If you are using containers, for example with Docker or Kubernetes, I'll tell you more about that in the next chapter: [ReadyApi in Containers - Docker](./docker.md){.internal-link target=_blank}.
+    If you are using containers, for example with Docker or Kubernetes, I'll tell you more about that in the next chapter: [ReadyAPI in Containers - Docker](./docker.md){.internal-link target=_blank}.
 
     In particular, when running on **Kubernetes** you will probably **not** want to use Gunicorn and instead run **a single Uvicorn process per container**, but I'll tell you about it later in that chapter.
 
 ## Gunicorn with Uvicorn Workers
 
-**Gunicorn** is mainly an application server using the **WSGI standard**. That means that Gunicorn can serve applications like Flask and Django. Gunicorn by itself is not compatible with **ReadyApi**, as ReadyApi uses the newest **<a href="https://asgi.readthedocs.io/en/latest/" class="external-link" target="_blank">ASGI standard</a>**.
+**Gunicorn** is mainly an application server using the **WSGI standard**. That means that Gunicorn can serve applications like Flask and Django. Gunicorn by itself is not compatible with **ReadyAPI**, as ReadyAPI uses the newest **<a href="https://asgi.readthedocs.io/en/latest/" class="external-link" target="_blank">ASGI standard</a>**.
 
 But Gunicorn supports working as a **process manager** and allowing users to tell it which specific **worker process class** to use. Then Gunicorn would start one or more **worker processes** using that class.
 
@@ -32,7 +32,7 @@ And **Uvicorn** has a **Gunicorn-compatible worker class**.
 
 Using that combination, Gunicorn would act as a **process manager**, listening on the **port** and the **IP**. And it would **transmit** the communication to the worker processes running the **Uvicorn class**.
 
-And then the Gunicorn-compatible **Uvicorn worker** class would be in charge of converting the data sent by Gunicorn to the ASGI standard for ReadyApi to use it.
+And then the Gunicorn-compatible **Uvicorn worker** class would be in charge of converting the data sent by Gunicorn to the ASGI standard for ReadyAPI to use it.
 
 ## Install Gunicorn and Uvicorn
 
@@ -82,7 +82,7 @@ $ gunicorn main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --b
 
 Let's see what each of those options mean:
 
-* `main:app`: This is the same syntax used by Uvicorn, `main` means the Python module named "`main`", so, a file `main.py`. And `app` is the name of the variable that is the **ReadyApi** application.
+* `main:app`: This is the same syntax used by Uvicorn, `main` means the Python module named "`main`", so, a file `main.py`. And `app` is the name of the variable that is the **ReadyAPI** application.
     * You can imagine that `main:app` is equivalent to a Python `import` statement like:
 
         ```Python
@@ -165,7 +165,7 @@ From the list of deployment concepts from above, using workers would mainly help
 
 ## Containers and Docker
 
-In the next chapter about [ReadyApi in Containers - Docker](./docker.md){.internal-link target=_blank} I'll tell some strategies you could use to handle the other **deployment concepts**.
+In the next chapter about [ReadyAPI in Containers - Docker](./docker.md){.internal-link target=_blank} I'll tell some strategies you could use to handle the other **deployment concepts**.
 
 I'll also show you the **official Docker image** that includes **Gunicorn with Uvicorn workers** and some default configurations that can be useful for simple cases.
 
@@ -177,4 +177,4 @@ You can use **Gunicorn** (or also Uvicorn) as a process manager with Uvicorn wor
 
 You could use these tools and ideas if you are setting up **your own deployment system** while taking care of the other deployment concepts yourself.
 
-Check out the next chapter to learn about **ReadyApi** with containers (e.g. Docker and Kubernetes). You will see that those tools have simple ways to solve the other **deployment concepts** as well. ✨
+Check out the next chapter to learn about **ReadyAPI** with containers (e.g. Docker and Kubernetes). You will see that those tools have simple ways to solve the other **deployment concepts** as well. ✨

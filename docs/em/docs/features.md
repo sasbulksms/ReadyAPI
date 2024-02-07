@@ -1,8 +1,8 @@
 # ⚒
 
-## ReadyApi ⚒
+## ReadyAPI ⚒
 
-**ReadyApi** 🤝 👆 📄:
+**ReadyAPI** 🤝 👆 📄:
 
 ### ⚓️ 🔛 📂 🐩
 
@@ -27,7 +27,7 @@
 
 ⚫️ 🌐 ⚓️ 🔛 🐩 **🐍 3️⃣.6️⃣ 🆎** 📄 (👏 Pydantic). 🙅‍♂ 🆕 ❕ 💡. 🐩 🏛 🐍.
 
-🚥 👆 💪 2️⃣ ⏲ ↗️ ❔ ⚙️ 🐍 🆎 (🚥 👆 🚫 ⚙️ ReadyApi), ✅ 📏 🔰: [🐍 🆎](python-types.md){.internal-link target=_blank}.
+🚥 👆 💪 2️⃣ ⏲ ↗️ ❔ ⚙️ 🐍 🆎 (🚥 👆 🚫 ⚙️ ReadyAPI), ✅ 📏 🔰: [🐍 🆎](python-types.md){.internal-link target=_blank}.
 
 👆 ✍ 🐩 🐍 ⏮️ 🆎:
 
@@ -74,7 +74,7 @@ my_second_user: User = User(**second_user_data)
 
 🏁 🐍 👩‍💻 🔬 ⚫️ 🆑 <a href="https://www.jetbrains.com/research/python-developers-survey-2017/#tools-and-features" class="external-link" target="_blank">👈 🌅 ⚙️ ⚒ "✍"</a>.
 
-🎂 **ReadyApi** 🛠️ ⚓️ 😌 👈. ✍ 👷 🌐.
+🎂 **ReadyAPI** 🛠️ ⚓️ 😌 👈. ✍ 👷 🌐.
 
 👆 🔜 🛎 💪 👟 🔙 🩺.
 
@@ -133,7 +133,7 @@ my_second_user: User = User(**second_user_data)
 
 ### 🔗 💉
 
-ReadyApi 🔌 📶 ⏩ ⚙️, ✋️ 📶 🏋️ <abbr title='also known as "components", "resources", "services", "providers"'><strong>🔗 💉</strong></abbr> ⚙️.
+ReadyAPI 🔌 📶 ⏩ ⚙️, ✋️ 📶 🏋️ <abbr title='also known as "components", "resources", "services", "providers"'><strong>🔗 💉</strong></abbr> ⚙️.
 
 * 🔗 💪 ✔️ 🔗, 🏗 🔗 ⚖️ **"📊" 🔗**.
 * 🌐 **🔁 🍵** 🛠️.
@@ -156,11 +156,11 @@ ReadyApi 🔌 📶 ⏩ ⚙️, ✋️ 📶 🏋️ <abbr title='also known as "c
 
 ## 💃 ⚒
 
-**ReadyApi** 🍕 🔗 ⏮️ (&amp; ⚓️ 🔛) <a href="https://www.starlette.io/" class="external-link" target="_blank"><strong>💃</strong></a>. , 🙆 🌖 💃 📟 👆 ✔️, 🔜 👷.
+**ReadyAPI** 🍕 🔗 ⏮️ (&amp; ⚓️ 🔛) <a href="https://www.starlette.io/" class="external-link" target="_blank"><strong>💃</strong></a>. , 🙆 🌖 💃 📟 👆 ✔️, 🔜 👷.
 
-`ReadyApi` 🤙 🎧-🎓 `Starlette`. , 🚥 👆 ⏪ 💭 ⚖️ ⚙️ 💃, 🌅 🛠️ 🔜 👷 🎏 🌌.
+`ReadyAPI` 🤙 🎧-🎓 `Starlette`. , 🚥 👆 ⏪ 💭 ⚖️ ⚙️ 💃, 🌅 🛠️ 🔜 👷 🎏 🌌.
 
-⏮️ **ReadyApi** 👆 🤚 🌐 **💃**'Ⓜ ⚒ (ReadyApi 💃 🔛 💊):
+⏮️ **ReadyAPI** 👆 🤚 🌐 **💃**'Ⓜ ⚒ (ReadyAPI 💃 🔛 💊):
 
 * 🤙 🎆 🎭. ⚫️ <a href="https://github.com/encode/starlette#performance" class="external-link" target="_blank">1️⃣ ⏩ 🐍 🛠️ 💪, 🔛 🇷🇪 ⏮️ **✳** &amp; **🚶**</a>.
 * ** *️⃣ ** 🐕‍🦺.
@@ -174,7 +174,7 @@ ReadyApi 🔌 📶 ⏩ ⚙️, ✋️ 📶 🏋️ <abbr title='also known as "c
 
 ## Pydantic ⚒
 
-**ReadyApi** 🍕 🔗 ⏮️ (&amp; ⚓️ 🔛) <a href="https://pydantic-docs.helpmanual.io" class="external-link" target="_blank"><strong>Pydantic</strong></a>. , 🙆 🌖 Pydantic 📟 👆 ✔️, 🔜 👷.
+**ReadyAPI** 🍕 🔗 ⏮️ (&amp; ⚓️ 🔛) <a href="https://pydantic-docs.helpmanual.io" class="external-link" target="_blank"><strong>Pydantic</strong></a>. , 🙆 🌖 Pydantic 📟 👆 ✔️, 🔜 👷.
 
 ✅ 🔢 🗃 ⚓️ 🔛 Pydantic, <abbr title="Object-Relational Mapper">🐜</abbr>Ⓜ, <abbr title="Object-Document Mapper">🏭</abbr>Ⓜ 💽.
 
@@ -182,7 +182,7 @@ ReadyApi 🔌 📶 ⏩ ⚙️, ✋️ 📶 🏋️ <abbr title='also known as "c
 
 🎏 ✔ 🎏 🌌 🤭, 📚 💼 👆 💪 🚶‍♀️ 🎚 👆 🤚 ⚪️➡️ 💽 **🔗 👩‍💻**.
 
-⏮️ **ReadyApi** 👆 🤚 🌐 **Pydantic**'Ⓜ ⚒ (ReadyApi ⚓️ 🔛 Pydantic 🌐 💽 🚚):
+⏮️ **ReadyAPI** 👆 🤚 🌐 **Pydantic**'Ⓜ ⚒ (ReadyAPI ⚓️ 🔛 Pydantic 🌐 💽 🚚):
 
 * **🙅‍♂ 🔠**:
     * 🙅‍♂ 🆕 🔗 🔑 ◾-🇪🇸 💡.

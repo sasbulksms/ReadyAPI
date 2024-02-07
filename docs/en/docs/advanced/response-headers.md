@@ -14,7 +14,7 @@ And then you can return any object you need, as you normally would (a `dict`, a 
 
 And if you declared a `response_model`, it will still be used to filter and convert the object you returned.
 
-**ReadyApi** will use that *temporal* response to extract the headers (also cookies and status code), and will put them in the final response that contains the value you returned, filtered by any `response_model`.
+**ReadyAPI** will use that *temporal* response to extract the headers (also cookies and status code), and will put them in the final response that contains the value you returned, filtered by any `response_model`.
 
 You can also declare the `Response` parameter in dependencies, and set headers (and cookies) in them.
 
@@ -31,12 +31,12 @@ Create a response as described in [Return a Response Directly](response-directly
 !!! note "Technical Details"
     You could also use `from starlette.responses import Response` or `from starlette.responses import JSONResponse`.
 
-    **ReadyApi** provides the same `starlette.responses` as `readyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette.
+    **ReadyAPI** provides the same `starlette.responses` as `readyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette.
 
-    And as the `Response` can be used frequently to set headers and cookies, **ReadyApi** also provides it at `readyapi.Response`.
+    And as the `Response` can be used frequently to set headers and cookies, **ReadyAPI** also provides it at `readyapi.Response`.
 
 ## Custom Headers
 
-Have in mind that custom proprietary headers can be added <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers" class="external-link" target="_blank">using the 'X-' prefix</a>.
+Keep in mind that custom proprietary headers can be added <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers" class="external-link" target="_blank">using the 'X-' prefix</a>.
 
 But if you have custom headers that you want a client in a browser to be able to see, you need to add them to your CORS configurations (read more in [CORS (Cross-Origin Resource Sharing)](../tutorial/cors.md){.internal-link target=_blank}), using the parameter `expose_headers` documented in <a href="https://www.starlette.io/middleware/#corsmiddleware" class="external-link" target="_blank">Starlette's CORS docs</a>.

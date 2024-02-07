@@ -19,13 +19,13 @@ Import `File` and `UploadFile` from `readyapi`:
     {!> ../../../docs_src/request_files/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1"
     {!> ../../../docs_src/request_files/tutorial001_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -44,13 +44,13 @@ Create file parameters the same way you would for `Body` or `Form`:
     {!> ../../../docs_src/request_files/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="8"
     {!> ../../../docs_src/request_files/tutorial001_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -69,9 +69,9 @@ Create file parameters the same way you would for `Body` or `Form`:
 
 The files will be uploaded as "form data".
 
-If you declare the type of your *path operation function* parameter as `bytes`, **ReadyApi** will read the file for you and you will receive the contents as `bytes`.
+If you declare the type of your *path operation function* parameter as `bytes`, **ReadyAPI** will read the file for you and you will receive the contents as `bytes`.
 
-Have in mind that this means that the whole contents will be stored in memory. This will work well for small files.
+Keep in mind that this means that the whole contents will be stored in memory. This will work well for small files.
 
 But there are several cases in which you might benefit from using `UploadFile`.
 
@@ -85,13 +85,13 @@ Define a file parameter with a type of `UploadFile`:
     {!> ../../../docs_src/request_files/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="13"
     {!> ../../../docs_src/request_files/tutorial001_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -142,28 +142,28 @@ contents = myfile.file.read()
 ```
 
 !!! note "`async` Technical Details"
-    When you use the `async` methods, **ReadyApi** runs the file methods in a threadpool and awaits for them.
+    When you use the `async` methods, **ReadyAPI** runs the file methods in a threadpool and awaits for them.
 
 !!! note "Starlette Technical Details"
-    **ReadyApi**'s `UploadFile` inherits directly from **Starlette**'s `UploadFile`, but adds some necessary parts to make it compatible with **Pydantic** and the other parts of ReadyApi.
+    **ReadyAPI**'s `UploadFile` inherits directly from **Starlette**'s `UploadFile`, but adds some necessary parts to make it compatible with **Pydantic** and the other parts of ReadyAPI.
 
 ## What is "Form Data"
 
 The way HTML forms (`<form></form>`) sends the data to the server normally uses a "special" encoding for that data, it's different from JSON.
 
-**ReadyApi** will make sure to read that data from the right place instead of JSON.
+**ReadyAPI** will make sure to read that data from the right place instead of JSON.
 
 !!! note "Technical Details"
     Data from forms is normally encoded using the "media type" `application/x-www-form-urlencoded` when it doesn't include files.
 
-    But when the form includes files, it is encoded as `multipart/form-data`. If you use `File`, **ReadyApi** will know it has to get the files from the correct part of the body.
+    But when the form includes files, it is encoded as `multipart/form-data`. If you use `File`, **ReadyAPI** will know it has to get the files from the correct part of the body.
 
     If you want to read more about these encodings and form fields, head to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST" class="external-link" target="_blank"><abbr title="Mozilla Developer Network">MDN</abbr> web docs for <code>POST</code></a>.
 
 !!! warning
     You can declare multiple `File` and `Form` parameters in a *path operation*, but you can't also declare `Body` fields that you expect to receive as JSON, as the request will have the body encoded using `multipart/form-data` instead of `application/json`.
 
-    This is not a limitation of **ReadyApi**, it's part of the HTTP protocol.
+    This is not a limitation of **ReadyAPI**, it's part of the HTTP protocol.
 
 ## Optional File Upload
 
@@ -181,7 +181,7 @@ You can make a file optional by using standard type annotations and setting a de
     {!> ../../../docs_src/request_files/tutorial001_02_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="10  18"
     {!> ../../../docs_src/request_files/tutorial001_02_an.py!}
@@ -196,7 +196,7 @@ You can make a file optional by using standard type annotations and setting a de
     {!> ../../../docs_src/request_files/tutorial001_02_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -215,13 +215,13 @@ You can also use `File()` with `UploadFile`, for example, to set additional meta
     {!> ../../../docs_src/request_files/tutorial001_03_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="8  14"
     {!> ../../../docs_src/request_files/tutorial001_03_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -244,7 +244,7 @@ To use that, declare a list of `bytes` or `UploadFile`:
     {!> ../../../docs_src/request_files/tutorial002_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="11  16"
     {!> ../../../docs_src/request_files/tutorial002_an.py!}
@@ -259,7 +259,7 @@ To use that, declare a list of `bytes` or `UploadFile`:
     {!> ../../../docs_src/request_files/tutorial002_py39.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -273,7 +273,7 @@ You will receive, as declared, a `list` of `bytes` or `UploadFile`s.
 !!! note "Technical Details"
     You could also use `from starlette.responses import HTMLResponse`.
 
-    **ReadyApi** provides the same `starlette.responses` as `readyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette.
+    **ReadyAPI** provides the same `starlette.responses` as `readyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette.
 
 ### Multiple File Uploads with Additional Metadata
 
@@ -285,7 +285,7 @@ And the same way as before, you can use `File()` to set additional parameters, e
     {!> ../../../docs_src/request_files/tutorial003_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="12  19-21"
     {!> ../../../docs_src/request_files/tutorial003_an.py!}
@@ -300,7 +300,7 @@ And the same way as before, you can use `File()` to set additional parameters, e
     {!> ../../../docs_src/request_files/tutorial003_py39.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.

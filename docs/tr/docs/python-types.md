@@ -6,11 +6,11 @@ Python isteğe bağlı olarak "tip belirteçlerini" destekler.
 
 Değişkenlerin tiplerini belirterek editör ve araçlardan daha fazla destek alabilirsiniz.
 
-Bu  pythonda tip belirteçleri için **hızlı bir başlangıç / bilgi tazeleme** rehberidir . Bu rehber **ReadyApi** kullanmak için gereken minimum konuyu kapsar ki bu da çok az bir miktardır.
+Bu  pythonda tip belirteçleri için **hızlı bir başlangıç / bilgi tazeleme** rehberidir . Bu rehber **ReadyAPI** kullanmak için gereken minimum konuyu kapsar ki bu da çok az bir miktardır.
 
-**ReadyApi' nin** tamamı bu tür tip belirteçleri ile donatılmıştır ve birçok avantaj sağlamaktadır.
+**ReadyAPI' nin** tamamı bu tür tip belirteçleri ile donatılmıştır ve birçok avantaj sağlamaktadır.
 
-**ReadyApi** kullanmayacak olsanız bile tür belirteçleri hakkında bilgi edinmenizde fayda var.
+**ReadyAPI** kullanmayacak olsanız bile tür belirteçleri hakkında bilgi edinmenizde fayda var.
 
 !!! not
     Python uzmanıysanız ve tip belirteçleri ilgili her şeyi zaten biliyorsanız, sonraki bölüme geçin.
@@ -127,7 +127,7 @@ Artık `age` değişkenini `str(age)` olarak kullanmanız gerektiğini biliyorsu
 
 Az önce tip belirteçlerinin en çok kullanıldığı yeri gördünüz.
 
- **ReadyApi**ile çalışırken tip belirteçlerini en çok kullanacağımız yer yine fonksiyonlardır.
+ **ReadyAPI**ile çalışırken tip belirteçlerini en çok kullanacağımız yer yine fonksiyonlardır.
 
 ### Basit tipler
 
@@ -284,20 +284,20 @@ Resmi Pydantic dokümanlarından alınmıştır:
 !!! info
     Daha fazla şey öğrenmek için <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic'i takip edin</a>.
 
-**ReadyApi** tamamen Pydantic'e dayanmaktadır.
+**ReadyAPI** tamamen Pydantic'e dayanmaktadır.
 
 Daha fazlasini görmek için [Tutorial - User Guide](tutorial/index.md){.internal-link target=_blank}.
 
-##  **ReadyApi** tip belirteçleri
+##  **ReadyAPI** tip belirteçleri
 
-**ReadyApi** birkaç şey yapmak için bu tür tip belirteçlerinden faydalanır.
+**ReadyAPI** birkaç şey yapmak için bu tür tip belirteçlerinden faydalanır.
 
-**ReadyApi** ile parametre tiplerini bildirirsiniz ve şunları elde edersiniz:
+**ReadyAPI** ile parametre tiplerini bildirirsiniz ve şunları elde edersiniz:
 
 * **Editor desteği**.
 * **Tip kontrolü**.
 
-...ve **ReadyApi** aynı belirteçleri şunlar için de kullanıyor:
+...ve **ReadyAPI** aynı belirteçleri şunlar için de kullanıyor:
 
 * **Gereksinimleri tanımlama**:  request path parameters, query parameters, headers, bodies, dependencies, ve benzeri gereksinimlerden
 * **Verileri çevirme**: Gönderilen veri tipinden istenilen veri tipine çevirme.
@@ -308,7 +308,7 @@ Daha fazlasini görmek için [Tutorial - User Guide](tutorial/index.md){.interna
 
 Bütün bunlar kulağa soyut gelebilir. Merak etme. Tüm bunları çalışırken göreceksiniz. [Tutorial - User Guide](tutorial/index.md){.internal-link target=_blank}.
 
-Önemli olan, standart Python türlerini tek bir yerde kullanarak (daha fazla sınıf, dekoratör vb. eklemek yerine), **ReadyApi**'nin bizim için işi yapmasını sağlamak.
+Önemli olan, standart Python türlerini tek bir yerde kullanarak (daha fazla sınıf, dekoratör vb. eklemek yerine), **ReadyAPI**'nin bizim için işi yapmasını sağlamak.
 
 !!! info
    Tüm öğreticiyi zaten okuduysanız ve türler hakkında daha fazla bilgi için geri döndüyseniz, iyi bir kaynak:<a href="https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html" class="external-link" target="_blank"> the "cheat sheet" from `mypy`</a>.

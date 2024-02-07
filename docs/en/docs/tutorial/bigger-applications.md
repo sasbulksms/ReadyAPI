@@ -2,7 +2,7 @@
 
 If you are building an application or a web API, it's rarely the case that you can put everything on a single file.
 
-**ReadyApi** provides a convenience tool to structure your application while keeping all the flexibility.
+**ReadyAPI** provides a convenience tool to structure your application while keeping all the flexibility.
 
 !!! info
     If you come from Flask, this would be the equivalent of Flask's Blueprints.
@@ -71,15 +71,15 @@ Let's say the file dedicated to handling just users is the submodule at `/app/ro
 
 You want to have the *path operations* related to your users separated from the rest of the code, to keep it organized.
 
-But it's still part of the same **ReadyApi** application/web API (it's part of the same "Python Package").
+But it's still part of the same **ReadyAPI** application/web API (it's part of the same "Python Package").
 
 You can create the *path operations* for that module using `APIRouter`.
 
 ### Import `APIRouter`
 
-You import it and create an "instance" the same way you would with the class `ReadyApi`:
+You import it and create an "instance" the same way you would with the class `ReadyAPI`:
 
-```Python hl_lines="1  3"
+```Python hl_lines="1  3" title="app/routers/users.py"
 {!../../../docs_src/bigger_applications/app/routers/users.py!}
 ```
 
@@ -87,13 +87,13 @@ You import it and create an "instance" the same way you would with the class `Re
 
 And then you use it to declare your *path operations*.
 
-Use it the same way you would use the `ReadyApi` class:
+Use it the same way you would use the `ReadyAPI` class:
 
-```Python hl_lines="6  11  16"
+```Python hl_lines="6  11  16" title="app/routers/users.py"
 {!../../../docs_src/bigger_applications/app/routers/users.py!}
 ```
 
-You can think of `APIRouter` as a "mini `ReadyApi`" class.
+You can think of `APIRouter` as a "mini `ReadyAPI`" class.
 
 All the same options are supported.
 
@@ -102,7 +102,7 @@ All the same `parameters`, `responses`, `dependencies`, `tags`, etc.
 !!! tip
     In this example, the variable is called `router`, but you can name it however you want.
 
-We are going to include this `APIRouter` in the main `ReadyApi` app, but first, let's check the dependencies and another `APIRouter`.
+We are going to include this `APIRouter` in the main `ReadyAPI` app, but first, let's check the dependencies and another `APIRouter`.
 
 ## Dependencies
 
@@ -114,22 +114,22 @@ We will now use a simple dependency to read a custom `X-Token` header:
 
 === "Python 3.9+"
 
-    ```Python hl_lines="3  6-8"
+    ```Python hl_lines="3  6-8" title="app/dependencies.py"
     {!> ../../../docs_src/bigger_applications/app_an_py39/dependencies.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
-    ```Python hl_lines="1  5-7"
+    ```Python hl_lines="1  5-7" title="app/dependencies.py"
     {!> ../../../docs_src/bigger_applications/app_an/dependencies.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
 
-    ```Python hl_lines="1  4-6"
+    ```Python hl_lines="1  4-6" title="app/dependencies.py"
     {!> ../../../docs_src/bigger_applications/app/dependencies.py!}
     ```
 
@@ -160,7 +160,7 @@ We know all the *path operations* in this module have the same:
 
 So, instead of adding all that to each *path operation*, we can add it to the `APIRouter`.
 
-```Python hl_lines="5-10  16  21"
+```Python hl_lines="5-10  16  21" title="app/routers/items.py"
 {!../../../docs_src/bigger_applications/app/routers/items.py!}
 ```
 
@@ -202,7 +202,7 @@ The end result is that the item paths are now:
     Having `dependencies` in the `APIRouter` can be used, for example, to require authentication for a whole group of *path operations*. Even if the dependencies are not added individually to each one of them.
 
 !!! check
-    The `prefix`, `tags`, `responses`, and `dependencies` parameters are (as in many other cases) just a feature from **ReadyApi** to help you avoid code duplication.
+    The `prefix`, `tags`, `responses`, and `dependencies` parameters are (as in many other cases) just a feature from **ReadyAPI** to help you avoid code duplication.
 
 ### Import the dependencies
 
@@ -212,7 +212,7 @@ And we need to get the dependency function from the module `app.dependencies`, t
 
 So we use a relative import with `..` for the dependencies:
 
-```Python hl_lines="3"
+```Python hl_lines="3" title="app/routers/items.py"
 {!../../../docs_src/bigger_applications/app/routers/items.py!}
 ```
 
@@ -282,7 +282,7 @@ We are not adding the prefix `/items` nor the `tags=["items"]` to each *path ope
 
 But we can still add _more_ `tags` that will be applied to a specific *path operation*, and also some extra `responses` specific to that *path operation*:
 
-```Python hl_lines="30-31"
+```Python hl_lines="30-31" title="app/routers/items.py"
 {!../../../docs_src/bigger_applications/app/routers/items.py!}
 ```
 
@@ -291,23 +291,23 @@ But we can still add _more_ `tags` that will be applied to a specific *path oper
 
     And it will also have both responses in the documentation, one for `404` and one for `403`.
 
-## The main `ReadyApi`
+## The main `ReadyAPI`
 
 Now, let's see the module at `app/main.py`.
 
-Here's where you import and use the class `ReadyApi`.
+Here's where you import and use the class `ReadyAPI`.
 
 This will be the main file in your application that ties everything together.
 
 And as most of your logic will now live in its own specific module, the main file will be quite simple.
 
-### Import `ReadyApi`
+### Import `ReadyAPI`
 
-You import and create a `ReadyApi` class as normally.
+You import and create a `ReadyAPI` class as normally.
 
 And we can even declare [global dependencies](dependencies/global-dependencies.md){.internal-link target=_blank} that will be combined with the dependencies for each `APIRouter`:
 
-```Python hl_lines="1  3  7"
+```Python hl_lines="1  3  7" title="app/main.py"
 {!../../../docs_src/bigger_applications/app/main.py!}
 ```
 
@@ -315,7 +315,7 @@ And we can even declare [global dependencies](dependencies/global-dependencies.m
 
 Now we import the other submodules that have `APIRouter`s:
 
-```Python hl_lines="5"
+```Python hl_lines="4-5" title="app/main.py"
 {!../../../docs_src/bigger_applications/app/main.py!}
 ```
 
@@ -377,7 +377,7 @@ The `router` from `users` would overwrite the one from `items` and we wouldn't b
 
 So, to be able to use both of them in the same file, we import the submodules directly:
 
-```Python hl_lines="5"
+```Python hl_lines="5" title="app/main.py"
 {!../../../docs_src/bigger_applications/app/main.py!}
 ```
 
@@ -385,7 +385,7 @@ So, to be able to use both of them in the same file, we import the submodules di
 
 Now, let's include the `router`s from the submodules `users` and `items`:
 
-```Python hl_lines="10-11"
+```Python hl_lines="10-11" title="app/main.py"
 {!../../../docs_src/bigger_applications/app/main.py!}
 ```
 
@@ -394,7 +394,7 @@ Now, let's include the `router`s from the submodules `users` and `items`:
 
     And `items.router` contains the `APIRouter` inside of the file `app/routers/items.py`.
 
-With `app.include_router()` we can add each `APIRouter` to the main `ReadyApi` application.
+With `app.include_router()` we can add each `APIRouter` to the main `ReadyAPI` application.
 
 It will include all the routes from that router as part of it.
 
@@ -418,7 +418,7 @@ It contains an `APIRouter` with some admin *path operations* that your organizat
 
 For this example it will be super simple. But let's say that because it is shared with other projects in the organization, we cannot modify it and add a `prefix`, `dependencies`, `tags`, etc. directly to the `APIRouter`:
 
-```Python hl_lines="3"
+```Python hl_lines="3" title="app/internal/admin.py"
 {!../../../docs_src/bigger_applications/app/internal/admin.py!}
 ```
 
@@ -426,7 +426,7 @@ But we still want to set a custom `prefix` when including the `APIRouter` so tha
 
 We can declare all that without having to modify the original `APIRouter` by passing those parameters to `app.include_router()`:
 
-```Python hl_lines="14-17"
+```Python hl_lines="14-17" title="app/main.py"
 {!../../../docs_src/bigger_applications/app/main.py!}
 ```
 
@@ -445,11 +445,11 @@ So, for example, other projects could use the same `APIRouter` with a different 
 
 ### Include a *path operation*
 
-We can also add *path operations* directly to the `ReadyApi` app.
+We can also add *path operations* directly to the `ReadyAPI` app.
 
 Here we do it... just to show that we can 🤷:
 
-```Python hl_lines="21-23"
+```Python hl_lines="21-23" title="app/main.py"
 {!../../../docs_src/bigger_applications/app/main.py!}
 ```
 
@@ -496,10 +496,10 @@ This is an advanced usage that you might not really need, but it's there in case
 
 ## Include an `APIRouter` in another
 
-The same way you can include an `APIRouter` in a `ReadyApi` application, you can include an `APIRouter` in another `APIRouter` using:
+The same way you can include an `APIRouter` in a `ReadyAPI` application, you can include an `APIRouter` in another `APIRouter` using:
 
 ```Python
 router.include_router(other_router)
 ```
 
-Make sure you do it before including `router` in the `ReadyApi` app, so that the *path operations* from `other_router` are also included.
+Make sure you do it before including `router` in the `ReadyAPI` app, so that the *path operations* from `other_router` are also included.

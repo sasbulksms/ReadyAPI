@@ -1,14 +1,14 @@
 # 🔗
 
-**ReadyApi** ✔️ 📶 🏋️ ✋️ 🏋️ **<abbr title="also known as components, resources, providers, services, injectables">🔗 💉</abbr>** ⚙️.
+**ReadyAPI** ✔️ 📶 🏋️ ✋️ 🏋️ **<abbr title="also known as components, resources, providers, services, injectables">🔗 💉</abbr>** ⚙️.
 
-⚫️ 🏗 📶 🙅 ⚙️, &amp; ⚒ ⚫️ 📶 ⏩ 🙆 👩‍💻 🛠️ 🎏 🦲 ⏮️ **ReadyApi**.
+⚫️ 🏗 📶 🙅 ⚙️, &amp; ⚒ ⚫️ 📶 ⏩ 🙆 👩‍💻 🛠️ 🎏 🦲 ⏮️ **ReadyAPI**.
 
 ## ⚫️❔ "🔗 💉"
 
 **"🔗 💉"** ⛓, 📋, 👈 📤 🌌 👆 📟 (👉 💼, 👆 *➡ 🛠️ 🔢*) 📣 👜 👈 ⚫️ 🚚 👷 &amp; ⚙️: "🔗".
 
-&amp; ⤴️, 👈 ⚙️ (👉 💼 **ReadyApi**) 🔜 ✊ 💅 🔨 ⚫️❔ 💪 🚚 👆 📟 ⏮️ 📚 💪 🔗 ("💉" 🔗).
+&amp; ⤴️, 👈 ⚙️ (👉 💼 **ReadyAPI**) 🔜 ✊ 💅 🔨 ⚫️❔ 💪 🚚 👆 📟 ⏮️ 📚 💪 🔗 ("💉" 🔗).
 
 👉 📶 ⚠ 🕐❔ 👆 💪:
 
@@ -102,7 +102,7 @@
 !!! tip
     👆 🔜 👀 ⚫️❔ 🎏 "👜", ↖️ ⚪️➡️ 🔢, 💪 ⚙️ 🔗 ⏭ 📃.
 
-🕐❔ 🆕 📨 🛬, **ReadyApi** 🔜 ✊ 💅:
+🕐❔ 🆕 📨 🛬, **ReadyAPI** 🔜 ✊ 💅:
 
 * 🤙 👆 🔗 ("☑") 🔢 ⏮️ ☑ 🔢.
 * 🤚 🏁 ⚪️➡️ 👆 🔢.
@@ -119,22 +119,22 @@ common_parameters --> read_items
 common_parameters --> read_users
 ```
 
-👉 🌌 👆 ✍ 🔗 📟 🕐 &amp; **ReadyApi** ✊ 💅 🤙 ⚫️ 👆 *➡ 🛠️*.
+👉 🌌 👆 ✍ 🔗 📟 🕐 &amp; **ReadyAPI** ✊ 💅 🤙 ⚫️ 👆 *➡ 🛠️*.
 
 !!! check
-    👀 👈 👆 🚫 ✔️ ✍ 🎁 🎓 &amp; 🚶‍♀️ ⚫️ 👱 **ReadyApi** "®" ⚫️ ⚖️ 🕳 🎏.
+    👀 👈 👆 🚫 ✔️ ✍ 🎁 🎓 &amp; 🚶‍♀️ ⚫️ 👱 **ReadyAPI** "®" ⚫️ ⚖️ 🕳 🎏.
 
-    👆 🚶‍♀️ ⚫️ `Depends` &amp; **ReadyApi** 💭 ❔ 🎂.
+    👆 🚶‍♀️ ⚫️ `Depends` &amp; **ReadyAPI** 💭 ❔ 🎂.
 
 ##  `async` ⚖️ 🚫 `async`
 
-🔗 🔜 🤙 **ReadyApi** (🎏 👆 *➡ 🛠️ 🔢*), 🎏 🚫 ✔ ⏪ 🔬 👆 🔢.
+🔗 🔜 🤙 **ReadyAPI** (🎏 👆 *➡ 🛠️ 🔢*), 🎏 🚫 ✔ ⏪ 🔬 👆 🔢.
 
 👆 💪 ⚙️ `async def` ⚖️ 😐 `def`.
 
 &amp; 👆 💪 📣 🔗 ⏮️ `async def` 🔘 😐 `def` *➡ 🛠️ 🔢*, ⚖️ `def` 🔗 🔘 `async def` *➡ 🛠️ 🔢*, ♒️.
 
-⚫️ 🚫 🤔. **ReadyApi** 🔜 💭 ⚫️❔.
+⚫️ 🚫 🤔. **ReadyAPI** 🔜 💭 ⚫️❔.
 
 !!! note
     🚥 👆 🚫 💭, ✅ [🔁: *"🏃 ❓" *](../../async.md){.internal-link target=_blank} 📄 🔃 `async` &amp; `await` 🩺.
@@ -149,13 +149,13 @@ common_parameters --> read_users
 
 ## 🙅 ⚙️
 
-🚥 👆 👀 ⚫️, *➡ 🛠️ 🔢* 📣 ⚙️ 🕐❔ *➡* &amp; *🛠️* 🏏, &amp; ⤴️ **ReadyApi** ✊ 💅 🤙 🔢 ⏮️ ☑ 🔢, ❎ 📊 ⚪️➡️ 📨.
+🚥 👆 👀 ⚫️, *➡ 🛠️ 🔢* 📣 ⚙️ 🕐❔ *➡* &amp; *🛠️* 🏏, &amp; ⤴️ **ReadyAPI** ✊ 💅 🤙 🔢 ⏮️ ☑ 🔢, ❎ 📊 ⚪️➡️ 📨.
 
 🤙, 🌐 (⚖️ 🏆) 🕸 🛠️ 👷 👉 🎏 🌌.
 
-👆 🙅 🤙 👈 🔢 🔗. 👫 🤙 👆 🛠️ (👉 💼, **ReadyApi**).
+👆 🙅 🤙 👈 🔢 🔗. 👫 🤙 👆 🛠️ (👉 💼, **ReadyAPI**).
 
-⏮️ 🔗 💉 ⚙️, 👆 💪 💬 **ReadyApi** 👈 👆 *➡ 🛠️ 🔢* "🪀" 🔛 🕳 🙆 👈 🔜 🛠️ ⏭ 👆 *➡ 🛠️ 🔢*, &amp; **ReadyApi** 🔜 ✊ 💅 🛠️ ⚫️ &amp; "💉" 🏁.
+⏮️ 🔗 💉 ⚙️, 👆 💪 💬 **ReadyAPI** 👈 👆 *➡ 🛠️ 🔢* "🪀" 🔛 🕳 🙆 👈 🔜 🛠️ ⏭ 👆 *➡ 🛠️ 🔢*, &amp; **ReadyAPI** 🔜 ✊ 💅 🛠️ ⚫️ &amp; "💉" 🏁.
 
 🎏 ⚠ ⚖ 👉 🎏 💭 "🔗 💉":
 
@@ -165,7 +165,7 @@ common_parameters --> read_users
 * 💉
 * 🦲
 
-## **ReadyApi** 🔌-🔌
+## **ReadyAPI** 🔌-🔌
 
 🛠️ &amp; "🔌-"Ⓜ 💪 🏗 ⚙️ **🔗 💉** ⚙️. ✋️ 👐, 📤 🤙 **🙅‍♂ 💪 ✍ "🔌-🔌"**, ⚙️ 🔗 ⚫️ 💪 📣 ♾ 🔢 🛠️ &amp; 🔗 👈 ▶️️ 💪 👆 *➡ 🛠️ 🔢*.
 
@@ -173,9 +173,9 @@ common_parameters --> read_users
 
 👆 🔜 👀 🖼 👉 ⏭ 📃, 🔃 🔗 &amp; ☁ 💽, 💂‍♂, ♒️.
 
-## **ReadyApi** 🔗
+## **ReadyAPI** 🔗
 
-🦁 🔗 💉 ⚙️ ⚒ **ReadyApi** 🔗 ⏮️:
+🦁 🔗 💉 ⚙️ ⚒ **ReadyAPI** 🔗 ⏮️:
 
 * 🌐 🔗 💽
 * ☁ 💽
@@ -230,4 +230,4 @@ paying_user --> pro_items
 
 🌐 👫 🔗, ⏪ 📣 👫 📄, 🚮 🔢, 🔬, ♒️. 👆 *➡ 🛠️*.
 
-**ReadyApi** 🔜 ✊ 💅 🚮 ⚫️ 🌐 🗄 🔗, 👈 ⚫️ 🎦 🎓 🧾 ⚙️.
+**ReadyAPI** 🔜 ✊ 💅 🚮 ⚫️ 🌐 🗄 🔗, 👈 ⚫️ 🎦 🎓 🧾 ⚙️.

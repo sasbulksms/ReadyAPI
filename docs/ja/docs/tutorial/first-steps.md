@@ -1,6 +1,6 @@
 # 最初のステップ
 
-最もシンプルなReadyApiファイルは以下のようになります:
+最もシンプルなReadyAPIファイルは以下のようになります:
 
 ```Python
 {!../../../docs_src/first_steps/tutorial001.py!}
@@ -28,7 +28,7 @@ $ uvicorn main:app --reload
     `uvicorn main:app`は以下を示します:
 
     * `main`: `main.py`ファイル (Python "module")。
-    * `app`:  `main.py`内部で作られるobject（`app = ReadyApi()`のように記述される）。
+    * `app`:  `main.py`内部で作られるobject（`app = ReadyAPI()`のように記述される）。
     * `--reload`: コードの変更時にサーバーを再起動させる。開発用。
 
 出力には次のような行があります:
@@ -67,7 +67,7 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 
 ### OpenAPI
 
-**ReadyApi**は、APIを定義するための**OpenAPI**標準規格を使用して、すべてのAPIの「スキーマ」を生成します。
+**ReadyAPI**は、APIを定義するための**OpenAPI**標準規格を使用して、すべてのAPIの「スキーマ」を生成します。
 
 #### 「スキーマ」
 
@@ -91,7 +91,7 @@ OpenAPIはAPIのためのAPIスキーマを定義します。そして、その�
 
 #### `openapi.json`を確認
 
-素のOpenAPIスキーマがどのようなものか興味がある場合、ReadyApiはすべてのAPIの説明を含むJSON（スキーマ）を自動的に生成します。
+素のOpenAPIスキーマがどのようなものか興味がある場合、ReadyAPIはすべてのAPIの説明を含むJSON（スキーマ）を自動的に生成します。
 
 次の場所で直接確認できます: <a href="http://127.0.0.1:8000/openapi.json" class="external-link" target="_blank">http://127.0.0.1:8000/openapi.json</a>.
 
@@ -101,7 +101,7 @@ OpenAPIはAPIのためのAPIスキーマを定義します。そして、その�
 {
     "openapi": "3.0.2",
     "info": {
-        "title": "ReadyApi",
+        "title": "ReadyAPI",
         "version": "0.1.0"
     },
     "paths": {
@@ -120,33 +120,33 @@ OpenAPIはAPIのためのAPIスキーマを定義します。そして、その�
 
 #### OpenAPIの目的
 
-OpenAPIスキーマは、ReadyApiに含まれている2つのインタラクティブなドキュメントシステムの動力源です。
+OpenAPIスキーマは、ReadyAPIに含まれている2つのインタラクティブなドキュメントシステムの動力源です。
 
-そして、OpenAPIに基づいた代替案が数十通りあります。 **ReadyApi**で構築されたアプリケーションに、これらの選択肢を簡単に追加できます。
+そして、OpenAPIに基づいた代替案が数十通りあります。 **ReadyAPI**で構築されたアプリケーションに、これらの選択肢を簡単に追加できます。
 
 また、APIと通信するクライアント用のコードを自動的に生成するために使用することもできます。たとえば、フロントエンド、モバイル、またはIoTアプリケーションです。
 
 ## ステップ毎の要約
 
-### Step 1: `ReadyApi`をインポート
+### Step 1: `ReadyAPI`をインポート
 
 ```Python hl_lines="1"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-`ReadyApi`は、APIのすべての機能を提供するPythonクラスです。
+`ReadyAPI`は、APIのすべての機能を提供するPythonクラスです。
 
 !!! note "技術詳細"
-    `ReadyApi`は`Starlette`を直接継承するクラスです。
+    `ReadyAPI`は`Starlette`を直接継承するクラスです。
 
-    `ReadyApi`でも<a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a>のすべての機能を利用可能です。
+    `ReadyAPI`でも<a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a>のすべての機能を利用可能です。
 
-### Step 2: `ReadyApi`の「インスタンス」を生成
+### Step 2: `ReadyAPI`の「インスタンス」を生成
 
 ```Python hl_lines="3"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
-ここで、`app`変数が`ReadyApi`クラスの「インスタンス」になります。
+ここで、`app`変数が`ReadyAPI`クラスの「インスタンス」になります。
 
 これが、すべてのAPIを作成するための主要なポイントになります。
 
@@ -243,7 +243,7 @@ APIを構築するときは、通常、これらの特定のHTTPメソッドを�
 ```Python hl_lines="6"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
-`@app.get("/")`は直下の関数が下記のリクエストの処理を担当することを**ReadyApi**に伝えます:
+`@app.get("/")`は直下の関数が下記のリクエストの処理を担当することを**ReadyAPI**に伝えます:
 
 * パス `/`
 * <abbr title="an HTTP GET method"><code>get</code> オペレーション</abbr>
@@ -255,7 +255,7 @@ APIを構築するときは、通常、これらの特定のHTTPメソッドを�
 
     「デコレータ」は直下の関数を受け取り、それを使って何かを行います。
 
-    私たちの場合、このデコレーターは直下の関数が**オペレーション** `get`を使用した**パス**` / `に対応することを**ReadyApi** に通知します。
+    私たちの場合、このデコレーターは直下の関数が**オペレーション** `get`を使用した**パス**` / `に対応することを**ReadyAPI** に通知します。
 
     これが「*パスオペレーションデコレータ*」です。
 
@@ -275,7 +275,7 @@ APIを構築するときは、通常、これらの特定のHTTPメソッドを�
 !!! tip "豆知識"
     各オペレーション (HTTPメソッド)は自由に使用できます。
 
-    **ReadyApi**は特定の意味づけを強制しません。
+    **ReadyAPI**は特定の意味づけを強制しません。
 
     ここでの情報は、要件ではなくガイドラインとして提示されます。
 
@@ -295,7 +295,7 @@ APIを構築するときは、通常、これらの特定のHTTPメソッドを�
 
 これは、Pythonの関数です。
 
-この関数は、`GET`オペレーションを使ったURL「`/`」へのリクエストを受け取るたびに**ReadyApi**によって呼び出されます。
+この関数は、`GET`オペレーションを使ったURL「`/`」へのリクエストを受け取るたびに**ReadyAPI**によって呼び出されます。
 
 この場合、この関数は`async`関数です。
 
@@ -324,7 +324,7 @@ JSONに自動的に変換されるオブジェクトやモデルは他にもた�
 
 ## まとめ
 
-* `ReadyApi`をインポート
+* `ReadyAPI`をインポート
 * `app`インスタンスを生成
 * **パスオペレーションデコレータ**を記述 (`@app.get("/")`)
 * **パスオペレーション関数**を定義 (上記の`def root(): ...`のように)

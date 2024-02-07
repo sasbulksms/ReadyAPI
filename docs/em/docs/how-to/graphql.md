@@ -1,8 +1,8 @@
 # 🕹
 
-**ReadyApi** ⚓️ 🔛 **🔫** 🐩, ⚫️ 📶 ⏩ 🛠️ 🙆 **🕹** 🗃 🔗 ⏮️ 🔫.
+**ReadyAPI** ⚓️ 🔛 **🔫** 🐩, ⚫️ 📶 ⏩ 🛠️ 🙆 **🕹** 🗃 🔗 ⏮️ 🔫.
 
-👆 💪 🌀 😐 ReadyApi *➡ 🛠️* ⏮️ 🕹 🔛 🎏 🈸.
+👆 💪 🌀 😐 ReadyAPI *➡ 🛠️* ⏮️ 🕹 🔛 🎏 🈸.
 
 !!! tip
     **🕹** ❎ 📶 🎯 ⚙️ 💼.
@@ -13,12 +13,12 @@
 
 ## 🕹 🗃
 
-📥 **🕹** 🗃 👈 ✔️ **🔫** 🐕‍🦺. 👆 💪 ⚙️ 👫 ⏮️ **ReadyApi**:
+📥 **🕹** 🗃 👈 ✔️ **🔫** 🐕‍🦺. 👆 💪 ⚙️ 👫 ⏮️ **ReadyAPI**:
 
 * <a href="https://strawberry.rocks/" class="external-link" target="_blank">🍓</a> 👶
-    * ⏮️ <a href="https://strawberry.rocks/docs/integrations/readyapi" class="external-link" target="_blank">🩺 ReadyApi</a>
+    * ⏮️ <a href="https://strawberry.rocks/docs/integrations/readyapi" class="external-link" target="_blank">🩺 ReadyAPI</a>
 * <a href="https://ariadnegraphql.org/" class="external-link" target="_blank">👸</a>
-    * ⏮️ <a href="https://ariadnegraphql.org/docs/starlette-integration" class="external-link" target="_blank">🩺 💃</a> (👈 ✔ ReadyApi)
+    * ⏮️ <a href="https://ariadnegraphql.org/docs/starlette-integration" class="external-link" target="_blank">🩺 💃</a> (👈 ✔ ReadyAPI)
 * <a href="https://tartiflette.io/" class="external-link" target="_blank">🍟</a>
     * ⏮️ <a href="https://tartiflette.github.io/tartiflette-asgi/" class="external-link" target="_blank">🍟 🔫</a> 🚚 🔫 🛠️
 * <a href="https://graphene-python.org/" class="external-link" target="_blank">⚗</a>
@@ -26,11 +26,11 @@
 
 ## 🕹 ⏮️ 🍓
 
-🚥 👆 💪 ⚖️ 💚 👷 ⏮️ **🕹**, <a href="https://strawberry.rocks/" class="external-link" target="_blank">**🍓**</a> **👍** 🗃 ⚫️ ✔️ 🔧 🔐 **ReadyApi** 🔧, ⚫️ 🌐 ⚓️ 🔛 **🆎 ✍**.
+🚥 👆 💪 ⚖️ 💚 👷 ⏮️ **🕹**, <a href="https://strawberry.rocks/" class="external-link" target="_blank">**🍓**</a> **👍** 🗃 ⚫️ ✔️ 🔧 🔐 **ReadyAPI** 🔧, ⚫️ 🌐 ⚓️ 🔛 **🆎 ✍**.
 
 ⚓️ 🔛 👆 ⚙️ 💼, 👆 5️⃣📆 💖 ⚙️ 🎏 🗃, ✋️ 🚥 👆 💭 👤, 👤 🔜 🎲 🤔 👆 🔄 **🍓**.
 
-📥 🤪 🎮 ❔ 👆 💪 🛠️ 🍓 ⏮️ ReadyApi:
+📥 🤪 🎮 ❔ 👆 💪 🛠️ 🍓 ⏮️ ReadyAPI:
 
 ```Python hl_lines="3  22  25-26"
 {!../../../docs_src/graphql/tutorial001.py!}
@@ -38,7 +38,7 @@
 
 👆 💪 💡 🌅 🔃 🍓 <a href="https://strawberry.rocks/" class="external-link" target="_blank">🍓 🧾</a>.
 
-&amp; 🩺 🔃 <a href="https://strawberry.rocks/docs/integrations/readyapi" class="external-link" target="_blank">🍓 ⏮️ ReadyApi</a>.
+&amp; 🩺 🔃 <a href="https://strawberry.rocks/docs/integrations/readyapi" class="external-link" target="_blank">🍓 ⏮️ ReadyAPI</a>.
 
 ## 🗝 `GraphQLApp` ⚪️➡️ 💃
 

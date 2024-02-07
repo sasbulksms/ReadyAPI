@@ -45,7 +45,7 @@ def test_default_openapi():
     response = client.get("/openapi.json")
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/": {
                 "get": {

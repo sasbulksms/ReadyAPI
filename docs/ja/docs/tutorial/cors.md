@@ -34,11 +34,11 @@
 
 ## `CORSMiddleware` の使用
 
-**ReadyApi** アプリケーションでは `CORSMiddleware` を使用して、CORSに関する設定ができます。
+**ReadyAPI** アプリケーションでは `CORSMiddleware` を使用して、CORSに関する設定ができます。
 
 * `CORSMiddleware`をインポートします。
 * 許可されたオリジンのリストを (文字列として) 作成します。
-* これを「ミドルウェア」として **ReadyApi** アプリケーションに追加します。
+* これを「ミドルウェア」として **ReadyAPI** アプリケーションに追加します。
 
 以下も、バックエンドに許可させるかどうか指定できます:
 
@@ -81,4 +81,4 @@
 !!! note "技術詳細"
     `from starlette.middleware.cors import CORSMiddleware` も使用できます。
 
-    **ReadyApi** は、開発者の利便性を高めるために、`readyapi.middleware` でいくつかのミドルウェアを提供します。利用可能なミドルウェアのほとんどは、Starletteから直接提供されています。
+    **ReadyAPI** は、開発者の利便性を高めるために、`readyapi.middleware` でいくつかのミドルウェアを提供します。利用可能なミドルウェアのほとんどは、Starletteから直接提供されています。

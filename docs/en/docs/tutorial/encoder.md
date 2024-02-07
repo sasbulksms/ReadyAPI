@@ -4,7 +4,7 @@ There are some cases where you might need to convert a data type (like a Pydanti
 
 For example, if you need to store it in a database.
 
-For that, **ReadyApi** provides a `jsonable_encoder()` function.
+For that, **ReadyAPI** provides a `jsonable_encoder()` function.
 
 ## Using the `jsonable_encoder`
 
@@ -26,7 +26,7 @@ It receives an object, like a Pydantic model, and returns a JSON compatible vers
     {!> ../../../docs_src/encoder/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="5  22"
     {!> ../../../docs_src/encoder/tutorial001.py!}
@@ -39,4 +39,4 @@ The result of calling it is something that can be encoded with the Python standa
 It doesn't return a large `str` containing the data in JSON format (as a string). It returns a Python standard data structure (e.g. a `dict`) with values and sub-values that are all compatible with JSON.
 
 !!! note
-    `jsonable_encoder` is actually used by **ReadyApi** internally to convert data. But it is useful in many other scenarios.
+    `jsonable_encoder` is actually used by **ReadyAPI** internally to convert data. But it is useful in many other scenarios.

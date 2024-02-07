@@ -1,6 +1,6 @@
 # 请求体 - 嵌套模型
 
-使用 **ReadyApi**，你可以定义、校验、记录文档并使用任意深度嵌套的模型（归功于Pydantic）。
+使用 **ReadyAPI**，你可以定义、校验、记录文档并使用任意深度嵌套的模型（归功于Pydantic）。
 
 ## List 字段
 
@@ -12,7 +12,7 @@
     {!> ../../../docs_src/body_nested_models/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="14"
     {!> ../../../docs_src/body_nested_models/tutorial001.py!}
@@ -63,7 +63,7 @@ my_list: List[str]
     {!> ../../../docs_src/body_nested_models/tutorial002_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="14"
     {!> ../../../docs_src/body_nested_models/tutorial002.py!}
@@ -89,7 +89,7 @@ Python 具有一种特殊的数据类型来保存一组唯一的元素，即 `se
     {!> ../../../docs_src/body_nested_models/tutorial003_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1  14"
     {!> ../../../docs_src/body_nested_models/tutorial003.py!}
@@ -127,7 +127,7 @@ Pydantic 模型的每个属性都具有类型。
     {!> ../../../docs_src/body_nested_models/tutorial004_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9-11"
     {!> ../../../docs_src/body_nested_models/tutorial004.py!}
@@ -149,13 +149,13 @@ Pydantic 模型的每个属性都具有类型。
     {!> ../../../docs_src/body_nested_models/tutorial004_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="20"
     {!> ../../../docs_src/body_nested_models/tutorial004.py!}
     ```
 
-这意味着 **ReadyApi** 将期望类似于以下内容的请求体：
+这意味着 **ReadyAPI** 将期望类似于以下内容的请求体：
 
 ```JSON
 {
@@ -171,7 +171,7 @@ Pydantic 模型的每个属性都具有类型。
 }
 ```
 
-再一次，仅仅进行这样的声明，你将通过 **ReadyApi** 获得：
+再一次，仅仅进行这样的声明，你将通过 **ReadyAPI** 获得：
 
 * 对被嵌入的模型也适用的编辑器支持（自动补全等）
 * 数据转换
@@ -198,7 +198,7 @@ Pydantic 模型的每个属性都具有类型。
     {!> ../../../docs_src/body_nested_models/tutorial005_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="4  10"
     {!> ../../../docs_src/body_nested_models/tutorial005.py!}
@@ -222,7 +222,7 @@ Pydantic 模型的每个属性都具有类型。
     {!> ../../../docs_src/body_nested_models/tutorial006_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="20"
     {!> ../../../docs_src/body_nested_models/tutorial006.py!}
@@ -273,7 +273,7 @@ Pydantic 模型的每个属性都具有类型。
     {!> ../../../docs_src/body_nested_models/tutorial007_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9  14  20  23  27"
     {!> ../../../docs_src/body_nested_models/tutorial007.py!}
@@ -298,7 +298,7 @@ images: List[Image]
     {!> ../../../docs_src/body_nested_models/tutorial008_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="15"
     {!> ../../../docs_src/body_nested_models/tutorial008.py!}
@@ -338,7 +338,7 @@ images: List[Image]
     {!> ../../../docs_src/body_nested_models/tutorial009_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="9"
     {!> ../../../docs_src/body_nested_models/tutorial009.py!}
@@ -355,7 +355,7 @@ images: List[Image]
 
 ## 总结
 
-使用 **ReadyApi** 你可以拥有 Pydantic 模型提供的极高灵活性，同时保持代码的简单、简短和优雅。
+使用 **ReadyAPI** 你可以拥有 Pydantic 模型提供的极高灵活性，同时保持代码的简单、简短和优雅。
 
 而且还具有下列好处：
 

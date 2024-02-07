@@ -30,7 +30,7 @@ Dessa forma:
 !!! note "Nota"
     Alguns códigos de resposta (consulte a próxima seção) indicam que a resposta não possui um corpo.
 
-    O ReadyApi sabe disso e produzirá documentos OpenAPI informando que não há corpo de resposta.
+    O ReadyAPI sabe disso e produzirá documentos OpenAPI informando que não há corpo de resposta.
 
 ## Sobre os códigos de status HTTP
 
@@ -83,7 +83,7 @@ Eles são apenas uma conveniência, eles possuem o mesmo número, mas dessa form
 !!! note "Detalhes técnicos"
     Você também pode usar `from starlette import status`.
 
-    **ReadyApi** fornece o mesmo `starlette.status` como `readyapi.status` apenas como uma conveniência para você, o desenvolvedor. Mas vem diretamente da Starlette.
+    **ReadyAPI** fornece o mesmo `starlette.status` como `readyapi.status` apenas como uma conveniência para você, o desenvolvedor. Mas vem diretamente da Starlette.
 
 
 ## Alterando o padrão

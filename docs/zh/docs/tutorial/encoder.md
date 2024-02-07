@@ -4,7 +4,7 @@
 
 比如，如果您需要将其存储在数据库中。
 
-对于这种要求， **ReadyApi**提供了`jsonable_encoder()`函数。
+对于这种要求， **ReadyAPI**提供了`jsonable_encoder()`函数。
 
 ## 使用`jsonable_encoder`
 
@@ -26,7 +26,7 @@
     {!> ../../../docs_src/encoder/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="5  22"
     {!> ../../../docs_src/encoder/tutorial001.py!}
@@ -39,4 +39,4 @@
 这个操作不会返回一个包含JSON格式（作为字符串）数据的庞大的`str`。它将返回一个Python标准数据结构（例如`dict`），其值和子值都与JSON兼容。
 
 !!! note
-    `jsonable_encoder`实际上是ReadyApi内部用来转换数据的。但是它在许多其他场景中也很有用。
+    `jsonable_encoder`实际上是ReadyAPI内部用来转换数据的。但是它在许多其他场景中也很有用。

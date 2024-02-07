@@ -1,8 +1,8 @@
 # Async Tests
 
-You have already seen how to test your **ReadyApi** applications using the provided `TestClient`. Up to now, you have only seen how to write synchronous tests, without using `async` functions.
+You have already seen how to test your **ReadyAPI** applications using the provided `TestClient`. Up to now, you have only seen how to write synchronous tests, without using `async` functions.
 
-Being able to use asynchronous functions in your tests could be useful, for example, when you're querying your database asynchronously. Imagine you want to test sending requests to your ReadyApi application and then verify that your backend successfully wrote the correct data in the database, while using an async database library.
+Being able to use asynchronous functions in your tests could be useful, for example, when you're querying your database asynchronously. Imagine you want to test sending requests to your ReadyAPI application and then verify that your backend successfully wrote the correct data in the database, while using an async database library.
 
 Let's look at how we can make that work.
 
@@ -12,9 +12,9 @@ If we want to call asynchronous functions in our tests, our test functions have 
 
 ## HTTPX
 
-Even if your **ReadyApi** application uses normal `def` functions instead of `async def`, it is still an `async` application underneath.
+Even if your **ReadyAPI** application uses normal `def` functions instead of `async def`, it is still an `async` application underneath.
 
-The `TestClient` does some magic inside to call the asynchronous ReadyApi application in your normal `def` test functions, using standard pytest. But that magic doesn't work anymore when we're using it inside asynchronous functions. By running our tests asynchronously, we can no longer use the `TestClient` inside our test functions.
+The `TestClient` does some magic inside to call the asynchronous ReadyAPI application in your normal `def` test functions, using standard pytest. But that magic doesn't work anymore when we're using it inside asynchronous functions. By running our tests asynchronously, we can no longer use the `TestClient` inside our test functions.
 
 The `TestClient` is based on <a href="https://www.python-httpx.org" class="external-link" target="_blank">HTTPX</a>, and luckily, we can use it directly to test the API.
 
@@ -84,9 +84,12 @@ response = client.get('/')
 !!! tip
     Note that we're using async/await with the new `AsyncClient` - the request is asynchronous.
 
+!!! warning
+    If your application relies on lifespan events, the `AsyncClient` won't trigger these events. To ensure they are triggered, use `LifespanManager` from <a href="https://github.com/florimondmanca/asgi-lifespan#usage" class="external-link" target="_blank">florimondmanca/asgi-lifespan</a>.
+
 ## Other Asynchronous Function Calls
 
-As the testing function is now asynchronous, you can now also call (and `await`) other `async` functions apart from sending requests to your ReadyApi application in your tests, exactly as you would call them anywhere else in your code.
+As the testing function is now asynchronous, you can now also call (and `await`) other `async` functions apart from sending requests to your ReadyAPI application in your tests, exactly as you would call them anywhere else in your code.
 
 !!! tip
     If you encounter a `RuntimeError: Task attached to a different loop` when integrating asynchronous function calls in your tests (e.g. when using <a href="https://stackoverflow.com/questions/41584243/runtimeerror-task-attached-to-a-different-loop" class="external-link" target="_blank">MongoDB's MotorClient</a>) Remember to instantiate objects that need an event loop only within async functions, e.g. an `'@app.on_event("startup")` callback.

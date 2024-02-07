@@ -1,7 +1,7 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 
-app = ReadyApi(swagger_ui_oauth2_redirect_url=None)
+app = ReadyAPI(swagger_ui_oauth2_redirect_url=None)
 
 
 @app.get("/items/")

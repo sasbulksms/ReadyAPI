@@ -1,7 +1,7 @@
 from functools import partial
 from typing import Optional
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 
 
@@ -11,7 +11,7 @@ def main(some_arg, q: Optional[str] = None):
 
 endpoint = partial(main, "foo")
 
-app = ReadyApi()
+app = ReadyAPI()
 
 app.get("/")(endpoint)
 

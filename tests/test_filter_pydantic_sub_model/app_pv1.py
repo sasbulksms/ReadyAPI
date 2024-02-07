@@ -1,9 +1,9 @@
 from typing import Optional
 
-from readyapi import Depends, ReadyApi
 from pydantic import BaseModel, validator
+from readyapi import Depends, ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class ModelB(BaseModel):

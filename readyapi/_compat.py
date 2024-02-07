@@ -17,10 +17,10 @@ from typing import (
     Union,
 )
 
-from readyapi.exceptions import RequestErrorModel
-from readyapi.types import IncEx, ModelNameMap, UnionType
 from pydantic import BaseModel, create_model
 from pydantic.version import VERSION as PYDANTIC_VERSION
+from readyapi.exceptions import RequestErrorModel
+from readyapi.types import IncEx, ModelNameMap, UnionType
 from starlette.datastructures import UploadFile
 from typing_extensions import Annotated, Literal, get_args, get_origin
 
@@ -197,9 +197,9 @@ if PYDANTIC_V2:
         if "$ref" not in json_schema:
             # TODO remove when deprecating Pydantic v1
             # Ref: https://github.com/pydantic/pydantic/blob/d61792cc42c80b13b23e3ffa74bc37ec7c77f7d1/pydantic/schema.py#L207
-            json_schema[
-                "title"
-            ] = field.field_info.title or field.alias.title().replace("_", " ")
+            json_schema["title"] = (
+                field.field_info.title or field.alias.title().replace("_", " ")
+            )
         return json_schema
 
     def get_compat_model_name_map(fields: List[ModelField]) -> ModelNameMap:
@@ -249,7 +249,12 @@ if PYDANTIC_V2:
         return is_bytes_sequence_annotation(field.type_)
 
     def copy_field_info(*, field_info: FieldInfo, annotation: Any) -> FieldInfo:
-        return type(field_info).from_annotation(annotation)
+        cls = type(field_info)
+        merged_field_info = cls.from_annotation(annotation)
+        new_field_info = copy(field_info)
+        new_field_info.metadata = merged_field_info.metadata
+        new_field_info.annotation = merged_field_info.annotation
+        return new_field_info
 
     def serialize_sequence_value(*, field: ModelField, value: Any) -> Sequence[Any]:
         origin_type = (
@@ -273,7 +278,6 @@ if PYDANTIC_V2:
         return BodyModel
 
 else:
-    from readyapi.openapi.constants import REF_PREFIX as REF_PREFIX
     from pydantic import AnyUrl as Url  # noqa: F401
     from pydantic import (  # type: ignore[assignment]
         BaseConfig as BaseConfig,  # noqa: F401
@@ -323,6 +327,7 @@ else:
     from pydantic.utils import (  # type: ignore[no-redef]
         lenient_issubclass as lenient_issubclass,  # noqa: F401
     )
+    from readyapi.openapi.constants import REF_PREFIX as REF_PREFIX
 
     GetJsonSchemaHandler = Any  # type: ignore[assignment,misc]
     JsonSchemaValue = Dict[str, Any]  # type: ignore[misc]

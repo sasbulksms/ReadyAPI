@@ -8,7 +8,7 @@ In this section you will see how.
 
 The normal (default) process, is as follows.
 
-A `ReadyApi` application (instance) has an `.openapi()` method that is expected to return the OpenAPI schema.
+A `ReadyAPI` application (instance) has an `.openapi()` method that is expected to return the OpenAPI schema.
 
 As part of the application object creation, a *path operation* for `/openapi.json` (or for whatever you set your `openapi_url`) is registered.
 
@@ -28,7 +28,7 @@ And that function `get_openapi()` receives as parameters:
 * `routes`: A list of routes, these are each of the registered *path operations*. They are taken from `app.routes`.
 
 !!! info
-    The parameter `summary` is available in OpenAPI 3.1.0 and above, supported by ReadyApi 0.99.0 and above.
+    The parameter `summary` is available in OpenAPI 3.1.0 and above, supported by ReadyAPI 0.99.0 and above.
 
 ## Overriding the defaults
 
@@ -36,9 +36,9 @@ Using the information above, you can use the same utility function to generate t
 
 For example, let's add <a href="https://github.com/Rebilly/ReDoc/blob/master/docs/redoc-vendor-extensions.md#x-logo" class="external-link" target="_blank">ReDoc's OpenAPI extension to include a custom logo</a>.
 
-### Normal **ReadyApi**
+### Normal **ReadyAPI**
 
-First, write all your **ReadyApi** application as normally:
+First, write all your **ReadyAPI** application as normally:
 
 ```Python hl_lines="1  4  7-9"
 {!../../../docs_src/extending_openapi/tutorial001.py!}
@@ -82,6 +82,6 @@ Now you can replace the `.openapi()` method with your new function.
 
 ### Check it
 
-Once you go to <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a> you will see that you are using your custom logo (in this example, **ReadyApi**'s logo):
+Once you go to <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a> you will see that you are using your custom logo (in this example, **ReadyAPI**'s logo):
 
 <img src="/img/tutorial/extending-openapi/image01.png">

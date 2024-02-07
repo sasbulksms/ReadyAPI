@@ -1,6 +1,6 @@
 # NoSQL (分散 / ビッグデータ) Databases
 
-**ReadyApi** はあらゆる <abbr title="分散データベース (Big Data)や 'Not Only SQL'">NoSQL</abbr>と統合することもできます。
+**ReadyAPI** はあらゆる <abbr title="分散データベース (Big Data)や 'Not Only SQL'">NoSQL</abbr>と統合することもできます。
 
 ここでは<abbr title="ここでのドキュメントとは、キーと値を持つJSONオブジェクト（ディクショナリー）をあらわし、これらの値は他のJSONオブジェクトや配列（リスト）、数値、文字列、真偽値などにすることができます。">ドキュメント</abbr>ベースのNoSQLデータベースである**<a href="https://www.couchbase.com/" class="external-link" target="_blank">Couchbase</a>**を使用した例を見てみましょう。
 
@@ -13,7 +13,7 @@
 * **ElasticSearch** など。
 
 !!! tip "豆知識"
-    **ReadyApi**と**Couchbase**を使った公式プロジェクト・ジェネレータがあります。すべて**Docker**ベースで、フロントエンドやその他のツールも含まれています: <a href="https://github.com/khulnasoft/full-stack-readyapi-couchbase" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-couchbase</a>
+    **ReadyAPI**と**Couchbase**を使った公式プロジェクト・ジェネレータがあります。すべて**Docker**ベースで、フロントエンドやその他のツールも含まれています: <a href="https://github.com/khulnasoft/full-stack-readyapi-couchbase" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-couchbase</a>
 
 ## Couchbase コンポーネントの Import
 
@@ -131,9 +131,9 @@ f-stringの`{}`の中に入れられた変数は、文字列の中に展開/注�
 UserInDB(username="johndoe", hashed_password="some_hash")
 ```
 
-## **ReadyApi** コードの実装
+## **ReadyAPI** コードの実装
 
-### `ReadyApi` app の作成
+### `ReadyAPI` app の作成
 
 ```Python hl_lines="46"
 {!../../../docs_src/nosql_databases/tutorial001.py!}

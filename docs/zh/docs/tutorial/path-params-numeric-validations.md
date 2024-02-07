@@ -18,7 +18,7 @@
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="3-4"
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_an.py!}
@@ -33,7 +33,7 @@
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         尽可能选择使用 `Annotated` 的版本。
@@ -60,7 +60,7 @@
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="11"
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_an.py!}
@@ -75,7 +75,7 @@
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         尽可能选择使用 `Annotated` 的版本。
@@ -103,11 +103,11 @@
 
 但是你可以对其重新排序，并将不带默认值的值（查询参数 `q`）放到最前面。
 
-对 **ReadyApi** 来说这无关紧要。它将通过参数的名称、类型和默认值声明（`Query`、`Path` 等）来检测参数，而不在乎参数的顺序。
+对 **ReadyAPI** 来说这无关紧要。它将通过参数的名称、类型和默认值声明（`Query`、`Path` 等）来检测参数，而不在乎参数的顺序。
 
 因此，你可以将函数声明为：
 
-=== "Python 3.6 non-Annotated"
+=== "Python 3.8 non-Annotated"
 
     !!! tip
         尽可能选择使用 `Annotated` 的版本。

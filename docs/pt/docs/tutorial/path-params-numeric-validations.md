@@ -12,7 +12,7 @@ Primeiro, importe `Path` de `readyapi`:
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="3"
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001.py!}
@@ -30,7 +30,7 @@ Por exemplo para declarar um valor de metadado `title` para o parâmetro de rota
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001_py310.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="10"
     {!> ../../../docs_src/path_params_numeric_validations/tutorial001.py!}
@@ -55,7 +55,7 @@ O Python irá acusar se você colocar um elemento com um valor padrão definido 
 
 Mas você pode reordená-los, colocando primeiro o elemento sem o valor padrão (o parâmetro de consulta `q`).
 
-Isso não faz diferença para o **ReadyApi**. Ele vai detectar os parâmetros pelos seus nomes, tipos e definições padrão (`Query`, `Path`, etc), sem se importar com a ordem.
+Isso não faz diferença para o **ReadyAPI**. Ele vai detectar os parâmetros pelos seus nomes, tipos e definições padrão (`Query`, `Path`, etc), sem se importar com a ordem.
 
 Então, você pode declarar sua função assim:
 

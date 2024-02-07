@@ -1,24 +1,24 @@
 # Implantação
 
-Implantar uma aplicação **ReadyApi** é relativamente fácil.
+Implantar uma aplicação **ReadyAPI** é relativamente fácil.
 
 Existem vários modos de realizar o _deploy_ dependendo de seu caso de uso específico e as ferramentas que você utiliza.
 
 Você verá mais sobre alguns modos de fazer o _deploy_ nas próximas seções.
 
-## Versões do ReadyApi
+## Versões do ReadyAPI
 
-**ReadyApi** já está sendo utilizado em produção em muitas aplicações e sistemas. E a cobertura de teste é mantida a 100%. Mas seu desenvolvimento continua andando rapidamente.
+**ReadyAPI** já está sendo utilizado em produção em muitas aplicações e sistemas. E a cobertura de teste é mantida a 100%. Mas seu desenvolvimento continua andando rapidamente.
 
 Novos recursos são adicionados frequentemente, _bugs_ são corrigidos regularmente, e o código está continuamente melhorando.
 
 É por isso que as versões atuais estão ainda no `0.x.x`, isso reflete que cada versão poderia ter potencialmente alterações que podem quebrar. Isso segue as convenções de <a href="https://semver.org/" class="external-link" target="_blank">Versionamento Semântico</a>.
 
-Você pode criar aplicações para produção com **ReadyApi** bem agora (e você provavelmente já faça isso por um tempo), você tem que ter certeza de utilizar uma versão que funcione corretamente com o resto do seu código.
+Você pode criar aplicações para produção com **ReadyAPI** bem agora (e você provavelmente já faça isso por um tempo), você tem que ter certeza de utilizar uma versão que funcione corretamente com o resto do seu código.
 
 ### Anote sua versão `readyapi`
 
-A primeira coisa que você deve fazer é "fixar" a versão do **ReadyApi** que está utilizando para a última versão específica que você sabe que funciona corretamente para a sua aplicação.
+A primeira coisa que você deve fazer é "fixar" a versão do **ReadyAPI** que está utilizando para a última versão específica que você sabe que funciona corretamente para a sua aplicação.
 
 Por exemplo, vamos dizer que você esteja utilizando a versão `0.45.0` no seu _app_.
 
@@ -48,7 +48,7 @@ Você pode ver as versões disponíveis (por exemplo, para verificar qual é a v
 
 Seguindo as convenções do Versionamento Semântico, qualquer versão abaixo de `1.0.0` pode potencialmente adicionar mudanças que quebrem.
 
-ReadyApi também segue a convenção que qualquer versão de _"PATCH"_ seja para ajustes de _bugs_ e mudanças que não quebrem a aplicação.
+ReadyAPI também segue a convenção que qualquer versão de _"PATCH"_ seja para ajustes de _bugs_ e mudanças que não quebrem a aplicação.
 
 !!! tip
     O _"PATCH"_ é o último número, por exemplo, em `0.2.3`, a versão do _PATCH_ é `3`.
@@ -64,13 +64,13 @@ Mudanças que quebram e novos recursos são adicionados em versões _"MINOR"_.
 !!! tip
     O _"MINOR"_ é o número do meio, por exemplo, em `0.2.3`, a versão _MINOR_ é `2`.
 
-### Atualizando as versões ReadyApi
+### Atualizando as versões ReadyAPI
 
 Você pode adicionar testes em sua aplicação.
 
-Com o **ReadyApi** é muito fácil (graças ao Starlette), verifique a documentação: [Testando](tutorial/testing.md){.internal-link target=_blank}
+Com o **ReadyAPI** é muito fácil (graças ao Starlette), verifique a documentação: [Testando](tutorial/testing.md){.internal-link target=_blank}
 
-Após você ter os testes, então você pode fazer o _upgrade_ da versão **ReadyApi** para uma mais recente, e ter certeza que todo seu código esteja funcionando corretamente rodando seus testes.
+Após você ter os testes, então você pode fazer o _upgrade_ da versão **ReadyAPI** para uma mais recente, e ter certeza que todo seu código esteja funcionando corretamente rodando seus testes.
 
 Se tudo estiver funcionando, ou após você fazer as alterações necessárias, e todos seus testes estiverem passando, então você poderá fixar o `readyapi` para a versão mais recente.
 
@@ -78,13 +78,13 @@ Se tudo estiver funcionando, ou após você fazer as alterações necessárias, 
 
 Você não deve fixar a versão do `starlette`.
 
-Versões diferentes do **ReadyApi** irão utilizar uma versão mais nova específica do Starlette.
+Versões diferentes do **ReadyAPI** irão utilizar uma versão mais nova específica do Starlette.
 
-Então, você pode deixar que o **ReadyApi** use a versão correta do Starlette.
+Então, você pode deixar que o **ReadyAPI** use a versão correta do Starlette.
 
 ### Sobre Pydantic
 
-Pydantic inclui os testes para **ReadyApi** em seus próprios testes, então novas versões do Pydantic (acima de `1.0.0`) são sempre compatíveis com ReadyApi.
+Pydantic inclui os testes para **ReadyAPI** em seus próprios testes, então novas versões do Pydantic (acima de `1.0.0`) são sempre compatíveis com ReadyAPI.
 
 Você pode fixar o Pydantic para qualquer versão acima de `1.0.0` e abaixo de `2.0.0` que funcionará.
 
@@ -98,10 +98,10 @@ pydantic>=1.2.0,<2.0.0
 
 Nessa seção você verá instruções e _links_ para guias de saber como:
 
-* Fazer uma imagem/container da sua aplicação **ReadyApi** com máxima performance. Em aproximadamente **5 min**.
+* Fazer uma imagem/container da sua aplicação **ReadyAPI** com máxima performance. Em aproximadamente **5 min**.
 * (Opcionalmente) entender o que você, como desenvolvedor, precisa saber sobre HTTPS.
 * Inicializar um _cluster_ Docker Swarm Mode com HTTPS automático, mesmo em um simples servidor de  $5 dólares/mês. Em aproximadamente **20 min**.
-* Gere e implante uma aplicação **ReadyApi** completa, usando seu _cluster_ Docker Swarm, com HTTPS etc. Em aproxiamadamente **10 min**.
+* Gere e implante uma aplicação **ReadyAPI** completa, usando seu _cluster_ Docker Swarm, com HTTPS etc. Em aproxiamadamente **10 min**.
 
 Você pode usar <a href="https://www.docker.com/" class="external-link" target="_blank">**Docker**</a> para implantação. Ele tem várias vantagens como segurança, replicabilidade, desenvolvimento simplificado etc.
 
@@ -155,15 +155,15 @@ COPY ./app /app
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
 ```
 
-### Crie o código **ReadyApi**
+### Crie o código **ReadyAPI**
 
 * Crie um diretório `app` e entre nele.
 * Crie um arquivo `main.py` com:
 
 ```Python
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/")
@@ -188,7 +188,7 @@ def read_item(item_id: int, q: str = None):
 ### Construa a imagem Docker
 
 * Vá para o diretório do projeto (onde seu `Dockerfile` está, contendo seu diretório `app`.
-* Construa sua imagem ReadyApi:
+* Construa sua imagem ReadyAPI:
 
 <div class="termy">
 
@@ -212,7 +212,7 @@ $ docker run -d --name mycontainer -p 80:80 myimage
 
 </div>
 
-Agora você tem um servidor ReadyApi otimizado em um container Docker. Auto-ajustado para seu servidor atual (e número de núcleos de CPU).
+Agora você tem um servidor ReadyAPI otimizado em um container Docker. Auto-ajustado para seu servidor atual (e número de núcleos de CPU).
 
 ### Verifique
 
@@ -275,7 +275,7 @@ Agora, pela perspectiva de um desenvolvedor, aqui estão algumas coisas para se 
 * Após obter uma conexão segura, o protocolo de comunicação ainda é HTTP.
     * O conteúdo está encriptado, mesmo embora ele esteja sendo enviado com o protocolo HTTP.
 
-É uma prática comum ter um servidor HTTP/programa rodando no servidor (a máquina, _host_ etc.) e gerenciar todas as partes HTTP: enviar as requisições HTTP decriptadas para a aplicação HTTP rodando no mesmo servidor (a aplicação **ReadyApi**, nesse caso), pega a resposta HTTP da aplicação, encripta utilizando o certificado apropriado e enviando de volta para o cliente usando HTTPS. Esse servidor é frequentemente chamado <a href="https://en.wikipedia.org/wiki/TLS_termination_proxy" class="external-link" target="_blank">TLS _Termination Proxy_</a>.
+É uma prática comum ter um servidor HTTP/programa rodando no servidor (a máquina, _host_ etc.) e gerenciar todas as partes HTTP: enviar as requisições HTTP decriptadas para a aplicação HTTP rodando no mesmo servidor (a aplicação **ReadyAPI**, nesse caso), pega a resposta HTTP da aplicação, encripta utilizando o certificado apropriado e enviando de volta para o cliente usando HTTPS. Esse servidor é frequentemente chamado <a href="https://en.wikipedia.org/wiki/TLS_termination_proxy" class="external-link" target="_blank">TLS _Termination Proxy_</a>.
 
 ### Vamos encriptar
 
@@ -313,9 +313,9 @@ Para configurar um _cluster_ Docker Swarm Mode com Traefik controlando HTTPS, si
 
 ### <a href="https://medium.com/@khulnasoft/docker-swarm-mode-and-traefik-for-a-https-cluster-20328dba6232" class="external-link" target="_blank">Docker Swarm Mode and Traefik for an HTTPS cluster</a>
 
-### Faça o _deploy_ de uma aplicação ReadyApi
+### Faça o _deploy_ de uma aplicação ReadyAPI
 
-O jeito mais fácil de configurar tudo pode ser utilizando o [Gerador de Projetos **ReadyApi**](project-generation.md){.internal-link target=_blank}.
+O jeito mais fácil de configurar tudo pode ser utilizando o [Gerador de Projetos **ReadyAPI**](project-generation.md){.internal-link target=_blank}.
 
 Ele é designado para ser integrado com esse _cluster_ Docker Swarm com Traefik e HTTPS descrito acima.
 
@@ -323,9 +323,9 @@ Você pode gerar um projeto em cerca de 2 minutos.
 
 O projeto gerado tem instruções para fazer o _deploy_, fazendo isso leva outros 2 minutos.
 
-## Alternativamente, faça o _deploy_ **ReadyApi** sem Docker
+## Alternativamente, faça o _deploy_ **ReadyAPI** sem Docker
 
-Você pode fazer o _deploy_ do **ReadyApi** diretamente sem o Docker também.
+Você pode fazer o _deploy_ do **ReadyAPI** diretamente sem o Docker também.
 
 Você apenas precisa instalar um servidor ASGI compatível como:
 

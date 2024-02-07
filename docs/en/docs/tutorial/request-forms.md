@@ -17,13 +17,13 @@ Import `Form` from `readyapi`:
     {!> ../../../docs_src/request_forms/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="1"
     {!> ../../../docs_src/request_forms/tutorial001_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -42,13 +42,13 @@ Create form parameters the same way you would for `Body` or `Query`:
     {!> ../../../docs_src/request_forms/tutorial001_an_py39.py!}
     ```
 
-=== "Python 3.6+"
+=== "Python 3.8+"
 
     ```Python hl_lines="8"
     {!> ../../../docs_src/request_forms/tutorial001_an.py!}
     ```
 
-=== "Python 3.6+ non-Annotated"
+=== "Python 3.8+ non-Annotated"
 
     !!! tip
         Prefer to use the `Annotated` version if possible.
@@ -73,7 +73,7 @@ With `Form` you can declare the same configurations as with `Body` (and `Query`,
 
 The way HTML forms (`<form></form>`) sends the data to the server normally uses a "special" encoding for that data, it's different from JSON.
 
-**ReadyApi** will make sure to read that data from the right place instead of JSON.
+**ReadyAPI** will make sure to read that data from the right place instead of JSON.
 
 !!! note "Technical Details"
     Data from forms is normally encoded using the "media type" `application/x-www-form-urlencoded`.
@@ -85,7 +85,7 @@ The way HTML forms (`<form></form>`) sends the data to the server normally uses 
 !!! warning
     You can declare multiple `Form` parameters in a *path operation*, but you can't also declare `Body` fields that you expect to receive as JSON, as the request will have the body encoded using `application/x-www-form-urlencoded` instead of `application/json`.
 
-    This is not a limitation of **ReadyApi**, it's part of the HTTP protocol.
+    This is not a limitation of **ReadyAPI**, it's part of the HTTP protocol.
 
 ## Recap
 

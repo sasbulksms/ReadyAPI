@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="https://readyapi.khulnasoft.com"><img src="https://readyapi.khulnasoft.com/img/logo-margin/logo-teal.png" alt="ReadyApi"></a>
+  <a href="https://readyapi.khulnasoft.com"><img src="https://readyapi.khulnasoft.com/img/logo-margin/logo-teal.png" alt="ReadyAPI"></a>
 </p>
 <p align="center">
-    <em>ReadyApi 프레임워크, 고성능, 간편한 학습, 빠른 코드 작성, 준비된 프로덕션</em>
+    <em>ReadyAPI 프레임워크, 고성능, 간편한 학습, 빠른 코드 작성, 준비된 프로덕션</em>
 </p>
 <p align="center">
 <a href="https://github.com/khulnasoft/readyapi/actions?query=workflow%3ATest" target="_blank">
@@ -24,7 +24,7 @@
 
 ---
 
-ReadyApi는 현대적이고, 빠르며(고성능), 파이썬 표준 타입 힌트에 기초한 Python3.6+의 API를 빌드하기 위한 웹 프레임워크입니다.
+ReadyAPI는 현대적이고, 빠르며(고성능), 파이썬 표준 타입 힌트에 기초한 Python3.8+의 API를 빌드하기 위한 웹 프레임워크입니다.
 
 주요 특징으로:
 
@@ -59,25 +59,25 @@ ReadyApi는 현대적이고, 빠르며(고성능), 파이썬 표준 타입 힌�
 
 ## 의견들
 
-"_[...] 저는 요즘 **ReadyApi**를 많이 사용하고 있습니다. [...] 사실 우리 팀의 **마이크로소프트 ML 서비스** 전부를 바꿀 계획입니다. 그중 일부는 핵심 **Windows**와 몇몇의 **Office** 제품들이 통합되고 있습니다._"
+"_[...] 저는 요즘 **ReadyAPI**를 많이 사용하고 있습니다. [...] 사실 우리 팀의 **마이크로소프트 ML 서비스** 전부를 바꿀 계획입니다. 그중 일부는 핵심 **Windows**와 몇몇의 **Office** 제품들이 통합되고 있습니다._"
 
 <div style="text-align: right; margin-right: 10%;">Kabir Khan - <strong>마이크로소프트</strong> <a href="https://github.com/khulnasoft/readyapi/pull/26" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_**ReadyApi** 라이브러리를 채택하여 **예측**을 얻기 위해 쿼리를 실행 할 수 있는 **REST** 서버를 생성했습니다. [Ludwig을 위해]_"
+"_**ReadyAPI** 라이브러리를 채택하여 **예측**을 얻기 위해 쿼리를 실행 할 수 있는 **REST** 서버를 생성했습니다. [Ludwig을 위해]_"
 
 <div style="text-align: right; margin-right: 10%;">Piero Molino, Yaroslav Dudin 그리고 Sai Sumanth Miryala - <strong>우버</strong> <a href="https://eng.uber.com/ludwig-v0-2/" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_**Netflix**는 우리의 오픈 소스 배포판인 **위기 관리** 오케스트레이션 프레임워크를 발표할 수 있어 기쁩니다: 바로 **Dispatch**입니다! [**ReadyApi**로 빌드]_"
+"_**Netflix**는 우리의 오픈 소스 배포판인 **위기 관리** 오케스트레이션 프레임워크를 발표할 수 있어 기쁩니다: 바로 **Dispatch**입니다! [**ReadyAPI**로 빌드]_"
 
 <div style="text-align: right; margin-right: 10%;">Kevin Glisson, Marc Vilanova, Forest Monsen - <strong>넷플릭스</strong> <a href="https://netflixtechblog.com/introducing-dispatch-da4b8a2a8072" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_**ReadyApi**가 너무 좋아서 구름 위를 걷는듯 합니다. 정말 즐겁습니다!_"
+"_**ReadyAPI**가 너무 좋아서 구름 위를 걷는듯 합니다. 정말 즐겁습니다!_"
 
 <div style="text-align: right; margin-right: 10%;">Brian Okken - <strong><a href="https://pythonbytes.fm/episodes/show/123/time-to-right-the-py-wrongs?time_in_sec=855" target="_blank">Python Bytes</a> 팟캐스트 호스트</strong> <a href="https://twitter.com/brianokken/status/1112220079972728832" target="_blank"><small>(ref)</small></a></div>
 
@@ -89,27 +89,27 @@ ReadyApi는 현대적이고, 빠르며(고성능), 파이썬 표준 타입 힌�
 
 ---
 
-"_REST API를 만들기 위해 **현대적인 프레임워크**를 찾고 있다면 **ReadyApi**를 확인해 보십시오. [...] 빠르고, 쓰기 쉽고, 배우기도 쉽습니다 [...]_"
+"_REST API를 만들기 위해 **현대적인 프레임워크**를 찾고 있다면 **ReadyAPI**를 확인해 보십시오. [...] 빠르고, 쓰기 쉽고, 배우기도 쉽습니다 [...]_"
 
-"_우리 **API**를 **ReadyApi**로 바꿨습니다  [...] 아마 여러분도 좋아하실 것입니다 [...]_"
+"_우리 **API**를 **ReadyAPI**로 바꿨습니다  [...] 아마 여러분도 좋아하실 것입니다 [...]_"
 
 <div style="text-align: right; margin-right: 10%;">Ines Montani - Matthew Honnibal - <strong><a href="https://explosion.ai" target="_blank">Explosion AI</a> 설립자 - <a href="https://spacy.io" target="_blank">spaCy</a> 제작자</strong> <a href="https://twitter.com/_inesmontani/status/1144173225322143744" target="_blank"><small>(ref)</small></a> - <a href="https://twitter.com/honnibal/status/1144031421859655680" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-## **Typer**, ReadyApi의 CLI
+## **Typer**, ReadyAPI의 CLI
 
 <a href="https://typer.khulnasoft.com" target="_blank"><img src="https://typer.khulnasoft.com/img/logo-margin/logo-margin-vector.svg" style="width: 20%;"></a>
 
 웹 API 대신 터미널에서 사용할 <abbr title="Command Line Interface">CLI</abbr> 앱을 만들고 있다면, <a href="https://typer.khulnasoft.com/" class="external-link" target="_blank">**Typer**</a>를 확인해 보십시오.
 
-**Typer**는 ReadyApi의 동생입니다. 그리고 **ReadyApi의 CLI**가 되기 위해 생겼습니다. ⌨️ 🚀
+**Typer**는 ReadyAPI의 동생입니다. 그리고 **ReadyAPI의 CLI**가 되기 위해 생겼습니다. ⌨️ 🚀
 
 ## 요구사항
 
-Python 3.7+
+Python 3.8+
 
-ReadyApi는 거인들의 어깨 위에 서 있습니다:
+ReadyAPI는 거인들의 어깨 위에 서 있습니다:
 
 * 웹 부분을 위한 <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a>.
 * 데이터 부분을 위한 <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic</a>.
@@ -147,9 +147,9 @@ $ pip install "uvicorn[standard]"
 ```Python
 from typing import Union
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/")
@@ -170,9 +170,9 @@ def read_item(item_id: int, q: Union[str, None] = None):
 ```Python hl_lines="9 14"
 from typing import Union
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/")
@@ -215,7 +215,7 @@ INFO:     Application startup complete.
 명령 `uvicorn main:app`은 다음을 나타냅니다:
 
 * `main`: `main.py` 파일 (파이썬 "모듈").
-* `app`: the object created inside of `main.py` with the line `app = ReadyApi()`.
+* `app`: the object created inside of `main.py` with the line `app = ReadyAPI()`.
 * `--reload`: 코드가 변경된 후 서버 재시작하기. 개발환경에서만 사용하십시오.
 
 </details>
@@ -262,10 +262,10 @@ Pydantic을 이용해 파이썬 표준 타입으로 본문을 선언합니다.
 ```Python hl_lines="4  9 10 11 12  25 26 27"
 from typing import Union
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Item(BaseModel):
@@ -323,7 +323,7 @@ def update_item(item_id: int, item: Item):
 
 새로운 문법, 특정 라이브러리의 메소드나 클래스 등을 배울 필요가 없습니다.
 
-그저 표준 **Python 3.6+**입니다.
+그저 표준 **Python 3.8+** 입니다.
 
 예를 들어, `int`에 대해선:
 
@@ -365,7 +365,7 @@ item: Item
 
 ---
 
-이전 코드 예제로 돌아가서, **ReadyApi**는 다음처럼 처리합니다:
+이전 코드 예제로 돌아가서, **ReadyAPI**는 다음처럼 처리합니다:
 
 * `GET` 및 `PUT` 요청에 `item_id`가 경로에 있는지 검증.
 * `GET` 및 `PUT` 요청에 `item_id`가 `int` 타입인지 검증.
@@ -429,7 +429,7 @@ item: Item
 
 ## 성능
 
-독립된 TechEmpower 벤치마크에서 Uvicorn에서 작동하는 ReadyApi 어플리케이션이 <a href="https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7" class="external-link" target="_blank">사용 가능한 가장 빠른 프레임워크 중 하나</a>로 Starlette와 Uvicorn(ReadyApi에서 내부적으로 사용)에만 밑돌고 있습니다. (*)
+독립된 TechEmpower 벤치마크에서 Uvicorn에서 작동하는 ReadyAPI 어플리케이션이 <a href="https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7" class="external-link" target="_blank">사용 가능한 가장 빠른 프레임워크 중 하나</a>로 Starlette와 Uvicorn(ReadyAPI에서 내부적으로 사용)에만 밑돌고 있습니다. (*)
 
 자세한 내용은 <a href="https://readyapi.khulnasoft.com/benchmarks/" class="internal-link" target="_blank">벤치마크</a> 섹션을 보십시오.
 
@@ -445,11 +445,11 @@ Starlette이 사용하는:
 * <a href="http://jinja.pocoo.org" target="_blank"><code>jinja2</code></a> - 기본 템플릿 설정을 사용하려면 필요.
 * <a href="https://andrew-d.github.io/python-multipart/" target="_blank"><code>python-multipart</code></a> - `request.form()`과 함께 <abbr title="HTTP 요청에서 파이썬 데이터로 가는 문자열 변환">"parsing"</abbr>의 지원을 원하면 필요.
 * <a href="https://pythonhosted.org/itsdangerous/" target="_blank"><code>itsdangerous</code></a> - `SessionMiddleware` 지원을 위해 필요.
-* <a href="https://pyyaml.org/wiki/PyYAMLDocumentation" target="_blank"><code>pyyaml</code></a> - Starlette의 `SchemaGenerator` 지원을 위해 필요 (ReadyApi와 쓸때는 필요 없을 것입니다).
+* <a href="https://pyyaml.org/wiki/PyYAMLDocumentation" target="_blank"><code>pyyaml</code></a> - Starlette의 `SchemaGenerator` 지원을 위해 필요 (ReadyAPI와 쓸때는 필요 없을 것입니다).
 * <a href="https://graphene-python.org/" target="_blank"><code>graphene</code></a> - `GraphQLApp` 지원을 위해 필요.
 * <a href="https://github.com/esnme/ultrajson" target="_blank"><code>ujson</code></a> - `UJSONResponse`를 사용하려면 필요.
 
-ReadyApi / Starlette이 사용하는:
+ReadyAPI / Starlette이 사용하는:
 
 * <a href="http://www.uvicorn.org" target="_blank"><code>uvicorn</code></a> - 애플리케이션을 로드하고 제공하는 서버.
 * <a href="https://github.com/ijl/orjson" target="_blank"><code>orjson</code></a> - `ORJSONResponse`을 사용하려면 필요.

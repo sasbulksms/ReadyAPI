@@ -1,9 +1,9 @@
 from typing import Set, Union
 
-from readyapi import ReadyApi, status
 from pydantic import BaseModel
+from readyapi import ReadyAPI, status
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

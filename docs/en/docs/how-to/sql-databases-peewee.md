@@ -1,11 +1,14 @@
-# SQL (Relational) Databases with Peewee
+# ~~SQL (Relational) Databases with Peewee~~ (deprecated)
+
+!!! warning "Deprecated"
+    This tutorial is deprecated and will be removed in a future version.
 
 !!! warning
     If you are just starting, the tutorial [SQL (Relational) Databases](../tutorial/sql-databases.md){.internal-link target=_blank} that uses SQLAlchemy should be enough.
 
     Feel free to skip this.
 
-    Peewee is not recommended with ReadyApi as it doesn't play well with anything async Python. There are several better alternatives.
+    Peewee is not recommended with ReadyAPI as it doesn't play well with anything async Python. There are several better alternatives.
 
 !!! info
     These docs assume Pydantic v1.
@@ -16,10 +19,10 @@
 
 If you are starting a project from scratch, you are probably better off with SQLAlchemy ORM ([SQL (Relational) Databases](../tutorial/sql-databases.md){.internal-link target=_blank}), or any other async ORM.
 
-If you already have a code base that uses <a href="https://docs.peewee-orm.com/en/latest/" class="external-link" target="_blank">Peewee ORM</a>, you can check here how to use it with **ReadyApi**.
+If you already have a code base that uses <a href="https://docs.peewee-orm.com/en/latest/" class="external-link" target="_blank">Peewee ORM</a>, you can check here how to use it with **ReadyAPI**.
 
 !!! warning "Python 3.7+ required"
-    You will need Python 3.7 or above to safely use Peewee with ReadyApi.
+    You will need Python 3.7 or above to safely use Peewee with ReadyAPI.
 
 ## Peewee for async
 
@@ -29,9 +32,9 @@ Peewee has some heavy assumptions about its defaults and about how it should be 
 
 If you are developing an application with an older non-async framework, and can work with all its defaults, **it can be a great tool**.
 
-But if you need to change some of the defaults, support more than one predefined database, work with an async framework (like ReadyApi), etc, you will need to add quite some complex extra code to override those defaults.
+But if you need to change some of the defaults, support more than one predefined database, work with an async framework (like ReadyAPI), etc, you will need to add quite some complex extra code to override those defaults.
 
-Nevertheless, it's possible to do it, and here you'll see exactly what code you have to add to be able to use Peewee with ReadyApi.
+Nevertheless, it's possible to do it, and here you'll see exactly what code you have to add to be able to use Peewee with ReadyAPI.
 
 !!! note "Technical Details"
     You can read more about Peewee's stand about async in Python <a href="https://docs.peewee-orm.com/en/latest/peewee/database.html#async-with-gevent" class="external-link" target="_blank">in the docs</a>, <a href="https://github.com/coleifer/peewee/issues/263#issuecomment-517347032" class="external-link" target="_blank">an issue</a>, <a href="https://github.com/coleifer/peewee/pull/2072#issuecomment-563215132" class="external-link" target="_blank">a PR</a>.
@@ -75,7 +78,7 @@ Let's first check all the normal Peewee code, create a Peewee database:
 ```
 
 !!! tip
-    Have in mind that if you wanted to use a different database, like PostgreSQL, you couldn't just change the string. You would need to use a different Peewee database class.
+    Keep in mind that if you wanted to use a different database, like PostgreSQL, you couldn't just change the string. You would need to use a different Peewee database class.
 
 #### Note
 
@@ -99,7 +102,7 @@ connect_args={"check_same_thread": False}
 
 ### Make Peewee async-compatible `PeeweeConnectionState`
 
-The main issue with Peewee and ReadyApi is that Peewee relies heavily on <a href="https://docs.python.org/3/library/threading.html#thread-local-data" class="external-link" target="_blank">Python's `threading.local`</a>, and it doesn't have a direct way to override it or let you handle connections/sessions directly (as is done in the SQLAlchemy tutorial).
+The main issue with Peewee and ReadyAPI is that Peewee relies heavily on <a href="https://docs.python.org/3/library/threading.html#thread-local-data" class="external-link" target="_blank">Python's `threading.local`</a>, and it doesn't have a direct way to override it or let you handle connections/sessions directly (as is done in the SQLAlchemy tutorial).
 
 And `threading.local` is not compatible with the new async features of modern Python.
 
@@ -110,7 +113,7 @@ And `threading.local` is not compatible with the new async features of modern Py
 
     Using this, each request would have its own database connection/session, which is the actual final goal.
 
-    But ReadyApi, using the new async features, could handle more than one request on the same thread. And at the same time, for a single request, it could run multiple things in different threads (in a threadpool), depending on if you use `async def` or normal `def`. This is what gives all the performance improvements to ReadyApi.
+    But ReadyAPI, using the new async features, could handle more than one request on the same thread. And at the same time, for a single request, it could run multiple things in different threads (in a threadpool), depending on if you use `async def` or normal `def`. This is what gives all the performance improvements to ReadyAPI.
 
 But Python 3.7 and above provide a more advanced alternative to `threading.local`, that can also be used in the places where `threading.local` would be used, but is compatible with the new async features.
 
@@ -132,10 +135,10 @@ It has all the logic to make Peewee use `contextvars` instead of `threading.loca
 
 `contextvars` works a bit differently than `threading.local`. But the rest of Peewee's internal code assumes that this class works with `threading.local`.
 
-So, we need to do some extra tricks to make it work as if it was just using `threading.local`. The `__init__`, `__setattr__`, and `__getattr__` implement all the required tricks for this to be used by Peewee without knowing that it is now compatible with ReadyApi.
+So, we need to do some extra tricks to make it work as if it was just using `threading.local`. The `__init__`, `__setattr__`, and `__getattr__` implement all the required tricks for this to be used by Peewee without knowing that it is now compatible with ReadyAPI.
 
 !!! tip
-    This will just make Peewee behave correctly when used with ReadyApi. Not randomly opening or closing connections that are being used, creating errors, etc.
+    This will just make Peewee behave correctly when used with ReadyAPI. Not randomly opening or closing connections that are being used, creating errors, etc.
 
     But it doesn't give Peewee async super-powers. You should still use normal `def` functions and not `async def`.
 
@@ -260,7 +263,7 @@ list(models.User.select())
 
 This is for the same reason that we had to create a custom `PeeweeGetterDict`. But by returning something that is already a `list` instead of the `peewee.ModelSelect` the `response_model` in the *path operation* with `List[models.User]` (that we'll see later) will work correctly.
 
-## Main **ReadyApi** app
+## Main **ReadyAPI** app
 
 And now in the file `sql_app/main.py` let's integrate and use all the other parts we created before.
 
@@ -307,7 +310,7 @@ For that, we need to create another `async` dependency `reset_db_state()` that i
 For the **next request**, as we will reset that context variable again in the `async` dependency `reset_db_state()` and then create a new connection in the `get_db()` dependency, that new request will have its own database state (connection, transactions, etc).
 
 !!! tip
-    As ReadyApi is an async framework, one request could start being processed, and before finishing, another request could be received and start processing as well, and it all could be processed in the same thread.
+    As ReadyAPI is an async framework, one request could start being processed, and before finishing, another request could be received and start processing as well, and it all could be processed in the same thread.
 
     But context variables are aware of these async features, so, a Peewee database state set in the `async` dependency `reset_db_state()` will keep its own data throughout the entire request.
 
@@ -325,9 +328,9 @@ async def reset_db_state():
     database.db.obj._state.reset()
 ```
 
-### Create your **ReadyApi** *path operations*
+### Create your **ReadyAPI** *path operations*
 
-Now, finally, here's the standard **ReadyApi** *path operations* code.
+Now, finally, here's the standard **ReadyAPI** *path operations* code.
 
 ```Python hl_lines="32-37  40-43  46-53  56-62  65-68  71-79"
 {!../../../docs_src/sql_databases_peewee/sql_app/main.py!}
@@ -361,9 +364,9 @@ This example includes an extra *path operation* that simulates a long processing
 
 It will have the database connection open at the beginning and will just wait some seconds before replying back. And each new request will wait one second less.
 
-This will easily let you test that your app with Peewee and ReadyApi is behaving correctly with all the stuff about threads.
+This will easily let you test that your app with Peewee and ReadyAPI is behaving correctly with all the stuff about threads.
 
-If you want to check how Peewee would break your app if used without modification, go the the `sql_app/database.py` file and comment the line:
+If you want to check how Peewee would break your app if used without modification, go the `sql_app/database.py` file and comment the line:
 
 ```Python
 # db._state = PeeweeConnectionState()
@@ -414,7 +417,7 @@ If you had multiple clients talking to your app exactly at the same time, this i
 
 And as your app starts to handle more and more clients at the same time, the waiting time in a single request needs to be shorter and shorter to trigger the error.
 
-### Fix Peewee with ReadyApi
+### Fix Peewee with ReadyAPI
 
 Now go back to the file `sql_app/database.py`, and uncomment the line:
 
@@ -487,13 +490,13 @@ Peewee uses <a href="https://docs.python.org/3/library/threading.html#thread-loc
 
 On top of that, an async framework could run some sync code in a threadpool (using `asyncio.run_in_executor`), but belonging to the same request.
 
-This means that, with Peewee's current implementation, multiple tasks could be using the same `threading.local` variable and end up sharing the same connection and data (that they shouldn't), and at the same time, if they execute sync I/O-blocking code in a threadpool (as with normal `def` functions in ReadyApi, in *path operations*  and dependencies), that code won't have access to the database state variables, even while it's part of the same request and it should be able to get access to the same database state.
+This means that, with Peewee's current implementation, multiple tasks could be using the same `threading.local` variable and end up sharing the same connection and data (that they shouldn't), and at the same time, if they execute sync I/O-blocking code in a threadpool (as with normal `def` functions in ReadyAPI, in *path operations*  and dependencies), that code won't have access to the database state variables, even while it's part of the same request and it should be able to get access to the same database state.
 
 ### Context variables
 
 Python 3.7 has <a href="https://docs.python.org/3/library/contextvars.html" class="external-link" target="_blank">`contextvars`</a> that can create a local variable very similar to `threading.local`, but also supporting these async features.
 
-There are several things to have in mind.
+There are several things to keep in mind.
 
 The `ContextVar` has to be created at the top of the module, like:
 
@@ -523,7 +526,7 @@ And the context variable would be set again for the next request, even if they a
 
 ### Set database state in the dependency `get_db()`
 
-As `get_db()` is a normal `def` function, **ReadyApi** will make it run in a threadpool, with a *copy* of the "context", holding the same value for the context variable (the `dict` with the reset database state). Then it can add database state to that `dict`, like the connection, etc.
+As `get_db()` is a normal `def` function, **ReadyAPI** will make it run in a threadpool, with a *copy* of the "context", holding the same value for the context variable (the `dict` with the reset database state). Then it can add database state to that `dict`, like the connection, etc.
 
 But if the value of the context variable (the default `dict`) was set in that normal `def` function, it would create a new value that would stay only in that thread of the threadpool, and the rest of the code (like the *path operation functions*) wouldn't have access to it. In `get_db()` we can only set values in the `dict`, but not the entire `dict` itself.
 

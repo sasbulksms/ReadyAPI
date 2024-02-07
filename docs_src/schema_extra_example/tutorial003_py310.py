@@ -1,7 +1,7 @@
-from readyapi import Body, ReadyApi
 from pydantic import BaseModel
+from readyapi import Body, ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

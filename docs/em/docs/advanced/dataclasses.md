@@ -1,8 +1,8 @@
 # ⚙️ 🎻
 
-ReadyApi 🏗 🔛 🔝 **Pydantic**, &amp; 👤 ✔️ 🌏 👆 ❔ ⚙️ Pydantic 🏷 📣 📨 &amp; 📨.
+ReadyAPI 🏗 🔛 🔝 **Pydantic**, &amp; 👤 ✔️ 🌏 👆 ❔ ⚙️ Pydantic 🏷 📣 📨 &amp; 📨.
 
-✋️ ReadyApi 🐕‍🦺 ⚙️ <a href="https://docs.python.org/3/library/dataclasses.html" class="external-link" target="_blank">`dataclasses`</a> 🎏 🌌:
+✋️ ReadyAPI 🐕‍🦺 ⚙️ <a href="https://docs.python.org/3/library/dataclasses.html" class="external-link" target="_blank">`dataclasses`</a> 🎏 🌌:
 
 ```Python hl_lines="1  7-12  19-20"
 {!../../../docs_src/dataclasses/tutorial001.py!}
@@ -10,7 +10,7 @@ ReadyApi 🏗 🔛 🔝 **Pydantic**, &amp; 👤 ✔️ 🌏 👆 ❔ ⚙️ Pyd
 
 👉 🐕‍🦺 👏 **Pydantic**, ⚫️ ✔️ <a href="https://pydantic-docs.helpmanual.io/usage/dataclasses/#use-of-stdlib-dataclasses-with-basemodel" class="external-link" target="_blank">🔗 🐕‍🦺 `dataclasses`</a>.
 
-, ⏮️ 📟 🔛 👈 🚫 ⚙️ Pydantic 🎯, ReadyApi ⚙️ Pydantic 🗜 📚 🐩 🎻 Pydantic 👍 🍛 🎻.
+, ⏮️ 📟 🔛 👈 🚫 ⚙️ Pydantic 🎯, ReadyAPI ⚙️ Pydantic 🗜 📚 🐩 🎻 Pydantic 👍 🍛 🎻.
 
 &amp; ↗️, ⚫️ 🐕‍🦺 🎏:
 
@@ -25,7 +25,7 @@ ReadyApi 🏗 🔛 🔝 **Pydantic**, &amp; 👤 ✔️ 🌏 👆 ❔ ⚙️ Pyd
 
     , 👆 5️⃣📆 💪 ⚙️ Pydantic 🏷.
 
-    ✋️ 🚥 👆 ✔️ 📚 🎻 🤥 🤭, 👉 👌 🎱 ⚙️ 👫 🏋️ 🕸 🛠️ ⚙️ ReadyApi. 👶
+    ✋️ 🚥 👆 ✔️ 📚 🎻 🤥 🤭, 👉 👌 🎱 ⚙️ 👫 🏋️ 🕸 🛠️ ⚙️ ReadyAPI. 👶
 
 ## 🎻 `response_model`
 
@@ -67,7 +67,7 @@ ReadyApi 🏗 🔛 🔝 **Pydantic**, &amp; 👤 ✔️ 🌏 👆 ❔ ⚙️ Pyd
 
 6️⃣. 📥 👥 🛬 📖 👈 🔌 `items` ❔ 📇 🎻.
 
-    ReadyApi 🎯 <abbr title="converting the data to a format that can be transmitted">✍</abbr> 💽 🎻.
+    ReadyAPI 🎯 <abbr title="converting the data to a format that can be transmitted">✍</abbr> 💽 🎻.
 
 7️⃣. 📥 `response_model` ⚙️ 🆎 ✍ 📇 `Author` 🎻.
 
@@ -75,13 +75,13 @@ ReadyApi 🏗 🔛 🔝 **Pydantic**, &amp; 👤 ✔️ 🌏 👆 ❔ ⚙️ Pyd
 
 8️⃣. 👀 👈 👉 *➡ 🛠️ 🔢* ⚙️ 🥔 `def` ↩️ `async def`.
 
-    🕧, ReadyApi 👆 💪 🌀 `def` &amp; `async def` 💪.
+    🕧, ReadyAPI 👆 💪 🌀 `def` &amp; `async def` 💪.
 
     🚥 👆 💪 ↗️ 🔃 🕐❔ ⚙️ ❔, ✅ 👅 📄 _"🏃 ❓" _ 🩺 🔃 <a href="https://readyapi.khulnasoft.com/async/#in-a-hurry" target="_blank" class="internal-link">`async` &amp; `await`</a>.
 
 9️⃣. 👉 *➡ 🛠️ 🔢* 🚫 🛬 🎻 (👐 ⚫️ 💪), ✋️ 📇 📖 ⏮️ 🔗 💽.
 
-    ReadyApi 🔜 ⚙️ `response_model` 🔢 (👈 🔌 🎻) 🗜 📨.
+    ReadyAPI 🔜 ⚙️ `response_model` 🔢 (👈 🔌 🎻) 🗜 📨.
 
 👆 💪 🌀 `dataclasses` ⏮️ 🎏 🆎 ✍ 📚 🎏 🌀 📨 🏗 📊 📊.
 
@@ -95,4 +95,4 @@ ReadyApi 🏗 🔛 🔝 **Pydantic**, &amp; 👤 ✔️ 🌏 👆 ❔ ⚙️ Pyd
 
 ## ⏬
 
-👉 💪 ↩️ ReadyApi ⏬ `0.67.0`. 👶
+👉 💪 ↩️ ReadyAPI ⏬ `0.67.0`. 👶
