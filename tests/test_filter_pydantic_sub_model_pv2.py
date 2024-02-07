@@ -2,7 +2,7 @@ from typing import Optional
 
 import pytest
 from dirty_equals import HasRepr, IsDict, IsOneOf
-from readyapi import Depends, ReadyApi
+from readyapi import Depends, ReadyAPI
 from readyapi.exceptions import ResponseValidationError
 from readyapi.testclient import TestClient
 from readyapi.utils import match_pydantic_error_url
@@ -14,7 +14,7 @@ from .utils import needs_pydanticv2
 def get_client():
     from pydantic import BaseModel, ValidationInfo, field_validator
 
-    app = ReadyApi()
+    app = ReadyAPI()
 
     class ModelB(BaseModel):
         username: str
@@ -87,7 +87,7 @@ def test_openapi_schema(client: TestClient):
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/model/{name}": {
                 "get": {

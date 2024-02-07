@@ -2,9 +2,9 @@ from datetime import datetime, time, timedelta
 from typing import Union
 from uuid import UUID
 
-from readyapi import Body, ReadyApi
+from readyapi import Body, ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.put("/items/{item_id}")

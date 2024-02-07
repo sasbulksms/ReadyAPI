@@ -1,8 +1,8 @@
 from typing import Union
 
-from readyapi import ReadyApi, Query
+from readyapi import ReadyAPI, Query
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/")
@@ -16,7 +16,7 @@ async def read_items(
         max_length=50,
         pattern="^fixedquery$",
         deprecated=True,
-    )
+    ),
 ):
     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
     if q:

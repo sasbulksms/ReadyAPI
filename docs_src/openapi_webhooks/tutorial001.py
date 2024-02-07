@@ -1,14 +1,14 @@
 from datetime import datetime
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Subscription(BaseModel):
     username: str
-    montly_fee: float
+    monthly_fee: float
     start_date: datetime
 
 

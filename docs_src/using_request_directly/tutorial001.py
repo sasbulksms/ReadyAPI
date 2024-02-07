@@ -1,6 +1,6 @@
-from readyapi import ReadyApi, Request
+from readyapi import ReadyAPI, Request
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/{item_id}")

@@ -1,4 +1,4 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from pydantic_settings import BaseSettings
 
 
@@ -9,7 +9,7 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/info")

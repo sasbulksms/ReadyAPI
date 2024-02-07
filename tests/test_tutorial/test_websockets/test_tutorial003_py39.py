@@ -1,5 +1,5 @@
 import pytest
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 
 from ...utils import needs_py39
@@ -20,7 +20,7 @@ def get_html():
 
 
 @pytest.fixture(name="client")
-def get_client(app: ReadyApi):
+def get_client(app: ReadyAPI):
     client = TestClient(app)
 
     return client

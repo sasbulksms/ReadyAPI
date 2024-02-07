@@ -1,7 +1,7 @@
 import warnings
 
 import pytest
-from readyapi import APIRouter, Depends, ReadyApi, Response
+from readyapi import APIRouter, Depends, ReadyAPI, Response
 from readyapi.responses import JSONResponse
 from readyapi.testclient import TestClient
 
@@ -102,7 +102,7 @@ async def callback5(level5: str):
     pass  # pragma: nocover
 
 
-app = ReadyApi(
+app = ReadyAPI(
     dependencies=[Depends(dep0)],
     responses={
         400: {"description": "Client error level 0"},
@@ -444,7 +444,7 @@ def test_openapi():
         assert "Duplicate Operation ID" in str(w[-1].message)
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/override1": {
                 "get": {

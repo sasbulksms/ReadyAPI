@@ -1,4 +1,4 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.middleware.wsgi import WSGIMiddleware
 from flask import Flask, request
 from markupsafe import escape
@@ -12,7 +12,7 @@ def flask_main():
     return f"Hello, {escape(name)} from Flask!"
 
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/v2")

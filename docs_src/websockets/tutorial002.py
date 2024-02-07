@@ -3,7 +3,7 @@ from typing import Union
 from readyapi import (
     Cookie,
     Depends,
-    ReadyApi,
+    ReadyAPI,
     Query,
     WebSocket,
     WebSocketException,
@@ -11,7 +11,7 @@ from readyapi import (
 )
 from readyapi.responses import HTMLResponse
 
-app = ReadyApi()
+app = ReadyAPI()
 
 html = """
 <!DOCTYPE html>

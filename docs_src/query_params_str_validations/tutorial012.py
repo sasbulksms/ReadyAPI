@@ -1,8 +1,8 @@
 from typing import List
 
-from readyapi import ReadyApi, Query
+from readyapi import ReadyAPI, Query
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/")

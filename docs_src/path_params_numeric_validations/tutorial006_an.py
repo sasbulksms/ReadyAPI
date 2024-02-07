@@ -1,7 +1,7 @@
-from readyapi import ReadyApi, Path, Query
+from readyapi import ReadyAPI, Path, Query
 from typing_extensions import Annotated
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/{item_id}")

@@ -1,4 +1,4 @@
-from readyapi import ReadyApi, Header, HTTPException
+from readyapi import ReadyAPI, Header, HTTPException
 from pydantic import BaseModel
 
 fake_secret_token = "coneofsilence"
@@ -8,7 +8,7 @@ fake_db = {
     "bar": {"id": "bar", "title": "Bar", "description": "The bartenders"},
 }
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Item(BaseModel):
@@ -31,6 +31,6 @@ async def create_item(item: Item, x_token: str = Header()):
     if x_token != fake_secret_token:
         raise HTTPException(status_code=400, detail="Invalid X-Token header")
     if item.id in fake_db:
-        raise HTTPException(status_code=400, detail="Item already exists")
+        raise HTTPException(status_code=409, detail="Item already exists")
     fake_db[item.id] = item
     return item

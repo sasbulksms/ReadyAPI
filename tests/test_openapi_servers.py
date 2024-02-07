@@ -1,8 +1,8 @@
 from dirty_equals import IsOneOf
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 
-app = ReadyApi(
+app = ReadyAPI(
     servers=[
         {"url": "/", "description": "Default, relative server"},
         {
@@ -32,7 +32,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "servers": [
             {"url": "/", "description": "Default, relative server"},
             {

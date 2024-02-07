@@ -1,14 +1,14 @@
 from functools import lru_cache
 from typing import Annotated
 
-from readyapi import Depends, ReadyApi
+from readyapi import Depends, ReadyAPI
 
 from .config import Settings
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
-@lru_cache()
+@lru_cache
 def get_settings():
     return Settings()
 

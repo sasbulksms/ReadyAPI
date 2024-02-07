@@ -1,9 +1,9 @@
 from typing import Union
 
-from readyapi import BackgroundTasks, Depends, ReadyApi
+from readyapi import BackgroundTasks, Depends, ReadyAPI
 from typing_extensions import Annotated
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 def write_log(message: str):

@@ -1,9 +1,9 @@
 import http
 from typing import FrozenSet, Optional
 
-from readyapi import ReadyApi, Path, Query
+from readyapi import ReadyAPI, Path, Query
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.api_route("/api_route")

@@ -1,9 +1,9 @@
 import pytest
-from readyapi import ReadyApi, Request, WebSocket, WebSocketDisconnect
+from readyapi import ReadyAPI, Request, WebSocket, WebSocketDisconnect
 from readyapi.routing import APIRoute, APIWebSocketRoute
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/users/{user_id}")

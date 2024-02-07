@@ -1,14 +1,14 @@
 from typing import Annotated, Union
 
-from readyapi import ReadyApi, Header
+from readyapi import ReadyAPI, Header
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/")
 async def read_items(
     strange_header: Annotated[
         Union[str, None], Header(convert_underscores=False)
-    ] = None
+    ] = None,
 ):
     return {"strange_header": strange_header}

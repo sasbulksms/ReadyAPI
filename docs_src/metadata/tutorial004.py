@@ -1,4 +1,4 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
 tags_metadata = [
     {
@@ -15,7 +15,7 @@ tags_metadata = [
     },
 ]
 
-app = ReadyApi(openapi_tags=tags_metadata)
+app = ReadyAPI(openapi_tags=tags_metadata)
 
 
 @app.get("/users/", tags=["users"])

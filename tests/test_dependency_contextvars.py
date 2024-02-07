@@ -1,14 +1,14 @@
 from contextvars import ContextVar
 from typing import Any, Awaitable, Callable, Dict, Optional
 
-from readyapi import Depends, ReadyApi, Request, Response
+from readyapi import Depends, ReadyAPI, Request, Response
 from readyapi.testclient import TestClient
 
 legacy_request_state_context_var: ContextVar[Optional[Dict[str, Any]]] = ContextVar(
     "legacy_request_state_context_var", default=None
 )
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 async def set_up_request_state_dependency():

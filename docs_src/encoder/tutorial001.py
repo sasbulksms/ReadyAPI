@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Union
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 
@@ -14,7 +14,7 @@ class Item(BaseModel):
     description: Union[str, None] = None
 
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.put("/items/{id}")

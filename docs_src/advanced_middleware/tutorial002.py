@@ -1,7 +1,7 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.middleware.trustedhost import TrustedHostMiddleware
 
-app = ReadyApi()
+app = ReadyAPI()
 
 app.add_middleware(
     TrustedHostMiddleware, allowed_hosts=["example.com", "*.example.com"]

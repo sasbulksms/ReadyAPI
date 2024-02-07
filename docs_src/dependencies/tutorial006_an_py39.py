@@ -1,8 +1,8 @@
 from typing import Annotated
 
-from readyapi import Depends, ReadyApi, Header, HTTPException
+from readyapi import Depends, ReadyAPI, Header, HTTPException
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 async def verify_token(x_token: Annotated[str, Header()]):

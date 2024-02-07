@@ -1,9 +1,9 @@
-from readyapi import Depends, ReadyApi
+from readyapi import Depends, ReadyAPI
 from readyapi.requests import HTTPConnection
 from readyapi.testclient import TestClient
 from starlette.websockets import WebSocket
 
-app = ReadyApi()
+app = ReadyAPI()
 app.state.value = 42
 
 

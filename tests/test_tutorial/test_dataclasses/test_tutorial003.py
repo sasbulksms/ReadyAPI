@@ -59,7 +59,7 @@ def test_openapi_schema():
     assert response.status_code == 200
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/authors/{author_id}/items/": {
                 "post": {
@@ -196,7 +196,7 @@ def test_openapi_schema_pv1():
     assert response.status_code == 200
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/authors/{author_id}/items/": {
                 "post": {

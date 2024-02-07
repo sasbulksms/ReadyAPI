@@ -1,4 +1,4 @@
-from readyapi import Depends, ReadyApi, HTTPException
+from readyapi import Depends, ReadyAPI, HTTPException
 from sqlalchemy.orm import Session
 
 from . import crud, models, schemas
@@ -6,7 +6,7 @@ from .database import SessionLocal, engine
 
 models.Base.metadata.create_all(bind=engine)
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 # Dependency

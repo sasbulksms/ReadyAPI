@@ -1,4 +1,4 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
 description = """
 ChimichangApp API helps you do awesome stuff. 🚀
@@ -15,7 +15,7 @@ You will be able to:
 * **Read users** (_not implemented_).
 """
 
-app = ReadyApi(
+app = ReadyAPI(
     title="ChimichangApp",
     description=description,
     summary="Deadpool's favorite app. Nuff said.",

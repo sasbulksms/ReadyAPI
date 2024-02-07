@@ -1,7 +1,7 @@
-from readyapi import APIRouter, ReadyApi
+from readyapi import APIRouter, ReadyAPI
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 router = APIRouter()
 

@@ -1,4 +1,4 @@
-from readyapi import Depends, ReadyApi, Header, HTTPException
+from readyapi import Depends, ReadyAPI, Header, HTTPException
 from typing_extensions import Annotated
 
 
@@ -13,7 +13,7 @@ async def verify_key(x_key: Annotated[str, Header()]):
     return x_key
 
 
-app = ReadyApi(dependencies=[Depends(verify_token), Depends(verify_key)])
+app = ReadyAPI(dependencies=[Depends(verify_token), Depends(verify_key)])
 
 
 @app.get("/items/")

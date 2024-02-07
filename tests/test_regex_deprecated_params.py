@@ -1,6 +1,6 @@
 import pytest
 from dirty_equals import IsDict
-from readyapi import ReadyApi, Query
+from readyapi import ReadyAPI, Query
 from readyapi.testclient import TestClient
 from readyapi.utils import match_pydantic_error_url
 from typing_extensions import Annotated
@@ -9,7 +9,7 @@ from .utils import needs_py310
 
 
 def get_client():
-    app = ReadyApi()
+    app = ReadyAPI()
     with pytest.warns(DeprecationWarning):
 
         @app.get("/items/")
@@ -82,7 +82,7 @@ def test_openapi_schema():
     # insert_assert(response.json())
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/items/": {
                 "get": {

@@ -1,7 +1,7 @@
 import time
 from typing import List
 
-from readyapi import Depends, ReadyApi, HTTPException
+from readyapi import Depends, ReadyAPI, HTTPException
 
 from . import crud, database, models, schemas
 from .database import db_state_default
@@ -10,7 +10,7 @@ database.db.connect()
 database.db.create_tables([models.User, models.Item])
 database.db.close()
 
-app = ReadyApi()
+app = ReadyAPI()
 
 sleep_time = 10
 

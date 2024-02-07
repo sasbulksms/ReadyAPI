@@ -1,8 +1,8 @@
 from typing import Annotated, List, Union
 
-from readyapi import ReadyApi, Header
+from readyapi import ReadyAPI, Header
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/")

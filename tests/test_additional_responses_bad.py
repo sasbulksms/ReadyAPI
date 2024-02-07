@@ -1,8 +1,8 @@
 import pytest
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/a", responses={"hello": {"description": "Not a valid additional response"}})
@@ -12,7 +12,7 @@ async def a():
 
 openapi_schema = {
     "openapi": "3.1.0",
-    "info": {"title": "ReadyApi", "version": "0.1.0"},
+    "info": {"title": "ReadyAPI", "version": "0.1.0"},
     "paths": {
         "/a": {
             "get": {

@@ -1,13 +1,20 @@
+import pytest
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
-
-from docs_src.async_sql_databases.tutorial001 import app
 
 from ...utils import needs_pydanticv1
 
 
+@pytest.fixture(name="app", scope="module")
+def get_app():
+    with pytest.warns(DeprecationWarning):
+        from docs_src.async_sql_databases.tutorial001 import app
+    yield app
+
+
 # TODO: pv2 add version with Pydantic v2
 @needs_pydanticv1
-def test_create_read():
+def test_create_read(app: ReadyAPI):
     with TestClient(app) as client:
         note = {"text": "Foo bar", "completed": False}
         response = client.post("/notes/", json=note)
@@ -21,13 +28,13 @@ def test_create_read():
         assert data in response.json()
 
 
-def test_openapi_schema():
+def test_openapi_schema(app: ReadyAPI):
     with TestClient(app) as client:
         response = client.get("/openapi.json")
         assert response.status_code == 200, response.text
         assert response.json() == {
             "openapi": "3.1.0",
-            "info": {"title": "ReadyApi", "version": "0.1.0"},
+            "info": {"title": "ReadyAPI", "version": "0.1.0"},
             "paths": {
                 "/notes/": {
                     "get": {

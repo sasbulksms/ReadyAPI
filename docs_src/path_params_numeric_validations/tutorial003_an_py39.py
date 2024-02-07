@@ -1,8 +1,8 @@
 from typing import Annotated
 
-from readyapi import ReadyApi, Path
+from readyapi import ReadyAPI, Path
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/{item_id}")

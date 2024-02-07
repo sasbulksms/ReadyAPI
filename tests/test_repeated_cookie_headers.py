@@ -1,7 +1,7 @@
-from readyapi import Depends, ReadyApi, Response
+from readyapi import Depends, ReadyAPI, Response
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 def set_cookie(*, response: Response):

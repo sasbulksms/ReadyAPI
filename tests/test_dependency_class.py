@@ -1,10 +1,10 @@
 from typing import AsyncGenerator, Generator
 
 import pytest
-from readyapi import Depends, ReadyApi
+from readyapi import Depends, ReadyAPI
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class CallableDependency:

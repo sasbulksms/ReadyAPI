@@ -1,4 +1,4 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 from pydantic import BaseModel
 
@@ -19,7 +19,7 @@ class Model3(BaseModel):
     ref2: Model2
 
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get(

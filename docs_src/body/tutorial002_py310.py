@@ -1,4 +1,4 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
 
@@ -9,7 +9,7 @@ class Item(BaseModel):
     tax: float | None = None
 
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.post("/items/")

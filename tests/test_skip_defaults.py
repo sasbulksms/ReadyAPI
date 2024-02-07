@@ -1,10 +1,10 @@
 from typing import Optional
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 from pydantic import BaseModel
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class SubModel(BaseModel):

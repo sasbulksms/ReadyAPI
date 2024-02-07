@@ -1,5 +1,5 @@
 import pytest
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 
 from .utils import needs_pydanticv2
@@ -7,7 +7,7 @@ from .utils import needs_pydanticv2
 
 @pytest.fixture(name="client")
 def get_client():
-    app = ReadyApi()
+    app = ReadyAPI()
 
     from pydantic import BaseModel, computed_field
 
@@ -41,7 +41,7 @@ def test_openapi_schema(client: TestClient):
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/": {
                 "get": {

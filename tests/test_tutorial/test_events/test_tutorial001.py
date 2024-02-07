@@ -1,22 +1,29 @@
+import pytest
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 
-from docs_src.events.tutorial001 import app
+
+@pytest.fixture(name="app", scope="module")
+def get_app():
+    with pytest.warns(DeprecationWarning):
+        from docs_src.events.tutorial001 import app
+    yield app
 
 
-def test_events():
+def test_events(app: ReadyAPI):
     with TestClient(app) as client:
         response = client.get("/items/foo")
         assert response.status_code == 200, response.text
         assert response.json() == {"name": "Fighters"}
 
 
-def test_openapi_schema():
+def test_openapi_schema(app: ReadyAPI):
     with TestClient(app) as client:
         response = client.get("/openapi.json")
         assert response.status_code == 200, response.text
         assert response.json() == {
             "openapi": "3.1.0",
-            "info": {"title": "ReadyApi", "version": "0.1.0"},
+            "info": {"title": "ReadyAPI", "version": "0.1.0"},
             "paths": {
                 "/items/{item_id}": {
                     "get": {

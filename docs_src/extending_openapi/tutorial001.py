@@ -1,7 +1,7 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.openapi.utils import get_openapi
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/")

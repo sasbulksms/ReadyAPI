@@ -1,11 +1,11 @@
 from typing import Union
 
 from dirty_equals import IsDict
-from readyapi import Body, Cookie, ReadyApi, Header, Path, Query
+from readyapi import Body, Cookie, ReadyAPI, Header, Path, Query
 from readyapi.testclient import TestClient
 from pydantic import BaseModel
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Item(BaseModel):
@@ -28,7 +28,7 @@ def examples(
                 "value": {"data": "Data in Body examples, example2"},
             },
         },
-    )
+    ),
 ):
     return item
 
@@ -146,7 +146,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/examples/": {
                 "post": {
