@@ -1,10 +1,10 @@
 from datetime import datetime, timedelta, timezone
 
-from readyapi import Depends, ReadyAPI, HTTPException, status
-from readyapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel
+from readyapi import Depends, HTTPException, ReadyAPI, status
+from readyapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
 # to get a string like this run:
 # openssl rand -hex 32
@@ -113,7 +113,7 @@ async def get_current_active_user(current_user: User = Depends(get_current_user)
 
 @app.post("/token")
 async def login_for_access_token(
-    form_data: OAuth2PasswordRequestForm = Depends()
+    form_data: OAuth2PasswordRequestForm = Depends(),
 ) -> Token:
     user = authenticate_user(fake_users_db, form_data.username, form_data.password)
     if not user:

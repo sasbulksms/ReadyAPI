@@ -1,7 +1,7 @@
 import secrets
 from typing import Annotated
 
-from readyapi import Depends, ReadyAPI, HTTPException, status
+from readyapi import Depends, HTTPException, ReadyAPI, status
 from readyapi.security import HTTPBasic, HTTPBasicCredentials
 
 app = ReadyAPI()
@@ -10,7 +10,7 @@ security = HTTPBasic()
 
 
 def get_current_username(
-    credentials: Annotated[HTTPBasicCredentials, Depends(security)]
+    credentials: Annotated[HTTPBasicCredentials, Depends(security)],
 ):
     current_username_bytes = credentials.username.encode("utf8")
     correct_username_bytes = b"stanleyjobson"
