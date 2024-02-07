@@ -700,7 +700,7 @@ if __name__ == "__main__":
         people_old_content == new_people_content
         and github_sponsors_old_content == new_github_sponsors_content
     ):
-        logging.info("The FastAPI People data hasn't changed, finishing.")
+        logging.info("The ReadyAPI People data hasn't changed, finishing.")
         sys.exit(0)
     people_path.write_text(new_people_content, encoding="utf-8")
     github_sponsors_path.write_text(new_github_sponsors_content, encoding="utf-8")
@@ -717,7 +717,7 @@ if __name__ == "__main__":
         ["git", "add", str(people_path), str(github_sponsors_path)], check=True
     )
     logging.info("Committing updated file")
-    message = "👥 Update FastAPI People"
+    message = "👥 Update ReadyAPI People"
     result = subprocess.run(["git", "commit", "-m", message], check=True)
     logging.info("Pushing branch")
     subprocess.run(["git", "push", "origin", branch_name], check=True)
