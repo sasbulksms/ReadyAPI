@@ -1,4 +1,4 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.routing import APIRoute
 from pydantic import BaseModel
 
@@ -7,7 +7,7 @@ def custom_generate_unique_id(route: APIRoute):
     return f"{route.tags[0]}-{route.name}"
 
 
-app = ReadyApi(generate_unique_id_function=custom_generate_unique_id)
+app = ReadyAPI(generate_unique_id_function=custom_generate_unique_id)
 
 
 class Item(BaseModel):

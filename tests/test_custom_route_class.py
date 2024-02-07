@@ -1,10 +1,10 @@
 import pytest
-from readyapi import APIRouter, ReadyApi
+from readyapi import APIRouter, ReadyAPI
 from readyapi.routing import APIRoute
 from readyapi.testclient import TestClient
 from starlette.routing import Route
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class APIRouteA(APIRoute):
@@ -76,7 +76,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/a/": {
                 "get": {

@@ -1,7 +1,7 @@
-from readyapi import Depends, ReadyApi
+from readyapi import Depends, ReadyAPI
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 async def user_exists(user_id: int):
@@ -26,7 +26,7 @@ def test_openapi_schema():
     data = response.json()
     assert data == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/users/{user_id}": {
                 "get": {

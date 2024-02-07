@@ -1,9 +1,9 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi._compat import PYDANTIC_V2
 from readyapi.testclient import TestClient
 from pydantic import BaseModel
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

@@ -1,6 +1,6 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/app")
@@ -8,7 +8,7 @@ def read_main():
     return {"message": "Hello World from main app"}
 
 
-subapi = ReadyApi()
+subapi = ReadyAPI()
 
 
 @subapi.get("/sub")

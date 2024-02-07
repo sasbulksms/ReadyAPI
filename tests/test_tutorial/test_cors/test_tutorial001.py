@@ -7,7 +7,7 @@ def test_cors():
     client = TestClient(app)
     # Test pre-flight response
     headers = {
-        "Origin": "https://localhost.tiangolo.com",
+        "Origin": "https://localhost.khulnasoft.com",
         "Access-Control-Request-Method": "GET",
         "Access-Control-Request-Headers": "X-Example",
     }
@@ -16,18 +16,18 @@ def test_cors():
     assert response.text == "OK"
     assert (
         response.headers["access-control-allow-origin"]
-        == "https://localhost.tiangolo.com"
+        == "https://localhost.khulnasoft.com"
     )
     assert response.headers["access-control-allow-headers"] == "X-Example"
 
     # Test standard response
-    headers = {"Origin": "https://localhost.tiangolo.com"}
+    headers = {"Origin": "https://localhost.khulnasoft.com"}
     response = client.get("/", headers=headers)
     assert response.status_code == 200, response.text
     assert response.json() == {"message": "Hello World"}
     assert (
         response.headers["access-control-allow-origin"]
-        == "https://localhost.tiangolo.com"
+        == "https://localhost.khulnasoft.com"
     )
 
     # Test non-CORS response

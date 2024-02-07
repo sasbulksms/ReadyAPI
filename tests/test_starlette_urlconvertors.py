@@ -1,7 +1,7 @@
-from readyapi import ReadyApi, Path, Query
+from readyapi import ReadyAPI, Path, Query
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/int/{param:int}")

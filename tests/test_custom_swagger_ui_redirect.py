@@ -1,9 +1,9 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 
 swagger_ui_oauth2_redirect_url = "/docs/redirect"
 
-app = ReadyApi(swagger_ui_oauth2_redirect_url=swagger_ui_oauth2_redirect_url)
+app = ReadyAPI(swagger_ui_oauth2_redirect_url=swagger_ui_oauth2_redirect_url)
 
 
 @app.get("/items/")

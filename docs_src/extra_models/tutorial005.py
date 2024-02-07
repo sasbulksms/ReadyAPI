@@ -1,8 +1,8 @@
 from typing import Dict
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/keyword-weights/", response_model=Dict[str, float])

@@ -17,7 +17,7 @@ def test_openapi_schema():
     assert response.status_code == 200
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "servers": [
             {
                 "url": IsOneOf(

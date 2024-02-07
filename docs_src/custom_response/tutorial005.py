@@ -1,7 +1,7 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.responses import PlainTextResponse
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/", response_class=PlainTextResponse)

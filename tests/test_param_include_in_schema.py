@@ -1,10 +1,10 @@
 from typing import Optional
 
 import pytest
-from readyapi import Cookie, ReadyApi, Header, Path, Query
+from readyapi import Cookie, ReadyAPI, Header, Path, Query
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/hidden_cookie")
@@ -35,7 +35,7 @@ async def hidden_query(
 
 openapi_schema = {
     "openapi": "3.1.0",
-    "info": {"title": "ReadyApi", "version": "0.1.0"},
+    "info": {"title": "ReadyAPI", "version": "0.1.0"},
     "paths": {
         "/hidden_cookie": {
             "get": {

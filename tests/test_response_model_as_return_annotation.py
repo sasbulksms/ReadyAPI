@@ -1,8 +1,8 @@
 from typing import List, Union
 
 import pytest
-from readyapi import ReadyApi
-from readyapi.exceptions import ReadyApiError, ResponseValidationError
+from readyapi import ReadyAPI
+from readyapi.exceptions import ReadyAPIError, ResponseValidationError
 from readyapi.responses import JSONResponse, Response
 from readyapi.testclient import TestClient
 from pydantic import BaseModel
@@ -25,7 +25,7 @@ class Item(BaseModel):
     price: float
 
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/no_response_model-no_annotation-return_model")
@@ -498,8 +498,8 @@ def test_no_response_model_annotation_json_response_class():
 
 
 def test_invalid_response_model_field():
-    app = ReadyApi()
-    with pytest.raises(ReadyApiError) as e:
+    app = ReadyAPI()
+    with pytest.raises(ReadyAPIError) as e:
 
         @app.get("/")
         def read_root() -> Union[Response, None]:
@@ -514,7 +514,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/no_response_model-no_annotation-return_model": {
                 "get": {

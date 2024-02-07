@@ -1,6 +1,6 @@
-from readyapi import ReadyApi, Response
+from readyapi import ReadyAPI, Response
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/legacy/")

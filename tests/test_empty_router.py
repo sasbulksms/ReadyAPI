@@ -1,9 +1,9 @@
 import pytest
-from readyapi import APIRouter, ReadyApi
-from readyapi.exceptions import ReadyApiError
+from readyapi import APIRouter, ReadyAPI
+from readyapi.exceptions import ReadyAPIError
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 router = APIRouter()
 
@@ -32,5 +32,5 @@ def test_use_empty():
 
 def test_include_empty():
     # if both include and router.path are empty - it should raise exception
-    with pytest.raises(ReadyApiError):
+    with pytest.raises(ReadyAPIError):
         app.include_router(router)

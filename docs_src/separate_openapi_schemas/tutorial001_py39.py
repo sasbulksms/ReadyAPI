@@ -1,6 +1,6 @@
 from typing import Optional
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
 
@@ -9,7 +9,7 @@ class Item(BaseModel):
     description: Optional[str] = None
 
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.post("/items/")

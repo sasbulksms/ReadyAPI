@@ -1,6 +1,6 @@
 import inspect
 
-from readyapi import APIRouter, ReadyApi
+from readyapi import APIRouter, ReadyAPI
 
 method_names = ["get", "put", "post", "delete", "options", "head", "patch", "trace"]
 
@@ -9,7 +9,7 @@ def test_signatures_consistency():
     base_sig = inspect.signature(APIRouter.get)
     for method_name in method_names:
         router_method = getattr(APIRouter, method_name)
-        app_method = getattr(ReadyApi, method_name)
+        app_method = getattr(ReadyAPI, method_name)
         router_sig = inspect.signature(router_method)
         app_sig = inspect.signature(app_method)
         param: inspect.Parameter

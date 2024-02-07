@@ -1,8 +1,8 @@
-from readyapi import Depends, ReadyApi
+from readyapi import Depends, ReadyAPI
 from readyapi.security import OAuth2PasswordBearer
 from pydantic import BaseModel
 
-app = ReadyApi()
+app = ReadyAPI()
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 

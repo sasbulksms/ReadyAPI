@@ -1,7 +1,7 @@
-from readyapi import ReadyApi, Form
+from readyapi import ReadyAPI, Form
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.post("/form/python-list")

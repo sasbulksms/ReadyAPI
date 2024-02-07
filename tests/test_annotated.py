@@ -1,11 +1,11 @@
 import pytest
 from dirty_equals import IsDict
-from readyapi import APIRouter, ReadyApi, Query
+from readyapi import APIRouter, ReadyAPI, Query
 from readyapi.testclient import TestClient
 from readyapi.utils import match_pydantic_error_url
 from typing_extensions import Annotated
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/default")
@@ -57,7 +57,7 @@ foo_is_short = {
             {
                 "ctx": {"min_length": 1},
                 "loc": ["query", "foo"],
-                "msg": "String should have at least 1 characters",
+                "msg": "String should have at least 1 character",
                 "type": "string_too_short",
                 "input": "",
                 "url": match_pydantic_error_url("string_too_short"),
@@ -98,7 +98,7 @@ def test_get(path, expected_status, expected_response):
 
 
 def test_multiple_path():
-    app = ReadyApi()
+    app = ReadyAPI()
 
     @app.get("/test1")
     @app.get("/test2")
@@ -124,7 +124,7 @@ def test_multiple_path():
 
 
 def test_nested_router():
-    app = ReadyApi()
+    app = ReadyAPI()
 
     router = APIRouter(prefix="/nested")
 
@@ -146,7 +146,7 @@ def test_openapi_schema():
     assert response.status_code == 200
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/default": {
                 "get": {

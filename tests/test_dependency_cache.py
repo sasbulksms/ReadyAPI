@@ -1,7 +1,7 @@
-from readyapi import Depends, ReadyApi, Security
+from readyapi import Depends, ReadyAPI, Security
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 counter_holder = {"counter": 0}
 

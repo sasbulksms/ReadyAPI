@@ -2,4 +2,4 @@
 set -x
 
 ruff readyapi tests docs_src scripts --fix
-black readyapi tests docs_src scripts
+ruff format readyapi tests docs_src scripts

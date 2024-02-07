@@ -1,9 +1,9 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.responses import RedirectResponse
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/typer")
 async def redirect_typer():
-    return RedirectResponse("https://typer.tiangolo.com")
+    return RedirectResponse("https://typer.khulnasoft.com")

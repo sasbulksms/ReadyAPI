@@ -1,7 +1,7 @@
-from readyapi import ReadyApi, Request
+from readyapi import ReadyAPI, Request
 from readyapi.testclient import TestClient
 
-app = ReadyApi(openapi_prefix="/api/v1")
+app = ReadyAPI(openapi_prefix="/api/v1")
 
 
 @app.get("/app")
@@ -23,7 +23,7 @@ def test_openapi():
     assert response.status_code == 200
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/app": {
                 "get": {

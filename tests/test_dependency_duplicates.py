@@ -1,12 +1,12 @@
 from typing import List
 
 from dirty_equals import IsDict
-from readyapi import Depends, ReadyApi
+from readyapi import Depends, ReadyAPI
 from readyapi.testclient import TestClient
 from readyapi.utils import match_pydantic_error_url
 from pydantic import BaseModel
 
-app = ReadyApi()
+app = ReadyAPI()
 
 client = TestClient(app)
 
@@ -104,7 +104,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/with-duplicates": {
                 "post": {

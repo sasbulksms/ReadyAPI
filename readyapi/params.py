@@ -45,7 +45,7 @@ class Param(FieldInfo):
         regex: Annotated[
             Optional[str],
             deprecated(
-                "Deprecated in ReadyApi 0.100.0 and Pydantic v2, use `pattern` instead."
+                "Deprecated in ReadyAPI 0.100.0 and Pydantic v2, use `pattern` instead."
             ),
         ] = None,
         discriminator: Union[str, None] = None,
@@ -156,7 +156,7 @@ class Path(Param):
         regex: Annotated[
             Optional[str],
             deprecated(
-                "Deprecated in ReadyApi 0.100.0 and Pydantic v2, use `pattern` instead."
+                "Deprecated in ReadyAPI 0.100.0 and Pydantic v2, use `pattern` instead."
             ),
         ] = None,
         discriminator: Union[str, None] = None,
@@ -242,7 +242,7 @@ class Query(Param):
         regex: Annotated[
             Optional[str],
             deprecated(
-                "Deprecated in ReadyApi 0.100.0 and Pydantic v2, use `pattern` instead."
+                "Deprecated in ReadyAPI 0.100.0 and Pydantic v2, use `pattern` instead."
             ),
         ] = None,
         discriminator: Union[str, None] = None,
@@ -327,7 +327,7 @@ class Header(Param):
         regex: Annotated[
             Optional[str],
             deprecated(
-                "Deprecated in ReadyApi 0.100.0 and Pydantic v2, use `pattern` instead."
+                "Deprecated in ReadyAPI 0.100.0 and Pydantic v2, use `pattern` instead."
             ),
         ] = None,
         discriminator: Union[str, None] = None,
@@ -412,7 +412,7 @@ class Cookie(Param):
         regex: Annotated[
             Optional[str],
             deprecated(
-                "Deprecated in ReadyApi 0.100.0 and Pydantic v2, use `pattern` instead."
+                "Deprecated in ReadyAPI 0.100.0 and Pydantic v2, use `pattern` instead."
             ),
         ] = None,
         discriminator: Union[str, None] = None,
@@ -496,7 +496,7 @@ class Body(FieldInfo):
         regex: Annotated[
             Optional[str],
             deprecated(
-                "Deprecated in ReadyApi 0.100.0 and Pydantic v2, use `pattern` instead."
+                "Deprecated in ReadyAPI 0.100.0 and Pydantic v2, use `pattern` instead."
             ),
         ] = None,
         discriminator: Union[str, None] = None,
@@ -609,7 +609,7 @@ class Form(Body):
         regex: Annotated[
             Optional[str],
             deprecated(
-                "Deprecated in ReadyApi 0.100.0 and Pydantic v2, use `pattern` instead."
+                "Deprecated in ReadyAPI 0.100.0 and Pydantic v2, use `pattern` instead."
             ),
         ] = None,
         discriminator: Union[str, None] = None,
@@ -694,7 +694,7 @@ class File(Form):
         regex: Annotated[
             Optional[str],
             deprecated(
-                "Deprecated in ReadyApi 0.100.0 and Pydantic v2, use `pattern` instead."
+                "Deprecated in ReadyAPI 0.100.0 and Pydantic v2, use `pattern` instead."
             ),
         ] = None,
         discriminator: Union[str, None] = None,

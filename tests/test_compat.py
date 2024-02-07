@@ -1,6 +1,6 @@
 from typing import List, Union
 
-from readyapi import ReadyApi, UploadFile
+from readyapi import ReadyAPI, UploadFile
 from readyapi._compat import (
     ModelField,
     Undefined,
@@ -60,7 +60,7 @@ def test_get_model_config():
 
 
 def test_complex():
-    app = ReadyApi()
+    app = ReadyAPI()
 
     @app.post("/")
     def foo(foo: Union[str, List[int]]):

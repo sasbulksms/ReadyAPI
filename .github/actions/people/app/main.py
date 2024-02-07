@@ -17,7 +17,7 @@ questions_category_id = "MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDAxNDM0"
 
 discussions_query = """
 query Q($after: String, $category_id: ID) {
-  repository(name: "readyapi", owner: "tiangolo") {
+  repository(name: "readyapi", owner: "khulnasoft") {
     discussions(first: 100, after: $after, categoryId: $category_id) {
       edges {
         cursor
@@ -60,7 +60,7 @@ query Q($after: String, $category_id: ID) {
 
 issues_query = """
 query Q($after: String) {
-  repository(name: "readyapi", owner: "tiangolo") {
+  repository(name: "readyapi", owner: "khulnasoft") {
     issues(first: 100, after: $after) {
       edges {
         cursor
@@ -93,7 +93,7 @@ query Q($after: String) {
 
 prs_query = """
 query Q($after: String) {
-  repository(name: "readyapi", owner: "tiangolo") {
+  repository(name: "readyapi", owner: "khulnasoft") {
     pullRequests(first: 100, after: $after) {
       edges {
         cursor
@@ -141,7 +141,7 @@ query Q($after: String) {
 
 sponsors_query = """
 query Q($after: String) {
-  user(login: "tiangolo") {
+  user(login: "khulnasoft") {
     sponsorshipsAsMaintainer(first: 100, after: $after) {
       edges {
         cursor
@@ -619,7 +619,7 @@ if __name__ == "__main__":
         settings=settings
     )
     authors = {**question_authors, **pr_authors}
-    maintainers_logins = {"tiangolo"}
+    maintainers_logins = {"khulnasoft"}
     bot_names = {"codecov", "github-actions", "pre-commit-ci", "dependabot"}
     maintainers = []
     for login in maintainers_logins:
@@ -700,7 +700,7 @@ if __name__ == "__main__":
         people_old_content == new_people_content
         and github_sponsors_old_content == new_github_sponsors_content
     ):
-        logging.info("The ReadyApi People data hasn't changed, finishing.")
+        logging.info("The ReadyAPI People data hasn't changed, finishing.")
         sys.exit(0)
     people_path.write_text(new_people_content, encoding="utf-8")
     github_sponsors_path.write_text(new_github_sponsors_content, encoding="utf-8")
@@ -717,7 +717,7 @@ if __name__ == "__main__":
         ["git", "add", str(people_path), str(github_sponsors_path)], check=True
     )
     logging.info("Committing updated file")
-    message = "👥 Update ReadyApi People"
+    message = "👥 Update ReadyAPI People"
     result = subprocess.run(["git", "commit", "-m", message], check=True)
     logging.info("Pushing branch")
     subprocess.run(["git", "push", "origin", branch_name], check=True)

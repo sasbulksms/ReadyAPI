@@ -1,4 +1,4 @@
-from readyapi import APIRouter, ReadyApi
+from readyapi import APIRouter, ReadyAPI
 from readyapi.responses import HTMLResponse, JSONResponse, PlainTextResponse
 from readyapi.testclient import TestClient
 
@@ -7,7 +7,7 @@ class OverrideResponse(JSONResponse):
     media_type = "application/x-override"
 
 
-app = ReadyApi()
+app = ReadyAPI()
 router_a = APIRouter()
 router_a_a = APIRouter()
 router_a_b_override = APIRouter()  # Overrides default class

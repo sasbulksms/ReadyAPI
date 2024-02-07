@@ -1,6 +1,6 @@
 from typing import Union
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.responses import FileResponse
 from pydantic import BaseModel
 
@@ -10,7 +10,7 @@ class Item(BaseModel):
     value: str
 
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get(

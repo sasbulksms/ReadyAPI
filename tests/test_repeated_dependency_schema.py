@@ -1,7 +1,7 @@
-from readyapi import Depends, ReadyApi, Header, status
+from readyapi import Depends, ReadyAPI, Header, status
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 def get_header(*, someheader: str = Header()):
@@ -49,7 +49,7 @@ schema = {
             },
         }
     },
-    "info": {"title": "ReadyApi", "version": "0.1.0"},
+    "info": {"title": "ReadyAPI", "version": "0.1.0"},
     "openapi": "3.1.0",
     "paths": {
         "/": {

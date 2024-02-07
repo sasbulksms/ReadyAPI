@@ -1,8 +1,8 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
 from . import a, b
 
-app = ReadyApi()
+app = ReadyAPI()
 
 app.include_router(a.router, prefix="/a")
 app.include_router(b.router, prefix="/b")

@@ -1,9 +1,9 @@
 from typing import Optional
 
-from readyapi import Depends, ReadyApi, Query, status
+from readyapi import Depends, ReadyAPI, Query, status
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 def _get_client_key(client_id: str = Query(...)) -> str:
@@ -56,7 +56,7 @@ expected_schema = {
             },
         }
     },
-    "info": {"title": "ReadyApi", "version": "0.1.0"},
+    "info": {"title": "ReadyAPI", "version": "0.1.0"},
     "openapi": "3.1.0",
     "paths": {
         "/foo": {

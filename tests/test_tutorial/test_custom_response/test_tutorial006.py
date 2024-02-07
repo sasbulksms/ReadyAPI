@@ -8,7 +8,7 @@ client = TestClient(app)
 def test_get():
     response = client.get("/typer", follow_redirects=False)
     assert response.status_code == 307, response.text
-    assert response.headers["location"] == "https://typer.tiangolo.com"
+    assert response.headers["location"] == "https://typer.khulnasoft.com"
 
 
 def test_openapi_schema():
@@ -16,7 +16,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/typer": {
                 "get": {

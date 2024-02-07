@@ -1,4 +1,4 @@
-name: ReadyApi People
+name: ReadyAPI People
 
 on:
   schedule:
@@ -12,14 +12,14 @@ on:
 
 jobs:
   readyapi-people:
-    if: github.repository_owner == 'tiangolo'
+    if: github.repository_owner == 'khulnasoft'
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       # Ref: https://github.com/actions/runner/issues/2033
       - name: Fix git safe.directory in container
         run: mkdir -p /home/runner/work/_temp/_github_home && printf "[safe]\n\tdirectory = /github/workspace" > /home/runner/work/_temp/_github_home/.gitconfig
@@ -31,4 +31,4 @@ jobs:
           limit-access-to-actor: true
       - uses: ./.github/actions/people
         with:
-          token: ${{ secrets.FASTAPI_PEOPLE }}
+          token: ${{ secrets.READYAPI_PEOPLE }}

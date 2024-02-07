@@ -1,4 +1,4 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.responses import JSONResponse
 from pydantic import BaseModel
 
@@ -12,7 +12,7 @@ class Message(BaseModel):
     message: str
 
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/items/{item_id}", response_model=Item, responses={404: {"model": Message}})

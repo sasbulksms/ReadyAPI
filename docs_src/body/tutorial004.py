@@ -1,6 +1,6 @@
 from typing import Union
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
 
@@ -11,11 +11,11 @@ class Item(BaseModel):
     tax: Union[float, None] = None
 
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.put("/items/{item_id}")
-async def create_item(item_id: int, item: Item, q: Union[str, None] = None):
+async def update_item(item_id: int, item: Item, q: Union[str, None] = None):
     result = {"item_id": item_id, **item.dict()}
     if q:
         result.update({"q": q})

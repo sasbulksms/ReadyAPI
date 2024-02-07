@@ -1,6 +1,6 @@
-from readyapi import ReadyApi, Form
+from readyapi import ReadyAPI, Form
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.post("/login/")

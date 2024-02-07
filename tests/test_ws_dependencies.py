@@ -1,7 +1,7 @@
 import json
 from typing import List
 
-from readyapi import APIRouter, Depends, ReadyApi, WebSocket
+from readyapi import APIRouter, Depends, ReadyAPI, WebSocket
 from readyapi.testclient import TestClient
 from typing_extensions import Annotated
 
@@ -22,7 +22,7 @@ def create_dependency(name: str):
 
 router = APIRouter(dependencies=[create_dependency("router")])
 prefix_router = APIRouter(dependencies=[create_dependency("prefix_router")])
-app = ReadyApi(dependencies=[create_dependency("app")])
+app = ReadyAPI(dependencies=[create_dependency("app")])
 
 
 @app.websocket("/", dependencies=[create_dependency("index")])

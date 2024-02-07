@@ -1,7 +1,7 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.responses import RedirectResponse
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.get("/teleport")

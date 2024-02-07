@@ -1,6 +1,6 @@
 from contextlib import asynccontextmanager
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
 
 def fake_answer_to_everything_ml_model(x: float):
@@ -11,7 +11,7 @@ ml_models = {}
 
 
 @asynccontextmanager
-async def lifespan(app: ReadyApi):
+async def lifespan(app: ReadyAPI):
     # Load the ML model
     ml_models["answer_to_everything"] = fake_answer_to_everything_ml_model
     yield
@@ -19,7 +19,7 @@ async def lifespan(app: ReadyApi):
     ml_models.clear()
 
 
-app = ReadyApi(lifespan=lifespan)
+app = ReadyAPI(lifespan=lifespan)
 
 
 @app.get("/predict")

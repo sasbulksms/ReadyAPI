@@ -1,9 +1,9 @@
 from typing import Annotated
 
-from readyapi import Depends, ReadyApi
+from readyapi import Depends, ReadyAPI
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 async def common_parameters(q: str | None = None, skip: int = 0, limit: int = 100):

@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 from typing import AsyncGenerator, Dict
 
 import pytest
-from readyapi import APIRouter, ReadyApi
+from readyapi import APIRouter, ReadyAPI
 from readyapi.testclient import TestClient
 from pydantic import BaseModel
 
@@ -21,8 +21,11 @@ def state() -> State:
     return State()
 
 
+@pytest.mark.filterwarnings(
+    r"ignore:\s*on_event is deprecated, use lifespan event handlers instead.*:DeprecationWarning"
+)
 def test_router_events(state: State) -> None:
-    app = ReadyApi()
+    app = ReadyAPI()
 
     @app.get("/")
     def main() -> Dict[str, str]:
@@ -85,12 +88,12 @@ def test_router_events(state: State) -> None:
 
 def test_app_lifespan_state(state: State) -> None:
     @asynccontextmanager
-    async def lifespan(app: ReadyApi) -> AsyncGenerator[None, None]:
+    async def lifespan(app: ReadyAPI) -> AsyncGenerator[None, None]:
         state.app_startup = True
         yield
         state.app_shutdown = True
 
-    app = ReadyApi(lifespan=lifespan)
+    app = ReadyAPI(lifespan=lifespan)
 
     @app.get("/")
     def main() -> Dict[str, str]:

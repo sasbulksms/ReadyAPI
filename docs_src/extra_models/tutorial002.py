@@ -1,9 +1,9 @@
 from typing import Union
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from pydantic import BaseModel, EmailStr
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class UserBase(BaseModel):

@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.testclient import TestClient
 from pydantic import BaseModel
 
@@ -18,7 +18,7 @@ def test_pydanticv2():
         def serialize_datetime(self, dt_field: datetime):
             return dt_field.replace(microsecond=0, tzinfo=timezone.utc).isoformat()
 
-    app = ReadyApi()
+    app = ReadyAPI()
     model = ModelWithDatetimeField(dt_field=datetime(2019, 1, 1, 8))
 
     @app.get("/model", response_model=ModelWithDatetimeField)
@@ -44,7 +44,7 @@ def test_pydanticv1():
                 ).isoformat()
             }
 
-    app = ReadyApi()
+    app = ReadyAPI()
     model = ModelWithDatetimeField(dt_field=datetime(2019, 1, 1, 8))
 
     @app.get("/model", response_model=ModelWithDatetimeField)

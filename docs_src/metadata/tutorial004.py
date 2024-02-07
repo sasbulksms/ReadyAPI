@@ -1,4 +1,4 @@
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 
 tags_metadata = [
     {
@@ -10,12 +10,12 @@ tags_metadata = [
         "description": "Manage items. So _fancy_ they have their own docs.",
         "externalDocs": {
             "description": "Items external docs",
-            "url": "https://readyapi.tiangolo.com/",
+            "url": "https://readyapi.khulnasoft.com/",
         },
     },
 ]
 
-app = ReadyApi(openapi_tags=tags_metadata)
+app = ReadyAPI(openapi_tags=tags_metadata)
 
 
 @app.get("/users/", tags=["users"])

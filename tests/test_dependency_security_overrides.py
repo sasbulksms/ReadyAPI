@@ -1,10 +1,10 @@
 from typing import List, Tuple
 
-from readyapi import Depends, ReadyApi, Security
+from readyapi import Depends, ReadyAPI, Security
 from readyapi.security import SecurityScopes
 from readyapi.testclient import TestClient
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 def get_user(required_scopes: SecurityScopes):

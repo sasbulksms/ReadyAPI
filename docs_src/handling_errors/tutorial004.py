@@ -1,9 +1,9 @@
-from readyapi import ReadyApi, HTTPException
+from readyapi import ReadyAPI, HTTPException
 from readyapi.exceptions import RequestValidationError
 from readyapi.responses import PlainTextResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.exception_handler(StarletteHTTPException)

@@ -1,6 +1,6 @@
-from readyapi import BackgroundTasks, Depends, ReadyApi
+from readyapi import BackgroundTasks, Depends, ReadyAPI
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 def write_log(message: str):

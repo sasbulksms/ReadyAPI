@@ -1,12 +1,12 @@
 from typing import Optional
 
 from dirty_equals import IsDict
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from readyapi.responses import JSONResponse
 from readyapi.testclient import TestClient
 from pydantic import BaseModel
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Item(BaseModel):
@@ -101,7 +101,7 @@ def test_openapi_schema():
     assert response.status_code == 200, response.text
     assert response.json() == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/items/{item_id}": {
                 "get": {

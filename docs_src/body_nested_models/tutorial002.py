@@ -1,9 +1,9 @@
 from typing import List, Union
 
-from readyapi import ReadyApi
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

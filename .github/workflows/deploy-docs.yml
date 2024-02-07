@@ -14,17 +14,17 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Clean site
         run: |
           rm -rf ./site
           mkdir ./site
       - name: Download Artifact Docs
         id: download
-        uses: dawidd6/action-download-artifact@v2.27.0
+        uses: dawidd6/action-download-artifact@v3.0.0
         with:
           if_no_artifact_found: ignore
-          github_token: ${{ secrets.FASTAPI_PREVIEW_DOCS_DOWNLOAD_ARTIFACTS }}
+          github_token: ${{ secrets.READYAPI_PREVIEW_DOCS_DOWNLOAD_ARTIFACTS }}
           workflow: build-docs.yml
           run_id: ${{ github.event.workflow_run.id }}
           name: docs-site
@@ -36,7 +36,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: readyapitiangolo
+          projectName: readyapikhulnasoft
           directory: './site'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ ( github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == 'master' && 'main' ) || ( github.event.workflow_run.head_sha ) }}
@@ -44,5 +44,5 @@ jobs:
         if: steps.deploy.outputs.url != ''
         uses: ./.github/actions/comment-docs-preview-in-pr
         with:
-          token: ${{ secrets.FASTAPI_PREVIEW_DOCS_COMMENT_DEPLOY }}
+          token: ${{ secrets.READYAPI_PREVIEW_DOCS_COMMENT_DEPLOY }}
           deploy_url: "${{ steps.deploy.outputs.url }}"

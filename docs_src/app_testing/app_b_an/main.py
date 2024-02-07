@@ -1,6 +1,6 @@
 from typing import Union
 
-from readyapi import ReadyApi, Header, HTTPException
+from readyapi import ReadyAPI, Header, HTTPException
 from pydantic import BaseModel
 from typing_extensions import Annotated
 
@@ -11,7 +11,7 @@ fake_db = {
     "bar": {"id": "bar", "title": "Bar", "description": "The bartenders"},
 }
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

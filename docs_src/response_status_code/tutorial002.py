@@ -1,6 +1,6 @@
-from readyapi import ReadyApi, status
+from readyapi import ReadyAPI, status
 
-app = ReadyApi()
+app = ReadyAPI()
 
 
 @app.post("/items/", status_code=status.HTTP_201_CREATED)

@@ -1,10 +1,10 @@
-"""ReadyApi framework, high performance, easy to learn, fast to code, ready for production"""
+"""ReadyAPI framework, high performance, easy to learn, fast to code, ready for production"""
 
-__version__ = "0.103.2"
+__version__ = "0.109.2"
 
 from starlette import status as status
 
-from .applications import ReadyApi as ReadyApi
+from .applications import ReadyAPI as ReadyAPI
 from .background import BackgroundTasks as BackgroundTasks
 from .datastructures import UploadFile as UploadFile
 from .exceptions import HTTPException as HTTPException

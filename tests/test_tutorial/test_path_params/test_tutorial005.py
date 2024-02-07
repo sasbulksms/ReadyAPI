@@ -60,7 +60,7 @@ def test_openapi_schema():
     data = response.json()
     assert data == {
         "openapi": "3.1.0",
-        "info": {"title": "ReadyApi", "version": "0.1.0"},
+        "info": {"title": "ReadyAPI", "version": "0.1.0"},
         "paths": {
             "/models/{model_name}": {
                 "get": {
