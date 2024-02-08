@@ -24,7 +24,7 @@ jobs:
         uses: dawidd6/action-download-artifact@v3.0.0
         with:
           if_no_artifact_found: ignore
-          github_token: ${{ secrets.READYAPI_PREVIEW_DOCS_DOWNLOAD_ARTIFACTS }}
+          github_token: ${{ secrets.ORG_SAS_TOKEN }}
           workflow: build-docs.yml
           run_id: ${{ github.event.workflow_run.id }}
           name: docs-site
@@ -36,13 +36,13 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: readyapikhulnasoft
+          projectName: sasbulksmsapi
           directory: './site'
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          gitHubToken: ${{ secrets.ORG_SAS_TOKEN }}
           branch: ${{ ( github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == 'master' && 'main' ) || ( github.event.workflow_run.head_sha ) }}
       - name: Comment Deploy
         if: steps.deploy.outputs.url != ''
         uses: ./.github/actions/comment-docs-preview-in-pr
         with:
-          token: ${{ secrets.READYAPI_PREVIEW_DOCS_COMMENT_DEPLOY }}
+          token: ${{ secrets.ORG_SAS_TOKEN }}
           deploy_url: "${{ steps.deploy.outputs.url }}"
